@@ -1,0 +1,99 @@
+\documentclass[a4paper,12pt,oneside]{report}
+\input{preamble}
+\title{Stitch: Robust Appearance-Invariant Visual Place Recognition for Anchoring Social AR Content in the Real World}
+\author{[Author Name]}
+\date{5 November 2026}
+\begin{document}
+\pagenumbering{roman}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\centering
+{\Large [Institution Name]\par}
+\vspace{1.5cm}
+{\huge\bfseries Stitch\par}
+\vspace{.5cm}
+{\LARGE Robust Appearance-Invariant Visual Place Recognition for Anchoring Social AR Content in the Real World\par}
+\vspace{1.2cm}
+{\large A thesis submitted in partial fulfilment of the requirements for\par}
+{\large [Degree / Programme]\par}
+\vspace{1cm}
+{\Large [Author Name]\par}
+{\large [Registration Number]\par}
+\vspace{.8cm}
+{\large Under the supervision of\par [Supervisor Name]\par}
+\vfill
+{\large [Department]\par [Institution]\par 5 November 2026\par}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\chapter*{Certificate}
+\addcontentsline{toc}{chapter}{Certificate}
+This page is an unsigned institutional placeholder. It does not certify supervision, examination, authorship, or approval. The institution should replace it with its prescribed certificate after reviewing the thesis and its reproducibility artifacts.
+\vspace{2cm}
+\noindent Supervisor: [Name and designation]\par
+\vspace{1cm}\noindent Signature: [To be signed]\par
+\vspace{1cm}\noindent Institution and date: [To be completed]
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+[The author should insert the institution's required declaration after reviewing the experiments, source attribution, software licenses, and the role of automated assistance.]
+
+The accompanying artifact contains executable code, downloaded-data manifests, model hashes, raw measurements, and generated tables. Experimental statements refer to the recorded runs in this artifact. No institutional acceptance or independent replication is implied by this draft.
+\vspace{2cm}\noindent Author signature: [To be signed]
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+Stitch proposes a social augmented-reality interface in which digital posts are associated with physical places and recovered when a later visitor observes the same scene. Its original implementation matches SIFT features to one reference image and projects content using a planar homography. This thesis investigates whether pretrained representations improve recognition and anchoring under appearance change while retaining a reproducible path toward mobile deployment.
+
+A modular implementation compares SIFT with FLANN, SuperPoint with LightGlue, CosPlace global retrieval, and a hierarchical combination of retrieval, local matching, geometric verification, and rendering. Experiments use a documented HPatches subset, a custom cross-time subset of real Tokyo 24/7 query photographs, and seeded photometric transformations of repository and benchmark images. Original scripts are executed through a bounded file-input adapter. All reported measurements, plots, and tables are derived from preserved run outputs.
+
+The evaluation distinguishes retrieval, geometric acceptance, and ground-truth homography accuracy. Tokyo metadata supports place labels but does not establish metric camera pose or planar anchoring error. Short contrastive adaptation trains only a projection head on disjoint HPatches places. Model export and integer quantization are tested using actual ONNX inference. The report documents accuracy losses, rejected anchors, and the limits of narrow galleries and synthetic illumination changes.
+
+The resulting artifact demonstrates a reproducible planar-AR research pipeline. It does not establish a city-scale AR cloud, a six-degree-of-freedom localization benchmark result, or phone-device performance. The deployment analysis therefore specifies the additional mapping, calibration, tracking, privacy, and evaluation work needed before persistent public AR content can be supported responsibly.
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+[Personal acknowledgements, funding information, and institutional support should be inserted by the author.]
+
+The project builds on the public Stitch repository and the research software and datasets cited throughout the thesis. Their availability made the recorded experiments possible. Dataset provenance and redistribution limitations are documented separately from software licenses.
+\tableofcontents
+\listoffigures
+\listoftables
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\nomenclature{AR}{Augmented reality}
+\nomenclature{VPR}{Visual place recognition}
+\nomenclature{SIFT}{Scale-invariant feature transform}
+\nomenclature{FLANN}{Fast library for approximate nearest neighbours}
+\nomenclature{RANSAC}{Random sample consensus}
+\nomenclature{CNN}{Convolutional neural network}
+\nomenclature{GeM}{Generalised mean pooling}
+\nomenclature{PnP}{Perspective-n-point}
+\nomenclature{SfM}{Structure from motion}
+\nomenclature{SLAM}{Simultaneous localisation and mapping}
+\nomenclature{GPS}{Global positioning system}
+\nomenclature{ONNX}{Open Neural Network Exchange}
+\nomenclature{QDQ}{Quantise--dequantise graph representation}
+\nomenclature{RSS}{Resident set size}
+\nomenclature{CI}{Confidence interval}
+\nomenclature{$H_{r\rightarrow q}$}{Homography mapping reference pixels to query pixels}
+\nomenclature{$R@k$}{Fraction of queries with a valid place among the first $k$ results}
+\printnomenclature[2.2cm]
+\clearpage\pagenumbering{arabic}
+\input{chapters/01_introduction}
+\input{chapters/02_background}
+\input{chapters/03_existing_system}
+\input{chapters/04_architecture}
+\input{chapters/05_datasets}
+\input{chapters/06_methodology}
+\input{chapters/07_experimental_setup}
+\input{chapters/08_results}
+\input{chapters/09_deployment}
+\input{chapters/10_ethics}
+\input{chapters/11_conclusion}
+\clearpage
+\renewcommand{\bibsection}{\chapter*{\bibname}\addcontentsline{toc}{chapter}{\bibname}}
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\appendix
+\input{chapters/appendix_a_reproduction}
+\input{chapters/appendix_b_structure}
+\input{chapters/appendix_c_qualitative}
+\input{chapters/appendix_d_code}
+\end{document}

@@ -1,0 +1,23 @@
+PAGE 16
+'Chapter 1' [99.212, 641.179] 20.6625
+'problem of both theoretical depth and practical importance.\n' [99.212, 85.286] 10.9091
+'1' [326.524, 35.433] 10.9091
+PAGE 17
+'Chapter 1. Introduction' [442.166, 761.132] 10.9091
+'A further dimension of this problem concerns the alignment between neu' [116.148, 721.202] 10.9091
+'sentations and human perception. Conventional adversarial attacks rely' [99.212, 704.767] 10.9091
+'L' [463.129, 704.767] 10.9091
+'p' [470.55400000000003, 703.1310000000001] 7.9701
+' norm constraints' [0.0, 0.0] 10.9091
+'as proxies for perceptual similarity, operating under the assumption t' [99.212, 688.332] 10.9091
+'perturbations remain imperceptible. However, recent theoretical analys' [99.212, 671.897] 10.9091
+'sumption is fundamentally limited. As the dimensionality of the featur' [99.212, 655.462] 10.9091
+'distributions learned by discriminative classifiers and those governin' [99.212, 639.028] 10.9091
+'diverge progressively, converging toward mutually singular manifolds i' [99.212, 622.593] 10.9091
+'[' [99.212, 606.157] 10.9091
+'12' [102.303, 606.157] 10.9091
+']. This geometric perspective implies that adversarial vulnerability i' [113.43, 606.157] 10.9091
+' 8' [0.0, 0.0] 10.9091
+'2' [326.66, 35.433] 10.9091
+PDF modules
+{'pptx': False, 'fitz': False, 'reportlab': False}

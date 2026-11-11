@@ -1,0 +1,18 @@
+{
+  "pdf_pages": 254,
+  "substantive_chapter_pages": 176,
+  "minimum_required_pdf_pages": 200,
+  "evidence_scene_entries": 48,
+  "complete_oracle_register_rows": 612,
+  "intro_pdf_page": 26,
+  "bibliography_pdf_page": 202,
+  "latex_errors": 0,
+  "undefined_references": 0,
+  "undefined_citations": 0,
+  "cited_entries": 30,
+  "bibliography_entries": 30,
+  "result_groups_checked": 84,
+  "demo_decoding": "passed",
+  "overfull_box_warnings": 0,
+  "pdf_sha256": "e44b66cc698f741c1cdeab6ffd027e3fb55f067e2fb3e63e6d92c47539ee764d"
+}

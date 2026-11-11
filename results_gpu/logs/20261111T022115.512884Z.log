@@ -1,0 +1,100 @@
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+WARNING:root:Please consider pre-processing before quantization. See https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+[0;93m2026-11-11 02:21:35.559114966 [W:onnxruntime:, transformer_memcpy.cc:74 ApplyImpl] 21 Memcpy nodes are added to the graph main_graph for CUDAExecutionProvider. It might have negative impact on performance (including unable to run CUDA graph). Set session_options.log_severity_level=1 to see the detail logs before this message.[m
+{
+  "scope": "CosPlace global descriptor only; SuperPoint/LightGlue and full pipeline not exported",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "runtime": "1.19.2",
+  "device": "CUDAExecutionProvider",
+  "onnx_export": "success",
+  "int8_quantization": "success",
+  "models": [
+    {
+      "variant": "fp32",
+      "path": "results_gpu/exports/cosplace_fp32.onnx",
+      "bytes": 45752880,
+      "median_inference_ms": 1.1085618752986193,
+      "p95_inference_ms": 1.129607087932527,
+      "provider": "CUDAExecutionProvider",
+      "max_abs_parity_error": 6.291642785072327e-05,
+      "mean_abs_max_error": 4.7278811204402395e-05,
+      "retrieval": [
+        {
+          "protocol": "tokyo_day_to_day",
+          "n": 24,
+          "recall1": 0.4166666666666667,
+          "recall5": 0.625,
+          "recall10": 0.75
+        },
+        {
+          "protocol": "tokyo_day_to_night",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_night_to_day",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_day_to_sunset",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "variant": "int8",
+      "path": "results_gpu/exports/cosplace_int8.onnx",
+      "bytes": 11516522,
+      "median_inference_ms": 1.1329164262861013,
+      "p95_inference_ms": 1.933596795424819,
+      "provider": "CUDAExecutionProvider",
+      "max_abs_parity_error": 0.0641217976808548,
+      "mean_abs_max_error": 0.023789571850405384,
+      "retrieval": [
+        {
+          "protocol": "tokyo_day_to_day",
+          "n": 24,
+          "recall1": 0.3333333333333333,
+          "recall5": 0.7083333333333334,
+          "recall10": 0.75
+        },
+        {
+          "protocol": "tokyo_day_to_night",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_night_to_day",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_day_to_sunset",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

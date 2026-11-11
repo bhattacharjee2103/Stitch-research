@@ -1,0 +1,20 @@
+\chapter{Key Implementation Listings}\label{app:code}
+\section{Robust geometry and coordinate utilities}
+\Cref{lst:geometry} contains the delivered geometric implementation. The listing is included directly from the package source, so it cannot drift through manual transcription.
+\lstinputlisting[language=Python,caption={Robust homography, corner-error and camera-centre utilities.},label={lst:geometry}]{code/geometry.py}
+
+\section{Local extraction and matching}
+\Cref{lst:features} shows how both feature families share a correspondence contract while retaining model-specific tensors for learned assignment.
+\lstinputlisting[language=Python,caption={Classical and learned local-feature interface.},label={lst:features}]{code/features.py}
+
+\section{Hierarchical place/content query}
+\Cref{lst:pipeline} implements selection, rejection and content rendering through the shared database.
+\lstinputlisting[language=Python,caption={Implemented query and posted-content pipeline.},label={lst:pipeline}]{code/pipeline.py}
+
+\section{Explicit-alpha content rendering}
+\Cref{lst:render} provides the compositing path tested with opaque black and transparent assets.
+\lstinputlisting[language=Python,caption={Reference-plane anchor composition and premultiplied alpha.},label={lst:render}]{code/rendering.py}
+
+\section{Executable configuration}
+\Cref{lst:configuration} is read by the CLI and comparison. Other executed hyperparameters are kept with their scripts and the run configuration artifact.
+\lstinputlisting[caption={Delivered default configuration.},label={lst:configuration}]{code/default.yaml}

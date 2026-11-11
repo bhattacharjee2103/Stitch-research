@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "trained_heads_replayed": 6,
+  "training_result_rows_reproduced": 72,
+  "exported_models": [
+    {
+      "variant": "fp32",
+      "images_replayed": 96,
+      "retrieval_scores_match": true,
+      "max_abs_error_to_native_cache": 5.53671270608902e-07
+    },
+    {
+      "variant": "int8",
+      "images_replayed": 96,
+      "retrieval_scores_match": true,
+      "max_abs_error_to_native_cache": 0.06979671120643616
+    }
+  ],
+  "profile_aggregates_checked": 4,
+  "retraining_performed": false,
+  "latency_rebenchmarked": false
+}

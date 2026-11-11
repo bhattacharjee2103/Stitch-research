@@ -1,0 +1,100 @@
+% Internship Completion Certificate -- PRONOB BHATTACHARJEE
+% Compile with XeLaTeX (needed for the Hindi letterhead):
+%     xelatex internship_certificate.tex
+\documentclass[11pt]{article}
+
+% ---------------------------------------------------------------
+%  EDIT THESE DETAILS
+% ---------------------------------------------------------------
+\newcommand{\CertDate}{10\textsuperscript{th} November 2026}
+\newcommand{\StudentName}{Pronob Bhattacharjee}
+\newcommand{\EnrollmentNumber}{25565017}
+\newcommand{\InternshipPeriod}{June--July 2026}
+\newcommand{\ProfName}{Balasubramanian Raman}
+\newcommand{\ProfDesignation}{Professor (HAG) and Head}
+% Leave empty ({}) to hide the line.
+\newcommand{\ProfPhone}{+91-1332-285852}
+\newcommand{\ProfEmail}{}   % e.g. name@cs.iitr.ac.in
+% ---------------------------------------------------------------
+
+\usepackage[letterpaper,top=0.5in,bottom=0.55in,left=0.85in,right=0.85in]{geometry}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+
+\setmainfont{Times New Roman}
+\newfontfamily\headfont{Mukta}[Script=Devanagari]
+\newfontfamily\hindibold{Mukta SemiBold}[Script=Devanagari]
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+\hyphenpenalty=10000 \exhyphenpenalty=10000 \sloppy
+
+\begin{document}
+
+% ---------------- Letterhead ----------------
+\begin{minipage}[t]{0.40\textwidth}
+  \vspace{0pt}
+  \hspace*{0.6em}\includegraphics[width=1.15in]{iitr_crest.jpg}\par
+  \vspace{6pt}
+  {\hindibold\large प्रो. बालसुब्रमण्यन रमन\par}
+  {\hindibold\large आचार्य एवं विभागाध्यक्ष\par}
+  {\headfont\large Prof. \ProfName\par}
+  {\headfont\large \ProfDesignation\par}
+\end{minipage}%
+\begin{minipage}[t]{0.60\textwidth}
+  \vspace{0pt}
+  {\hindibold\Large भारतीय प्रौद्योगिकी संस्थान रुड़की\par}
+  {\hindibold\Large कंप्यूटर विज्ञान एवं अभियांत्रिकी विभाग\par}
+  {\hindibold\Large रुड़की–247 667, उत्तराखण्ड, भारत\par}
+  \vspace{1pt}
+  {\headfont\large
+  INDIAN INSTITUTE OF TECHNOLOGY ROORKEE\par
+  DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING\par
+  ROORKEE-247 667, UTTARAKHAND, INDIA\par
+  \ifdefempty{\ProfPhone}{}{Phone. : \ProfPhone\ (O)\par}
+  \ifdefempty{\ProfEmail}{}{Email : \ProfEmail\par}}
+\end{minipage}
+
+\vspace{20pt}
+\hfill Date: \CertDate
+
+\vspace{-4pt}
+\begin{center}
+  {\large\bfseries\underline{Certificate of Internship Completion}}
+\end{center}
+\vspace{-4pt}
+
+% ---------------- Body ----------------
+This is to certify that \StudentName\ (\EnrollmentNumber), an M.Tech.\ Artificial Intelligence
+student at the Mehta Family School of Data Science and Artificial Intelligence (MFSDSAI),
+IIT Roorkee, successfully completed an internship under my supervision during \InternshipPeriod.
+
+During the internship, \StudentName\ worked on the project \emph{``Stitch: Robust
+Appearance-Invariant Visual Place Recognition for Anchoring Social AR Content in the Real
+World''}. The project aims to recognise a real-world location reliably, even when the lighting
+or viewing angle changes, so that augmented-reality (AR) content can be placed accurately at
+that location. As part of this work, \StudentName\ designed and evaluated a recognition
+pipeline that combines deep-learning-based image retrieval, robust feature matching and
+geometric verification. The work also extended the system to depth-aware 3D placement of AR
+content and optimised the models for efficient deployment on mobile devices.
+
+I appreciate the sincere efforts and contributions made during the internship and wish
+\StudentName\ all the best for future academic and professional endeavors.
+
+Sincerely,
+
+\vspace{48pt}
+
+Dr.\ \ProfName, BOYSCAST Fellow\\
+Guest Professor, IDAKS, Osaka Metropolitan University, Osaka, JAPAN\\
+\ProfDesignation\\
+Department of Computer Science and Engineering\\
+Joint faculty, Mehta Family School of Data Science and Artificial Intelligence\\
+Indian Institute of Technology Roorkee\\
+Roorkee 247 667\\
+Phone: \ProfPhone%
+\ifdefempty{\ProfEmail}{}{\\Email: \ProfEmail}
+
+\end{document}

@@ -1,0 +1,16 @@
+{
+  "reference_filename": "main.pdf",
+  "reference_sha256": "03a2e61cc1265ba52116a7e9a42bed215261eea3bf86dc70b55a5000d482981a",
+  "chapter_geometry": {
+    "Chapter 1": [
+      99.212,
+      641.179,
+      20.6625
+    ],
+    "Introduction": [
+      99.212,
+      584.999,
+      24.7871
+    ]
+  }
+}

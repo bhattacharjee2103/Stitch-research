@@ -1,0 +1,142 @@
+{
+  "reference_report": "/Users/bhattacharjee/Desktop/internship/PRONOB-BHATTACHARJEE-Overleaf/main.pdf",
+  "reference_slides": "/Users/bhattacharjee/Desktop/internship/IITR_template.pdf",
+  "source_documents_modified": false,
+  "assets": [
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/slide_bg.png",
+      "destination": "presentation/assets/slide_bg.png",
+      "sha256": "387acbb863c09cd5655e6696dd2b1f7f29631edd7255eafba97b51ed67b740a7"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/titleslide_bg.png",
+      "destination": "presentation/assets/titleslide_bg.png",
+      "sha256": "90d3f1bc5ad5ddfa283bfe1fae557215d8a91ddf8bd8551c28e16fa542147179"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/white_bg.png",
+      "destination": "presentation/assets/white_bg.png",
+      "sha256": "d78aa0299fc7df15e5bf2ea0450b045ba30fc9195354c0c9fcdaabee17150bae"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/iitr.png",
+      "destination": "presentation/assets/iitr.png",
+      "sha256": "4354574dfdbee36473bff309600a014745a7832caaf2d6d6bf990a6e036cd6a8"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/IITR.jpg",
+      "destination": "presentation/assets/IITR.jpg",
+      "sha256": "a87a880a4e3543af65999176f92d9931e436a183eff10580ccd66d2aaa5e4ff4"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/logo_color.jpg",
+      "destination": "presentation/assets/logo_color.jpg",
+      "sha256": "a87a880a4e3543af65999176f92d9931e436a183eff10580ccd66d2aaa5e4ff4"
+    },
+    {
+      "source": "/Users/bhattacharjee/Downloads/IIT ROORKEE/25565017_seminar/beamerthemeIITR.sty",
+      "destination": "presentation/beamerthemeIITR.sty",
+      "sha256": "34854986f9724326504c3d849545d790dafbfa9381e8240d2ba27f66f982ad21"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/PRONOB-BHATTACHARJEE-Overleaf/main.pdf page 1 / Im1.jpg",
+      "destination": "report/assets/iitr_crest.jpg",
+      "sha256": "0cb57b41ee50717eeb96a72f6762f66107aac5cda55d5d4f8c74f0406918b721"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/src/stitch/geometry.py",
+      "destination": "report/code/geometry.py",
+      "sha256": "3e7214e27647cb462718429568a35774b9a0fe08cef970ccd86edd18d956985e"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/src/stitch/features.py",
+      "destination": "report/code/features.py",
+      "sha256": "f81e4c7ea129dbb934171e904f0734cdfa65ce5f028d6e0e330be1b9f3622cc4"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/src/stitch/pipeline.py",
+      "destination": "report/code/pipeline.py",
+      "sha256": "b25e114d6328bfd709841f5a2388518c2b17064f0fd8604bc11da70d7456ff38"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/src/stitch/rendering.py",
+      "destination": "report/code/rendering.py",
+      "sha256": "b9f59a741231a3e66ce7be57820c54ba5fe8c810a8ee6839c2ac7bba04f24d5d"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/configs/default.yaml",
+      "destination": "report/code/default.yaml",
+      "sha256": "68f3efc795be4abd63c2246986fd82698c6edcf7e6625b784dd959f6cef28d59"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/hpatches_success.pdf",
+      "destination": "presentation/figures/hpatches_success.pdf",
+      "sha256": "5dd1c6e33b91077c2e5be534007fcef538fd4bbefc6ce16ca53b7232e7017c9b"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/corner_ecdf.pdf",
+      "destination": "presentation/figures/corner_ecdf.pdf",
+      "sha256": "6d891f8d77e0f1cf83249eac0cedf57afbc8598794e669b040f6c32736c32dcc"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/tokyo_retrieval.pdf",
+      "destination": "presentation/figures/tokyo_retrieval.pdf",
+      "sha256": "1b0fe86b47d7a878d11e8a86649409f468df35257795f624b2e248e209cee7ea"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/tokyo_contact.pdf",
+      "destination": "presentation/figures/tokyo_contact.pdf",
+      "sha256": "6fbe3763579134fe6b9bc55f87039bb54acfabd61ebb04be28d56eb2093c4cc7"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/synthetic_contact.pdf",
+      "destination": "presentation/figures/synthetic_contact.pdf",
+      "sha256": "b7cfce8e0f20dbf87a743fbd4785f3225b6ccee46a3dfac78c57dafbb9adb1c8"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/stage_ablation.pdf",
+      "destination": "presentation/figures/stage_ablation.pdf",
+      "sha256": "26d30dda7568215f88349049d57772d6f2606b384dac2746733741ce51decaa5"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/training_loss.pdf",
+      "destination": "presentation/figures/training_loss.pdf",
+      "sha256": "df5df6cebf1c9c8153cb181222f8d7fb3f182dfe5d6ff662208cc3f0ff07567a"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/quantization.pdf",
+      "destination": "presentation/figures/quantization.pdf",
+      "sha256": "7007ccb358c15142a7955377592398fb3cfeb1733bc35e81cfee21cf41a70daa"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/efficiency.pdf",
+      "destination": "presentation/figures/efficiency.pdf",
+      "sha256": "7c47135720485543b8a694b2c71a0292359764b414a28e5bdcc673499e55d1c6"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/qualitative_overlays.pdf",
+      "destination": "presentation/figures/qualitative_overlays.pdf",
+      "sha256": "5155814932edb36df84fc0b0b2539a433227bf787a9165ade732d43985c32a3a"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/matches_tokyo_day_to_night.pdf",
+      "destination": "presentation/figures/matches_tokyo_day_to_night.pdf",
+      "sha256": "a748cf8571710f5932fec409682d9bf60256fd706b75233e9216da983d20543b"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/figures/matches_hpatches_illumination.pdf",
+      "destination": "presentation/figures/matches_hpatches_illumination.pdf",
+      "sha256": "d1fb3de0a9c9d4904037022ac157fb7055304fa4b2af3331164295fdb3952ba6"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/branding/project_metadata.tex",
+      "destination": "report/metadata.tex",
+      "sha256": "af5773a144072dd8687cf15a8e49dbd12cf6316a0f1a895870b6f142dab2b1c0"
+    },
+    {
+      "source": "/Users/bhattacharjee/Desktop/internship/Stitch-research/branding/project_metadata.tex",
+      "destination": "presentation/metadata.tex",
+      "sha256": "af5773a144072dd8687cf15a8e49dbd12cf6316a0f1a895870b6f142dab2b1c0"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+WARNING:root:Please consider pre-processing before quantization. See https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+{
+  "scope": "CosPlace global descriptor only; SuperPoint/LightGlue and full pipeline not exported",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "runtime": "1.19.2",
+  "device": "CPUExecutionProvider",
+  "onnx_export": "success",
+  "int8_quantization": "success",
+  "models": [
+    {
+      "variant": "fp32",
+      "path": "models/exports/cosplace_fp32.onnx",
+      "bytes": 45752880,
+      "median_inference_ms": 24.03727100000097,
+      "p95_inference_ms": 29.707551750000505,
+      "max_abs_parity_error": 5.53671270608902e-07,
+      "mean_abs_max_error": 2.919332473538816e-07,
+      "retrieval": [
+        {
+          "protocol": "tokyo_day_to_day",
+          "n": 24,
+          "recall1": 0.4166666666666667,
+          "recall5": 0.625,
+          "recall10": 0.75
+        },
+        {
+          "protocol": "tokyo_day_to_night",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_night_to_day",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_day_to_sunset",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "variant": "int8",
+      "path": "models/exports/cosplace_int8.onnx",
+      "bytes": 11516522,
+      "median_inference_ms": 17.32133349999998,
+      "p95_inference_ms": 25.78852100000084,
+      "max_abs_parity_error": 0.06979671120643616,
+      "mean_abs_max_error": 0.023896853352198377,
+      "retrieval": [
+        {
+          "protocol": "tokyo_day_to_day",
+          "n": 24,
+          "recall1": 0.3333333333333333,
+          "recall5": 0.7083333333333334,
+          "recall10": 0.7083333333333334
+        },
+        {
+          "protocol": "tokyo_day_to_night",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_night_to_day",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        },
+        {
+          "protocol": "tokyo_day_to_sunset",
+          "n": 24,
+          "recall1": 1.0,
+          "recall5": 1.0,
+          "recall10": 1.0
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

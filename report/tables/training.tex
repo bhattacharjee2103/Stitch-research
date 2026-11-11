@@ -1,0 +1,35 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrr}
+\caption{Short frozen-backbone projection training, three fixed seeds. Rates are percentages. HPatches rows use only held-out place identities. Intervals are clipped to the feasible percentage range and are unstable with only three seeds.}\label{tab:training}\\
+\toprule
+Protocol & Descriptor & Mean R@1 & SD & 95\% $t$ interval \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Protocol & Descriptor & Mean R@1 & SD & 95\% $t$ interval \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{Continued on next page}\\
+\endfoot
+\bottomrule\endlastfoot
+HP illum. & Pretrained 512 & 100.0 & 0.0 & 100.0--100.0 \\
+HP illum. & Head, no night aug. & 100.0 & 0.0 & 100.0--100.0 \\
+HP illum. & Head + night aug. & 100.0 & 0.0 & 100.0--100.0 \\
+HP view. & Pretrained 512 & 77.5 & 0.0 & 77.5--77.5 \\
+HP view. & Head, no night aug. & 75.8 & 5.2 & 62.9--88.8 \\
+HP view. & Head + night aug. & 74.2 & 1.4 & 70.6--77.8 \\
+Tokyo D--D & Pretrained 512 & 41.7 & 0.0 & 41.7--41.7 \\
+Tokyo D--D & Head, no night aug. & 30.6 & 2.4 & 24.6--36.5 \\
+Tokyo D--D & Head + night aug. & 37.5 & 7.2 & 19.6--55.4 \\
+Tokyo D--N & Pretrained 512 & 100.0 & 0.0 & 100.0--100.0 \\
+Tokyo D--N & Head, no night aug. & 94.4 & 6.4 & 78.6--100.0 \\
+Tokyo D--N & Head + night aug. & 94.4 & 4.8 & 82.5--100.0 \\
+Tokyo D--S & Pretrained 512 & 100.0 & 0.0 & 100.0--100.0 \\
+Tokyo D--S & Head, no night aug. & 97.2 & 2.4 & 91.2--100.0 \\
+Tokyo D--S & Head + night aug. & 98.6 & 2.4 & 92.6--100.0 \\
+Tokyo N--D & Pretrained 512 & 100.0 & 0.0 & 100.0--100.0 \\
+Tokyo N--D & Head, no night aug. & 93.1 & 4.8 & 81.1--100.0 \\
+Tokyo N--D & Head + night aug. & 94.4 & 4.8 & 82.5--100.0 \\
+\end{longtable}\endgroup

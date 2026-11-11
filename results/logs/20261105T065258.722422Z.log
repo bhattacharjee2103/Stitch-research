@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/scripts/verify_research.py", line 109, in <module>
+    if __name__=='__main__':main()
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/scripts/verify_research.py", line 85, in main
+    assert row['homography_success']==success,key
+KeyError: 'homography_success'

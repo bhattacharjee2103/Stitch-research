@@ -1,0 +1,75 @@
+\documentclass[a4paper,11pt,oneside]{report}
+\input{preamble}
+\input{metadata}
+% Edition switch: \FullReportfalse = short edition (~85 pages);
+% \FullReporttrue = complete edition with derivations, scene atlases, code listings and ledgers.
+\newif\ifFullReport
+\FullReportfalse
+\title{\StitchFullTitle}
+\author{\StudentName}
+\date{\ReportDate}
+\begin{document}
+\input{frontmatter}
+\tableofcontents
+\listoffigures
+\listoftables
+\ifFullReport
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\fi
+\nomenclature{AR}{Augmented reality}
+\nomenclature{VPR}{Visual place recognition}
+\nomenclature{SIFT}{Scale-invariant feature transform}
+\nomenclature{FLANN}{Fast library for approximate nearest neighbours}
+\nomenclature{RANSAC}{Random sample consensus}
+\nomenclature{CNN}{Convolutional neural network}
+\nomenclature{GeM}{Generalised mean pooling}
+\nomenclature{PnP}{Perspective-n-point}
+\nomenclature{SfM}{Structure from motion}
+\nomenclature{SLAM}{Simultaneous localisation and mapping}
+\nomenclature{GPS}{Global positioning system}
+\nomenclature{ONNX}{Open Neural Network Exchange}
+\nomenclature{QDQ}{Quantise--dequantise graph representation}
+\nomenclature{RSS}{Resident set size}
+\nomenclature{CI}{Confidence interval}
+\nomenclature{$H_{r\rightarrow q}$}{Homography mapping reference pixels to query pixels}
+\nomenclature{$R@k$}{Fraction of queries with a valid place among the first $k$ results}
+\printnomenclature[2.2cm]
+\clearpage\pagenumbering{arabic}
+\input{chapters/01_introduction}
+\input{chapters/02_background}
+\input{chapters/03_existing_system}
+\input{chapters/04_architecture}
+\input{chapters/05_datasets}
+\input{chapters/06_methodology}
+\ifFullReport\input{chapters/06a_projective_foundations}\fi
+\input{chapters/07_experimental_setup}
+\ifFullReport\input{chapters/07a_decision_analysis}\fi
+\input{chapters/08_results}
+\ifFullReport
+\input{chapters/08a_failure_analysis}
+\input{chapters/12_hpatches_evidence}
+\input{chapters/13_tokyo_evidence}
+\fi
+\input{chapters/09_deployment}
+\ifFullReport
+\input{chapters/09a_reliability}
+\input{chapters/09b_persistent_service}
+\fi
+\input{chapters/10_ethics}
+\input{chapters/11_conclusion}
+\clearpage
+\renewcommand{\bibsection}{\chapter*{\bibname}\addcontentsline{toc}{chapter}{\bibname}}
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\appendix
+\input{chapters/appendix_a_reproduction}
+\ifFullReport
+\input{chapters/appendix_b_structure}
+\input{chapters/appendix_c_qualitative}
+\fi
+\ifFullReport
+\input{chapters/appendix_d_code}
+\input{chapters/appendix_e_pair_register}
+\fi
+\end{document}

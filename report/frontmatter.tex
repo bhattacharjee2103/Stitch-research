@@ -1,0 +1,143 @@
+% Cover geometry and crest placement follow the supplied PRONOB thesis PDF.
+\newcommand{\CoverLine}[3]{%
+  \node[anchor=base,inner sep=0,align=center,font=\fontsize{#2}{#2}\selectfont]
+    at ([xshift=329.528bp,yshift=#1bp]current page.south west) {#3};}
+\newcommand{\CoverCrest}[1]{%
+  \node[anchor=south west,inner sep=0] at ([xshift=266.528bp,yshift=#1bp]current page.south west)
+  {\includegraphics[width=125.98bp]{assets/iitr_crest.jpg}};}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}\thispagestyle{empty}\null
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north,inner sep=0,text width=460.63bp,align=center,
+  font=\setstretch{1}\bfseries\fontsize{16}{21.6}\selectfont]
+  at ([xshift=329.528bp,yshift=682.445bp]current page.south west)
+  {STITCH: ROBUST APPEARANCE-INVARIANT\\
+   VISUAL PLACE RECOGNITION FOR ANCHORING\\
+   SOCIAL AR CONTENT IN THE REAL WORLD};
+\CoverLine{576.874}{14}{\bfseries A DISSERTATION}
+\CoverLine{532.268}{14}{\itshape by}
+\CoverLine{487.663}{14}{\bfseries\StudentName}
+\CoverLine{465.735}{14}{\bfseries Enrollment No: \EnrollmentNumber}
+\CoverCrest{179.266}
+\CoverLine{131.792}{14}{\bfseries\SchoolName}
+\CoverLine{112.663}{14}{\bfseries\InstituteUppercase}
+\CoverLine{93.535}{14}{\bfseries ROORKEE -- 247667, INDIA}
+\CoverLine{77.276}{14}{\bfseries\ReportMonthYear}
+\end{tikzpicture}
+\end{titlepage}
+
+\begin{titlepage}\thispagestyle{empty}\null
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north,inner sep=0,text width=460.63bp,align=center,
+  font=\setstretch{1}\bfseries\fontsize{14}{19.2}\selectfont]
+  at ([xshift=329.528bp,yshift=706.030bp]current page.south west)
+  {STITCH: ROBUST APPEARANCE-INVARIANT\\
+   VISUAL PLACE RECOGNITION FOR ANCHORING\\
+   SOCIAL AR CONTENT IN THE REAL WORLD};
+\CoverLine{632.557}{12}{\bfseries A DISSERTATION}
+\CoverLine{587.473}{12}{\itshape Submitted in partial fulfilment of the}
+\CoverLine{571.214}{12}{\itshape requirements for the award of the degree}
+\CoverLine{546.451}{12}{of}
+\CoverLine{521.688}{12}{\bfseries\DegreeName}
+\CoverLine{496.925}{12}{\itshape in}
+\CoverLine{472.162}{12}{\bfseries\ProgrammeName}
+\CoverLine{433.226}{12}{\itshape by}
+\CoverLine{394.289}{12}{\bfseries\StudentName}
+\CoverLine{372.361}{12}{Enrollment No: \EnrollmentNumber}
+\CoverCrest{201.502}
+\CoverLine{156.418}{12}{\bfseries\SchoolName}
+\CoverLine{139.681}{12}{\bfseries\InstituteUppercase}
+\CoverLine{122.944}{12}{\bfseries ROORKEE -- 247667, INDIA}
+\CoverLine{106.685}{12}{\bfseries\ReportMonthYear}
+\end{tikzpicture}
+\end{titlepage}
+
+\clearpage\pagenumbering{roman}\hypersetup{pageanchor=true}
+\thispagestyle{empty}\null\vfill
+\begin{center}\bfseries
+\textcopyright\ \InstituteUppercase, ROORKEE -- 2026\par
+\vspace{8pt} ALL RIGHTS RESERVED
+\end{center}
+\vfill\null\clearpage
+
+\chapter*{Candidate's Declaration}
+\addcontentsline{toc}{chapter}{Candidate's Declaration}
+I, \textbf{\StudentName}, present the dissertation entitled
+``\textbf{\StitchFullTitle}'' in partial fulfilment of the requirements for the award of the degree of
+\textbf{\DegreeName} in \ProgrammeName, submitted to the \SchoolName,
+\InstituteName. The report documents the implementation, executed experiments and attributed prior
+research for the Stitch project, prepared under the guidance of \SupervisorName.
+
+All experimental results are linked to the accompanying commands, datasets and software artifacts.
+Published methods, public datasets and automated assistance are acknowledged in the report.
+This declaration is prepared for review and signature by the candidate.
+
+\vspace{8pt}
+\noindent Date: \ReportDate\hfill (\StudentName)\par
+\noindent Place: Roorkee\par
+\vspace{13pt}
+\begin{center}\bfseries CERTIFICATION\end{center}
+The dissertation submitted by \StudentName\ (Enrollment No.\ \EnrollmentNumber) is presented for
+review under the guidance of \SupervisorName. Final certification and acceptance are to be
+completed by the supervisor and the institution after review.
+
+\vspace{10pt}
+\begin{flushright}
+\textbf{\SupervisorName}\\
+\SupervisorDesignation\\
+\SupervisorDepartment\\
+Joint Faculty, \SchoolName\\
+\InstituteName\\[8pt]
+Signature: \rule{3cm}{.3pt}
+\end{flushright}
+\clearpage
+
+\thispagestyle{plain}\null\vfill
+\begin{flushright}\Large\itshape
+Dedicated to\\[6pt]
+my family, teachers\\[6pt]
+and mentors
+\end{flushright}
+\vspace{2cm}\clearpage
+
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+The author acknowledges \SupervisorName\ and the \SchoolName, \InstituteName, in the academic
+context of this report. The public Stitch repository, the authors of the cited methods, and the
+maintainers of the public datasets and research software are gratefully acknowledged.
+
+The report and presentation adopt the institutional artwork and layout references supplied by the
+author. The experiments, scripts and provenance records accompany the dissertation so that its
+claims can be reviewed and reproduced. Automated implementation and writing assistance formed
+part of artifact preparation; the author is responsible for reviewing the final submission.
+
+Personal acknowledgements may be added by the candidate before final submission.
+\clearpage
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+Stitch proposes a social augmented-reality interface in which digital posts are associated with
+physical places and recovered when a later visitor observes the same scene. Its original
+implementation matches SIFT features to one reference image and projects content using a planar
+homography. This thesis investigates whether pretrained representations improve recognition and
+anchoring under appearance change while retaining a reproducible path toward mobile deployment.
+
+A modular implementation compares SIFT with FLANN, SuperPoint with LightGlue, CosPlace global
+retrieval, and a hierarchical combination of retrieval, local matching, geometric verification,
+and rendering. Experiments use a documented HPatches subset, a custom cross-time subset of real
+Tokyo 24/7 query photographs, and seeded photometric transformations of repository and benchmark
+images. Original scripts are executed through a bounded file-input adapter. All reported
+measurements, plots and tables are derived from preserved run outputs.
+
+The evaluation distinguishes retrieval, geometric acceptance and ground-truth homography accuracy.
+Tokyo metadata supports place labels but does not establish metric camera pose or planar anchoring
+error. Short contrastive adaptation trains only a projection head on disjoint HPatches places.
+Model export and integer quantisation are tested using actual ONNX inference. The report documents
+accuracy losses, rejected anchors, and the limits of narrow galleries and synthetic illumination changes.
+
+The resulting artifact demonstrates a reproducible planar-AR research pipeline. It does not
+establish a city-scale AR cloud, a six-degree-of-freedom localisation benchmark result, or phone-device
+performance. The deployment analysis specifies the mapping, calibration, tracking, privacy and
+evaluation work needed before persistent public AR content can be supported responsibly.
+\clearpage

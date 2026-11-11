@@ -1,0 +1,25 @@
+{
+  "config": {
+    "seed": 17,
+    "device": "cpu",
+    "threads": 2,
+    "max_side": 640,
+    "camera_fov_x_deg": 70.0,
+    "capture_angle_sweep_deg": 30.0,
+    "depth_model_id": "depth-anything/Depth-Anything-V2-Metric-Outdoor-Small-hf",
+    "depth_max_m": 80.0,
+    "max_keypoints": 512,
+    "sift_ratio": 0.7,
+    "ransac_px": 5.0,
+    "min_inliers": 12,
+    "min_inlier_ratio": 0.2,
+    "top_k": 3,
+    "cosplace_size": 224,
+    "cosplace_weights": "models/cosplace_r18_512.pth",
+    "lightglue_depth_confidence": 0.95,
+    "lightglue_width_confidence": 0.99
+  },
+  "learned_exhaustive": true,
+  "timing_definition": "Sum of measured warm query feature/global extraction and candidate matching+geometry; cached references, excludes I/O and ranking",
+  "benchmark_sha256": "67eeffb4ea5181e41ee96ac5997eaa050b573057239d9f54996bf5fbfb880d82"
+}

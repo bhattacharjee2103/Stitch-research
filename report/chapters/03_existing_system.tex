@@ -1,0 +1,59 @@
+\chapter{Analysis of the Existing System}\label{ch:existing}
+\section{Inspected source snapshot}
+The upstream repository was cloned and inspected at the revision recorded in the bibliography and model/data provenance. Its executable Python content comprises \code{tep.py}, \code{tep2.py} and \code{tep3.py}. Bundled media include a reference image, a test image, an overlay, a short video and an animated walkthrough. No labelled place database, learning code or downloadable benchmark is included \citep{stitchrepo}. The original scripts remain present and unmodified in the working artifact.
+
+The inspection distinguishes what is implied by comments from what the code actually does. In particular, the latest script is not simply a frame-by-frame SIFT matcher: it includes optical flow, adaptive detection intervals, forward--backward checking and homography smoothing. Consequently, comparing its tracking speed directly with a learned re-recognition pass would confound different workloads. Both workloads are useful, but they answer different questions.
+
+\section{The file-processing script}
+\subsection{Initialisation}
+\code{tep.py} reads \code{reference.jpg} in grayscale and \code{overlay.png} in colour. It constructs a SIFT extractor with the upstream feature budget, extracts reference descriptors once, and resizes the overlay to the reference dimensions. A FLANN matcher uses the recorded tree and search settings. The input is \code{video.mp4}; the output writer uses a reduced playback frame rate. That output frame rate is a presentation choice and must not be interpreted as measured inference throughput.
+
+Reference caching is an important strength. It avoids repeating work that is unchanged across frames. The same principle is preserved in the modular system, where local reference features and global gallery descriptors are prepared before an online query. A fair runtime report must therefore state whether this preparation is included. The upstream bounded execution includes initialisation, whereas the later warm profiles isolate query-time processing.
+
+\subsection{Frame processing and verification}
+Each frame is converted to grayscale, blurred and enhanced with CLAHE. SIFT descriptors are extracted from the enhanced image. The first two descriptor neighbours are compared with the script's ratio threshold. A tentative homography is estimated only after enough matches survive; it is used only after an additional inlier-count test. These operations are conceptually sensible but encode thresholds and preprocessing directly in a monolithic script.
+
+The reference and query are not processed identically. The reference is loaded directly as grayscale, whereas the query receives blur and local contrast enhancement. This asymmetry is part of the preserved upstream behaviour. The controlled A--D experiment instead uses a common image-resizing convention and shared geometry thresholds, with the difference documented. The latter is a normalised comparison of methods, not a claim of byte-for-byte reproduction of every upstream preprocessing decision.
+
+\subsection{Persistence and compositing}
+When a new homography is unavailable, \code{tep.py} can reuse the previous one for a bounded number of frames. This can maintain visual continuity during a short detection failure. It can also display an old transformation after camera motion, because the reused map is not updated by a geometric motion model. A rendered frame is therefore not equivalent to a successful fresh recognition.
+
+The overlay mask is inferred from warped image intensity. Pixels that are sufficiently dark are treated as transparent. This is simple for demonstration assets, but it makes legitimate black content disappear and does not represent semi-transparency. The refactored renderer uses an explicit alpha plane and premultiplied colour. A unit test verifies that an opaque black overlay remains opaque and that a fully transparent one leaves the frame intact.
+
+\section{The first live-stream variant}
+\code{tep2.py} follows the same broad matching and rendering sequence but reads a stream and displays a window. In the inspected snapshot, the example URL definition is commented out while the variable is subsequently used. Native execution therefore lacks a required input value. The script also continues when a frame read fails, without a finite retry policy or an EOF distinction.
+
+These issues are I/O failures rather than evidence about the SIFT algorithm. The execution adapter supplies a file source and suppresses display calls so that the vision code can be exercised in this environment. It does not invent a live phone experiment. The code path is labelled ``bounded file-input adapter'' in the result record, and the original stream requirement is retained in the source analysis.
+
+\section{The latest detection-and-tracking variant}
+\subsection{Detection and scheduling}
+\code{tep3.py} reads a hard-coded private DroidCam URL and resizes frames to a fixed working shape. During detection it downsamples the grayscale query, extracts SIFT descriptors, matches them to the full reference descriptors, and rescales matched query points back to working-frame coordinates. This coordinate correction is necessary: fitting the homography in a mixture of downsampled and full-frame pixels would corrupt the overlay location.
+
+Detection is attempted at an interval rather than on every frame. Failed detections increase that interval up to a cap. A successful detection resets the schedule and initialises tracking. This reduces repeated expensive searches when a target is absent, but it also introduces recognition delay. A frame-count average can look favourable partly because some frames perform little or no recognition work. The bounded execution therefore reports decoded frames, homography calls and warp calls separately.
+
+\subsection{Optical flow and consistency checks}
+Once points are available, pyramidal Lucas--Kanade optical flow propagates their positions between frames. A periodic backward pass checks whether tracking approximately returns to the previous point positions. A geometric filter further rejects motions that differ substantially from median motion. These checks target local tracking errors; they do not compare a newly visible place with a database.
+
+The source contains implementation limitations worth preserving in the audit. It does not fully validate all optional optical-flow outputs before indexing them, and the backward-status array is not incorporated into every acceptance decision. A feature set may therefore be lost abruptly rather than producing a clean diagnostic rejection. The modular recognition path handles empty feature sets and model-estimation failures explicitly. It does not claim that every tracking behaviour has been ported or improved.
+
+\subsection{Homography smoothing}
+The tracking correspondences estimate a fresh homography. A determinant-based validity check rejects nonfinite or implausibly scaled matrices. The script may lock the prior transformation when average point motion is small, or blend matrix entries with the new estimate when motion is larger. This can reduce visible jitter in the demonstration.
+
+However, a homography is defined only up to scale. Entrywise averaging is not generally invariant to that representation, and a smooth matrix sequence need not correspond to the intended surface motion. The determinant is also affected by multiplying the whole matrix by a scalar. The new verifier normalises the matrix representation, checks rank and numerical conditioning, and examines the projected reference boundary. More principled temporal filtering in a calibrated pose or surface-coordinate space remains a deployment extension.
+
+\section{Execution protocol and measured baseline}
+The three scripts were executed through \code{scripts/run_originals.py}. The adapter redirects video capture to the bundled file, supplies the missing URL variable where needed, suppresses GUI display, and terminates the run after the same decoded-frame budget. It wraps homography and warping calls to count them without changing their arguments or results. The exact command, elapsed time, exit state and raw output are preserved in the command journal.
+
+\resultinput{originals.tex}
+\Cref{tab:originals} reports the recorded measurements. The latest script's lower average time is consistent with its design: many frames track an existing target rather than recomputing complete SIFT detection and matching. The earlier scripts repeatedly detect and describe features. The table cannot isolate an algorithmic speedup independent of this workload change, nor does it establish behaviour on a real day/night stream.
+
+The bundled video provides a functional regression input. It tests decoding, feature processing, homography calls and output writing on the media supplied with the project. It lacks a ground-truth pose, framewise homography annotations and independent place labels. The number of nonnull estimates or warps therefore describes execution, not accuracy. Later benchmark experiments supply the missing ground-truth comparison where available.
+
+\section{Failure mechanisms motivating the redesign}
+The first limitation is a fixed reference identity. Every successful match is interpreted relative to one target image. There is no mechanism to select among stored places or attach multiple users' posts to a shared identity. Adding a gallery without explicit rejection would introduce false-place overlays, because even a nonmatching frame can have nearest neighbours.
+
+The second limitation is that temporal continuity is used to bridge a recognition failure. Reuse and tracking help when the correct target has already been found, but they do not solve re-entry under a different appearance. A visitor arriving at night needs a fresh correspondence to the stored representation. That task motivates the learned local and global components evaluated here.
+
+The third limitation is implicit state. Input configuration, recognition thresholds, cached geometry and rendering all live in script-level variables. A failure in one stage can be difficult to attribute. Separating extraction, matching, verification and compositing makes it possible to store the evidence supporting an anchor and to distinguish a wrong retrieval from a bad homography.
+
+The fourth limitation is the absence of experimental accounting. Without fixed query lists, ground truth, saved predictions and runtime definitions, a demonstration can support only a narrow claim that an overlay appeared on selected footage. The redesign adds this accounting before drawing broader conclusions. Its aim is to establish which parts of the original idea are supported by measured evidence and which remain a research or deployment requirement.

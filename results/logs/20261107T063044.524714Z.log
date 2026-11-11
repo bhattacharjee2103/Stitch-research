@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "models/cosplace_r18_512.pth",
+      "bytes": 45832971,
+      "sha256": "db09310a175e325fe25e7a460b41886ab9357b19c41d370a9ed3ed81bc9abf9f"
+    },
+    {
+      "path": "models/torch/hub/checkpoints/superpoint_v1.pth",
+      "bytes": 5206086,
+      "sha256": "52b6708629640ca883673b5d5c097c4ddad37d8048b33f09c8ca0d69db12c40e"
+    },
+    {
+      "path": "models/torch/hub/checkpoints/superpoint_lightglue_v0-1_arxiv.pth",
+      "bytes": 47500279,
+      "sha256": "6ff7040d0a497fc6639337946d7538dae07428c18f77a067a0b5a960e7cc551a"
+    }
+  ],
+  "code_revisions": {
+    "LightGlue": "5a650c444718caffc2669dc0094cde908f42dd73",
+    "CosPlace": "52b56e95ea62245281281f3bafd7b9390d19a0fd"
+  },
+  "parameters": {
+    "SuperPoint": 1300865,
+    "LightGlue": 11851601,
+    "CosPlace": 11439169
+  }
+}

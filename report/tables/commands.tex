@@ -1,0 +1,1378 @@
+\noindent\textbf{Initial setup/inspection 1}.
+\begin{lstlisting}[numbers=none]
+pwd && rg --files -g 'AGENTS.md' -g '!node_modules' -g '!venv' -g '!\.git' . /Users/bhattacharjee/.codex/attachments/96f3cc0c-84ef-4a82-a64b-b9fce597c78b 2>/dev/null
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 2}.
+\begin{lstlisting}[numbers=none]
+cat '/Users/bhattacharjee/.codex/attachments/96f3cc0c-84ef-4a82-a64b-b9fce597c78b/Pasted text.txt'
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 3}.
+\begin{lstlisting}[numbers=none]
+ls -la
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 4}.
+\begin{lstlisting}[numbers=none]
+for p in /AGENTS.md /Users/AGENTS.md /Users/bhattacharjee/AGENTS.md /Users/bhattacharjee/Desktop/AGENTS.md; do if [ -f "$p" ]; then cat "$p"; fi; done
+find . -name AGENTS.md -print
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 5}.
+\begin{lstlisting}[numbers=none]
+python3 --version
+which git pdflatex latexmk biber brew ffmpeg tectonic
+ df -h .
+sysctl -n machdep.cpu.brand_string hw.memsize
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 6}.
+\begin{lstlisting}[numbers=none]
+git clone https://github.com/BitsJayMehta173/Stitch.git Stitch-research
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 7}.
+\begin{lstlisting}[numbers=none]
+ls /opt/homebrew/bin/python* /usr/local/bin/python* /usr/bin/python* 2>/dev/null
+uname -m
+system_profiler SPHardwareDataType | head -22
+kpsewhich algorithm.sty
+kpsewhich algpseudocode.sty
+kpsewhich siunitx.sty
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 8}.
+\begin{lstlisting}[numbers=none]
+find /opt/homebrew/bin /usr/local/bin /usr/bin -maxdepth 1 -name 'python*' -print 2>/dev/null
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 9}.
+\begin{lstlisting}[numbers=none]
+/usr/bin/python3 --version
+/opt/homebrew/bin/python3.14 --version
+ls /opt/homebrew/opt | rg 'python|uv'
+find /Users/bhattacharjee/Desktop/internship/Stitch-research -maxdepth 2 -type f -not -path '*/.git/*' -print
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 10}.
+\begin{lstlisting}[numbers=none]
+ls -la Stitch-research
+curl -I --connect-timeout 10 --max-time 20 https://raw.githubusercontent.com/BitsJayMehta173/Stitch/main/tep3.py
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 11}.
+\begin{lstlisting}[numbers=none]
+git rev-parse HEAD
+rg --files
+cat tep.py tep2.py tep3.py README.md
+\end{lstlisting}
+
+\noindent\textbf{Initial setup/inspection 12}.
+\begin{lstlisting}[numbers=none]
+/usr/bin/python3 -m venv .venv
+mkdir -p src/stitch scripts configs tests data results/raw results/logs figures thesis/chapters thesis/figures thesis/tables demo vendor
+.venv/bin/python -m pip --version
+\end{lstlisting}
+
+\noindent\textbf{20261105T051728.588219Z}: exit 0, 2.263 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install --upgrade pip
+\end{lstlisting}
+
+\noindent\textbf{20261105T051730.887161Z}: exit 0, 150.577 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -r requirements.txt
+\end{lstlisting}
+
+\noindent\textbf{20261105T051803.763940Z}: exit 0, 14.033 seconds.
+\begin{lstlisting}[numbers=none]
+git clone --depth 1 https://github.com/cvg/LightGlue.git vendor/LightGlue
+\end{lstlisting}
+
+\noindent\textbf{20261105T051817.840310Z}: exit 0, 1.409 seconds.
+\begin{lstlisting}[numbers=none]
+git clone --depth 1 https://github.com/gmberton/CosPlace.git vendor/CosPlace
+\end{lstlisting}
+
+\noindent\textbf{20261105T051830.718242Z}: exit 6, 1.696 seconds.
+\begin{lstlisting}[numbers=none]
+curl -IL --connect-timeout 10 --max-time 25 https://icvl.ee.ic.ac.uk/vbalnt/hpatches/hpatches-sequences-release.tar.gz
+\end{lstlisting}
+
+\noindent\textbf{20261105T051832.447559Z}: exit 0, 3.881 seconds.
+\begin{lstlisting}[numbers=none]
+curl -IL --connect-timeout 10 --max-time 25 'http://www.ok.sc.e.titech.ac.jp/~torii/project/247/'
+\end{lstlisting}
+
+\noindent\textbf{20261105T051859.042356Z}: exit 28, 180.034 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fL --connect-timeout 10 --max-time 180 -o data/tokyo_queries.zip https://data.ciirc.cvut.cz/public/projects/2015netVLAD/Tokyo247/queries/247query_subset_v2.zip
+\end{lstlisting}
+
+\noindent\textbf{20261105T051946.478990Z}: exit 0, 479.281 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fL --connect-timeout 10 --max-time 1200 -o data/hpatches-sequences-release.zip https://huggingface.co/datasets/vbalnt/hpatches/resolve/main/hpatches-sequences-release.zip
+\end{lstlisting}
+
+\noindent\textbf{20261105T052006.808242Z}: exit 0, 1.099 seconds.
+\begin{lstlisting}[numbers=none]
+curl -sSIL --connect-timeout 10 --max-time 20 https://huggingface.co/datasets/vbalnt/hpatches/resolve/main/hpatches-sequences-release.zip
+\end{lstlisting}
+
+\noindent\textbf{20261105T052007.946358Z}: exit 0, 0.845 seconds.
+\begin{lstlisting}[numbers=none]
+curl -sS -I -H 'Range: bytes=0-99' --connect-timeout 10 --max-time 20 https://data.ciirc.cvut.cz/public/projects/2015netVLAD/Tokyo247/queries/247query_subset_v2.zip
+\end{lstlisting}
+
+\noindent\textbf{20261105T052041.129322Z}: exit 1, 40.940 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import sys,zipfile;sys.path.insert(0,'"'"'scripts'"'"');from remote_zip import RemoteZipIO;r=RemoteZipIO('"'"'https://data.ciirc.cvut.cz/public/projects/2015netVLAD/Tokyo247/queries/247query_subset_v2.zip'"'"');z=zipfile.ZipFile(r);print(len(z.namelist()));print('"'"'\n'"'"'.join(z.namelist()[:35]));print([(n,z.read(n)[:150]) for n in z.namelist() if n.endswith('"'"'.csv'"'"')][:1])'
+\end{lstlisting}
+
+\noindent\textbf{20261105T052159.098463Z}: exit 0, 2.430 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fsSL --connect-timeout 10 --max-time 30 -o data/hpatches_hf_tree.json 'https://huggingface.co/api/datasets/JimmyFu/hpatches_sequences/tree/main?recursive=true'
+\end{lstlisting}
+
+\noindent\textbf{20261105T052302.124472Z}: exit 0, 15.673 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import sys,zipfile,json;sys.path.insert(0,'"'"'scripts'"'"');from remote_zip import RemoteZipIO;r=RemoteZipIO('"'"'https://data.ciirc.cvut.cz/public/projects/2015netVLAD/Tokyo247/queries/247query_subset_v2.zip'"'"');z=zipfile.ZipFile(r);print(z.read('"'"'247query_subset_v2/Readme.txt'"'"').decode());n=next(n for n in z.namelist() if n.endswith('"'"'.csv'"'"'));print(n,z.read(n).decode());open('"'"'data/tokyo_zip_directory.json'"'"','"'"'w'"'"').write(json.dumps([dict(name=i.filename,offset=i.header_offset,size=i.file_size,compressed=i.compress_size,crc=i.CRC,method=i.compress_type) for i in z.infolist()],indent=2))'
+\end{lstlisting}
+
+\noindent\textbf{20261105T052305.737685Z}: exit 0, 129.830 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fsSL --connect-timeout 10 --max-time 180 -o models_cosplace_download.pth https://github.com/gmberton/CosPlace/releases/download/v1.0/ResNet18_512_cosplace.pth
+\end{lstlisting}
+
+\noindent\textbf{20261105T052317.888293Z}: exit 0, 2.865 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e . --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261105T052320.783618Z}: exit 0, 2.437 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e vendor/LightGlue --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261105T052454.115168Z}: exit 0, 386.097 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_data.py --dataset tokyo
+\end{lstlisting}
+
+\noindent\textbf{20261105T052634.748331Z}: exit 0, 61.876 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/run_originals.py --limit 90
+\end{lstlisting}
+
+\noindent\textbf{20261105T052649.085364Z}: exit 0, 108.436 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_models.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T052655.188712Z}: exit 0, 31.692 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import cv2,json,platform,torch,psutil,importlib.metadata as m;from pathlib import Path;v=cv2.VideoCapture('"'"'video.mp4'"'"');d=dict(platform=platform.platform(),machine=platform.machine(),python=platform.python_version(),cpu=platform.processor(),physical_memory_bytes=psutil.virtual_memory().total,torch_mps_available=torch.backends.mps.is_available(),torch_cuda_available=torch.cuda.is_available(),packages={p:m.version(p) for p in ['"'"'numpy'"'"','"'"'opencv-contrib-python'"'"','"'"'torch'"'"','"'"'torchvision'"'"','"'"'kornia'"'"','"'"'scipy'"'"','"'"'matplotlib'"'"','"'"'Pillow'"'"','"'"'onnx'"'"','"'"'onnxruntime'"'"']},video=dict(width=v.get(3),height=v.get(4),fps=v.get(5),frames=v.get(7)));v.release();Path('"'"'results/environment.json'"'"').write_text(json.dumps(d,indent=2));print(json.dumps(d,indent=2))'
+\end{lstlisting}
+
+\noindent\textbf{20261105T052736.685439Z}: exit 0, 4.905 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261105T052950.790466Z}: exit 0, 2.418 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_data.py --dataset hpatches
+\end{lstlisting}
+
+\noindent\textbf{20261105T053026.926415Z}: exit 0, 5.494 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from stitch.features import LocalEngine;from stitch.io import read_image;from stitch.retrieval import GlobalEngine;import torch,time;torch.set_num_threads(2);im=read_image('"'"'reference.jpg'"'"')[0];e=LocalEngine('"'"'superpoint'"'"',512);a=e.extract(im);start=time.perf_counter();p,q,ids=e.match(a,a);print('"'"'SP points'"'"',len(a.points),'"'"'matches'"'"',len(p),'"'"'matching_ms'"'"',(time.perf_counter()-start)*1000);g=GlobalEngine();print('"'"'CosPlace dimension'"'"',g.extract(im).shape)'
+\end{lstlisting}
+
+\noindent\textbf{20261105T053131.878032Z}: exit 1, 0.067 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m compileall -q src scripts tests
+\end{lstlisting}
+
+\noindent\textbf{20261105T053145.439997Z}: exit 0, 0.170 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m compileall -q src scripts tests
+\end{lstlisting}
+
+\noindent\textbf{20261105T053145.639983Z}: exit 0, 2.712 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_data.py --dataset hpatches
+\end{lstlisting}
+
+\noindent\textbf{20261105T053148.401823Z}: exit 0, 2.216 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T053203.373611Z}: exit 0, 968.671 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/evaluate.py --learned-exhaustive
+\end{lstlisting}
+
+\noindent\textbf{20261105T053231.430339Z}: exit 0, 25.342 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/train.py --steps 120
+\end{lstlisting}
+
+\noindent\textbf{20261105T053256.841737Z}: exit 0, 26.273 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/export_models.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T053428.648382Z}: exit 0, 2.723 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261105T053431.416021Z}: exit 0, 0.891 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip freeze --all
+\end{lstlisting}
+
+\noindent\textbf{20261105T053452.374058Z}: exit 0, 1.796 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import cv2,json,numpy as np;from pathlib import Path;rows=json.loads(Path('"'"'data/tokyo/selected.json'"'"').read_text());panels=[];first=rows[0]['"'"'place_id'"'"'];selected=[r for r in rows if r['"'"'place_id'"'"']==first];print(selected);[(print(r['"'"'image'"'"'],r['"'"'condition'"'"'],float(cv2.imread('"'"'data/tokyo/'"'"'+r['"'"'image'"'"']).mean()))) for r in selected];panels=[cv2.resize(cv2.imread('"'"'data/tokyo/'"'"'+r['"'"'image'"'"']),(320,240)) for r in selected];cv2.imwrite('"'"'figures/tokyo_inspection.jpg'"'"',np.hstack(panels))'
+\end{lstlisting}
+
+\noindent\textbf{20261105T053456.339375Z}: exit 0, 0.562 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fsSL --connect-timeout 10 --max-time 30 -o results/sources/aachen_readme.md https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Aachen-Day-Night/README_Aachen-Day-Night_v1_1.md
+\end{lstlisting}
+
+\noindent\textbf{20261105T053456.950016Z}: exit 0, 0.749 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fsSL --connect-timeout 10 --max-time 30 -o results/sources/robotcar_readme.md https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/RobotCar-Seasons/README_RobotCar-Seasons.md
+\end{lstlisting}
+
+\noindent\textbf{20261105T053457.777340Z}: exit 0, 0.739 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fsSL --connect-timeout 10 --max-time 30 -o results/sources/cmu_readme.md https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Extended-CMU-Seasons/README_Extended-CMU-Seasons.md
+\end{lstlisting}
+
+\noindent\textbf{20261105T053458.549454Z}: exit 0, 0.401 seconds.
+\begin{lstlisting}[numbers=none]
+curl -fsSL --connect-timeout 10 --max-time 30 -o results/sources/hpatches_readme.md https://raw.githubusercontent.com/hpatches/hpatches-dataset/master/README.md
+\end{lstlisting}
+
+\noindent\textbf{20261105T054650.922828Z}: exit 0, 9.309 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python tep.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T054652.047516Z}: exit 0, 0.038 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import json;from pathlib import Path;d=json.loads(Path('"'"'results/training.json'"'"').read_text());print([(r['"'"'protocol'"'"'],r['"'"'variant'"'"'],r['"'"'augmentation'"'"'],r['"'"'seed'"'"'],round(r['"'"'recall1'"'"'],3)) for r in d['"'"'results'"'"'] if r['"'"'protocol'"'"'] in ['"'"'tokyo_day_to_day'"'"','"'"'hpatches_viewpoint'"'"']])'
+\end{lstlisting}
+
+\noindent\textbf{20261105T054700.276524Z}: exit 0, 5.598 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/stitch index data/places.json
+\end{lstlisting}
+
+\noindent\textbf{20261105T054705.910108Z}: exit 0, 28.593 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/stitch query data/places.json test.jpg results/raw/cli_query.png
+\end{lstlisting}
+
+\noindent\textbf{20261105T054742.415068Z}: exit 0, 16.932 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/probe_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T054759.395798Z}: exit 0, 2.074 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import sys,json;from pathlib import Path;sys.path.insert(0,'"'"'scripts'"'"');from download_data import member,TOKYO;rows=json.loads(Path('"'"'data/tokyo_zip_directory.json'"'"').read_text());i=next(r for r in rows if r['"'"'name'"'"'].endswith('"'"'/Readme.txt'"'"'));member(i,TOKYO,Path.cwd()/'"'"'results/sources/tokyo_readme.txt'"'"')'
+\end{lstlisting}
+
+\noindent\textbf{20261105T054953.631155Z}: exit 1, 2.152 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/qualitative.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T054954.748109Z}: exit 0, 0.081 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import csv,json;from pathlib import Path;rs=list(csv.DictReader(Path('"'"'results/retrieval.csv'"'"').open()));print('"'"'\n'"'"'.join(str(r) for r in rs if r['"'"'protocol'"'"'].startswith('"'"'tokyo_'"'"') and r['"'"'method'"'"'] in ['"'"'A_SIFT'"'"','"'"'B_SP_LightGlue'"'"','"'"'C_CosPlace'"'"','"'"'D_full_top3'"'"']));p=json.loads(Path('"'"'results/pairs.json'"'"').read_text());import numpy as np;print([(s,m,np.mean([r['"'"'homography_success'"'"'] for r in p if r['"'"'protocol'"'"']==s and r['"'"'method'"'"']==m]),np.mean([r['"'"'accepted'"'"'] for r in p if r['"'"'protocol'"'"']==s and r['"'"'method'"'"']==m])) for s in ['"'"'hpatches_illumination'"'"','"'"'hpatches_viewpoint'"'"'] for m in ['"'"'sift'"'"','"'"'superpoint'"'"']])'
+\end{lstlisting}
+
+\noindent\textbf{20261105T054955.815465Z}: exit 1, 1.022 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/demo.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T054956.868306Z}: exit 1, 1.010 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/profile.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T054957.912795Z}: exit 0, 118.743 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/generate_artifacts.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T055242.908276Z}: exit 0, 11.955 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/qualitative.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T055254.934633Z}: exit 0, 103.781 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/demo.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T055438.792760Z}: exit 0, 152.640 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/benchmark_runtime.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T055441.193860Z}: exit 0, 10.173 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method classical
+\end{lstlisting}
+
+\noindent\textbf{20261105T055451.421071Z}: exit 0, 84.772 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method local
+\end{lstlisting}
+
+\noindent\textbf{20261105T055455.482303Z}: exit 0, 0.045 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import json,csv;from pathlib import Path;p=json.loads(Path('"'"'results/predictions.json'"'"').read_text());print('"'"'Open-set'"'"',[(m,sum(r['"'"'accepted'"'"'] for r in p if r['"'"'protocol'"'"']=='"'"'open_set'"'"' and r['"'"'method'"'"']==m)) for m in ['"'"'A_SIFT'"'"','"'"'B_SP_LightGlue'"'"','"'"'D_full_top1'"'"','"'"'D_full_top3'"'"','"'"'D_full_top5'"'"','"'"'D_no_geometry'"'"']]);rows=list(csv.DictReader(Path('"'"'results/retrieval.csv'"'"').open()));print('"'"'Synthetic severe'"'"',[r for r in rows if r['"'"'protocol'"'"']=='"'"'synthetic_night_severe'"'"' and r['"'"'method'"'"'] in ['"'"'A_SIFT'"'"','"'"'B_SP_LightGlue'"'"','"'"'C_CosPlace'"'"','"'"'D_full_top3'"'"']]);print('"'"'Ablation'"'"',[r for r in rows if r['"'"'protocol'"'"']=='"'"'tokyo_day_to_day'"'"'])'
+\end{lstlisting}
+
+\noindent\textbf{20261105T055616.354179Z}: exit 0, 6.809 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method retrieval
+\end{lstlisting}
+
+\noindent\textbf{20261105T055623.199031Z}: exit 0, 48.002 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method full
+\end{lstlisting}
+
+\noindent\textbf{20261105T055711.499630Z}: exit 0, 15.141 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/generate_artifacts.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T060521.591059Z}: exit 0, 0.166 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pathlib import Path;import subprocess;Path('"'"'docs'"'"').mkdir(exist_ok=True);Path('"'"'docs/UPSTREAM_README.md'"'"').write_bytes(subprocess.check_output(['"'"'git'"'"','"'"'show'"'"','"'"'HEAD:README.md'"'"']))'
+\end{lstlisting}
+
+\noindent\textbf{20261105T060521.796123Z}: exit 0, 2.502 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261105T060524.343033Z}: exit 0, 39.402 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/stitch video data/places.json video.mp4 results/raw/cli_video.mp4 --limit 8
+\end{lstlisting}
+
+\noindent\textbf{20261105T060527.912335Z}: exit 0, 16.320 seconds.
+\begin{lstlisting}[numbers=none]
+bash scripts/setup.sh
+\end{lstlisting}
+
+\noindent\textbf{20261105T060528.169115Z}: exit 0, 1.718 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install --upgrade pip
+\end{lstlisting}
+
+\noindent\textbf{20261105T060529.934447Z}: exit 0, 0.542 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -r requirements.txt
+\end{lstlisting}
+
+\noindent\textbf{20261105T060530.633366Z}: exit 0, 3.969 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e . --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261105T060534.649113Z}: exit 0, 3.841 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e vendor/LightGlue --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261105T060538.608904Z}: exit 0, 5.351 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_models.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T060544.023207Z}: exit 0, 0.205 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/snapshot_environment.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T060603.812353Z}: exit 0, 4.141 seconds.
+\begin{lstlisting}[numbers=none]
+make data
+\end{lstlisting}
+
+\noindent\textbf{20261105T060604.722962Z}: exit 0, 1.164 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T060605.920926Z}: exit 0, 2.028 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T060752.805044Z}: exit 2, 23.068 seconds.
+\begin{lstlisting}[numbers=none]
+make thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T060752.894846Z}: in progress at artifact generation.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T060858.429350Z}: exit 2, 19.297 seconds.
+\begin{lstlisting}[numbers=none]
+make thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T060858.510106Z}: exit 2, 19.212 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T060927.786710Z}: exit 0, 1.320 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_data.py --verify-only
+\end{lstlisting}
+
+\noindent\textbf{20261105T060929.156015Z}: exit 0, 0.040 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import shutil;print({p:shutil.which(p) for p in ['"'"'gs'"'"','"'"'pdftoppm'"'"','"'"'mutool'"'"','"'"'latexmk'"'"','"'"'bibtex'"'"','"'"'makeindex'"'"']})'
+\end{lstlisting}
+
+\noindent\textbf{20261105T061002.417428Z}: exit 0, 0.212 seconds.
+\begin{lstlisting}[numbers=none]
+make clean
+\end{lstlisting}
+
+\noindent\textbf{20261105T061002.667976Z}: exit 2, 30.203 seconds.
+\begin{lstlisting}[numbers=none]
+make thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T061002.720547Z}: exit 2, 30.144 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T061119.642113Z}: exit 0, 0.958 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_thesis.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T061120.635443Z}: exit 0, 5.394 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;r=PdfReader('"'"'thesis/thesis.pdf'"'"');print([(i+1,p.extract_text()[:95].replace('"'"'\n'"'"','"'"' '"'"')) for i,p in enumerate(r.pages) if '"'"'Table 8.1:'"'"' in p.extract_text() or '"'"'Chapter 1'"'"' in p.extract_text()[:100] or '"'"'Bibliography'"'"' in p.extract_text()[:100]]);print(r.outline[:3])'
+\end{lstlisting}
+
+\noindent\textbf{20261105T061153.880326Z}: exit 0, 0.892 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 67 -l 67 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/thesis_table_check
+\end{lstlisting}
+
+\noindent\textbf{20261105T061154.809827Z}: exit 0, 0.202 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 37 -l 37 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/thesis_architecture_check
+\end{lstlisting}
+
+\noindent\textbf{20261105T061155.045666Z}: exit 0, 0.237 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 78 -l 78 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/thesis_overlay_check
+\end{lstlisting}
+
+\noindent\textbf{20261105T061155.320668Z}: exit 0, 0.093 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 1 -l 1 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/thesis_title_check
+\end{lstlisting}
+
+\noindent\textbf{20261105T061322.200930Z}: exit 0, 0.145 seconds.
+\begin{lstlisting}[numbers=none]
+make clean
+\end{lstlisting}
+
+\noindent\textbf{20261105T061322.384509Z}: exit 0, 28.754 seconds.
+\begin{lstlisting}[numbers=none]
+make thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T061322.430691Z}: exit 0, 28.703 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T061616.989356Z}: exit 0, 109.893 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/demo.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T061630.344476Z}: exit 0, 0.151 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pathlib import Path; import json; p=Path('"'"'results/demo.json'"'"'); d=json.loads(p.read_text()); print('"'"'Demo input:'"'"', *d['"'"'source_images'"'"']); print('"'"'Output:'"'"', Path('"'"'demo/comparison.mp4'"'"').resolve()); print('"'"'Video write in progress:'"'"', Path('"'"'demo/comparison.mp4'"'"').stat().st_size, '"'"'bytes'"'"')'
+\end{lstlisting}
+
+\noindent\textbf{20261105T061818.031121Z}: exit 0, 0.379 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'import cv2; c=cv2.VideoCapture('"'"'demo/comparison.mp4'"'"'); n=0; ok,f=c.read(); assert ok, '"'"'Video cannot be decoded'"'"'; shape=f.shape; n=1; ok,f=c.read();
+while ok:
+ n+=1; ok,f=c.read()
+c.release(); assert n==48, n; print('"'"'Verified fresh demo:'"'"', n, '"'"'frames;'"'"', shape[1], '"'"'x'"'"', shape[0])'
+\end{lstlisting}
+
+\noindent\textbf{20261105T061818.441559Z}: exit 1, 0.126 seconds.
+\begin{lstlisting}[numbers=none]
+/usr/bin/open demo/comparison.mp4
+\end{lstlisting}
+
+\noindent\textbf{20261105T061832.531575Z}: exit 0, 0.261 seconds.
+\begin{lstlisting}[numbers=none]
+/usr/bin/open -a 'QuickTime Player' demo/comparison.mp4
+\end{lstlisting}
+
+\noindent\textbf{20261105T062500.396651Z}: exit 0, 0.438 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;from pathlib import Path;files=[Path('"'"'../PRONOB-BHATTACHARJEE-latex/PRONOB BHATTACHARJEE.pdf'"'"'),Path('"'"'../PRONOB-BHATTACHARJEE-Overleaf/main.pdf'"'"'),Path('"'"'../IITR_template.pdf'"'"')];
+for path in files:
+ r=PdfReader(path);print('"'"'\nFILE'"'"',path,'"'"'PAGES'"'"',len(r.pages),'"'"'SIZE'"'"',r.pages[0].mediabox);print('"'"'\n'"'"'.join((p.extract_text() or '"'"''"'"')[:6500] for p in r.pages[:6]))'
+\end{lstlisting}
+
+\noindent\textbf{20261105T062547.765248Z}: exit 0, 0.623 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pathlib import Path;import zipfile;from PIL import Image;from pypdf import PdfReader;print('"'"'ASSETS'"'"');
+for p in Path('"'"'..'"'"').glob('"'"'*'"'"'):
+ if p.suffix.lower() in ['"'"'.png'"'"','"'"'.jpg'"'"']:print(p.name,Image.open(p).size)
+for p in Path('"'"'..'"'"').glob('"'"'*.zip'"'"'):
+ z=zipfile.ZipFile(p);print('"'"'ARCHIVE'"'"',p.name,len(z.namelist()));print([n for n in z.namelist() if n.endswith(('"'"'.sty'"'"','"'"'.cls'"'"','"'"'.map'"'"'))][:30])
+r=PdfReader('"'"'../PRONOB-BHATTACHARJEE-Overleaf/main.pdf'"'"');print('"'"'THESIS PAGE TITLES'"'"');print([(i+1,(r.pages[i].extract_text() or '"'"''"'"')[:180].replace('"'"'\n'"'"','"'"' '"'"')) for i in [7,8,9,10,11,12,13,14,15,20,35]]);print('"'"'PAGE1 IMAGES'"'"',[(v.name,len(v.data),v.image.size) for v in r.pages[0].images]);print('"'"'TEXT POSITIONS'"'"');
+r.pages[0].extract_text(visitor_text=lambda t,cm,tm,f,s:print(repr(t[:85]),'"'"'xy'"'"',tm[4:6],'"'"'size'"'"',s) if t.strip() else None)'
+\end{lstlisting}
+
+\noindent\textbf{20261105T062548.450208Z}: exit 0, 0.200 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 1 -l 1 -scale-to 1300 -png -singlefile ../PRONOB-BHATTACHARJEE-Overleaf/main.pdf results/raw/reference_report_cover
+\end{lstlisting}
+
+\noindent\textbf{20261105T062548.680032Z}: exit 0, 0.219 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 14 -l 14 -scale-to 1300 -png -singlefile ../PRONOB-BHATTACHARJEE-Overleaf/main.pdf results/raw/reference_report_body
+\end{lstlisting}
+
+\noindent\textbf{20261105T062548.928585Z}: exit 0, 0.874 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 1 -l 1 -scale-to 1500 -png -singlefile ../IITR_template.pdf results/raw/reference_slide_title
+\end{lstlisting}
+
+\noindent\textbf{20261105T062549.832160Z}: exit 0, 1.149 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 4 -l 4 -scale-to 1500 -png -singlefile ../IITR_template.pdf results/raw/reference_slide_body
+\end{lstlisting}
+
+\noindent\textbf{20261105T062654.091555Z}: exit 0, 0.232 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader; r=PdfReader('"'"'../PRONOB-BHATTACHARJEE-Overleaf/main.pdf'"'"');
+for i in [15,16]:
+ print('"'"'PAGE'"'"',i+1);r.pages[i].extract_text(visitor_text=lambda t,cm,tm,f,s:print(repr(t[:70]),tm[4:6],s) if t.strip() and (tm[5]>590 or tm[5]<90) else None)
+print('"'"'PDF modules'"'"');import importlib.util;print({n:bool(importlib.util.find_spec(n)) for n in ['"'"'pptx'"'"','"'"'fitz'"'"','"'"'reportlab'"'"']})'
+\end{lstlisting}
+
+\noindent\textbf{20261105T062706.126122Z}: exit 0, 0.214 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;r=PdfReader('"'"'../PRONOB-BHATTACHARJEE-Overleaf/thesis-graphics.pdf'"'"');
+for i in [0,1]:
+ print('"'"'GRAPHICS'"'"',i+1);r.pages[i].extract_text(visitor_operand_before=lambda op,args,cm,tm:print(op,args) if op in [b'"'"'cm'"'"',b'"'"'Do'"'"'] else None)
+r=PdfReader('"'"'../PRONOB-BHATTACHARJEE-Overleaf/main.pdf'"'"');r.pages[15].extract_text(visitor_text=lambda t,cm,tm,f,s:print(repr(t[:60]),tm[4:6],s) if t.strip() else None)'
+\end{lstlisting}
+
+\noindent\textbf{20261105T063014.121353Z}: exit 0, 2.735 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install python-pptx==1.0.2
+\end{lstlisting}
+
+\noindent\textbf{20261105T063015.406488Z}: exit 0, 0.276 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_iitr_assets.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T063234.202515Z}: exit 0, 0.033 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/restyle_iitr_report.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T063234.266409Z}: exit 0, 25.767 seconds.
+\begin{lstlisting}[numbers=none]
+make thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T063234.342166Z}: exit 0, 25.687 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T063640.164469Z}: exit 0, 0.560 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/generate_presentation_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T063640.756639Z}: exit 2, 6.796 seconds.
+\begin{lstlisting}[numbers=none]
+make -C presentation slides
+\end{lstlisting}
+
+\noindent\textbf{20261105T063748.190935Z}: exit 0, 0.200 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 1 -l 1 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/iitr_report_cover
+\end{lstlisting}
+
+\noindent\textbf{20261105T063748.424041Z}: exit 0, 0.130 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 2 -l 2 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/iitr_report_inner_cover
+\end{lstlisting}
+
+\noindent\textbf{20261105T063748.584871Z}: exit 0, 0.143 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 4 -l 4 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/iitr_report_declaration
+\end{lstlisting}
+
+\noindent\textbf{20261105T063748.758544Z}: exit 0, 0.191 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 20 -l 20 -scale-to 1300 -png -singlefile thesis/thesis.pdf results/raw/iitr_report_chapter
+\end{lstlisting}
+
+\noindent\textbf{20261105T063826.276948Z}: exit 0, 25.947 seconds.
+\begin{lstlisting}[numbers=none]
+make -C presentation slides
+\end{lstlisting}
+
+\noindent\textbf{20261105T063852.288769Z}: exit 0, 1.574 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 1 -l 2 -scale-to 1400 -png presentation/Stitch_IITR_Presentation.pdf results/raw/iitr_slide
+\end{lstlisting}
+
+\noindent\textbf{20261105T063853.897155Z}: exit 0, 0.357 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 15 -l 15 -scale-to 1400 -png -singlefile presentation/Stitch_IITR_Presentation.pdf results/raw/iitr_slide_results
+\end{lstlisting}
+
+\noindent\textbf{20261105T063906.533229Z}: exit 0, 0.215 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;r=PdfReader('"'"'thesis/thesis.pdf'"'"');
+for i in [0,1]:
+ print('"'"'PAGE'"'"',i+1,r.pages[i].mediabox)
+ def show(t,cm,tm,font,size):
+  if t.strip():print(repr(t[:85]),'"'"'position'"'"',(round(tm[4]*cm[0]+tm[5]*cm[2]+cm[4],2),round(tm[4]*cm[1]+tm[5]*cm[3]+cm[5],2)))
+ r.pages[i].extract_text(visitor_text=show)'
+\end{lstlisting}
+
+\noindent\textbf{20261105T063906.841090Z}: exit 0, 0.371 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 16 -l 16 -scale-to 1300 -png -singlefile ../PRONOB-BHATTACHARJEE-Overleaf/main.pdf results/raw/reference_report_chapter
+\end{lstlisting}
+
+\noindent\textbf{20261105T064000.220624Z}: exit 0, 0.308 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;
+for path,i in [('"'"'../PRONOB-BHATTACHARJEE-Overleaf/main.pdf'"'"',15),('"'"'thesis/thesis.pdf'"'"',19)]:
+ print(path);r=PdfReader(path)
+ def show(t,cm,tm,f,s):
+  if t.strip() and tm[5]>490:print(repr(t[:65]),round(tm[4],3),round(tm[5],3),s)
+ r.pages[i].extract_text(visitor_text=show)'
+\end{lstlisting}
+
+\noindent\textbf{20261105T064016.391671Z}: exit 0, 0.330 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;
+for path,i in [('"'"'../PRONOB-BHATTACHARJEE-Overleaf/main.pdf'"'"',16),('"'"'thesis/thesis.pdf'"'"',20)]:
+ print(path);rows=[];PdfReader(path).pages[i].extract_text(visitor_text=lambda t,cm,tm,f,s:rows.append((t[:65],tm[4],tm[5],s)) if t.strip() else None);print(rows[:5]);print(rows[-2:])'
+\end{lstlisting}
+
+\noindent\textbf{20261105T064112.752468Z}: exit 0, 0.217 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;r=PdfReader('"'"'presentation/Stitch_IITR_Presentation.pdf'"'"');print(r.pages[1].extract_text());
+def f(t,cm,tm,font,size):
+ if '"'"'INDIAN'"'"' in t:print(repr(t),cm,tm,size)
+r.pages[1].extract_text(visitor_text=f)'
+\end{lstlisting}
+
+\noindent\textbf{20261105T064113.000883Z}: exit 0, 24.164 seconds.
+\begin{lstlisting}[numbers=none]
+make thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T064113.045480Z}: exit 0, 24.114 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T064404.078519Z}: exit 0, 0.461 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T064404.596654Z}: exit 0, 0.468 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/package_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T064447.228720Z}: exit 0, 16.910 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/check_document_packages.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T064448.337993Z}: exit 0, 0.711 seconds.
+\begin{lstlisting}[numbers=none]
+pdftoppm -f 2 -l 2 -scale-to 1400 -png -singlefile presentation/Stitch_IITR_Presentation.pdf results/raw/iitr_slide_author_final
+\end{lstlisting}
+
+\noindent\textbf{20261105T064449.080706Z}: exit 0, 0.141 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pypdf import PdfReader;r=PdfReader('"'"'thesis/thesis.pdf'"'"');p=r.pages[19];out=[];p.extract_text(visitor_text=lambda t,cm,tm,f,s:out.append((t[:50],tm[4],tm[5],s)) if t.strip() and tm[5]>490 else None);print(out);print('"'"'body bounds:'"'"',r.pages[19].mediabox)'
+\end{lstlisting}
+
+\noindent\textbf{20261105T064504.180674Z}: exit 0, 0.178 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/snapshot_environment.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T064603.528739Z}: exit 0, 1.219 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T064604.779912Z}: exit 0, 1.132 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_thesis.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T064605.947423Z}: exit 0, 0.096 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from pathlib import Path;from pypdf import PdfReader;import json;d=Path('"'"'deliverables'"'"');print('"'"'\n'"'"'.join(str(p.resolve())+'"'"' | '"'"'+str(p.stat().st_size)+'"'"' bytes'"'"' for p in sorted(d.iterdir()) if p.is_file()));print(Path('"'"'results/standalone_packages_verification.json'"'"').read_text())'
+\end{lstlisting}
+
+\noindent\textbf{20261105T064814.639158Z}: exit 0, 2.171 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261105T064922.537044Z}: exit 1, 7.880 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip download --no-deps --dest .cache/wheels opencv-python==4.11.0.86
+\end{lstlisting}
+
+\noindent\textbf{20261105T064934.773406Z}: exit 0, 6.122 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip download --no-deps --dest .cache/wheels opencv-python==4.11.0.86
+\end{lstlisting}
+
+\noindent\textbf{20261105T065059.529486Z}: exit 0, 0.330 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip uninstall -y opencv-contrib-python
+\end{lstlisting}
+
+\noindent\textbf{20261105T065059.892978Z}: exit 0, 0.437 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install --no-deps .cache/wheels/opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl
+\end{lstlisting}
+
+\noindent\textbf{20261105T065100.361237Z}: exit 0, 0.268 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip check
+\end{lstlisting}
+
+\noindent\textbf{20261105T065147.072171Z}: exit 0, 22.727 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261105T065209.841463Z}: exit 0, 0.062 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m compileall -q src scripts tests
+\end{lstlisting}
+
+\noindent\textbf{20261105T065209.932280Z}: exit 0, 0.159 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/snapshot_environment.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065258.722422Z}: exit 1, 1.701 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_research.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065300.468906Z}: exit 0, 3.647 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/stitch index data/places.json
+\end{lstlisting}
+
+\noindent\textbf{20261105T065304.162382Z}: exit 0, 20.794 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/stitch query data/places.json test.jpg results/raw/audit_cli_query.png
+\end{lstlisting}
+
+\noindent\textbf{20261105T065325.002021Z}: exit 0, 20.568 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/stitch video data/places.json video.mp4 results/raw/audit_cli_video.mp4 --limit 2
+\end{lstlisting}
+
+\noindent\textbf{20261105T065353.751749Z}: exit 0, 6.728 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_research.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065433.490353Z}: exit 0, 42.477 seconds.
+\begin{lstlisting}[numbers=none]
+make package
+\end{lstlisting}
+
+\noindent\textbf{20261105T065433.536594Z}: exit 0, 21.449 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T065434.593113Z}: exit 0, 0.248 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261105T065455.024877Z}: exit 0, 0.220 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_iitr_assets.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065455.276702Z}: exit 0, 0.134 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/generate_presentation_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065455.441088Z}: exit 0, 19.009 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C presentation slides
+\end{lstlisting}
+
+\noindent\textbf{20261105T065514.494629Z}: exit 0, 1.006 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065515.531302Z}: exit 0, 0.432 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/package_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065543.483631Z}: exit 0, 1.004 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261105T065550.691204Z}: exit 0, 27.870 seconds.
+\begin{lstlisting}[numbers=none]
+make check-documents
+\end{lstlisting}
+
+\noindent\textbf{20261105T065550.745068Z}: exit 0, 8.323 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_research.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065559.119409Z}: exit 0, 0.883 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_thesis.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065600.035437Z}: exit 0, 1.063 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065601.130152Z}: exit 0, 17.426 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/check_document_packages.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065713.174447Z}: exit 1, 0.040 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261105T065724.753702Z}: exit 0, 17.102 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/check_document_packages.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T065748.296746Z}: exit 0, 0.056 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m compileall -q src scripts tests
+\end{lstlisting}
+
+\noindent\textbf{20261105T065748.435570Z}: exit 0, 0.324 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip check
+\end{lstlisting}
+
+\noindent\textbf{20261105T171849.404819Z}: exit 0, 0.872 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261105T171917.747993Z}: exit 0, 0.231 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261105T172020.452180Z}: exit 0, 3.390 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261105T172023.874238Z}: exit 0, 6.582 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_research.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172109.500695Z}: exit 0, 42.914 seconds.
+\begin{lstlisting}[numbers=none]
+make -j2 PYTHON=.venv/bin/python package
+\end{lstlisting}
+
+\noindent\textbf{20261105T172109.551511Z}: exit 0, 22.013 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis PYTHON=/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T172131.599762Z}: exit 0, 0.179 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_iitr_assets.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172131.807537Z}: exit 0, 0.124 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/generate_presentation_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172131.964820Z}: exit 0, 18.968 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C presentation PYTHON=/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python slides
+\end{lstlisting}
+
+\noindent\textbf{20261105T172150.974376Z}: exit 0, 0.999 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172152.003575Z}: exit 0, 0.408 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/package_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172222.235375Z}: exit 0, 17.423 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_model_artifacts.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172250.066037Z}: exit 0, 47.782 seconds.
+\begin{lstlisting}[numbers=none]
+make check-documents
+\end{lstlisting}
+
+\noindent\textbf{20261105T172250.181407Z}: exit 0, 11.736 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_research.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172301.957670Z}: exit 0, 17.216 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_model_artifacts.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172319.221315Z}: exit 0, 0.755 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_thesis.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172320.006398Z}: exit 0, 1.075 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172321.118316Z}: exit 0, 16.726 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/check_document_packages.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T172324.634750Z}: exit 0, 0.548 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261105T172325.214992Z}: exit 0, 0.050 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m compileall -q src scripts tests
+\end{lstlisting}
+
+\noindent\textbf{20261105T172325.294683Z}: exit 0, 0.308 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip check
+\end{lstlisting}
+
+\noindent\textbf{20261105T172354.394797Z}: exit 0, 21.212 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/stitch query data/places.json test.jpg results/raw/second_audit_cli_query.png
+\end{lstlisting}
+
+\noindent\textbf{20261105T172415.653597Z}: exit 0, 0.262 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/snapshot_environment.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205001.296062Z}: exit 0, 51.011 seconds.
+\begin{lstlisting}[numbers=none]
+make thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T205001.384604Z}: exit 0, 50.918 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis PYTHON=/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T205157.650794Z}: exit 0, 3.916 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261105T205201.608392Z}: exit 0, 3.081 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261105T205204.722463Z}: exit 0, 67.738 seconds.
+\begin{lstlisting}[numbers=none]
+make package
+\end{lstlisting}
+
+\noindent\textbf{20261105T205204.817739Z}: exit 0, 45.750 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis PYTHON=/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python thesis
+\end{lstlisting}
+
+\noindent\textbf{20261105T205250.602065Z}: exit 0, 0.191 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_iitr_assets.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205250.822360Z}: exit 0, 0.128 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/generate_presentation_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205250.982915Z}: exit 0, 19.021 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C presentation PYTHON=/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python slides
+\end{lstlisting}
+
+\noindent\textbf{20261105T205310.047707Z}: exit 0, 1.185 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205311.262414Z}: exit 0, 1.195 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/package_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205404.307368Z}: exit 0, 0.616 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -c 'from scripts.generate_extended_evidence import write_manifest; result=write_manifest(); print("Evidence assets hashed:",len(result["generated_outputs"]))'
+\end{lstlisting}
+
+\noindent\textbf{20261105T205404.954443Z}: exit 0, 56.487 seconds.
+\begin{lstlisting}[numbers=none]
+make check-documents
+\end{lstlisting}
+
+\noindent\textbf{20261105T205405.046440Z}: exit 0, 12.064 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_research.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205417.155986Z}: exit 0, 17.374 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_model_artifacts.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205434.576635Z}: exit 0, 4.240 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_thesis.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205438.847011Z}: exit 0, 1.198 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205440.074142Z}: exit 0, 21.363 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/check_document_packages.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205542.620927Z}: exit 0, 5.155 seconds.
+\begin{lstlisting}[numbers=none]
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+\end{lstlisting}
+
+\noindent\textbf{20261105T205543.738644Z}: exit 0, 0.062 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m compileall -q src scripts tests
+\end{lstlisting}
+
+\noindent\textbf{20261105T205543.831580Z}: exit 0, 0.338 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip check
+\end{lstlisting}
+
+\noindent\textbf{20261105T205552.631065Z}: exit 0, 4.266 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_thesis.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205556.927358Z}: exit 0, 1.196 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/verify_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205558.153498Z}: exit 0, 1.159 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/package_iitr_documents.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205559.347193Z}: exit 0, 21.175 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/check_document_packages.py
+\end{lstlisting}
+
+\noindent\textbf{20261105T205650.800177Z}: exit 0, 4.185 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -
+\end{lstlisting}
+
+\noindent\textbf{20261107T063039.615283Z}: exit 0, 0.646 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install --upgrade pip
+\end{lstlisting}
+
+\noindent\textbf{20261107T063040.292584Z}: exit 0, 0.353 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -r requirements.txt
+\end{lstlisting}
+
+\noindent\textbf{20261107T063040.704200Z}: exit 0, 1.951 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e . --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261107T063042.686558Z}: exit 0, 1.805 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e vendor/LightGlue --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261107T063044.524714Z}: exit 0, 3.830 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_models.py
+\end{lstlisting}
+
+\noindent\textbf{20261107T063048.387226Z}: exit 0, 0.141 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/snapshot_environment.py
+\end{lstlisting}
+
+\noindent\textbf{20261107T063048.568397Z}: exit 0, 1.207 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261107T063049.813980Z}: exit 0, 2.008 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261107T103959.273112Z}: exit 1, 2.785 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261107T104017.187591Z}: exit 0, 2.768 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261107T104030.546778Z}: exit 0, 12.277 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/run_originals.py --limit 90
+\end{lstlisting}
+
+\noindent\textbf{20261107T104042.888982Z}: in progress at artifact generation.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/evaluate.py --learned-exhaustive
+\end{lstlisting}
+
+\noindent\textbf{20261107T183120.484098Z}: exit 0, 0.695 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install --upgrade pip
+\end{lstlisting}
+
+\noindent\textbf{20261107T183121.210974Z}: exit 0, 0.341 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -r requirements.txt
+\end{lstlisting}
+
+\noindent\textbf{20261107T183121.610703Z}: exit 0, 2.047 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e . --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261107T183123.688979Z}: exit 0, 1.844 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e vendor/LightGlue --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261107T183125.566290Z}: exit 0, 3.745 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_models.py
+\end{lstlisting}
+
+\noindent\textbf{20261107T183129.341507Z}: exit 0, 0.136 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/snapshot_environment.py
+\end{lstlisting}
+
+\noindent\textbf{20261107T195701.490617Z}: exit 0, 7.960 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install --upgrade pip
+\end{lstlisting}
+
+\noindent\textbf{20261107T195709.485124Z}: exit 0, 0.380 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -r requirements.txt
+\end{lstlisting}
+
+\noindent\textbf{20261107T195709.917630Z}: exit 1, 7.951 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e . --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261107T195736.805577Z}: exit 0, 0.526 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install --upgrade pip
+\end{lstlisting}
+
+\noindent\textbf{20261107T195737.363098Z}: exit 0, 0.326 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -r requirements.txt
+\end{lstlisting}
+
+\noindent\textbf{20261107T195737.739104Z}: exit 0, 1.933 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e . --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261107T195739.703592Z}: exit 0, 1.778 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pip install -e vendor/LightGlue --no-deps
+\end{lstlisting}
+
+\noindent\textbf{20261107T195741.512731Z}: exit 0, 2.967 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_models.py
+\end{lstlisting}
+
+\noindent\textbf{20261107T195744.510862Z}: exit 0, 0.137 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/snapshot_environment.py
+\end{lstlisting}
+
+\noindent\textbf{20261109T073045.677679Z}: exit 0, 0.004 seconds.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C report PYTHON=/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python thesis
+\end{lstlisting}
+
+\noindent\textbf{20261109T074313.788133Z}: exit 0, 3.131 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python -m pytest -q
+\end{lstlisting}
+
+\noindent\textbf{20261109T074323.382473Z}: exit 0, 1.300 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/download_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261109T074324.712374Z}: exit 0, 1.613 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/prepare_data.py
+\end{lstlisting}
+
+\noindent\textbf{20261109T074326.362324Z}: exit 0, 11.225 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/run_originals.py --limit 90
+\end{lstlisting}
+
+\noindent\textbf{20261109T074350.495586Z}: exit 0, 893.074 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/evaluate.py --learned-exhaustive
+\end{lstlisting}
+
+\noindent\textbf{20261109T075918.479055Z}: exit 0, 22.127 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/train.py --steps 120
+\end{lstlisting}
+
+\noindent\textbf{20261109T075940.750069Z}: exit 0, 21.902 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/export_models.py
+\end{lstlisting}
+
+\noindent\textbf{20261109T080010.888464Z}: exit 0, 101.332 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/demo.py
+\end{lstlisting}
+
+\noindent\textbf{20261109T080152.338377Z}: exit 0, 164.440 seconds.
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/benchmark_runtime.py
+\end{lstlisting}
+
+\noindent\textbf{20261109T080154.286035Z}: exit 0, 9.125 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method classical
+\end{lstlisting}
+
+\noindent\textbf{20261109T080203.449039Z}: exit 0, 87.552 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method local
+\end{lstlisting}
+
+\noindent\textbf{20261109T080331.147238Z}: exit 0, 7.356 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method retrieval
+\end{lstlisting}
+
+\noindent\textbf{20261109T080338.541730Z}: exit 0, 57.976 seconds.
+\begin{lstlisting}[numbers=none]
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/benchmark_runtime.py --method full
+\end{lstlisting}
+
+\noindent\textbf{20261109T080447.349271Z}: in progress at artifact generation.
+\begin{lstlisting}[numbers=none]
+/Library/Developer/CommandLineTools/usr/bin/make -C report PYTHON=/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python thesis
+\end{lstlisting}

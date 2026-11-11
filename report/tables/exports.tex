@@ -1,0 +1,10 @@
+\begin{table}[htbp]\centering\small
+\caption{Executed global-descriptor export and quantisation on the host CPU. Parity is measured against native PyTorch across downloaded Tokyo images. Timing excludes preprocessing and is not a phone measurement.}\label{tab:exports}
+\begin{tabular}{lrrrr}
+\toprule
+ONNX variant & MB & Median ms & 95th pct. ms & Max abs. error \\
+\midrule
+fp32 & 45.75 & 24.04 & 29.71 & 5.5e-07 \\
+int8 & 11.52 & 17.32 & 25.79 & 0.07 \\
+\bottomrule
+\end{tabular}\end{table}

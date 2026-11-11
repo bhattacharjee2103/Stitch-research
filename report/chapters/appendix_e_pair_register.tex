@@ -1,0 +1,713 @@
+\chapter{Complete Oracle-Pair Result Register}\label{app:pair-register}
+This register retains every positive pair for both local methods, including rejections. It is generated from \code{results/pairs.json}; the scene atlases provide the corresponding images. Error is mean corner error in working pixels. The Tokyo rows have no independent homography ground truth, so their error cells are unavailable. The register is an audit view of the existing experiment and adds no new test observations.
+\section{hpatches\_illumination}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for hpatches\_illumination.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+i\_ajuntament\_2 & SIFT & 202 & 176 & 0.87 & 0.50 & yes \\
+i\_ajuntament\_2 & SP+LG & 402 & 366 & 0.91 & 0.71 & yes \\
+i\_ajuntament\_3 & SIFT & 31 & 9 & 0.29 & -- & no \\
+i\_ajuntament\_3 & SP+LG & 289 & 256 & 0.89 & 0.85 & yes \\
+i\_ajuntament\_4 & SIFT & 14 & 5 & 0.36 & -- & no \\
+i\_ajuntament\_4 & SP+LG & 217 & 193 & 0.89 & 0.93 & yes \\
+i\_ajuntament\_5 & SIFT & 35 & 12 & 0.34 & -- & no \\
+i\_ajuntament\_5 & SP+LG & 218 & 179 & 0.82 & 3.86 & yes \\
+i\_ajuntament\_6 & SIFT & 15 & 7 & 0.47 & -- & no \\
+i\_ajuntament\_6 & SP+LG & 220 & 193 & 0.88 & 2.33 & yes \\
+i\_autannes\_2 & SIFT & 127 & 122 & 0.96 & 0.39 & yes \\
+i\_autannes\_2 & SP+LG & 337 & 335 & 0.99 & 0.54 & yes \\
+i\_autannes\_3 & SIFT & 64 & 60 & 0.94 & 6.79 & yes \\
+i\_autannes\_3 & SP+LG & 315 & 305 & 0.97 & 0.83 & yes \\
+i\_autannes\_4 & SIFT & 25 & 19 & 0.76 & 1.25 & yes \\
+i\_autannes\_4 & SP+LG & 223 & 173 & 0.78 & 3.11 & yes \\
+i\_autannes\_5 & SIFT & 14 & 9 & 0.64 & 2.38 & no \\
+i\_autannes\_5 & SP+LG & 229 & 221 & 0.97 & 1.46 & yes \\
+i\_autannes\_6 & SIFT & 68 & 57 & 0.84 & 1.56 & yes \\
+i\_autannes\_6 & SP+LG & 317 & 315 & 0.99 & 0.61 & yes \\
+i\_bologna\_2 & SIFT & 82 & 80 & 0.98 & 0.80 & yes \\
+i\_bologna\_2 & SP+LG & 368 & 366 & 0.99 & 0.64 & yes \\
+i\_bologna\_3 & SIFT & 48 & 43 & 0.90 & 1.85 & yes \\
+i\_bologna\_3 & SP+LG & 350 & 349 & 1.00 & 0.38 & yes \\
+i\_bologna\_4 & SIFT & 49 & 48 & 0.98 & 0.99 & yes \\
+i\_bologna\_4 & SP+LG & 348 & 336 & 0.97 & 0.65 & yes \\
+i\_bologna\_5 & SIFT & 52 & 48 & 0.92 & 2.28 & yes \\
+i\_bologna\_5 & SP+LG & 332 & 261 & 0.79 & 1.82 & yes \\
+i\_bologna\_6 & SIFT & 41 & 35 & 0.85 & 1.03 & yes \\
+i\_bologna\_6 & SP+LG & 325 & 308 & 0.95 & 1.31 & yes \\
+i\_books\_2 & SIFT & 215 & 188 & 0.87 & 0.76 & yes \\
+i\_books\_2 & SP+LG & 427 & 421 & 0.99 & 0.20 & yes \\
+i\_books\_3 & SIFT & 174 & 164 & 0.94 & 0.68 & yes \\
+i\_books\_3 & SP+LG & 434 & 429 & 0.99 & 0.24 & yes \\
+i\_books\_4 & SIFT & 212 & 202 & 0.95 & 0.89 & yes \\
+i\_books\_4 & SP+LG & 442 & 438 & 0.99 & 0.31 & yes \\
+i\_books\_5 & SIFT & 253 & 234 & 0.92 & 0.09 & yes \\
+i\_books\_5 & SP+LG & 443 & 441 & 1.00 & 0.21 & yes \\
+i\_books\_6 & SIFT & 296 & 267 & 0.90 & 0.33 & yes \\
+i\_books\_6 & SP+LG & 434 & 431 & 0.99 & 0.27 & yes \\
+i\_boutique\_2 & SIFT & 171 & 157 & 0.92 & 0.27 & yes \\
+i\_boutique\_2 & SP+LG & 389 & 371 & 0.95 & 0.32 & yes \\
+i\_boutique\_3 & SIFT & 55 & 51 & 0.93 & 0.29 & yes \\
+i\_boutique\_3 & SP+LG & 316 & 272 & 0.86 & 0.45 & yes \\
+i\_boutique\_4 & SIFT & 76 & 70 & 0.92 & 0.68 & yes \\
+i\_boutique\_4 & SP+LG & 340 & 317 & 0.93 & 0.51 & yes \\
+i\_boutique\_5 & SIFT & 17 & 7 & 0.41 & -- & no \\
+i\_boutique\_5 & SP+LG & 261 & 248 & 0.95 & 0.66 & yes \\
+i\_boutique\_6 & SIFT & 13 & 8 & 0.62 & 0.57 & no \\
+i\_boutique\_6 & SP+LG & 265 & 226 & 0.85 & 0.80 & yes \\
+i\_bridger\_2 & SIFT & 129 & 127 & 0.98 & 0.43 & yes \\
+i\_bridger\_2 & SP+LG & 348 & 339 & 0.97 & 0.29 & yes \\
+i\_bridger\_3 & SIFT & 104 & 99 & 0.95 & 0.42 & yes \\
+i\_bridger\_3 & SP+LG & 328 & 318 & 0.97 & 0.45 & yes \\
+i\_bridger\_4 & SIFT & 93 & 89 & 0.96 & 0.23 & yes \\
+i\_bridger\_4 & SP+LG & 345 & 341 & 0.99 & 0.39 & yes \\
+i\_bridger\_5 & SIFT & 62 & 56 & 0.90 & 1.25 & yes \\
+i\_bridger\_5 & SP+LG & 319 & 308 & 0.97 & 0.61 & yes \\
+i\_bridger\_6 & SIFT & 4 & 4 & 1.00 & -- & no \\
+i\_bridger\_6 & SP+LG & 201 & 172 & 0.86 & 1.27 & yes \\
+i\_brooklyn\_2 & SIFT & 156 & 140 & 0.90 & 0.71 & yes \\
+i\_brooklyn\_2 & SP+LG & 336 & 296 & 0.88 & 0.48 & yes \\
+i\_brooklyn\_3 & SIFT & 246 & 232 & 0.94 & 1.73 & yes \\
+i\_brooklyn\_3 & SP+LG & 398 & 396 & 0.99 & 1.62 & yes \\
+i\_brooklyn\_4 & SIFT & 18 & 15 & 0.83 & 2.53 & yes \\
+i\_brooklyn\_4 & SP+LG & 310 & 295 & 0.95 & 1.03 & yes \\
+i\_brooklyn\_5 & SIFT & 261 & 244 & 0.93 & 2.00 & yes \\
+i\_brooklyn\_5 & SP+LG & 412 & 411 & 1.00 & 1.96 & yes \\
+i\_brooklyn\_6 & SIFT & 134 & 121 & 0.90 & 2.45 & yes \\
+i\_brooklyn\_6 & SP+LG & 339 & 322 & 0.95 & 1.85 & yes \\
+i\_castle\_2 & SIFT & 18 & 12 & 0.67 & 3.85 & yes \\
+i\_castle\_2 & SP+LG & 286 & 282 & 0.99 & 1.30 & yes \\
+i\_castle\_3 & SIFT & 52 & 49 & 0.94 & 0.96 & yes \\
+i\_castle\_3 & SP+LG & 363 & 359 & 0.99 & 0.83 & yes \\
+i\_castle\_4 & SIFT & 62 & 53 & 0.85 & 1.19 & yes \\
+i\_castle\_4 & SP+LG & 324 & 299 & 0.92 & 1.14 & yes \\
+i\_castle\_5 & SIFT & 16 & 10 & 0.62 & 5.27 & no \\
+i\_castle\_5 & SP+LG & 301 & 295 & 0.98 & 0.64 & yes \\
+i\_castle\_6 & SIFT & 15 & 12 & 0.80 & 1.02 & yes \\
+i\_castle\_6 & SP+LG & 291 & 290 & 1.00 & 0.48 & yes \\
+i\_chestnuts\_2 & SIFT & 158 & 153 & 0.97 & 0.25 & yes \\
+i\_chestnuts\_2 & SP+LG & 378 & 317 & 0.84 & 0.73 & yes \\
+i\_chestnuts\_3 & SIFT & 155 & 150 & 0.97 & 0.36 & yes \\
+i\_chestnuts\_3 & SP+LG & 377 & 370 & 0.98 & 0.23 & yes \\
+i\_chestnuts\_4 & SIFT & 162 & 155 & 0.96 & 0.25 & yes \\
+i\_chestnuts\_4 & SP+LG & 348 & 342 & 0.98 & 0.28 & yes \\
+i\_chestnuts\_5 & SIFT & 123 & 121 & 0.98 & 0.42 & yes \\
+i\_chestnuts\_5 & SP+LG & 334 & 317 & 0.95 & 0.31 & yes \\
+i\_chestnuts\_6 & SIFT & 56 & 56 & 1.00 & 0.63 & yes \\
+i\_chestnuts\_6 & SP+LG & 303 & 273 & 0.90 & 0.49 & yes \\
+i\_contruction\_2 & SIFT & 424 & 424 & 1.00 & 0.05 & yes \\
+i\_contruction\_2 & SP+LG & 462 & 462 & 1.00 & 0.07 & yes \\
+i\_contruction\_3 & SIFT & 416 & 414 & 1.00 & 0.05 & yes \\
+i\_contruction\_3 & SP+LG & 450 & 449 & 1.00 & 0.28 & yes \\
+i\_contruction\_4 & SIFT & 292 & 276 & 0.95 & 0.32 & yes \\
+i\_contruction\_4 & SP+LG & 393 & 392 & 1.00 & 0.15 & yes \\
+i\_contruction\_5 & SIFT & 76 & 70 & 0.92 & 0.46 & yes \\
+i\_contruction\_5 & SP+LG & 270 & 253 & 0.94 & 0.46 & yes \\
+i\_contruction\_6 & SIFT & 30 & 29 & 0.97 & 1.11 & yes \\
+i\_contruction\_6 & SP+LG & 239 & 236 & 0.99 & 0.54 & yes \\
+i\_crownday\_2 & SIFT & 26 & 20 & 0.77 & 1.29 & yes \\
+i\_crownday\_2 & SP+LG & 284 & 272 & 0.96 & 0.48 & yes \\
+i\_crownday\_3 & SIFT & 43 & 37 & 0.86 & 2.11 & yes \\
+i\_crownday\_3 & SP+LG & 329 & 325 & 0.99 & 0.63 & yes \\
+i\_crownday\_4 & SIFT & 90 & 82 & 0.91 & 0.60 & yes \\
+i\_crownday\_4 & SP+LG & 351 & 350 & 1.00 & 0.37 & yes \\
+i\_crownday\_5 & SIFT & 191 & 181 & 0.95 & 0.68 & yes \\
+i\_crownday\_5 & SP+LG & 387 & 373 & 0.96 & 0.76 & yes \\
+i\_crownday\_6 & SIFT & 27 & 22 & 0.81 & 1.60 & yes \\
+i\_crownday\_6 & SP+LG & 279 & 274 & 0.98 & 0.29 & yes \\
+i\_crownnight\_2 & SIFT & 89 & 79 & 0.89 & 0.28 & yes \\
+i\_crownnight\_2 & SP+LG & 346 & 343 & 0.99 & 0.47 & yes \\
+i\_crownnight\_3 & SIFT & 75 & 65 & 0.87 & 0.78 & yes \\
+i\_crownnight\_3 & SP+LG & 350 & 308 & 0.88 & 0.77 & yes \\
+i\_crownnight\_4 & SIFT & 63 & 54 & 0.86 & 1.45 & yes \\
+i\_crownnight\_4 & SP+LG & 340 & 327 & 0.96 & 0.20 & yes \\
+i\_crownnight\_5 & SIFT & 37 & 34 & 0.92 & 0.33 & yes \\
+i\_crownnight\_5 & SP+LG & 326 & 318 & 0.98 & 0.37 & yes \\
+i\_crownnight\_6 & SIFT & 5 & 0 & 0.00 & -- & no \\
+i\_crownnight\_6 & SP+LG & 144 & 119 & 0.83 & 1.95 & yes \\
+\end{longtable}\endgroup
+\section{hpatches\_viewpoint}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for hpatches\_viewpoint.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+v\_abstract\_2 & SIFT & 243 & 226 & 0.93 & 0.38 & yes \\
+v\_abstract\_2 & SP+LG & 376 & 373 & 0.99 & 0.20 & yes \\
+v\_abstract\_3 & SIFT & 208 & 181 & 0.87 & 0.61 & yes \\
+v\_abstract\_3 & SP+LG & 360 & 353 & 0.98 & 0.37 & yes \\
+v\_abstract\_4 & SIFT & 108 & 86 & 0.80 & 2.60 & yes \\
+v\_abstract\_4 & SP+LG & 234 & 215 & 0.92 & 1.96 & yes \\
+v\_abstract\_5 & SIFT & 145 & 130 & 0.90 & 1.50 & yes \\
+v\_abstract\_5 & SP+LG & 287 & 279 & 0.97 & 0.67 & yes \\
+v\_abstract\_6 & SIFT & 69 & 49 & 0.71 & 3.80 & yes \\
+v\_abstract\_6 & SP+LG & 208 & 189 & 0.91 & 1.80 & yes \\
+v\_adam\_2 & SIFT & 237 & 231 & 0.97 & 0.90 & yes \\
+v\_adam\_2 & SP+LG & 376 & 375 & 1.00 & 0.53 & yes \\
+v\_adam\_3 & SIFT & 178 & 173 & 0.97 & 0.86 & yes \\
+v\_adam\_3 & SP+LG & 382 & 377 & 0.99 & 0.79 & yes \\
+v\_adam\_4 & SIFT & 64 & 54 & 0.84 & 2.58 & yes \\
+v\_adam\_4 & SP+LG & 259 & 259 & 1.00 & 1.08 & yes \\
+v\_adam\_5 & SIFT & 147 & 135 & 0.92 & 1.66 & yes \\
+v\_adam\_5 & SP+LG & 328 & 288 & 0.88 & 1.72 & yes \\
+v\_adam\_6 & SIFT & 119 & 102 & 0.86 & 1.28 & yes \\
+v\_adam\_6 & SP+LG & 320 & 320 & 1.00 & 1.07 & yes \\
+v\_apprentices\_2 & SIFT & 313 & 302 & 0.96 & 0.38 & yes \\
+v\_apprentices\_2 & SP+LG & 394 & 392 & 0.99 & 0.22 & yes \\
+v\_apprentices\_3 & SIFT & 240 & 223 & 0.93 & 0.92 & yes \\
+v\_apprentices\_3 & SP+LG & 321 & 320 & 1.00 & 0.44 & yes \\
+v\_apprentices\_4 & SIFT & 118 & 104 & 0.88 & 1.93 & yes \\
+v\_apprentices\_4 & SP+LG & 287 & 282 & 0.98 & 0.41 & yes \\
+v\_apprentices\_5 & SIFT & 54 & 45 & 0.83 & 4.00 & yes \\
+v\_apprentices\_5 & SP+LG & 266 & 258 & 0.97 & 0.34 & yes \\
+v\_apprentices\_6 & SIFT & 44 & 41 & 0.93 & 0.96 & yes \\
+v\_apprentices\_6 & SP+LG & 280 & 279 & 1.00 & 0.47 & yes \\
+v\_artisans\_2 & SIFT & 132 & 125 & 0.95 & 0.42 & yes \\
+v\_artisans\_2 & SP+LG & 246 & 243 & 0.99 & 0.35 & yes \\
+v\_artisans\_3 & SIFT & 91 & 87 & 0.96 & 1.20 & yes \\
+v\_artisans\_3 & SP+LG & 213 & 209 & 0.98 & 0.93 & yes \\
+v\_artisans\_4 & SIFT & 91 & 84 & 0.92 & 4.22 & yes \\
+v\_artisans\_4 & SP+LG & 259 & 248 & 0.96 & 1.54 & yes \\
+v\_artisans\_5 & SIFT & 9 & 8 & 0.89 & -- & no \\
+v\_artisans\_5 & SP+LG & 119 & 109 & 0.92 & -- & no \\
+v\_artisans\_6 & SIFT & 117 & 116 & 0.99 & 0.40 & yes \\
+v\_artisans\_6 & SP+LG & 262 & 260 & 0.99 & 0.36 & yes \\
+v\_astronautis\_2 & SIFT & 165 & 162 & 0.98 & 1.35 & yes \\
+v\_astronautis\_2 & SP+LG & 312 & 307 & 0.98 & 1.02 & yes \\
+v\_astronautis\_3 & SIFT & 57 & 51 & 0.89 & 5.82 & yes \\
+v\_astronautis\_3 & SP+LG & 254 & 236 & 0.93 & 1.08 & yes \\
+v\_astronautis\_4 & SIFT & 91 & 83 & 0.91 & 1.10 & yes \\
+v\_astronautis\_4 & SP+LG & 315 & 305 & 0.97 & 0.72 & yes \\
+v\_astronautis\_5 & SIFT & 25 & 21 & 0.84 & 2.80 & yes \\
+v\_astronautis\_5 & SP+LG & 259 & 203 & 0.78 & 7.21 & yes \\
+v\_astronautis\_6 & SIFT & 165 & 160 & 0.97 & 1.12 & yes \\
+v\_astronautis\_6 & SP+LG & 363 & 298 & 0.82 & 3.44 & yes \\
+v\_azzola\_2 & SIFT & 192 & 164 & 0.85 & 1.99 & yes \\
+v\_azzola\_2 & SP+LG & 261 & 217 & 0.83 & 1.58 & yes \\
+v\_azzola\_3 & SIFT & 46 & 33 & 0.72 & 3.56 & yes \\
+v\_azzola\_3 & SP+LG & 214 & 199 & 0.93 & 2.63 & yes \\
+v\_azzola\_4 & SIFT & 283 & 278 & 0.98 & 0.91 & yes \\
+v\_azzola\_4 & SP+LG & 254 & 249 & 0.98 & 0.64 & yes \\
+v\_azzola\_5 & SIFT & 76 & 60 & 0.79 & 5.79 & yes \\
+v\_azzola\_5 & SP+LG & 179 & 168 & 0.94 & 1.83 & yes \\
+v\_azzola\_6 & SIFT & 9 & 6 & 0.67 & 20.65 & no \\
+v\_azzola\_6 & SP+LG & 132 & 107 & 0.81 & 3.76 & yes \\
+v\_bark\_2 & SIFT & 116 & 116 & 1.00 & 0.41 & yes \\
+v\_bark\_2 & SP+LG & 251 & 240 & 0.96 & 0.66 & yes \\
+v\_bark\_3 & SIFT & 73 & 73 & 1.00 & 0.67 & yes \\
+v\_bark\_3 & SP+LG & 11 & 4 & 0.36 & -- & no \\
+v\_bark\_4 & SIFT & 57 & 53 & 0.93 & 0.41 & yes \\
+v\_bark\_4 & SP+LG & 17 & 5 & 0.29 & 451.46 & no \\
+v\_bark\_5 & SIFT & 49 & 47 & 0.96 & 0.54 & yes \\
+v\_bark\_5 & SP+LG & 48 & 41 & 0.85 & 1.38 & yes \\
+v\_bark\_6 & SIFT & 25 & 23 & 0.92 & 0.46 & yes \\
+v\_bark\_6 & SP+LG & 21 & 5 & 0.24 & 495.20 & no \\
+v\_bees\_2 & SIFT & 312 & 307 & 0.98 & 0.43 & yes \\
+v\_bees\_2 & SP+LG & 368 & 368 & 1.00 & 0.70 & yes \\
+v\_bees\_3 & SIFT & 345 & 341 & 0.99 & 0.23 & yes \\
+v\_bees\_3 & SP+LG & 402 & 401 & 1.00 & 0.47 & yes \\
+v\_bees\_4 & SIFT & 309 & 304 & 0.98 & 0.44 & yes \\
+v\_bees\_4 & SP+LG & 345 & 342 & 0.99 & 0.90 & yes \\
+v\_bees\_5 & SIFT & 164 & 161 & 0.98 & 0.84 & yes \\
+v\_bees\_5 & SP+LG & 272 & 231 & 0.85 & 2.14 & yes \\
+v\_bees\_6 & SIFT & 174 & 166 & 0.95 & 1.86 & yes \\
+v\_bees\_6 & SP+LG & 337 & 325 & 0.96 & 0.96 & yes \\
+v\_beyus\_2 & SIFT & 102 & 93 & 0.91 & 0.58 & yes \\
+v\_beyus\_2 & SP+LG & 243 & 217 & 0.89 & 0.98 & yes \\
+v\_beyus\_3 & SIFT & 15 & 9 & 0.60 & 43.75 & no \\
+v\_beyus\_3 & SP+LG & 212 & 189 & 0.89 & 1.51 & yes \\
+v\_beyus\_4 & SIFT & 241 & 230 & 0.95 & 0.23 & yes \\
+v\_beyus\_4 & SP+LG & 290 & 281 & 0.97 & 0.32 & yes \\
+v\_beyus\_5 & SIFT & 22 & 14 & 0.64 & 5.91 & yes \\
+v\_beyus\_5 & SP+LG & 203 & 158 & 0.78 & 2.00 & yes \\
+v\_beyus\_6 & SIFT & 43 & 37 & 0.86 & 1.80 & yes \\
+v\_beyus\_6 & SP+LG & 232 & 211 & 0.91 & 1.34 & yes \\
+v\_bip\_2 & SIFT & 188 & 173 & 0.92 & 0.32 & yes \\
+v\_bip\_2 & SP+LG & 227 & 227 & 1.00 & 0.38 & yes \\
+v\_bip\_3 & SIFT & 149 & 140 & 0.94 & 0.20 & yes \\
+v\_bip\_3 & SP+LG & 182 & 180 & 0.99 & 0.68 & yes \\
+v\_bip\_4 & SIFT & 154 & 146 & 0.95 & 0.38 & yes \\
+v\_bip\_4 & SP+LG & 193 & 187 & 0.97 & 0.36 & yes \\
+v\_bip\_5 & SIFT & 95 & 88 & 0.93 & 1.86 & yes \\
+v\_bip\_5 & SP+LG & 24 & 7 & 0.29 & 5.71 & no \\
+v\_bip\_6 & SIFT & 82 & 78 & 0.95 & 0.56 & yes \\
+v\_bip\_6 & SP+LG & 11 & 4 & 0.36 & -- & no \\
+v\_bird\_2 & SIFT & 217 & 206 & 0.95 & 0.38 & yes \\
+v\_bird\_2 & SP+LG & 201 & 190 & 0.95 & 0.36 & yes \\
+v\_bird\_3 & SIFT & 138 & 129 & 0.93 & 1.20 & yes \\
+v\_bird\_3 & SP+LG & 188 & 173 & 0.92 & 1.99 & yes \\
+v\_bird\_4 & SIFT & 126 & 120 & 0.95 & 2.20 & yes \\
+v\_bird\_4 & SP+LG & 216 & 214 & 0.99 & 1.65 & yes \\
+v\_bird\_5 & SIFT & 60 & 53 & 0.88 & 14.30 & yes \\
+v\_bird\_5 & SP+LG & 198 & 172 & 0.87 & 4.15 & yes \\
+v\_bird\_6 & SIFT & 6 & 4 & 0.67 & -- & no \\
+v\_bird\_6 & SP+LG & 145 & 126 & 0.87 & 26.82 & yes \\
+v\_birdwoman\_2 & SIFT & 23 & 22 & 0.96 & 0.94 & yes \\
+v\_birdwoman\_2 & SP+LG & 51 & 49 & 0.96 & 1.47 & yes \\
+v\_birdwoman\_3 & SIFT & 36 & 26 & 0.72 & 4.65 & yes \\
+v\_birdwoman\_3 & SP+LG & 89 & 82 & 0.92 & 2.11 & yes \\
+v\_birdwoman\_4 & SIFT & 92 & 84 & 0.91 & 0.79 & yes \\
+v\_birdwoman\_4 & SP+LG & 96 & 91 & 0.95 & 0.91 & yes \\
+v\_birdwoman\_5 & SIFT & 249 & 240 & 0.96 & 0.29 & yes \\
+v\_birdwoman\_5 & SP+LG & 222 & 219 & 0.99 & 0.28 & yes \\
+v\_birdwoman\_6 & SIFT & 51 & 50 & 0.98 & 0.80 & yes \\
+v\_birdwoman\_6 & SP+LG & 110 & 106 & 0.96 & 0.98 & yes \\
+\end{longtable}\endgroup
+\section{tokyo\_day\_to\_day}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for tokyo\_day\_to\_day.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+t000\_day\_to\_day & SIFT & 80 & 62 & 0.78 & -- & yes \\
+t000\_day\_to\_day & SP+LG & 116 & 106 & 0.91 & -- & yes \\
+t001\_day\_to\_day & SIFT & 74 & 69 & 0.93 & -- & yes \\
+t001\_day\_to\_day & SP+LG & 170 & 129 & 0.76 & -- & yes \\
+t002\_day\_to\_day & SIFT & 92 & 73 & 0.79 & -- & yes \\
+t002\_day\_to\_day & SP+LG & 125 & 105 & 0.84 & -- & yes \\
+t003\_day\_to\_day & SIFT & 19 & 10 & 0.53 & -- & no \\
+t003\_day\_to\_day & SP+LG & 77 & 73 & 0.95 & -- & yes \\
+t004\_day\_to\_day & SIFT & 32 & 28 & 0.88 & -- & yes \\
+t004\_day\_to\_day & SP+LG & 81 & 78 & 0.96 & -- & yes \\
+t005\_day\_to\_day & SIFT & 74 & 60 & 0.81 & -- & yes \\
+t005\_day\_to\_day & SP+LG & 168 & 166 & 0.99 & -- & yes \\
+t006\_day\_to\_day & SIFT & 58 & 40 & 0.69 & -- & yes \\
+t006\_day\_to\_day & SP+LG & 154 & 137 & 0.89 & -- & yes \\
+t007\_day\_to\_day & SIFT & 44 & 11 & 0.25 & -- & no \\
+t007\_day\_to\_day & SP+LG & 36 & 34 & 0.94 & -- & yes \\
+t008\_day\_to\_day & SIFT & 80 & 67 & 0.84 & -- & yes \\
+t008\_day\_to\_day & SP+LG & 171 & 163 & 0.95 & -- & yes \\
+t009\_day\_to\_day & SIFT & 121 & 100 & 0.83 & -- & yes \\
+t009\_day\_to\_day & SP+LG & 204 & 186 & 0.91 & -- & yes \\
+t010\_day\_to\_day & SIFT & 15 & 6 & 0.40 & -- & no \\
+t010\_day\_to\_day & SP+LG & 21 & 9 & 0.43 & -- & no \\
+t011\_day\_to\_day & SIFT & 2 & 0 & 0.00 & -- & no \\
+t011\_day\_to\_day & SP+LG & 12 & 5 & 0.42 & -- & no \\
+t012\_day\_to\_day & SIFT & 20 & 15 & 0.75 & -- & yes \\
+t012\_day\_to\_day & SP+LG & 81 & 56 & 0.69 & -- & yes \\
+t013\_day\_to\_day & SIFT & 57 & 44 & 0.77 & -- & yes \\
+t013\_day\_to\_day & SP+LG & 92 & 70 & 0.76 & -- & yes \\
+t014\_day\_to\_day & SIFT & 0 & 0 & 0.00 & -- & no \\
+t014\_day\_to\_day & SP+LG & 36 & 6 & 0.17 & -- & no \\
+t015\_day\_to\_day & SIFT & 6 & 4 & 0.67 & -- & no \\
+t015\_day\_to\_day & SP+LG & 12 & 5 & 0.42 & -- & no \\
+t016\_day\_to\_day & SIFT & 10 & 8 & 0.80 & -- & no \\
+t016\_day\_to\_day & SP+LG & 33 & 7 & 0.21 & -- & no \\
+t017\_day\_to\_day & SIFT & 0 & 0 & 0.00 & -- & no \\
+t017\_day\_to\_day & SP+LG & 25 & 10 & 0.40 & -- & no \\
+t018\_day\_to\_day & SIFT & 3 & 0 & 0.00 & -- & no \\
+t018\_day\_to\_day & SP+LG & 27 & 6 & 0.22 & -- & no \\
+t019\_day\_to\_day & SIFT & 7 & 4 & 0.57 & -- & no \\
+t019\_day\_to\_day & SP+LG & 18 & 6 & 0.33 & -- & no \\
+t020\_day\_to\_day & SIFT & 13 & 6 & 0.46 & -- & no \\
+t020\_day\_to\_day & SP+LG & 54 & 44 & 0.81 & -- & yes \\
+t021\_day\_to\_day & SIFT & 0 & 0 & 0.00 & -- & no \\
+t021\_day\_to\_day & SP+LG & 26 & 7 & 0.27 & -- & no \\
+t022\_day\_to\_day & SIFT & 6 & 4 & 0.67 & -- & no \\
+t022\_day\_to\_day & SP+LG & 28 & 7 & 0.25 & -- & no \\
+t023\_day\_to\_day & SIFT & 1 & 0 & 0.00 & -- & no \\
+t023\_day\_to\_day & SP+LG & 34 & 6 & 0.18 & -- & no \\
+\end{longtable}\endgroup
+\section{tokyo\_day\_to\_night}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for tokyo\_day\_to\_night.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+t000\_day\_to\_night & SIFT & 13 & 5 & 0.38 & -- & no \\
+t000\_day\_to\_night & SP+LG & 211 & 163 & 0.77 & -- & yes \\
+t001\_day\_to\_night & SIFT & 22 & 17 & 0.77 & -- & yes \\
+t001\_day\_to\_night & SP+LG & 247 & 199 & 0.81 & -- & yes \\
+t002\_day\_to\_night & SIFT & 35 & 32 & 0.91 & -- & yes \\
+t002\_day\_to\_night & SP+LG & 249 & 176 & 0.71 & -- & yes \\
+t003\_day\_to\_night & SIFT & 25 & 15 & 0.60 & -- & yes \\
+t003\_day\_to\_night & SP+LG & 233 & 168 & 0.72 & -- & yes \\
+t004\_day\_to\_night & SIFT & 11 & 5 & 0.45 & -- & no \\
+t004\_day\_to\_night & SP+LG & 229 & 211 & 0.92 & -- & yes \\
+t005\_day\_to\_night & SIFT & 17 & 5 & 0.29 & -- & no \\
+t005\_day\_to\_night & SP+LG & 191 & 172 & 0.90 & -- & yes \\
+t006\_day\_to\_night & SIFT & 22 & 8 & 0.36 & -- & no \\
+t006\_day\_to\_night & SP+LG & 253 & 243 & 0.96 & -- & yes \\
+t007\_day\_to\_night & SIFT & 15 & 8 & 0.53 & -- & no \\
+t007\_day\_to\_night & SP+LG & 125 & 87 & 0.70 & -- & yes \\
+t008\_day\_to\_night & SIFT & 4 & 4 & 1.00 & -- & no \\
+t008\_day\_to\_night & SP+LG & 261 & 245 & 0.94 & -- & yes \\
+t009\_day\_to\_night & SIFT & 16 & 12 & 0.75 & -- & yes \\
+t009\_day\_to\_night & SP+LG & 227 & 190 & 0.84 & -- & yes \\
+t010\_day\_to\_night & SIFT & 7 & 5 & 0.71 & -- & no \\
+t010\_day\_to\_night & SP+LG & 210 & 198 & 0.94 & -- & yes \\
+t011\_day\_to\_night & SIFT & 1 & 0 & 0.00 & -- & no \\
+t011\_day\_to\_night & SP+LG & 171 & 141 & 0.82 & -- & yes \\
+t012\_day\_to\_night & SIFT & 27 & 22 & 0.81 & -- & yes \\
+t012\_day\_to\_night & SP+LG & 245 & 231 & 0.94 & -- & yes \\
+t013\_day\_to\_night & SIFT & 12 & 9 & 0.75 & -- & no \\
+t013\_day\_to\_night & SP+LG & 193 & 170 & 0.88 & -- & yes \\
+t014\_day\_to\_night & SIFT & 16 & 8 & 0.50 & -- & no \\
+t014\_day\_to\_night & SP+LG & 150 & 125 & 0.83 & -- & yes \\
+t015\_day\_to\_night & SIFT & 12 & 10 & 0.83 & -- & no \\
+t015\_day\_to\_night & SP+LG & 111 & 39 & 0.35 & -- & yes \\
+t016\_day\_to\_night & SIFT & 23 & 12 & 0.52 & -- & no \\
+t016\_day\_to\_night & SP+LG & 176 & 167 & 0.95 & -- & yes \\
+t017\_day\_to\_night & SIFT & 7 & 7 & 1.00 & -- & no \\
+t017\_day\_to\_night & SP+LG & 169 & 164 & 0.97 & -- & yes \\
+t018\_day\_to\_night & SIFT & 40 & 34 & 0.85 & -- & yes \\
+t018\_day\_to\_night & SP+LG & 167 & 152 & 0.91 & -- & yes \\
+t019\_day\_to\_night & SIFT & 12 & 5 & 0.42 & -- & no \\
+t019\_day\_to\_night & SP+LG & 180 & 178 & 0.99 & -- & yes \\
+t020\_day\_to\_night & SIFT & 28 & 23 & 0.82 & -- & yes \\
+t020\_day\_to\_night & SP+LG & 190 & 139 & 0.73 & -- & yes \\
+t021\_day\_to\_night & SIFT & 71 & 62 & 0.87 & -- & yes \\
+t021\_day\_to\_night & SP+LG & 207 & 201 & 0.97 & -- & yes \\
+t022\_day\_to\_night & SIFT & 12 & 10 & 0.83 & -- & no \\
+t022\_day\_to\_night & SP+LG & 179 & 162 & 0.91 & -- & yes \\
+t023\_day\_to\_night & SIFT & 16 & 7 & 0.44 & -- & no \\
+t023\_day\_to\_night & SP+LG & 154 & 135 & 0.88 & -- & yes \\
+\end{longtable}\endgroup
+\section{tokyo\_night\_to\_day}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for tokyo\_night\_to\_day.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+t000\_night\_to\_day & SIFT & 10 & 5 & 0.50 & -- & no \\
+t000\_night\_to\_day & SP+LG & 211 & 168 & 0.80 & -- & yes \\
+t001\_night\_to\_day & SIFT & 23 & 17 & 0.74 & -- & yes \\
+t001\_night\_to\_day & SP+LG & 247 & 176 & 0.71 & -- & yes \\
+t002\_night\_to\_day & SIFT & 36 & 30 & 0.83 & -- & yes \\
+t002\_night\_to\_day & SP+LG & 249 & 202 & 0.81 & -- & yes \\
+t003\_night\_to\_day & SIFT & 27 & 20 & 0.74 & -- & yes \\
+t003\_night\_to\_day & SP+LG & 233 & 167 & 0.72 & -- & yes \\
+t004\_night\_to\_day & SIFT & 11 & 5 & 0.45 & -- & no \\
+t004\_night\_to\_day & SP+LG & 229 & 202 & 0.88 & -- & yes \\
+t005\_night\_to\_day & SIFT & 8 & 4 & 0.50 & -- & no \\
+t005\_night\_to\_day & SP+LG & 191 & 178 & 0.93 & -- & yes \\
+t006\_night\_to\_day & SIFT & 16 & 7 & 0.44 & -- & no \\
+t006\_night\_to\_day & SP+LG & 253 & 244 & 0.96 & -- & yes \\
+t007\_night\_to\_day & SIFT & 4 & 4 & 1.00 & -- & no \\
+t007\_night\_to\_day & SP+LG & 125 & 88 & 0.70 & -- & yes \\
+t008\_night\_to\_day & SIFT & 5 & 0 & 0.00 & -- & no \\
+t008\_night\_to\_day & SP+LG & 261 & 256 & 0.98 & -- & yes \\
+t009\_night\_to\_day & SIFT & 18 & 13 & 0.72 & -- & yes \\
+t009\_night\_to\_day & SP+LG & 227 & 189 & 0.83 & -- & yes \\
+t010\_night\_to\_day & SIFT & 13 & 6 & 0.46 & -- & no \\
+t010\_night\_to\_day & SP+LG & 210 & 185 & 0.88 & -- & yes \\
+t011\_night\_to\_day & SIFT & 3 & 0 & 0.00 & -- & no \\
+t011\_night\_to\_day & SP+LG & 171 & 138 & 0.81 & -- & yes \\
+t012\_night\_to\_day & SIFT & 27 & 18 & 0.67 & -- & yes \\
+t012\_night\_to\_day & SP+LG & 245 & 234 & 0.96 & -- & yes \\
+t013\_night\_to\_day & SIFT & 13 & 10 & 0.77 & -- & no \\
+t013\_night\_to\_day & SP+LG & 193 & 167 & 0.87 & -- & yes \\
+t014\_night\_to\_day & SIFT & 16 & 7 & 0.44 & -- & no \\
+t014\_night\_to\_day & SP+LG & 150 & 140 & 0.93 & -- & yes \\
+t015\_night\_to\_day & SIFT & 6 & 5 & 0.83 & -- & no \\
+t015\_night\_to\_day & SP+LG & 111 & 47 & 0.42 & -- & yes \\
+t016\_night\_to\_day & SIFT & 14 & 9 & 0.64 & -- & no \\
+t016\_night\_to\_day & SP+LG & 176 & 167 & 0.95 & -- & yes \\
+t017\_night\_to\_day & SIFT & 10 & 8 & 0.80 & -- & no \\
+t017\_night\_to\_day & SP+LG & 169 & 164 & 0.97 & -- & yes \\
+t018\_night\_to\_day & SIFT & 42 & 33 & 0.79 & -- & yes \\
+t018\_night\_to\_day & SP+LG & 167 & 162 & 0.97 & -- & yes \\
+t019\_night\_to\_day & SIFT & 4 & 4 & 1.00 & -- & no \\
+t019\_night\_to\_day & SP+LG & 180 & 180 & 1.00 & -- & yes \\
+t020\_night\_to\_day & SIFT & 27 & 22 & 0.81 & -- & yes \\
+t020\_night\_to\_day & SP+LG & 190 & 140 & 0.74 & -- & yes \\
+t021\_night\_to\_day & SIFT & 64 & 60 & 0.94 & -- & yes \\
+t021\_night\_to\_day & SP+LG & 207 & 200 & 0.97 & -- & yes \\
+t022\_night\_to\_day & SIFT & 8 & 4 & 0.50 & -- & no \\
+t022\_night\_to\_day & SP+LG & 179 & 171 & 0.96 & -- & yes \\
+t023\_night\_to\_day & SIFT & 4 & 4 & 1.00 & -- & no \\
+t023\_night\_to\_day & SP+LG & 154 & 137 & 0.89 & -- & yes \\
+\end{longtable}\endgroup
+\section{tokyo\_day\_to\_sunset}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for tokyo\_day\_to\_sunset.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+t000\_day\_to\_sunset & SIFT & 41 & 31 & 0.76 & -- & yes \\
+t000\_day\_to\_sunset & SP+LG & 268 & 194 & 0.72 & -- & yes \\
+t001\_day\_to\_sunset & SIFT & 153 & 132 & 0.86 & -- & yes \\
+t001\_day\_to\_sunset & SP+LG & 369 & 280 & 0.76 & -- & yes \\
+t002\_day\_to\_sunset & SIFT & 129 & 119 & 0.92 & -- & yes \\
+t002\_day\_to\_sunset & SP+LG & 350 & 315 & 0.90 & -- & yes \\
+t003\_day\_to\_sunset & SIFT & 27 & 13 & 0.48 & -- & yes \\
+t003\_day\_to\_sunset & SP+LG & 196 & 101 & 0.52 & -- & yes \\
+t004\_day\_to\_sunset & SIFT & 171 & 144 & 0.84 & -- & yes \\
+t004\_day\_to\_sunset & SP+LG & 336 & 328 & 0.98 & -- & yes \\
+t005\_day\_to\_sunset & SIFT & 107 & 98 & 0.92 & -- & yes \\
+t005\_day\_to\_sunset & SP+LG & 298 & 282 & 0.95 & -- & yes \\
+t006\_day\_to\_sunset & SIFT & 58 & 43 & 0.74 & -- & yes \\
+t006\_day\_to\_sunset & SP+LG & 302 & 275 & 0.91 & -- & yes \\
+t007\_day\_to\_sunset & SIFT & 55 & 37 & 0.67 & -- & yes \\
+t007\_day\_to\_sunset & SP+LG & 297 & 280 & 0.94 & -- & yes \\
+t008\_day\_to\_sunset & SIFT & 41 & 37 & 0.90 & -- & yes \\
+t008\_day\_to\_sunset & SP+LG & 325 & 318 & 0.98 & -- & yes \\
+t009\_day\_to\_sunset & SIFT & 106 & 76 & 0.72 & -- & yes \\
+t009\_day\_to\_sunset & SP+LG & 329 & 307 & 0.93 & -- & yes \\
+t010\_day\_to\_sunset & SIFT & 9 & 6 & 0.67 & -- & no \\
+t010\_day\_to\_sunset & SP+LG & 223 & 207 & 0.93 & -- & yes \\
+t011\_day\_to\_sunset & SIFT & 10 & 7 & 0.70 & -- & no \\
+t011\_day\_to\_sunset & SP+LG & 205 & 128 & 0.62 & -- & yes \\
+t012\_day\_to\_sunset & SIFT & 128 & 113 & 0.88 & -- & yes \\
+t012\_day\_to\_sunset & SP+LG & 332 & 316 & 0.95 & -- & yes \\
+t013\_day\_to\_sunset & SIFT & 128 & 119 & 0.93 & -- & yes \\
+t013\_day\_to\_sunset & SP+LG & 274 & 255 & 0.93 & -- & yes \\
+t014\_day\_to\_sunset & SIFT & 13 & 9 & 0.69 & -- & no \\
+t014\_day\_to\_sunset & SP+LG & 184 & 173 & 0.94 & -- & yes \\
+t015\_day\_to\_sunset & SIFT & 25 & 11 & 0.44 & -- & no \\
+t015\_day\_to\_sunset & SP+LG & 165 & 69 & 0.42 & -- & yes \\
+t016\_day\_to\_sunset & SIFT & 14 & 5 & 0.36 & -- & no \\
+t016\_day\_to\_sunset & SP+LG & 164 & 110 & 0.67 & -- & yes \\
+t017\_day\_to\_sunset & SIFT & 15 & 10 & 0.67 & -- & no \\
+t017\_day\_to\_sunset & SP+LG & 168 & 113 & 0.67 & -- & yes \\
+t018\_day\_to\_sunset & SIFT & 44 & 33 & 0.75 & -- & yes \\
+t018\_day\_to\_sunset & SP+LG & 211 & 201 & 0.95 & -- & yes \\
+t019\_day\_to\_sunset & SIFT & 6 & 4 & 0.67 & -- & no \\
+t019\_day\_to\_sunset & SP+LG & 178 & 171 & 0.96 & -- & yes \\
+t020\_day\_to\_sunset & SIFT & 31 & 25 & 0.81 & -- & yes \\
+t020\_day\_to\_sunset & SP+LG & 184 & 140 & 0.76 & -- & yes \\
+t021\_day\_to\_sunset & SIFT & 110 & 103 & 0.94 & -- & yes \\
+t021\_day\_to\_sunset & SP+LG & 256 & 251 & 0.98 & -- & yes \\
+t022\_day\_to\_sunset & SIFT & 86 & 78 & 0.91 & -- & yes \\
+t022\_day\_to\_sunset & SP+LG & 206 & 198 & 0.96 & -- & yes \\
+t023\_day\_to\_sunset & SIFT & 13 & 6 & 0.46 & -- & no \\
+t023\_day\_to\_sunset & SP+LG & 172 & 149 & 0.87 & -- & yes \\
+\end{longtable}\endgroup
+\section{synthetic\_day}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for synthetic\_day.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+repo\_reference\_day\_17 & SIFT & 338 & 321 & 0.95 & 0.12 & yes \\
+repo\_reference\_day\_17 & SP+LG & 465 & 456 & 0.98 & 0.40 & yes \\
+repo\_reference\_day\_23 & SIFT & 333 & 311 & 0.93 & 0.14 & yes \\
+repo\_reference\_day\_23 & SP+LG & 463 & 436 & 0.94 & 0.53 & yes \\
+repo\_reference\_day\_42 & SIFT & 340 & 326 & 0.96 & 0.36 & yes \\
+repo\_reference\_day\_42 & SP+LG & 455 & 455 & 1.00 & 0.26 & yes \\
+repo\_test\_day\_17 & SIFT & 266 & 251 & 0.94 & 0.19 & yes \\
+repo\_test\_day\_17 & SP+LG & 404 & 358 & 0.89 & 0.78 & yes \\
+repo\_test\_day\_23 & SIFT & 208 & 194 & 0.93 & 0.32 & yes \\
+repo\_test\_day\_23 & SP+LG & 410 & 405 & 0.99 & 0.38 & yes \\
+repo\_test\_day\_42 & SIFT & 208 & 195 & 0.94 & 0.09 & yes \\
+repo\_test\_day\_42 & SP+LG & 391 & 375 & 0.96 & 0.36 & yes \\
+i\_ajuntament\_day\_17 & SIFT & 285 & 267 & 0.94 & 0.36 & yes \\
+i\_ajuntament\_day\_17 & SP+LG & 426 & 418 & 0.98 & 0.16 & yes \\
+i\_ajuntament\_day\_23 & SIFT & 303 & 282 & 0.93 & 0.17 & yes \\
+i\_ajuntament\_day\_23 & SP+LG & 427 & 415 & 0.97 & 0.28 & yes \\
+i\_ajuntament\_day\_42 & SIFT & 279 & 256 & 0.92 & 0.25 & yes \\
+i\_ajuntament\_day\_42 & SP+LG & 426 & 423 & 0.99 & 0.20 & yes \\
+i\_autannes\_day\_17 & SIFT & 217 & 215 & 0.99 & 0.12 & yes \\
+i\_autannes\_day\_17 & SP+LG & 385 & 384 & 1.00 & 0.27 & yes \\
+i\_autannes\_day\_23 & SIFT & 216 & 214 & 0.99 & 0.51 & yes \\
+i\_autannes\_day\_23 & SP+LG & 386 & 386 & 1.00 & 0.24 & yes \\
+i\_autannes\_day\_42 & SIFT & 152 & 149 & 0.98 & 0.27 & yes \\
+i\_autannes\_day\_42 & SP+LG & 381 & 350 & 0.92 & 0.32 & yes \\
+v\_abstract\_day\_17 & SIFT & 300 & 287 & 0.96 & 0.17 & yes \\
+v\_abstract\_day\_17 & SP+LG & 441 & 440 & 1.00 & 0.16 & yes \\
+v\_abstract\_day\_23 & SIFT & 266 & 254 & 0.95 & 0.21 & yes \\
+v\_abstract\_day\_23 & SP+LG & 427 & 362 & 0.85 & 0.16 & yes \\
+v\_abstract\_day\_42 & SIFT & 265 & 250 & 0.94 & 0.09 & yes \\
+v\_abstract\_day\_42 & SP+LG & 432 & 432 & 1.00 & 0.18 & yes \\
+v\_adam\_day\_17 & SIFT & 306 & 300 & 0.98 & 0.07 & yes \\
+v\_adam\_day\_17 & SP+LG & 438 & 414 & 0.95 & 0.13 & yes \\
+v\_adam\_day\_23 & SIFT & 281 & 278 & 0.99 & 0.18 & yes \\
+v\_adam\_day\_23 & SP+LG & 439 & 426 & 0.97 & 0.08 & yes \\
+v\_adam\_day\_42 & SIFT & 233 & 224 & 0.96 & 0.18 & yes \\
+v\_adam\_day\_42 & SP+LG & 425 & 424 & 1.00 & 0.15 & yes \\
+\end{longtable}\endgroup
+\section{synthetic\_night}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for synthetic\_night.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+repo\_reference\_night\_17 & SIFT & 312 & 298 & 0.96 & 0.30 & yes \\
+repo\_reference\_night\_17 & SP+LG & 442 & 422 & 0.95 & 0.64 & yes \\
+repo\_reference\_night\_23 & SIFT & 307 & 285 & 0.93 & 0.52 & yes \\
+repo\_reference\_night\_23 & SP+LG & 445 & 419 & 0.94 & 0.59 & yes \\
+repo\_reference\_night\_42 & SIFT & 329 & 308 & 0.94 & 0.45 & yes \\
+repo\_reference\_night\_42 & SP+LG & 428 & 421 & 0.98 & 0.51 & yes \\
+repo\_test\_night\_17 & SIFT & 103 & 87 & 0.84 & 5.97 & yes \\
+repo\_test\_night\_17 & SP+LG & 315 & 285 & 0.90 & 0.95 & yes \\
+repo\_test\_night\_23 & SIFT & 88 & 64 & 0.73 & 1.00 & yes \\
+repo\_test\_night\_23 & SP+LG & 337 & 320 & 0.95 & 0.82 & yes \\
+repo\_test\_night\_42 & SIFT & 131 & 114 & 0.87 & 0.37 & yes \\
+repo\_test\_night\_42 & SP+LG & 321 & 294 & 0.92 & 0.58 & yes \\
+i\_ajuntament\_night\_17 & SIFT & 186 & 147 & 0.79 & 0.58 & yes \\
+i\_ajuntament\_night\_17 & SP+LG & 413 & 359 & 0.87 & 0.72 & yes \\
+i\_ajuntament\_night\_23 & SIFT & 198 & 163 & 0.82 & 0.53 & yes \\
+i\_ajuntament\_night\_23 & SP+LG & 411 & 390 & 0.95 & 0.32 & yes \\
+i\_ajuntament\_night\_42 & SIFT & 185 & 147 & 0.79 & 0.83 & yes \\
+i\_ajuntament\_night\_42 & SP+LG & 407 & 396 & 0.97 & 0.30 & yes \\
+i\_autannes\_night\_17 & SIFT & 42 & 37 & 0.88 & 1.00 & yes \\
+i\_autannes\_night\_17 & SP+LG & 319 & 301 & 0.94 & 0.91 & yes \\
+i\_autannes\_night\_23 & SIFT & 49 & 44 & 0.90 & 0.98 & yes \\
+i\_autannes\_night\_23 & SP+LG & 332 & 316 & 0.95 & 0.95 & yes \\
+i\_autannes\_night\_42 & SIFT & 39 & 32 & 0.82 & 0.75 & yes \\
+i\_autannes\_night\_42 & SP+LG & 324 & 277 & 0.85 & 1.12 & yes \\
+v\_abstract\_night\_17 & SIFT & 219 & 210 & 0.96 & 0.11 & yes \\
+v\_abstract\_night\_17 & SP+LG & 397 & 395 & 0.99 & 0.43 & yes \\
+v\_abstract\_night\_23 & SIFT & 227 & 207 & 0.91 & 0.17 & yes \\
+v\_abstract\_night\_23 & SP+LG & 393 & 390 & 0.99 & 0.14 & yes \\
+v\_abstract\_night\_42 & SIFT & 204 & 190 & 0.93 & 0.19 & yes \\
+v\_abstract\_night\_42 & SP+LG & 402 & 401 & 1.00 & 0.26 & yes \\
+v\_adam\_night\_17 & SIFT & 32 & 19 & 0.59 & 0.63 & yes \\
+v\_adam\_night\_17 & SP+LG & 392 & 388 & 0.99 & 0.21 & yes \\
+v\_adam\_night\_23 & SIFT & 29 & 17 & 0.59 & 4.90 & yes \\
+v\_adam\_night\_23 & SP+LG & 390 & 389 & 1.00 & 0.29 & yes \\
+v\_adam\_night\_42 & SIFT & 22 & 11 & 0.50 & 0.59 & no \\
+v\_adam\_night\_42 & SP+LG & 380 & 378 & 0.99 & 0.20 & yes \\
+\end{longtable}\endgroup
+\section{synthetic\_night\_severe}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for synthetic\_night\_severe.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+repo\_reference\_night\_severe\_17 & SIFT & 205 & 176 & 0.86 & 0.33 & yes \\
+repo\_reference\_night\_severe\_17 & SP+LG & 392 & 390 & 0.99 & 0.84 & yes \\
+repo\_reference\_night\_severe\_23 & SIFT & 188 & 170 & 0.90 & 0.91 & yes \\
+repo\_reference\_night\_severe\_23 & SP+LG & 393 & 375 & 0.95 & 0.44 & yes \\
+repo\_reference\_night\_severe\_42 & SIFT & 180 & 163 & 0.91 & 0.26 & yes \\
+repo\_reference\_night\_severe\_42 & SP+LG & 388 & 385 & 0.99 & 0.52 & yes \\
+repo\_test\_night\_severe\_17 & SIFT & 21 & 12 & 0.57 & -- & no \\
+repo\_test\_night\_severe\_17 & SP+LG & 117 & 111 & 0.95 & 2.68 & yes \\
+repo\_test\_night\_severe\_23 & SIFT & 23 & 10 & 0.43 & -- & no \\
+repo\_test\_night\_severe\_23 & SP+LG & 123 & 104 & 0.85 & 3.35 & yes \\
+repo\_test\_night\_severe\_42 & SIFT & 20 & 10 & 0.50 & -- & no \\
+repo\_test\_night\_severe\_42 & SP+LG & 135 & 117 & 0.87 & 1.19 & yes \\
+i\_ajuntament\_night\_severe\_17 & SIFT & 0 & 0 & 0.00 & -- & no \\
+i\_ajuntament\_night\_severe\_17 & SP+LG & 301 & 279 & 0.93 & 0.77 & yes \\
+i\_ajuntament\_night\_severe\_23 & SIFT & 38 & 0 & 0.00 & -- & no \\
+i\_ajuntament\_night\_severe\_23 & SP+LG & 309 & 295 & 0.95 & 1.09 & yes \\
+i\_ajuntament\_night\_severe\_42 & SIFT & 5 & 0 & 0.00 & -- & no \\
+i\_ajuntament\_night\_severe\_42 & SP+LG & 305 & 263 & 0.86 & 1.42 & yes \\
+i\_autannes\_night\_severe\_17 & SIFT & 19 & 11 & 0.58 & -- & no \\
+i\_autannes\_night\_severe\_17 & SP+LG & 170 & 140 & 0.82 & 1.22 & yes \\
+i\_autannes\_night\_severe\_23 & SIFT & 3 & 0 & 0.00 & -- & no \\
+i\_autannes\_night\_severe\_23 & SP+LG & 179 & 118 & 0.66 & 2.17 & yes \\
+i\_autannes\_night\_severe\_42 & SIFT & 9 & 5 & 0.56 & 83.14 & no \\
+i\_autannes\_night\_severe\_42 & SP+LG & 164 & 145 & 0.88 & 1.43 & yes \\
+v\_abstract\_night\_severe\_17 & SIFT & 92 & 75 & 0.82 & 0.71 & yes \\
+v\_abstract\_night\_severe\_17 & SP+LG & 277 & 256 & 0.92 & 0.48 & yes \\
+v\_abstract\_night\_severe\_23 & SIFT & 104 & 64 & 0.62 & 0.87 & yes \\
+v\_abstract\_night\_severe\_23 & SP+LG & 268 & 236 & 0.88 & 0.67 & yes \\
+v\_abstract\_night\_severe\_42 & SIFT & 94 & 74 & 0.79 & 0.35 & yes \\
+v\_abstract\_night\_severe\_42 & SP+LG & 262 & 224 & 0.85 & 0.76 & yes \\
+v\_adam\_night\_severe\_17 & SIFT & 0 & 0 & 0.00 & -- & no \\
+v\_adam\_night\_severe\_17 & SP+LG & 184 & 132 & 0.72 & 2.01 & yes \\
+v\_adam\_night\_severe\_23 & SIFT & 0 & 0 & 0.00 & -- & no \\
+v\_adam\_night\_severe\_23 & SP+LG & 180 & 152 & 0.84 & 0.84 & yes \\
+v\_adam\_night\_severe\_42 & SIFT & 0 & 0 & 0.00 & -- & no \\
+v\_adam\_night\_severe\_42 & SP+LG & 164 & 137 & 0.84 & 3.17 & yes \\
+\end{longtable}\endgroup
+\section{synthetic\_warm\_night}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for synthetic\_warm\_night.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+repo\_reference\_warm\_night\_17 & SIFT & 304 & 289 & 0.95 & 0.33 & yes \\
+repo\_reference\_warm\_night\_17 & SP+LG & 441 & 438 & 0.99 & 0.57 & yes \\
+repo\_reference\_warm\_night\_23 & SIFT & 314 & 290 & 0.92 & 0.46 & yes \\
+repo\_reference\_warm\_night\_23 & SP+LG & 439 & 437 & 1.00 & 0.38 & yes \\
+repo\_reference\_warm\_night\_42 & SIFT & 318 & 295 & 0.93 & 0.45 & yes \\
+repo\_reference\_warm\_night\_42 & SP+LG & 425 & 419 & 0.99 & 0.34 & yes \\
+repo\_test\_warm\_night\_17 & SIFT & 77 & 72 & 0.94 & 0.79 & yes \\
+repo\_test\_warm\_night\_17 & SP+LG & 297 & 289 & 0.97 & 0.35 & yes \\
+repo\_test\_warm\_night\_23 & SIFT & 70 & 54 & 0.77 & 0.47 & yes \\
+repo\_test\_warm\_night\_23 & SP+LG & 326 & 260 & 0.80 & 1.57 & yes \\
+repo\_test\_warm\_night\_42 & SIFT & 103 & 93 & 0.90 & 0.58 & yes \\
+repo\_test\_warm\_night\_42 & SP+LG & 309 & 300 & 0.97 & 0.42 & yes \\
+i\_ajuntament\_warm\_night\_17 & SIFT & 144 & 117 & 0.81 & 0.67 & yes \\
+i\_ajuntament\_warm\_night\_17 & SP+LG & 398 & 384 & 0.96 & 0.21 & yes \\
+i\_ajuntament\_warm\_night\_23 & SIFT & 154 & 129 & 0.84 & 0.67 & yes \\
+i\_ajuntament\_warm\_night\_23 & SP+LG & 408 & 397 & 0.97 & 0.37 & yes \\
+i\_ajuntament\_warm\_night\_42 & SIFT & 147 & 109 & 0.74 & 0.88 & yes \\
+i\_ajuntament\_warm\_night\_42 & SP+LG & 410 & 404 & 0.99 & 0.16 & yes \\
+i\_autannes\_warm\_night\_17 & SIFT & 31 & 23 & 0.74 & 1.20 & yes \\
+i\_autannes\_warm\_night\_17 & SP+LG & 314 & 308 & 0.98 & 0.32 & yes \\
+i\_autannes\_warm\_night\_23 & SIFT & 37 & 31 & 0.84 & 0.97 & yes \\
+i\_autannes\_warm\_night\_23 & SP+LG & 327 & 293 & 0.90 & 0.35 & yes \\
+i\_autannes\_warm\_night\_42 & SIFT & 30 & 24 & 0.80 & 0.99 & yes \\
+i\_autannes\_warm\_night\_42 & SP+LG & 312 & 305 & 0.98 & 0.75 & yes \\
+v\_abstract\_warm\_night\_17 & SIFT & 209 & 201 & 0.96 & 0.11 & yes \\
+v\_abstract\_warm\_night\_17 & SP+LG & 392 & 375 & 0.96 & 0.44 & yes \\
+v\_abstract\_warm\_night\_23 & SIFT & 226 & 208 & 0.92 & 0.11 & yes \\
+v\_abstract\_warm\_night\_23 & SP+LG & 386 & 385 & 1.00 & 0.18 & yes \\
+v\_abstract\_warm\_night\_42 & SIFT & 190 & 177 & 0.93 & 0.15 & yes \\
+v\_abstract\_warm\_night\_42 & SP+LG & 396 & 395 & 1.00 & 0.22 & yes \\
+v\_adam\_warm\_night\_17 & SIFT & 32 & 13 & 0.41 & 2.08 & yes \\
+v\_adam\_warm\_night\_17 & SP+LG & 391 & 341 & 0.87 & 0.45 & yes \\
+v\_adam\_warm\_night\_23 & SIFT & 45 & 26 & 0.58 & -- & no \\
+v\_adam\_warm\_night\_23 & SP+LG & 384 & 369 & 0.96 & 0.34 & yes \\
+v\_adam\_warm\_night\_42 & SIFT & 37 & 12 & 0.32 & -- & no \\
+v\_adam\_warm\_night\_42 & SP+LG & 375 & 375 & 1.00 & 0.19 & yes \\
+\end{longtable}\endgroup
+\section{synthetic\_fog}
+\begingroup\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llrrrrr}
+\caption{All oracle-pair results for synthetic\_fog.}\\
+\toprule
+Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endfirsthead
+\toprule Query & Method & Matches & Inliers & Ratio & Error & Accept\\\midrule\endhead
+\bottomrule\endfoot
+repo\_reference\_fog\_17 & SIFT & 256 & 234 & 0.91 & 0.41 & yes \\
+repo\_reference\_fog\_17 & SP+LG & 454 & 402 & 0.89 & 0.79 & yes \\
+repo\_reference\_fog\_23 & SIFT & 263 & 248 & 0.94 & 0.27 & yes \\
+repo\_reference\_fog\_23 & SP+LG & 445 & 437 & 0.98 & 0.18 & yes \\
+repo\_reference\_fog\_42 & SIFT & 258 & 238 & 0.92 & 0.81 & yes \\
+repo\_reference\_fog\_42 & SP+LG & 441 & 435 & 0.99 & 0.56 & yes \\
+repo\_test\_fog\_17 & SIFT & 88 & 65 & 0.74 & 0.23 & yes \\
+repo\_test\_fog\_17 & SP+LG & 362 & 361 & 1.00 & 0.39 & yes \\
+repo\_test\_fog\_23 & SIFT & 66 & 51 & 0.77 & 0.27 & yes \\
+repo\_test\_fog\_23 & SP+LG & 386 & 363 & 0.94 & 0.73 & yes \\
+repo\_test\_fog\_42 & SIFT & 89 & 73 & 0.82 & 0.18 & yes \\
+repo\_test\_fog\_42 & SP+LG & 355 & 287 & 0.81 & 1.26 & yes \\
+i\_ajuntament\_fog\_17 & SIFT & 107 & 87 & 0.81 & 0.90 & yes \\
+i\_ajuntament\_fog\_17 & SP+LG & 421 & 402 & 0.95 & 0.29 & yes \\
+i\_ajuntament\_fog\_23 & SIFT & 117 & 99 & 0.85 & 0.49 & yes \\
+i\_ajuntament\_fog\_23 & SP+LG & 426 & 419 & 0.98 & 0.25 & yes \\
+i\_ajuntament\_fog\_42 & SIFT & 97 & 79 & 0.81 & 0.65 & yes \\
+i\_ajuntament\_fog\_42 & SP+LG & 421 & 372 & 0.88 & 0.51 & yes \\
+i\_autannes\_fog\_17 & SIFT & 49 & 39 & 0.80 & 1.64 & yes \\
+i\_autannes\_fog\_17 & SP+LG & 364 & 360 & 0.99 & 0.29 & yes \\
+i\_autannes\_fog\_23 & SIFT & 47 & 38 & 0.81 & 4.74 & yes \\
+i\_autannes\_fog\_23 & SP+LG & 355 & 338 & 0.95 & 0.71 & yes \\
+i\_autannes\_fog\_42 & SIFT & 51 & 38 & 0.75 & 4.90 & yes \\
+i\_autannes\_fog\_42 & SP+LG & 347 & 341 & 0.98 & 0.33 & yes \\
+v\_abstract\_fog\_17 & SIFT & 190 & 168 & 0.88 & 0.27 & yes \\
+v\_abstract\_fog\_17 & SP+LG & 404 & 404 & 1.00 & 0.24 & yes \\
+v\_abstract\_fog\_23 & SIFT & 185 & 166 & 0.90 & 0.28 & yes \\
+v\_abstract\_fog\_23 & SP+LG & 411 & 408 & 0.99 & 0.13 & yes \\
+v\_abstract\_fog\_42 & SIFT & 171 & 157 & 0.92 & 0.26 & yes \\
+v\_abstract\_fog\_42 & SP+LG & 408 & 408 & 1.00 & 0.17 & yes \\
+v\_adam\_fog\_17 & SIFT & 47 & 35 & 0.74 & 0.40 & yes \\
+v\_adam\_fog\_17 & SP+LG & 415 & 413 & 1.00 & 0.31 & yes \\
+v\_adam\_fog\_23 & SIFT & 34 & 33 & 0.97 & 0.41 & yes \\
+v\_adam\_fog\_23 & SP+LG & 411 & 410 & 1.00 & 0.25 & yes \\
+v\_adam\_fog\_42 & SIFT & 27 & 23 & 0.85 & 0.38 & yes \\
+v\_adam\_fog\_42 & SP+LG & 395 & 395 & 1.00 & 0.16 & yes \\
+\end{longtable}\endgroup

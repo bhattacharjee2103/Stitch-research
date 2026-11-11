@@ -1,0 +1,7 @@
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/bhattacharjee/.cache/fontconfig
+	/Users/bhattacharjee/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+Generated 18 tables/macros and 9 figures from actual results

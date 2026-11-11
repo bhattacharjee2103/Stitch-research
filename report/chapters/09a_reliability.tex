@@ -1,0 +1,59 @@
+\chapter{Software Reliability and Artifact Verification}\label{ch:reliability}
+\section{Reliability at the boundaries between modules}
+The research pipeline depends on several libraries with different tensor layouts, image conventions and error behaviour. Reliability therefore comes from explicit boundary contracts rather than from assuming every component returns a useful result. An image decoder can return no pixels, a detector can return no features, a matcher can return too few correspondences, and a model estimator can fail despite receiving arrays of the expected shape. Each state must be represented without accidentally reusing an older successful result.
+
+The delivered package separates image I/O, local features, global retrieval, geometry, database access and rendering. This permits a failure to be tested at its own boundary. A geometry regression does not require network access or a large pretrained checkpoint, while an exported-model replay deliberately uses the real model artifact. The two checks provide different evidence and should not be described as interchangeable forms of model validation.
+
+\section{Data contracts and representation invariants}
+Working images are BGR arrays, while global-model preprocessing converts them to RGB and applies the recorded channel normalisation. Local learned extraction uses grayscale at the working resolution with additional internal resizing disabled. A feature record supplies points, descriptors and model-specific tensors. A match record supplies two equally sized coordinate arrays and their index pairs. These conventions constrain the meaning of every later matrix.
+
+The geometry interface interprets its source points as reference pixels and destination points as query pixels. Failure returns an unaccepted verification record with a defined inlier-mask shape. A successful identity decision includes the selected reference, which is necessary to resolve both image dimensions and reference-bound content. The renderer cannot infer those dimensions from the query frame, because the two images may differ in size.
+
+The database schema distinguishes its document version from the companion descriptor-index version. A content record can be valid without a precomputed descriptor matrix, while an old matrix may be incompatible with the current encoder. Keeping those versions separate allows an index rebuild without pretending that all posted content has changed. Conversely, a geometry-changing reference revision needs more than a descriptor rebuild if existing anchor polygons must be migrated.
+
+\section{Cache identity and invalidation}
+An index is valid only for the image bytes, preprocessing and model that generated it. File names alone are insufficient: replacing an image in place can preserve its path while changing all descriptors. Likewise, loading another checkpoint with the same architecture preserves the vector dimension while changing its meaning. The index therefore records SHA256 image fingerprints and the encoder checkpoint fingerprint alongside the reference list and preprocessing configuration.
+
+The supported configuration includes descriptor input size, enhancement mode and working-image resize limit. A preprocessing-version field provides an explicit place to invalidate caches after a deliberate implementation change. The current service-free artifact records the encoder type and checkpoint identity; future distributed implementations should additionally bind the executable preprocessing revision and any local-feature cache format to their own versioned artifacts.
+
+Loading checks the number of fingerprints, reference order, index version, configuration and finite two-dimensional descriptor matrix. These checks catch several structurally plausible stale caches. They do not establish that the checkpoint was acquired from a trusted distributor or that the database has not been maliciously rewritten. Those are separate software-supply and access-control responsibilities outside the local research demonstration.
+
+\section{Regression tests that target a meaningful failure}
+The geometry tests use a known projective map with injected outliers and verify both acceptance and corner accuracy. Empty and collinear correspondence sets exercise rejection. Homogeneous-scale tests ensure that multiplying a map by a nonzero scalar does not change the projection or rendered image. A separate extreme matrix checks that an unrepresentable normalisation is rejected before a decomposition raises an exception.
+
+The rendering tests preserve opaque black pixels and fully transparent content, support a grayscale asset, and reject crossed or collapsed anchor quadrilaterals. These tests target visible application failures rather than copying the implementation's arithmetic into an identical assertion. A place/reference selection regression uses two places sharing a reference-path string but different cached image dimensions, ensuring that rendering resolves the full identity pair.
+
+Database tests change a reference image after building an index, vary the encoder fingerprint or resize setting, and damage structural index fields. Each operation must make loading fail with a rebuild instruction. Duplicate place identities and empty databases are rejected. Invalid normalised anchor polygons are rejected before neural inference, so an application does not spend a full query discovering that a stored post cannot be warped safely.
+
+CLI checks also matter. A decoder that opens but produces no frame must not create an apparently successful empty video result. An image write that reports failure must not be followed by a success message. The regression suite covers these states with controlled test doubles. Separate model-backed image and video checks exercise the actual path through descriptors, verification, content lookup and output decoding.
+
+\section{Independent reconstruction of experimental decisions}
+The research audit does more than verify file presence. It reconstructs each saved ranking and selected candidate from the recorded global descriptors and candidate-pair evidence. It checks correct-identity ranks, accepted identities, correctly verified outcomes and selected homographies against the prediction file. Oracle-pair rows are cross-checked against the same underlying evidence rather than treated as a second independent source of results.
+
+Candidate acceptance is also recomputed from support counts, ratios, configuration and the current projective-validity checks. This is useful after a numerical bug fix: it establishes whether the corrected predicate changes any recorded decision. If it did, the old reported statistics would need a clearly identified revision. In the reviewed artifact, the saved experiment outcomes remain consistent with the corrected implementation.
+
+The audit recomputes end-to-end homography success using the frozen query labels, ground-truth coordinate conversions and saved selected maps. It then checks the CSV aggregates and generated statistics. This chain can detect a summary-table error even when the underlying neural inference is left untouched. It cannot discover an incorrectly labelled public image solely from hashes and arithmetic, which is why image-level inspection and dataset provenance remain necessary.
+
+\section{Replaying saved model artifacts}
+The short adaptation experiment produces six projection-head checkpoints: three seeds with and without the additional night augmentation. Verification loads each saved head, applies it to the retained native descriptors, rebuilds the held-out rankings and compares every recorded training-result row. This validates the connection between checkpoint files and reported adaptation accuracy without rerunning optimisation or selecting another training seed.
+
+The exported-model audit validates the produced ONNX graphs and executes both float and INT8 graphs on the actual Tokyo images. It compares their retrieval scores with the export record and checks output differences against the retained native descriptors. This is stronger than checking that a graph file can be opened. It remains narrower than a phone deployment test because the execution provider is the recorded host CPU runtime.
+
+Timing aggregates are independently recomputed from the stored per-call samples. That catches a mistaken median, mean or upper quantile without pretending to obtain a fresh latency measurement. The distinction is explicit: replaying accuracy, recomputing aggregates and rebenchmarking runtime are separate activities. The final audit states which activities were executed.
+
+\section{Document builds as a dependency graph}
+The report consumes generated tables and figures, and the presentation consumes a subset of those same generated artifacts. Consequently, a parallel build must finish report-data generation before presentation-data generation. Otherwise, a successful compiler invocation could still produce slides containing the previous version of a figure or number. The build now enforces report-before-presentation order even when Make is invoked with parallel jobs.
+
+Author metadata and the copied code listings are refreshed before the report is compiled. The LaTeX process stops on errors, and post-build checks reject unresolved citations, references, overfull boxes and oversized floats. Compiler success alone is not sufficient evidence of a correct report: metadata, empirical inputs, reference-layout measurements and final deliverable hashes are checked separately.
+
+The source packages are tested after extraction into newly created temporary directories. Reusing an old build directory could hide a missing source file or bibliography artifact, because the compiler might find a stale generated dependency. Fresh extraction prevents that particular false pass. The standalone Makefiles compile only the bundled LaTeX snapshot; they do not require datasets, model downloads or the project's Python environment.
+
+\section{Provenance across report and presentation formats}
+The canonical report PDF and presentation PDF are copied into the deliverables folder, and a manifest records file lengths and SHA256 values. The source checker compares bundled files with their current project counterparts. These checks detect an archive that still contains an older chapter even when the main PDF has already been rebuilt. The reference PDFs supplied by the author remain outside the set of files edited for the Stitch report.
+
+The PowerPoint is an image-based export of the LaTeX slides, with extracted slide text in notes. This preserves the mathematics and original institutional artwork while making the LaTeX source the editable master. It does not provide separately editable PowerPoint text boxes. The limitation is documented in the package so reviewers do not discover it only after attempting a late presentation edit.
+
+\section{What the final check can and cannot establish}
+Passing tests and artifact audits establish consistency for the implemented contracts and retained experiment files. They do not prove that no software defect remains under every possible input. The reviewed system still has the documented scientific limits: a small selected gallery, planar image relations, synthetic appearance stressors and host-only runtime measurements. Reliability checks strengthen the trustworthiness of those bounded results; they do not enlarge their empirical scope.
+
+The most useful next reliability step is therefore targeted coverage. A future failure should be reduced to a reproducible input and a contract-level regression, followed by a separately identified experiment if the decision policy changes. This keeps fixes reviewable and prevents the report from drifting away from the executable implementation it describes.

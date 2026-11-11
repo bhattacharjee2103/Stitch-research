@@ -1,0 +1,19 @@
+# Tested on CPython 3.9 / macOS arm64; use Python 3.9--3.12.
+numpy==2.0.2
+opencv-python==4.11.0.86
+torch==2.7.1
+torchvision==0.22.1
+kornia==0.8.1
+scipy==1.13.1
+matplotlib==3.9.4
+Pillow==11.3.0
+PyYAML==6.0.2
+pytest==8.4.2
+psutil==7.0.0
+tqdm==4.67.1
+onnx==1.17.0
+onnxruntime==1.19.2
+requests==2.32.5
+pypdf==5.9.0
+# LaTeX slide-to-PowerPoint export for the supplied IITR theme.
+python-pptx==1.0.2

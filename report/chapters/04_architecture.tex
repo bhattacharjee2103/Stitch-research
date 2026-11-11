@@ -1,0 +1,123 @@
+\chapter{System Design and Architecture}\label{ch:architecture}
+\section{End-to-end responsibilities}
+The implemented system divides a query into capture or decoding, preprocessing, place hypothesis generation, local correspondence, geometric verification, content lookup and rendering. The division follows the different evidence required at each stage. Capture supplies pixels; retrieval supplies candidate identities; geometry supplies a mapping; the database supplies content associated with the verified identity. A later stage is not allowed to turn an absent earlier result into an apparently successful anchor.
+
+\begin{figure}[htbp]\centering
+\begin{tikzpicture}[node distance=7mm and 7mm,box/.style={draw,rounded corners,align=center,text width=3.05cm,minimum height=1cm},arr/.style={-{Latex},thick}]
+\node[box] (capture) {File, video or camera\\decode and resize};
+\node[box,right=of capture] (global) {CosPlace descriptor\\candidate retrieval};
+\node[box,right=of global] (local) {SuperPoint features\\LightGlue matches};
+\node[box,below=of local] (geometry) {RANSAC homography\\accept or reject};
+\node[box,left=of geometry] (content) {Verified place ID\\content records};
+\node[box,left=of content] (render) {Reference-plane warp\\alpha compositing};
+\draw[arr] (capture)--(global);\draw[arr] (global)--(local);\draw[arr] (local)--(geometry);
+\draw[arr] (geometry)--(content);\draw[arr] (content)--(render);
+\node[draw,dashed,below=of content,align=center,text width=6.5cm] (db) {On-disk place database: references, descriptor index, posted assets and normalised anchor polygons};
+\draw[arr] (db)--(content);\draw[arr] (db.east)-|(local.south east);
+\end{tikzpicture}
+\caption{Implemented hierarchical recognition and planar content-rendering flow. The diagram is an architectural specification, not a measured throughput result.}\label{fig:architecture}
+\end{figure}
+
+\Cref{fig:architecture} depicts the implemented path. The classical mode replaces the global shortlist and learned correspondence stage with exhaustive SIFT--FLANN verification. The learned-local mode removes global retrieval but retains exhaustive SuperPoint--LightGlue comparisons. Keeping those alternatives behind the same query interface makes stage removal explicit rather than changing the application data model for each method.
+
+\section{Module contracts}
+\subsection{Image I/O and coordinates}
+The I/O module returns a decoded BGR image and the transformation from original image coordinates to the working resolution. This second output is essential for evaluation: ground-truth homographies are expressed in the original images, whereas inference uses resized images. The module preserves aspect ratio and records separate horizontal and vertical scale values after integer rounding. It rejects unreadable files instead of returning an empty array that fails later in feature extraction.
+
+The video iterator accepts a file path, numeric webcam index or stream URL. It stops on EOF or a failed read and releases the capture resource. An explicit frame limit supports bounded experiments. A production live-stream client could add a retry state with a deadline; that policy should be kept outside geometry and should not silently reuse the last camera frame as a new observation.
+
+\subsection{Local features and correspondences}
+A local-feature record contains pixel coordinates, descriptor arrays and any model-specific tensors required by the matcher. The shared interface returns two coordinate arrays and the descriptor-index pairs that produced them. Empty output has a stable shape. This allows geometry to reject insufficient support without depending on the internal format of either OpenCV or LightGlue.
+
+Learned features are associated with the resized image, and internal extractor resizing is disabled for the controlled comparison. Reference features are cached when the pipeline is constructed. Query features are extracted once and reused across candidates. This division avoids measuring repeated extraction merely because a shortlist contains several references.
+
+\subsection{Geometry and verification}
+The geometry module returns the estimated homography, an inlier mask, count and ratio, and a separate acceptance flag. Retaining a rejected matrix for diagnostics is useful, but rendering checks the acceptance decision through the pipeline's selected prediction. A matrix existing in memory does not itself authorise an overlay. The interface also exposes corner projection and camera-pose error utilities for tests and future calibrated evaluations.
+
+The acceptance policy combines sufficient correspondence support with numerical and boundary checks. This policy is common to the normalised local-method comparison. It is intentionally distinct from the original scripts' hard-coded thresholds, whose unmodified results are reported separately. The distinction prevents a software refactor from being mistaken for a perfectly controlled reproduction of every upstream heuristic.
+
+\subsection{Global retrieval}
+The global module loads the official CosPlace weights into the compatible ResNet18 and pooling architecture. Random ImageNet initialisation weights are not downloaded because the complete pretrained state is supplied by the selected checkpoint. A fixed preprocessing path resizes to the recorded descriptor input shape and applies channel normalisation. Gallery and query descriptors follow the same path.
+
+Ranking uses the dot product of normalised vectors with stable tie ordering. Exact search is appropriate for the small galleries in this artifact and makes the evaluation easy to inspect. An approximate index would introduce another source of candidate recall loss; it should be evaluated separately before a larger deployment. The descriptor index stores image fingerprints so stale references cannot be silently matched against an obsolete cached vector.
+
+\section{Place-database schema}
+The database document has a schema version and a list of places. Each place has a unique identifier, one or more reference-image paths, and a list of posted-content records. Paths resolve relative to the database document so the artifact can be moved as a directory. The schema keeps a place identity distinct from a particular reference view: adding a second photograph need not duplicate all associated posts.
+
+\begin{lstlisting}[float=htbp,language=Python,caption={Implemented place-record structure with illustrative identifiers. The numerical anchor coordinates are configuration values, not experimental results.},label={lst:schema},numbers=none]
+{
+  "schema_version": 1,
+  "places": [{
+    "id": "place_identifier",
+    "references": ["reference_view.jpg"],
+    "content": [{
+      "id": "post_identifier",
+      "kind": "image",
+      "asset": "posted_image.png",
+      "author": "example-user",
+      "created_at": "2026-11-05",
+      "anchor_normalized": [
+        [0.2, 0.2], [0.8, 0.2],
+        [0.8, 0.65], [0.2, 0.65]
+      ],
+      "opacity": 0.8
+    }]
+  }]
+}
+\end{lstlisting}
+
+\Cref{lst:schema} shows the implemented fields. Normalised polygon coordinates preserve the intended reference region when an image is resized. They describe a quadrilateral in the reference image, not a metric plane pose or a three-dimensional volume. The asset can retain its own alpha channel. The current renderer consumes image assets; the schema's content-kind field provides a point for future video, note and mesh renderers without claiming they are implemented.
+
+The index is stored in a companion compressed NumPy file. It contains descriptors, reference paths, image hashes, the encoder checkpoint hash and preprocessing settings, including the image resize limit. Loading checks the index version, reference list, fingerprint count, configuration and finite descriptor matrix. A changed reference image, checkpoint or resize limit requires rebuilding. Enforcing cache-size limits remains a service implementation requirement.
+
+Each content polygon is associated with one reference photograph. An optional \code{reference} field selects that photograph; when omitted, the first reference is used. A post is rendered only through its associated reference. Adding a second photograph does not transfer polygon coordinates between views; that requires a validated geometric relation.
+
+\section{Implemented query behaviour}
+A query extracts its local features once. In full mode it also extracts a global descriptor and ranks references, selecting the configured shortlist. Each candidate receives local matching and RANSAC verification. Accepted candidates are ranked by inlier count and then inlier ratio. If none is accepted, the returned place identifier is absent. Otherwise, the selected reference and the content records belonging to that reference's place are returned together.
+
+Rendering loads each selected asset, maps its corners to its reference-anchor polygon, composes that map with the reference-to-query homography, and alpha-composites into the query frame. This implements a complete local recognition-to-content path. The content is not selected by manually choosing an overlay after observing a query result. It is retrieved through the matched place record.
+
+Candidate diagnostics accompany the decision. They record place identifiers, support counts, ratios and acceptance flags. These diagnostics make it possible to explain why a familiar scene did not display a post: the correct reference may be outside the shortlist, or its local support may be inadequate. A user interface could convert those states into a prompt to move the camera or improve lighting. The research CLI reports the evidence directly.
+
+\ifFullReport
+\section{Proposed multi-user posting and retrieval flow}
+\designnote
+A production posting transaction would begin with an authenticated user observing an already mapped place or requesting creation of a new place. The client would submit a reference observation and a proposed anchor. A server would validate the observation, associate it with a map revision and persist the content record only after the identity and permissions are established. An unresolved observation should remain a draft rather than create a potentially incorrect public anchor.
+
+A later visitor would first obtain nearby place candidates, using an approximate location prior if the user permits it. Visual retrieval and geometric verification would establish a local map relation. The service would then return only content visible to that visitor under access and moderation rules. Content delivery and anchor resolution are separate operations: resolving a place must not expose a private post merely because its author once used that map.
+
+\begin{figure}[htbp]\centering
+\begin{tikzpicture}[node distance=1.1cm,box/.style={draw,rounded corners,align=center,text width=3cm,minimum height=1cm},arr/.style={-{Latex},thick}]
+\node[box] (a) {Posting client\\observation + draft};
+\node[box,right=of a] (b) {Place/map service\\verify + version};
+\node[box,right=of b] (c) {Content service\\permissions + assets};
+\node[box,below=of b] (d) {Visiting client\\recognise + resolve};
+\draw[arr] (a)--node[above,font=\small]{propose}(b);
+\draw[arr] (b)--node[above,font=\small]{verified ID}(c);
+\draw[arr] (d)--node[left,font=\small]{query}(b);
+\draw[arr] (c.south)|-node[pos=.7,below,font=\small]{authorised content}(d.east);
+\end{tikzpicture}
+\caption{Proposed multi-user service responsibilities. These network transactions are not implemented or load-tested in the local artifact.}\label{fig:multiuser}
+\end{figure}
+
+\Cref{fig:multiuser} separates the responsibilities needed to make the original social concept credible. A map service controls coordinate consistency and reference revisions. A content service controls visibility, asset retrieval and moderation state. The client controls capture, local inference and presentation. This division prevents an image-matching success from being overloaded as proof of authorisation, current map validity and safe content.
+\fi
+
+\ifFullReport
+\section{API and consistency sketch}
+An API could expose a place-creation operation, an observation-verification operation, content posting, content retrieval and anchor retirement. Each response should include a place ID and map revision, not only a raw pose or homography. Posting should be idempotent under a client-generated request key so a network retry cannot create duplicate objects. Updating a map should create a new revision and retain an explicit relation to existing anchors.
+
+Anchor migration is a geometric operation. If an old reference plane is replaced, old polygon coordinates cannot simply be copied into an unrelated photograph. The service would need a validated transformation or a human-assisted reattachment. Until that relation exists, affected posts should be marked unresolved. This policy is more defensible than rendering an obsolete anchor with a stale cached homography.
+
+Content deletion should remove the public record and invalidate cached asset access, while map deletion should address references and derived indexes. An audit record may retain a minimal event description without retaining the original image indefinitely. These design choices are discussed as requirements rather than as implemented guarantees. The local database is intentionally small and file-based, which supports inspection but does not provide concurrent transactions or distributed deletion.
+\fi
+
+\section{Server and device allocation}
+The implemented artifact runs entirely on the host CPU. For a mobile deployment, global retrieval could remain on device for a geographically limited gallery, while a server supplies additional map candidates. Local verification could also run on device after downloading sparse reference features. The trade-off depends on model size, bandwidth, privacy requirements and the measured phone execution backend; those quantities cannot be decided from desktop throughput alone.
+
+A viable interaction loop should separate occasional recognition from high-frequency tracking. The original \code{tep3.py} already illustrates this principle for a known target. Learned recognition could establish or refresh the map relation, after which the native AR tracking system updates the view. This architecture would not require executing the full hierarchical recogniser at the display refresh rate. Nevertheless, tracking drift and recovery latency would need their own measurements before the system could be described as persistent.
+
+\section{Testability and failure containment}
+The module boundaries support tests with known transforms and synthetic outliers, independently of network downloads. The database can be inspected without loading a neural model. Rendering can be tested with an opaque black asset and a transparent asset. I/O failures can be reproduced through bounded files. These checks protect coordinate and state conventions that otherwise produce convincing but incorrect overlays.
+
+The main containment rule is rejection on insufficient evidence. A missing descriptor set, failed estimate, singular transform or absent verified candidate returns no anchor. Qualitative demonstrations retain these failures visibly. The resulting behaviour may display less content than a permissive prototype, but it provides an interpretable basis for studying whether a future recognition improvement actually increases correctly supported anchors.

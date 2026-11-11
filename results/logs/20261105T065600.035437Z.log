@@ -1,0 +1,41 @@
+{
+  "report_pages": 127,
+  "slides": 30,
+  "powerpoint_slides": 30,
+  "metadata_verified": true,
+  "original_asset_copies_verified": 27,
+  "measured_result_sources_verified": true,
+  "latex_errors": 0,
+  "undefined_references_or_citations": 0,
+  "overfull_boxes": 0,
+  "oversized_floats": 0,
+  "supervisor": "Dr. R. Balasubramanian",
+  "enrollment": "25565017",
+  "original_reference_documents_modified": false,
+  "reference_chapter_geometry": {
+    "Chapter 1": [
+      99.212,
+      641.179,
+      20.6625
+    ],
+    "Introduction": [
+      99.212,
+      584.999,
+      24.7871
+    ]
+  },
+  "stitch_chapter_geometry": {
+    "Chapter 1": [
+      99.213,
+      641.179,
+      20.6625
+    ],
+    "Introduction": [
+      99.213,
+      584.999,
+      24.7871
+    ]
+  },
+  "chapter_heading_alignment_tolerance_pdf_points": 0.01,
+  "powerpoint_editing": "Edit supplied LaTeX master; PPTX is a faithful rendered-slide export"
+}

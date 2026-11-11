@@ -1,0 +1,22 @@
+seed: 17
+device: cpu
+threads: 2
+max_side: 640
+# Approximate horizontal camera FOV. Calibrate this value for the source camera
+# before relying on metric 3D placement. It is used with zero lens distortion.
+camera_fov_x_deg: 70.0
+# Suggested total yaw sweep for additional reference captures.
+capture_angle_sweep_deg: 30.0
+# Optional outdoor metric monocular depth model; fetched on first 3D placement.
+depth_model_id: depth-anything/Depth-Anything-V2-Metric-Outdoor-Small-hf
+depth_max_m: 80.0
+max_keypoints: 512
+sift_ratio: 0.70
+ransac_px: 5.0
+min_inliers: 12
+min_inlier_ratio: 0.20
+top_k: 3
+cosplace_size: 224
+cosplace_weights: models/cosplace_r18_512.pth
+lightglue_depth_confidence: 0.95
+lightglue_width_confidence: 0.99

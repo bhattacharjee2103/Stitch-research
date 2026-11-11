@@ -1,0 +1,16 @@
+{
+  "report_pages": 125,
+  "slides": 30,
+  "powerpoint_slides": 30,
+  "metadata_verified": true,
+  "original_asset_copies_verified": 27,
+  "measured_result_sources_verified": true,
+  "latex_errors": 0,
+  "undefined_references_or_citations": 0,
+  "overfull_boxes": 0,
+  "oversized_floats": 0,
+  "supervisor": "Dr. R. Balasubramanian",
+  "enrollment": "25565017",
+  "original_reference_documents_modified": false,
+  "powerpoint_editing": "Edit supplied LaTeX master; PPTX is a faithful rendered-slide export"
+}

@@ -1,0 +1,99 @@
+.............................F.                                          [100%]
+=================================== FAILURES ===================================
+____________ test_cli_reports_output_failure_or_empty_video[query] _____________
+
+tmp_path = PosixPath('/private/var/folders/lb/j6x3z82d17z292m4k0yh7vyh0000gn/T/pytest-of-bhattacharjee/pytest-0/test_cli_reports_output_failur0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1185640d0>
+command = 'query'
+
+    @pytest.mark.parametrize('command',['query','video'])
+    def test_cli_reports_output_failure_or_empty_video(tmp_path,monkeypatch,command):
+        class FakePipeline:
+            def __init__(self,*args):pass
+            def query(self,image):return SimpleNamespace()
+            def render(self,image,prediction):return image
+        monkeypatch.setattr(cli,'Pipeline',FakePipeline)
+        monkeypatch.setattr(cli,'PlaceDatabase',lambda path:None)
+        monkeypatch.setattr(cli,'read_image',lambda *args:(np.zeros((10,10,3),np.uint8),np.eye(3)))
+        monkeypatch.setattr(cli.cv2,'imwrite',lambda *args:False)
+        monkeypatch.setattr(cli,'frames',lambda *args:iter([]))
+        monkeypatch.setattr(sys,'argv',['stitch',command,'unused.json','input',str(tmp_path/'output')])
+        with pytest.raises(OSError,match='Cannot write image|no decodable frames'):
+>           cli.main()
+
+tests/test_pipeline_cli.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def main():
+        p=argparse.ArgumentParser(description=__doc__)
+        p.add_argument('--config',default='configs/default.yaml')
+        sub=p.add_subparsers(dest='command',required=True)
+        b=sub.add_parser('index');b.add_argument('database')
+        reg=sub.add_parser('register',help='Register a captured reference, overlay and GPS location')
+        reg.add_argument('database');reg.add_argument('place_id');reg.add_argument('reference')
+        reg.add_argument('overlay');reg.add_argument('--name',default='')
+        reg.add_argument('--latitude',type=float,required=True);reg.add_argument('--longitude',type=float,required=True)
+        reg.add_argument('--opacity',type=float,default=.8)
+        reg.add_argument('--anchor',type=float,nargs=8,
+                         help='Normalized overlay corner coordinates x0 y0 x1 y1 x2 y2 x3 y3')
+        for name in ['query','video']:
+            a=sub.add_parser(name);a.add_argument('database');a.add_argument('input');a.add_argument('output')
+            a.add_argument('--method',choices=['classical','local','full'],default='full')
+            a.add_argument('--latitude',type=float);a.add_argument('--longitude',type=float)
+            if name=='video':a.add_argument('--limit',type=int,default=120)
+        scan=sub.add_parser('scan',help='Show live recognition and overlays from a webcam or stream')
+        scan.add_argument('database');scan.add_argument('input',help='Webcam index, video path or stream URL')
+        scan.add_argument('--method',choices=['classical','local','full'],default='full')
+        scan.add_argument('--latitude',type=float);scan.add_argument('--longitude',type=float)
+        scan.add_argument('--limit',type=int,default=0)
+        args=p.parse_args()
+        config=yaml.safe_load(Path(args.config).read_text())
+        torch.set_num_threads(config['threads']);cv2.setNumThreads(config['threads'])
+        torch.manual_seed(config['seed']);np.random.seed(config['seed']);cv2.setRNGSeed(config['seed'])
+        if args.command=='register':
+            path=Path(args.database)
+            if path.exists():
+                db=PlaceDatabase(args.database)
+            else:
+                path.parent.mkdir(parents=True,exist_ok=True)
+                path.write_text(json.dumps({'schema_version':1,'places':[]},indent=2)+'\n')
+                db=PlaceDatabase(args.database,allow_empty=True)
+            place=db.register(args.place_id,args.name,args.reference,args.overlay,
+                              args.latitude,args.longitude,args.opacity,
+                              None if args.anchor is None else np.asarray(args.anchor).reshape(4,2))
+            print(json.dumps(place,indent=2))
+            return
+        db=PlaceDatabase(args.database)
+        if args.command=='index':
+            db.build(GlobalEngine(config['cosplace_weights'],config['device'],size=config['cosplace_size']),
+                     config['max_side'])
+            print('Indexed',len(db.rows),'reference images')
+            return
+        pipeline=Pipeline(db,config,args.method)
+        if args.command=='scan':
+            shown=0
+            try:
+                for frame in frames(args.input,args.limit):
+                    h,w=frame.shape[:2];scale=min(1,config['max_side']/max(h,w))
+                    frame=cv2.resize(frame,(round(w*scale),round(h*scale)))
+                    prediction=pipeline.query(frame,args.latitude,args.longitude)
+                    output=pipeline.render(frame,prediction)
+                    title=(f"Stitch: {prediction.place_id} ({prediction.elapsed_ms:.0f} ms)"
+                           if prediction.place_id else f"Stitch: searching ({prediction.elapsed_ms:.0f} ms)")
+                    cv2.imshow(title,output)
+                    shown+=1
+                    if cv2.waitKey(1) & 0xFF in (ord('q'),27):break
+            finally:
+                cv2.destroyAllWindows()
+            if not shown:raise OSError('Video input contains no decodable frames')
+            return
+        Path(args.output).parent.mkdir(parents=True,exist_ok=True)
+        if args.command=='query':
+            image,_=read_image(args.input,config['max_side'])
+>           prediction=pipeline.query(image,args.latitude,args.longitude)
+E           TypeError: query() takes 2 positional arguments but 4 were given
+
+src/stitch/cli.py:80: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_pipeline_cli.py::test_cli_reports_output_failure_or_empty_video[query]
+1 failed, 30 passed in 2.16s

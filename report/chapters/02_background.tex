@@ -1,0 +1,81 @@
+\chapter{Background and Literature Review}\label{ch:background}
+\section{Recognition, localisation and anchoring}
+Visual place recognition asks which previously observed place is depicted in a query. Image retrieval implements this as ranking a gallery using visual descriptors. A retrieved image can supply an approximate location or a candidate region, but its similarity score does not determine the query camera's geometric pose. Visual localisation instead estimates the camera transformation relative to a map. In a calibrated three-dimensional setting that transformation has rotation and translation components. The established long-term benchmark distinguishes retrieval-like recognition from six-degree-of-freedom localisation under changing conditions \citep{sattler2018}.
+
+Anchoring adds an application coordinate convention. A post needs a position or surface in the map, and the current device needs a transformation from that map to its view. A planar reference image can provide such a convention for image overlays: content coordinates map to reference-image pixels and then to query-image pixels. General three-dimensional objects require a world or surface coordinate frame whose scale and orientation are known. These outputs impose different observability requirements and should not share a single undifferentiated ``localisation success'' score.
+
+This separation guides the experimental design. Global-only retrieval is evaluated as retrieval. A local matcher is evaluated on image pairs whose relationship is known independently. A complete candidate-search pipeline is evaluated both for its ranked place result and for whether its selected candidate passes verification. On HPatches, an additional ground-truth comparison checks the estimated mapping. This arrangement permits a matcher to be good even when retrieval misses its correct candidate, and permits a retrieval method to be good even when a query lacks enough shared surface for anchoring.
+
+\section{Handcrafted local features}
+\subsection{SIFT}
+SIFT constructs local descriptors around characteristic image structures selected across scale. Orientation assignment and gradient-distribution normalisation provide robustness to several nuisance transformations. Lowe's account also makes clear that robustness is bounded: perspective distortion, severe appearance change and absent detail remain relevant \citep{lowe2004}. Stitch uses the OpenCV implementation rather than reimplementing the detector.
+
+For this application, a local descriptor provides more than an image-level match. Each descriptor remains associated with a pixel location, so accepted correspondences constrain a geometric map. This is the central reason a global embedding cannot directly replace the original pipeline. The comparison tests whether learned keypoints and descriptors provide better correspondences while preserving that association.
+
+\subsection{Approximate matching and the ratio test}
+FLANN selects approximate nearest neighbours using indexing strategies suited to descriptor search \citep{muja2009}. In the upstream scripts, a randomised tree index and a bounded search effort retrieve the first two neighbours for each reference descriptor. A ratio criterion rejects a match when its best neighbour is insufficiently separated from the second-best candidate. This ambiguity test is useful for repeated textures, although it cannot establish physical scene identity by itself.
+
+The implementation must also handle cases omitted by compact demonstrations. A query with no descriptors produces no candidate correspondences. A reference descriptor may receive fewer than two neighbours if the target set is too small. Neither condition should raise an unhandled tuple-unpacking error or lead to a reused anchor being interpreted as a new recognition. The refactor makes empty sets and rejection first-class outputs.
+
+\section{Learned local representations and matching}
+\subsection{SuperPoint}
+SuperPoint jointly predicts interest points and descriptors from an image. Its training framework uses synthetic supervision and homographic adaptation to improve repeatability without requiring manually annotated natural-image keypoints \citep{detone2018}. The present work uses publicly released pretrained weights. Neither the detector nor its descriptor backbone is trained on the evaluation subset.
+
+The practical hypothesis is that joint learning may preserve useful correspondence evidence when raw contrast or local gradient distributions change. That hypothesis remains empirical. The learned extractor can still miss features in severe low light, repeated patterns or regions with little texture. A bounded keypoint count is used for both local methods, so the learned method is not granted an unlimited correspondence budget.
+
+\ifFullReport
+\subsection{SuperGlue and contextual assignment}
+SuperGlue conditions correspondence decisions on both feature sets through a graph neural network with attention and a differentiable assignment formulation. It explicitly models unmatched features, allowing occlusion and non-repeatability to be handled within matching \citep{sarlin2020}. This provides the conceptual motivation for comparing a learned matching stage with nearest-neighbour filtering. SuperGlue itself is reviewed but not executed in this artifact.
+\fi
+
+\subsection{LightGlue}
+LightGlue revisits sparse learned matching with adaptive computation. Its official implementation supports SuperPoint and several other feature families and exposes mechanisms that adjust work to pair difficulty \citep{lindenberger2023,lightgluerepo}. The experiments use SuperPoint-compatible pretrained weights, CPU inference and the recorded confidence settings. Flash-attention acceleration is disabled so the tested execution path is explicit.
+
+Adaptivity matters for Stitch because a difficult night query may require more work than an easy repeated view. A single average latency can conceal that variation. The artifact consequently records per-pair times and separately profiles complete queries. However, a laptop inference result does not demonstrate the same adaptive performance in a mobile runtime: export operators, memory allocation and backend support must also be verified.
+
+\ifFullReport
+\subsection{LoFTR and the detector-free alternative}
+LoFTR establishes correspondences through coarse-to-fine dense feature interaction rather than relying on a separately detected sparse keypoint set \citep{sun2021}. Its larger contextual field motivates it as an alternative when repeated keypoints are scarce. It is not included in the executed comparison, which focuses on a sparse pipeline compatible with cached per-reference features. A claim about LoFTR's accuracy or mobile cost on these subsets would require an additional run.
+\fi
+
+\section{Global descriptors for place retrieval}
+\subsection{NetVLAD}
+NetVLAD makes residual aggregation trainable and uses weak place supervision to learn image embeddings for retrieval \citep{arandjelovic2016}. Its broader lesson is that visual similarity can be learned from place relationships rather than from generic object categories alone. In Stitch, this role is coarse candidate selection; it reduces the number of local reference-query comparisons before geometric verification.
+
+\subsection{CosPlace}
+CosPlace addresses large-scale visual geo-localisation through a classification-based training formulation and releases compact pretrained retrieval models \citep{berton2022,cosplacerepo}. The artifact selects a ResNet18 model with a 512-dimensional output. The choice provides a smaller encoder than the larger released backbones and a straightforward convolutional export path. It is an engineering selection for the available host, rather than a demonstrated optimum among all modern retrieval systems.
+
+\ifFullReport
+\subsection{MixVPR and foundation features}
+MixVPR aggregates feature maps through feature mixing and is a relevant alternative to residual aggregation \citep{alibey2023}. DINOv2 provides self-supervised visual features that can also motivate retrieval pipelines \citep{oquab2023}. These approaches are discussed to position the selected model within the literature. They are not silently substituted for CosPlace, and the thesis attributes no locally measured performance to them.
+\fi
+
+\subsection{Candidate retrieval as a bottleneck}
+If a correct reference is absent from the selected shortlist, a downstream matcher cannot recover it without expanding the search. A small shortlist can therefore improve latency while reducing the ceiling on successful anchoring. Increasing its size may recover relevant references but also adds expensive nonmatching pairs and more opportunities for a false geometric acceptance. The stage ablation varies shortlist size on exactly the same queries to expose this trade-off.
+
+A retrieval score also has no universal probability interpretation. Cosine similarity measures proximity in the selected descriptor space. Its distribution changes with gallery composition, camera conditions and training domain. Treating a high similarity as permission to display content would bypass the local evidence needed to identify an anchoring surface. The no-geometry ablation is retained as a diagnostic, not as the recommended rendering policy.
+
+\section{Projective geometry and robust estimation}
+Image correspondences constrain different geometric models depending on scene structure and calibration. Homographies describe plane-induced image mappings and pure-rotation cases. Essential matrices describe calibrated two-view epipolar relationships. PnP estimates camera pose from known three-dimensional points and their image projections \citep{hartley2004,lepetit2009}. Stitch's available assets and HPatches supply a direct planar formulation; the downloaded Tokyo metadata does not supply the calibrated 2D--3D relationships needed for PnP.
+
+RANSAC estimates a model from subsets of tentative correspondences while rejecting gross outliers \citep{fischler1981}. It does not transform an inappropriate model into a physically correct one. A street scene may admit many correspondences on one facade while foreground objects remain inconsistent with the same homography. Similarly, repeated windows may support a projective map to the wrong location. Inlier support is therefore necessary evidence for this prototype, but it is not complete evidence of place identity or three-dimensional consistency.
+
+\section{Hierarchical visual localisation}
+Coarse-to-fine localisation combines global hypotheses with local geometric evidence. HF-Net demonstrates this principle using jointly predicted local and global representations \citep{sarlin2019}. The present system adopts the hierarchy but uses separate pretrained networks and a planar verifier. Its proposed combination is an integration choice, not a claim to originate hierarchical localisation.
+
+Separating the stages remains valuable for a small research artifact. Each component can be replaced and each failure can be attributed to a recorded intermediate output. A wrong shortlist, an inadequate correspondence set and an inaccurate accepted homography become different diagnoses. The resulting modularity also exposes costs that a monolithic end-to-end timing would hide, such as reference extraction and content asset loading.
+
+\section{Benchmarks and domain coverage}
+HPatches offers image sequences with illumination or viewpoint variation and known planar relationships \citep{balntas2017,hpatchesrepo}. It is suited to evaluating image alignment, but it does not establish geographic recognition over a city or metric pose accuracy. A small distractor gallery assembled from its sequence references is an explicit custom retrieval task.
+
+Tokyo 24/7 was designed around changes in time of day and viewpoint, with camera-phone queries and a street-view database \citep{torii2015}. Using its accessible query photographs as both cross-time references and queries creates a useful paired recognition experiment but changes the task. The benchmark's original database scale and ground-truth conventions must not be carried over to this subset's results.
+
+Aachen Day-Night, RobotCar Seasons and Extended CMU Seasons extend evaluation toward long-term metric localisation \citep{sattler2018,localizationbenchmark}. MSLS provides broader geographic, seasonal and sequence variation \citep{warburg2020}. Those capabilities motivate future validation, while their absence from the executed image set limits what this thesis can conclude about seasonal robustness and map-level localisation.
+
+\section{Persistent AR services and lifecycle}
+ARCore Cloud Anchors uses hosted scene information and an anchor identifier to support later resolution by devices observing the environment \citep{arcore}. ARKit world maps support saving spatial state and attempting relocalisation in a later session \citep{arkit}. These systems demonstrate that persistence involves mapping and coordinate recovery, not only content storage. Their documentation informs the proposed integration boundary; neither service is called by the experiments.
+
+Azure Spatial Anchors is relevant historically, but Microsoft states that the service was retired in November 2024 \citep{azure}. It is therefore discussed as background rather than recommended as a new dependency. This distinction illustrates why service status must be checked independently of the publication date of an AR architecture proposal.
+
+\section{Research gap addressed by the artifact}
+The literature already provides strong representations, matchers and hierarchical localisation designs. The immediate gap in Stitch is the absence of an evaluated connection between those components and its reference-plane rendering demonstration. The artifact addresses that gap by preserving the classical behaviour, introducing explicit place records, executing controlled comparisons, and making rejection and uncertainty visible. The remaining gap is larger: metric map construction, cross-device anchor management and realistic phone validation are still required for the original social-AR ambition.

@@ -1,0 +1,12 @@
+\begin{table}[htbp]\centering\small
+\caption{Isolated warm CPU query and rendering measurements with cached references. RSS is the complete Python process peak, including imports, models, gallery and allocator state.}\label{tab:profiles}
+\begin{tabular}{lrrr}
+\toprule
+Pipeline & Median ms & 95th pct. ms & Peak RSS MB \\
+\midrule
+classical & 186.2 & 211.3 & 568.3 \\
+local & 3020.4 & 4040.9 & 1435.5 \\
+retrieval & 18.5 & 21.4 & 537.2 \\
+full & 1332.5 & 1523.1 & 1492.3 \\
+\bottomrule
+\end{tabular}\end{table}

@@ -1,0 +1,38 @@
+[
+  {
+    "archive": "deliverables/Stitch_IITR_Report_LaTeX.zip",
+    "command": [
+      "latexmk",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-outdir=build",
+      "main.tex"
+    ],
+    "clean_temporary_directory": true,
+    "manifest_sha256_verified": true,
+    "bundled_sources_match_current_project": true,
+    "final_latex_log_clean": true,
+    "returncode": 0,
+    "pdf_pages": 88,
+    "outside_project_data_required": false
+  },
+  {
+    "archive": "deliverables/Stitch_IITR_Presentation_LaTeX.zip",
+    "command": [
+      "latexmk",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-outdir=build",
+      "Stitch_IITR_Presentation.tex"
+    ],
+    "clean_temporary_directory": true,
+    "manifest_sha256_verified": true,
+    "bundled_sources_match_current_project": true,
+    "final_latex_log_clean": true,
+    "returncode": 0,
+    "pdf_pages": 30,
+    "outside_project_data_required": false
+  }
+]

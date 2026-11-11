@@ -1,0 +1,28 @@
+ASSETS
+white_bg.png (195, 239)
+unet.png (1536, 1024)
+slide_bg.png (1025, 768)
+IITR.jpg (5121, 5025)
+iitr.png (5129, 4968)
+titleslide_bg.png (1500, 1125)
+logo_color.jpg (5121, 5025)
+ARCHIVE PRONOB BHATTACHARJEE.zip 39
+['soikat-fonts.map']
+ARCHIVE PRONOB-BHATTACHARJEE-Overleaf.zip 37
+['soikat-fonts.map']
+ARCHIVE Soikat-thesis-latex.zip 41
+['soikat-fonts.map']
+THESIS PAGE TITLES
+[(8, 'Contents Candidate’s Declaration ii Acknowledgement iv Abstract v List of Figures x List of Tables xi 1 Introduction 1 1.1 Background and Motivation . . . . . . . . . . . . . . . .'), (9, 'Contents 3 Frequency-enhanced Salient Area Masking Adversarial Attack 14 3.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14 3.2 Met'), (10, 'Contents 4.3.2 Overall Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39 4.3.3 Attack-Specific Performance . . . . . . . . . . . . . . . . . . . . . . . '), (11, 'Contents 6.3.4 Attack Evaluation Metrics (Part II) . . . . . . . . . . . . . . . . . . . . . . 63 6.3.5 Baselines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . '), (12, 'List of Figures 3.1 Effect of different mask sizes on a299×299image. . . . . . . . . . . . . . . . . . . 18 3.2 Frequency Domain Comparison, adversarial image generated using ResNe'), (13, 'List of Tables 3.1 Comparison of adversarial attacks across multiple models. Higher ASR, SSIM, and PSNR indicate stronger attacks and better visual preservation, while lowerL2 indi'), (14, 'List of Tables 6.2 Discriminator (4-layer MLP) accuracy at distinguishing classifier features from perceptual-proxy features. Results are mean±std over 3 random seeds. . . . . . . '), (15, 'List of Tables 6.16 Jacobian-vector product∥Jg·δ∥ for RN and PGD perturbations. RN perturbations havehigher JVP norms than PGD, indicating that the near-zero LPIPS of the RN attack'), (16, 'Chapter 1 Introduction 1.1 Background and Motivation Deep neural networks (DNNs) have achieved remarkable performance across a wide range of artificial intelligence tasks, includin'), (21, 'Chapter 1. Introduction Contributions in Adversarial Robustness for LLM Mathematical Reasoning (ReThink) • We proposeReThink, a training-free neuro-symbolic framework that formulat'), (36, 'Chapter 3. Frequency-enhanced Salient Area Masking Adversarial Attack • Structural Similarity Index (SSIM) [68]: A perceptual metric that quantifies the structural similarity betwe')]
+PAGE1 IMAGES [('Im1.jpg', 396183, (2026, 2048))]
+TEXT POSITIONS
+'NOVEL ADVERSARIAL ATTACKS ON VISION, AUDIO' xy [99.298, 671.337] size 15.9402
+'MODELS AND DEFENSE FOR LLM REASONING' xy [119.852, 649.817] size 15.9402
+'A DISSERTATION' xy [262.20799999999997, 576.867] size 13.9477
+'by' xy [322.13599999999997, 532.262] size 13.9477
+'PRONOB BHATTACHARJEE\n' xy [219.79499999999996, 487.6569999999999] size 13.9477
+'Enrollment No: 25565017\n' xy [241.69599999999997, 465.7299999999999] size 13.9477
+'Mehta Family School of Data Science and Artificial Intelligence\n' xy [111.10899999999998, 131.7899999999999] size 13.9477
+'INDIAN INSTITUTE OF TECHNOLOGY ROORKEE\n' xy [137.46399999999997, 112.6619999999999] size 13.9477
+'ROORKEE – 247667, INDIA\n' xy [228.70999999999998, 93.5339999999999] size 13.9477
+'May, 2026' xy [291.899, 77.2749999999999] size 13.9477

@@ -1,0 +1,17 @@
+.venv/
+data/
+models/
+vendor/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+report/build/
+output.mp4
+.DS_Store
+.cache/
+presentation/build/
+.venv-linux/
+.git.corrupt-backup/
+*.pyc
+# truncated/corrupt build (4 MiB, no EOF marker); rebuild before adding
+report/thesis_full.pdf

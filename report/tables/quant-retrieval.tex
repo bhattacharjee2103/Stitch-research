@@ -1,0 +1,21 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrr}
+\caption{Retrieval accuracy (percent) after actual ONNX inference. Calibration uses training places, not Tokyo queries.}\label{tab:quant-retrieval}\\
+\toprule
+Protocol & Float R@1 & INT8 R@1 & Float R@5 & INT8 R@5 \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Protocol & Float R@1 & INT8 R@1 & Float R@5 & INT8 R@5 \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{Continued on next page}\\
+\endfoot
+\bottomrule\endlastfoot
+tokyo\_day\_to\_day & 41.7 & 33.3 & 62.5 & 70.8 \\
+tokyo\_day\_to\_night & 100.0 & 100.0 & 100.0 & 100.0 \\
+tokyo\_night\_to\_day & 100.0 & 100.0 & 100.0 & 100.0 \\
+tokyo\_day\_to\_sunset & 100.0 & 100.0 & 100.0 & 100.0 \\
+\end{longtable}\endgroup

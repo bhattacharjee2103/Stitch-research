@@ -1,0 +1,49 @@
+features 0 / 332
+features 30 / 332
+features 60 / 332
+features 90 / 332
+features 120 / 332
+features 150 / 332
+features 180 / 332
+features 210 / 332
+features 240 / 332
+features 270 / 332
+features 300 / 332
+features 330 / 332
+hpatches_illumination query 0 / 60 cached pairs 48
+hpatches_illumination query 10 / 60 cached pairs 528
+hpatches_illumination query 20 / 60 cached pairs 1008
+hpatches_illumination query 30 / 60 cached pairs 1488
+hpatches_illumination query 40 / 60 cached pairs 1968
+hpatches_illumination query 50 / 60 cached pairs 2448
+hpatches_viewpoint query 0 / 60 cached pairs 2928
+hpatches_viewpoint query 10 / 60 cached pairs 3408
+hpatches_viewpoint query 20 / 60 cached pairs 3888
+hpatches_viewpoint query 30 / 60 cached pairs 4368
+hpatches_viewpoint query 40 / 60 cached pairs 4848
+hpatches_viewpoint query 50 / 60 cached pairs 5328
+tokyo_day_to_day query 0 / 24 cached pairs 5808
+tokyo_day_to_day query 10 / 24 cached pairs 6288
+tokyo_day_to_day query 20 / 24 cached pairs 6768
+tokyo_day_to_night query 0 / 24 cached pairs 6960
+tokyo_day_to_night query 10 / 24 cached pairs 7440
+tokyo_day_to_night query 20 / 24 cached pairs 7920
+tokyo_night_to_day query 0 / 24 cached pairs 8112
+tokyo_night_to_day query 10 / 24 cached pairs 8592
+tokyo_night_to_day query 20 / 24 cached pairs 9072
+tokyo_day_to_sunset query 0 / 24 cached pairs 9264
+tokyo_day_to_sunset query 10 / 24 cached pairs 9744
+tokyo_day_to_sunset query 20 / 24 cached pairs 10224
+synthetic_day query 0 / 18 cached pairs 10420
+synthetic_day query 10 / 18 cached pairs 10940
+synthetic_night query 0 / 18 cached pairs 11356
+synthetic_night query 10 / 18 cached pairs 11876
+synthetic_night_severe query 0 / 18 cached pairs 12292
+synthetic_night_severe query 10 / 18 cached pairs 12812
+synthetic_warm_night query 0 / 18 cached pairs 13228
+synthetic_warm_night query 10 / 18 cached pairs 13748
+synthetic_fog query 0 / 18 cached pairs 14164
+synthetic_fog query 10 / 18 cached pairs 14684
+open_set query 0 / 12 cached pairs 15096
+open_set query 10 / 12 cached pairs 15576
+Completed 612 oracle pair rows, 2226 prediction rows

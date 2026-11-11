@@ -1,0 +1,103 @@
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/verify_research.py
+{
+  "status": "passed",
+  "input_files_sha256_verified": 768,
+  "vendor_revisions_verified": true,
+  "benchmark_hash_verified": true,
+  "training_test_places_disjoint": true,
+  "prediction_decisions_independently_reconstructed": 2226,
+  "oracle_pairs_cross_checked": 612,
+  "candidate_pairs": 15624,
+  "candidate_acceptance_decisions_recomputed": 15624,
+  "retrieval_csv_consistent": true,
+  "homography_success_recomputed": true,
+  "inference_rerun": false
+}
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/verify_model_artifacts.py
+{
+  "status": "passed",
+  "trained_heads_replayed": 6,
+  "training_result_rows_reproduced": 72,
+  "exported_models": [
+    {
+      "variant": "fp32",
+      "images_replayed": 96,
+      "retrieval_scores_match": true,
+      "max_abs_error_to_native_cache": 5.53671270608902e-07
+    },
+    {
+      "variant": "int8",
+      "images_replayed": 96,
+      "retrieval_scores_match": true,
+      "max_abs_error_to_native_cache": 0.06979671120643616
+    }
+  ],
+  "profile_aggregates_checked": 4,
+  "retraining_performed": false,
+  "latency_rebenchmarked": false
+}
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/verify_thesis.py
+{
+  "pdf_pages": 254,
+  "substantive_chapter_pages": 176,
+  "minimum_required_pdf_pages": 200,
+  "evidence_scene_entries": 48,
+  "complete_oracle_register_rows": 612,
+  "intro_pdf_page": 26,
+  "bibliography_pdf_page": 202,
+  "latex_errors": 0,
+  "undefined_references": 0,
+  "undefined_citations": 0,
+  "cited_entries": 30,
+  "bibliography_entries": 30,
+  "result_groups_checked": 84,
+  "demo_decoding": "passed",
+  "overfull_box_warnings": 0,
+  "pdf_sha256": "cec743696c784c1bcb4b6d632f4e31c0b667f29494c42dde1c713afe5126a0c0"
+}
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/verify_iitr_documents.py
+{
+  "report_pages": 254,
+  "slides": 30,
+  "powerpoint_slides": 30,
+  "metadata_verified": true,
+  "original_asset_copies_verified": 27,
+  "measured_result_sources_verified": true,
+  "latex_errors": 0,
+  "undefined_references_or_citations": 0,
+  "overfull_boxes": 0,
+  "oversized_floats": 0,
+  "supervisor": "Dr. R. Balasubramanian",
+  "enrollment": "25565017",
+  "original_reference_documents_modified": false,
+  "reference_chapter_geometry": {
+    "Chapter 1": [
+      99.212,
+      641.179,
+      20.6625
+    ],
+    "Introduction": [
+      99.212,
+      584.999,
+      24.7871
+    ]
+  },
+  "stitch_chapter_geometry": {
+    "Chapter 1": [
+      99.213,
+      641.179,
+      20.6625
+    ],
+    "Introduction": [
+      99.213,
+      584.999,
+      24.7871
+    ]
+  },
+  "reference_pdf_available": true,
+  "chapter_heading_alignment_tolerance_pdf_points": 0.01,
+  "powerpoint_editing": "Edit supplied LaTeX master; PPTX is a faithful rendered-slide export"
+}
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/check_document_packages.py
+Stitch_IITR_Report standalone compilation passed: 254 pages
+Stitch_IITR_Presentation standalone compilation passed: 30 pages

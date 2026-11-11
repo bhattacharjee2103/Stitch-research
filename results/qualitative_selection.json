@@ -1,0 +1,26 @@
+[
+  {
+    "protocol": "hpatches_illumination",
+    "id": "i_ajuntament_3",
+    "sift": false,
+    "learned": true
+  },
+  {
+    "protocol": "hpatches_viewpoint",
+    "id": "v_azzola_6",
+    "sift": false,
+    "learned": true
+  },
+  {
+    "protocol": "tokyo_day_to_night",
+    "id": "tokyo_000_day_to_night",
+    "sift": false,
+    "learned": true
+  },
+  {
+    "protocol": "tokyo_day_to_day",
+    "id": "tokyo_003_day_to_day",
+    "sift": false,
+    "learned": true
+  }
+]

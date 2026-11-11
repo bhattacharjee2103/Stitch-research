@@ -1,0 +1,87 @@
+[
+  {
+    "name": "aachen_v1_1",
+    "url": "https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Aachen-Day-Night/aachen_v1_1.zip",
+    "argv": [
+      "curl",
+      "-sSIL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "25",
+      "https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Aachen-Day-Night/aachen_v1_1.zip"
+    ],
+    "returncode": 0,
+    "headers": "HTTP/1.1 200 OK\nDate: Thu, 05 Nov 2026 05:47:45 GMT\nServer: Apache/2.4.67 (Debian)\nX-Content-Type-Options: nosniff\nLast-Modified: Mon, 20 Jul 2020 13:40:44 GMT\nETag: \"f9cd5317-5aadfa7406f00\"\nAccept-Ranges: bytes\nContent-Length: 4190982935\nContent-Type: application/zip\n\n",
+    "error": "",
+    "image_archives_downloaded": false
+  },
+  {
+    "name": "robotcar_images",
+    "url": "https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/RobotCar-Seasons/images/",
+    "argv": [
+      "curl",
+      "-sSIL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "25",
+      "https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/RobotCar-Seasons/images/"
+    ],
+    "returncode": 0,
+    "headers": "HTTP/1.1 200 OK\nDate: Thu, 05 Nov 2026 05:47:49 GMT\nServer: Apache/2.4.67 (Debian)\nX-Content-Type-Options: nosniff\nContent-Type: text/html;charset=UTF-8\n\n",
+    "error": "",
+    "image_archives_downloaded": false
+  },
+  {
+    "name": "cmu_slice2",
+    "url": "https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Extended-CMU-Seasons/slice2.tar",
+    "argv": [
+      "curl",
+      "-sSIL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "25",
+      "https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Extended-CMU-Seasons/slice2.tar"
+    ],
+    "returncode": 0,
+    "headers": "HTTP/1.1 200 OK\nDate: Thu, 05 Nov 2026 05:47:53 GMT\nServer: Apache/2.4.67 (Debian)\nX-Content-Type-Options: nosniff\nLast-Modified: Fri, 22 May 2020 13:51:50 GMT\nETag: \"1d4e50800-5a63cee51106b\"\nAccept-Ranges: bytes\nContent-Length: 7866746880\nContent-Type: application/x-tar\n\n",
+    "error": "",
+    "image_archives_downloaded": false
+  },
+  {
+    "name": "msls_download",
+    "url": "https://www.mapillary.com/dataset/places",
+    "argv": [
+      "curl",
+      "-sSIL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "25",
+      "https://www.mapillary.com/dataset/places"
+    ],
+    "returncode": 0,
+    "headers": "HTTP/2 200 \nvary: Accept-Encoding\ncontent-type: text/html;charset=utf-8\nreporting-endpoints: coop_report=\"https://www.facebook.com/browser_reporting/coop/?minimize=0\", coep_report=\"https://www.facebook.com/browser_reporting/coep/?minimize=0\", permissions_policy=\"https://www.facebook.com/ajax/browser_error_reports/\"\nreport-to: {\"max_age\":2592000,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/browser_reporting\\/coop\\/?minimize=0\"}],\"group\":\"coop_report\",\"include_subdomains\":true}, {\"max_age\":86400,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/browser_reporting\\/coep\\/?minimize=0\"}],\"group\":\"coep_report\"}, {\"max_age\":21600,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/\"}],\"group\":\"permissions_policy\"}\nx-frame-options: DENY\ncontent-security-policy: default-src 'self' blob: https://*.fbcdn.net https://*.fbsbx.com https://*.facebook.com https://*.mapillary.com;script-src 'self' https://*.fbcdn.net https://*.facebook.com 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com;style-src 'self' 'unsafe-inline' https://*.facebook.com https://*.fbcdn.net;connect-src 'self' https://*.fbcdn.net https://*.facebook.com https://*.mapillary.com https://*.arcgis.com/ https://*.openstreetmap.org https://analytics.google.com https://*.analytics.google.com https://*.google-analytics.com https://*.googletagmanager.com;font-src 'self' data: https://*.facebook.com https://*.fbcdn.net;img-src 'self' data: blob: https://*.fbcdn.net https://*.fbsbx.com https://*.facebook.com https://*.mapillary.com https://*.tile.openstreetmap.org https://*.google-analytics.com https://*.googletagmanager.com https://www.googletagmanager.com;media-src 'self' https://*.facebook.com https://*.fbcdn.net https://*.mapillary.com;child-src 'self' data: blob: https://*.fbcdn.net https://*.fbsbx.com https://*.facebook.com https://*.mapillary.com;frame-src 'self' blob: https://*.mapillary.com https://*.youtube.com;manifest-src 'self' data: blob: https://*.fbcdn.net https://*.fbsbx.com https://*.facebook.com https://*.mapillary.com;object-src 'self' data: blob: https://*.fbcdn.net https://*.fbsbx.com https://*.facebook.com https://*.mapillary.com;worker-src 'self' blob: 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com/gtag/js https://www.googletagmanager.com;\ndocument-policy: force-load-at-top\ndocument-policy: include-js-call-stacks-in-crash-reports\npermissions-policy: accelerometer=(), attribution-reporting=(), autoplay=(), bluetooth=(), camera=(), ch-device-memory=(), ch-downlink=(), ch-dpr=(), ch-ect=(), ch-rtt=(), ch-save-data=(), ch-ua-arch=(), ch-ua-bitness=(), ch-viewport-height=(), ch-viewport-width=(), ch-width=(), clipboard-read=(), clipboard-write=(self), compute-pressure=(), display-capture=(), encrypted-media=(), fullscreen=(self), gamepad=(), geolocation=(self), gyroscope=(), hid=(), idle-detection=(), interest-cohort=(), keyboard-map=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), private-state-token-issuance=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), shared-storage=(), shared-storage-select-url=(), private-state-token-redemption=(), usb=(), unload=(self), window-management=(), xr-spatial-tracking=();report-to=\"permissions_policy\"\ncross-origin-resource-policy: cross-origin\ncross-origin-embedder-policy-report-only: require-corp;report-to=\"coep_report\"\ncross-origin-opener-policy: same-origin-allow-popups\npragma: no-cache\ncache-control: private, no-cache, no-store, must-revalidate\nexpires: Sat, 01 Jan 2000 00:00:00 GMT\nx-content-type-options: nosniff\nx-xss-protection: 0\norigin-agent-cluster: ?1\nstrict-transport-security: max-age=31536000; preload; includeSubDomains\nx-fb-debug: Xi58sqOmBgWSSimKw/HsHh+SAr9wuxkUVEG9yyRNos/PC0l7JhMqi6jjai8abBTRM0tkjSCgEC8Eu/JA6o0GBA==\ndate: Thu, 05 Nov 2026 05:47:58 GMT\nx-fb-connection-quality: MODERATE; q=0.3, rtt=508, rtx=0, c=10, mss=1238, tbw=3650, tp=-1, tpl=-1, uplat=1120, ullat=0\nalt-svc: h3=\":443\"; ma=86400\n\n",
+    "error": "",
+    "image_archives_downloaded": false
+  },
+  {
+    "name": "tokyo_streetview_info",
+    "url": "https://www.di.ens.fr/willow/research/netvlad/",
+    "argv": [
+      "curl",
+      "-sSIL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "25",
+      "https://www.di.ens.fr/willow/research/netvlad/"
+    ],
+    "returncode": 0,
+    "headers": "HTTP/1.1 200 OK\nDate: Thu, 05 Nov 2026 05:47:59 GMT\nServer: Apache\nLast-Modified: Mon, 14 Feb 2022 18:31:19 GMT\nETag: \"334a-5d7fe9f658dfb\"\nAccept-Ranges: bytes\nVary: Accept-Encoding\nContent-Type: text/html\n\n",
+    "error": "",
+    "image_archives_downloaded": false
+  }
+]

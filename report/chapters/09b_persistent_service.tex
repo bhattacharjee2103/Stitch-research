@@ -1,0 +1,64 @@
+\chapter{Reference Revisions and Persistent-AR Transactions}\label{ch:persistent-transactions}
+\section{Scope of this service design}
+\designnote
+The implemented artifact is a local planar recogniser with JSON place records and image posts. It has no authenticated posting server, distributed map service or native tracking integration. This chapter develops a concrete transaction and revision design to explain what would be required to turn a verified image relation into a maintainable social-AR system. The proposed states and messages are specifications for future implementation, not evidence of a deployed backend.
+
+The design begins with an important restriction. A post is not attached to a place name alone; it is attached through a particular coordinate representation and revision. If that representation changes, the post needs a validated migration relation or an explicit unresolved state. A system that retains only a place identifier cannot determine whether an old polygon is still geometrically meaningful after reference replacement.
+
+\section{Separate identities for places, references and anchors}
+A place identifier represents a semantic location used for retrieval and content grouping. A reference identifier represents an observation or map fragment with its own image fingerprint, calibration metadata if available and revision history. An anchor identifier represents a content attachment expressed in that reference or map domain. These identifiers should remain separate even when an initial prototype contains only one reference and one post per place.
+
+For the current planar model, an anchor can be represented conceptually as $(p,r,v,A)$: place $p$, reference $r$, reference revision $v$ and content-to-reference map $A$. A query supplies a verified $H_{r\rightarrow q}$ for the same reference revision. Rendering is permitted only when the revision and coordinate interpretation agree. Merely finding another photograph with the same place label is insufficient to compose the stored map.
+
+A future three-dimensional representation would replace $A$ with an anchor pose in a map coordinate system and would additionally require calibrated localisation and a relation to the device tracking world. The transaction principles still apply, but the present homography is not silently promoted into that pose. The mapping and validation work would need to be executed and measured separately.
+
+\section{A proposed posting transaction}
+The client first creates a draft containing content metadata and a candidate attachment. The draft is not immediately public. A verification step resolves a supported reference or map revision and checks that the attachment lies within the allowed coordinate domain. The server then checks permissions, content visibility and whether the referenced revision remains active before committing the post.
+
+The commit should use an idempotency key generated for the user's logical posting action. If a network timeout causes the client to retry, the same logical request should return the already created record rather than create a second post. The key must be scoped to the user and operation, with a documented lifetime. An arbitrary repeated image is not a suitable idempotency key because a user may intentionally post two different records using the same asset.
+
+The commit also needs a revision precondition. A client that verified revision $v$ should not accidentally attach its draft to revision $v+1$ if the map changed while the asset was uploading. The server can reject the stale precondition or retain an unresolved draft. It should not reinterpret coordinates without a validated transfer relation. This prevents an ordinary concurrent update from becoming a silent anchor-placement error.
+
+\section{Observation verification and content delivery}
+A visiting client sends an observation or descriptor under a declared privacy policy and receives candidate information appropriate to its permissions. Local or server-side verification resolves a reference identity and revision. Only after that relation is supported does the content service return visible posts bound to that revision. Recognition and authorisation remain distinct: visual access to a facade is not permission to read every private post associated with it.
+
+The response should carry a bounded validity interval or revision token so the client can determine whether cached content remains current. The exact interval is a product policy requiring measurement, not a value derived from the desktop benchmark. A client can cache image assets independently of anchor validity, but it must stop rendering them when the corresponding anchor relation becomes invalid or access is revoked.
+
+For a planar implementation, the response must preserve the reference-specific attachment. Posts attached to another view can remain unresolved until that view is verified or a validated reference relation becomes available. The local database's optional content-reference field is a limited version of this principle. It avoids inventing a cross-view transfer merely to display more content.
+
+\section{Reference replacement and migration}
+Suppose an old reference $r_o$ is replaced by a new reference $r_n$, and a validated image relation $M_{o\rightarrow n}$ is available for the relevant plane. A content-to-old-reference map $A_o$ could be transferred as
+\begin{equation}
+ A_n=M_{o\rightarrow n}A_o.
+\end{equation}
+This composition is valid only within the relation's geometric scope. If the old post lies on a different depth layer, an occluded region or a changed physical object, a single plane relation may not preserve its intended attachment. Migration therefore needs an explicit validity policy rather than an assumption that all polygons can be copied through any successful image match.
+
+If no trustworthy relation exists, the service should retain the original revision for history and mark the active attachment unresolved or retired. A user-assisted reattachment can create a new anchor revision while preserving the content's identity and audit history. This design distinguishes content deletion from coordinate repair: a geometrically obsolete attachment need not imply that its text or media must be silently discarded.
+
+Rollback also needs a declared rule. Restoring an earlier reference revision does not automatically mean every later post should be attached to it. Each anchor carries the revision on which it was created or migrated. A rollback operation must evaluate those references explicitly and avoid generating a state in which the database label says one revision while cached geometry assumes another.
+
+\section{State transitions for a displayed post}
+A useful proposed lifecycle includes draft, attached, unresolved, retired and deleted states. Draft means no public attachment has been committed. Attached means a valid coordinate relation and visibility policy exist. Unresolved means the content exists but its current geometric relation cannot be established. Retired preserves a deliberate historical record without active rendering, while deleted removes the content under the service's deletion policy.
+
+These states should not be inferred from whether an asset file is still present in a cache. A cached image may remain available after its anchor becomes unresolved or its visibility changes. Rendering decisions need the authoritative anchor state and access token. Otherwise, an offline cache can preserve an attachment that the map or content service already invalidated.
+
+State transitions should record the reason and revision involved. A failure to recognise a place during one query is not necessarily a permanent unresolved state for every post there. Conversely, a retired map revision should not become active merely because a future frame happens to match its old photograph. Query uncertainty and persistent lifecycle changes are different events.
+
+\section{Tracking and recognition as separate clocks}
+Recognition can be expensive relative to display refresh, as the recorded CPU measurements demonstrate. A future client should therefore treat recognition and native tracking as processes with different update rates. Recognition establishes or refreshes a map relation; tracking propagates a previously supported relation through camera motion. Losing tracking must invalidate the presentation state even when the last recognition result was correct.
+
+The client should retain timestamps and revision identities for both relations. A mathematically composable transform can still be stale if its map revision or observation age is no longer acceptable. A recovery policy might request new recognition after occlusion, a tracking reset or a large uncertainty increase. Those triggers need device measurements and session-level evaluation before they can be recommended as fixed operating values.
+
+The current demo does not test this state machine. Its still-image motion is generated and its comparison displays actual per-frame recogniser outputs. It is therefore evidence that the local recognition and rendering modules execute together, not a measurement of inertial tracking quality or recovery after a real device relocalisation.
+
+\section{Consistency and partial failure}
+Uploading an asset, committing metadata and publishing an attachment are distinct operations that can fail independently. A future service needs a cleanup policy for uploaded assets whose post commit never succeeds. It also needs a way to return a committed post after the client loses the acknowledgement. Idempotent commits and explicit draft identifiers address different sides of this problem.
+
+A map update can race with content delivery. The response should identify the revision used to verify the query and the revision required by each returned anchor. The client must reject a mismatched combination rather than combining a new reference hash with an old content-to-reference matrix. This is the distributed counterpart of the local descriptor-index configuration checks.
+
+Deletion can race with caching and replication as well. A service design should specify which events invalidate anchor records, access tokens and cached asset references. This chapter does not assign a legal retention period or claim a globally immediate deletion guarantee. It identifies the technical dependencies that an implemented policy would need to control and test.
+
+\section{A testable implementation roadmap}
+The first extension should retain a small local gallery while adding explicit reference and anchor revisions. Tests can then simulate a replaced photograph, an idempotent retry, a revoked post and a query using a stale revision. The expected behaviour is concrete: either a compatible attachment is returned or rendering is withheld with a traceable state. No city-scale infrastructure is required to validate those contracts initially.
+
+The next stage would connect calibrated localisation and native tracking on a real device, using an evaluation set that measures alignment error, recovery and wrong-place display over time. Only then would broader geographic indexing and multi-user load tests provide meaningful deployment evidence. Expanding the server before validating the coordinate lifecycle would scale an unresolved geometric ambiguity rather than resolve it.

@@ -1,0 +1,26 @@
+# refcam configuration.
+# Flat key: value pairs only. Values may be integers, floats, true/false or strings.
+# Text after '#' is a comment.
+
+# Camera preview / processing resolution.
+resolution_width: 640
+resolution_height: 480
+
+# Number of frames used for the on-screen FPS average.
+fps_window: 30
+
+# Reference storage: directory (relative to the project root) holding refs/<name>/.
+refs_dir: refs
+
+# Minimum SIFT keypoints for a saved reference; below this the add flow re-selects.
+min_keypoints: 40
+
+# Detection settings.
+detector: sift
+match_ratio: 0.75
+min_inliers: 12
+
+# Detection smoothing and overlay style.
+hold_frames: 15
+ema_alpha: 0.6
+overlay_style: outline

@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/scripts/demo.py", line 11, in <module>
+    from stitch.pipeline import Pipeline
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/src/stitch/pipeline.py", line 12, in <module>
+    from .retrieval import GlobalEngine, rank
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/src/stitch/retrieval.py", line 8, in <module>
+    from torchvision.models import resnet18
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torchvision/__init__.py", line 10, in <module>
+    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torchvision/models/__init__.py", line 2, in <module>
+    from .convnext import *
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torchvision/models/convnext.py", line 8, in <module>
+    from ..ops.misc import Conv2dNormActivation, Permute
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torchvision/ops/__init__.py", line 23, in <module>
+    from .poolers import MultiScaleRoIAlign
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torchvision/ops/poolers.py", line 10, in <module>
+    from .roi_align import roi_align
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torchvision/ops/roi_align.py", line 7, in <module>
+    from torch._dynamo.utils import is_compile_supported
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torch/_dynamo/__init__.py", line 13, in <module>
+    from . import config, convert_frame, eval_frame, resume_execution
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/torch/_dynamo/convert_frame.py", line 26, in <module>
+    import cProfile
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/cProfile.py", line 10, in <module>
+    import profile as _pyprofile
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/scripts/profile.py", line 15, in <module>
+    from stitch.pipeline import Pipeline
+ImportError: cannot import name 'Pipeline' from partially initialized module 'stitch.pipeline' (most likely due to a circular import) (/Users/bhattacharjee/Desktop/internship/Stitch-research/src/stitch/pipeline.py)

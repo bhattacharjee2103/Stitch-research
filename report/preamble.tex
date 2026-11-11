@@ -1,0 +1,55 @@
+% Measurements follow the supplied PRONOB BHATTACHARJEE thesis reference.
+\usepackage[a4paper,left=35mm,right=12.5mm,top=37.655mm,bottom=25mm,headsep=9mm,footskip=11.446mm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{graphicx,booktabs,longtable,array,tabularx}
+\usepackage{siunitx,subcaption,float}
+\usepackage{algorithm,algpseudocode}
+\usepackage{listings,xcolor}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,fit,backgrounds}
+\pgfplotsset{compat=1.18}
+\usepackage[intoc]{nomencl}
+\makenomenclature
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,unicode]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\makeatletter
+\providecommand*{\theHALG@line}{}
+\renewcommand*{\theHALG@line}{\thealgorithm.\arabic{ALG@line}}
+\makeatother
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\normalsize\itshape\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{17pt}
+\setlength{\parskip}{0pt}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\setlength{\emergencystretch}{3em}
+\graphicspath{{assets/}{figures/}}
+\definecolor{stitchblue}{HTML}{245A81}
+\definecolor{codegray}{HTML}{F4F6F8}
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,columns=fullflexible,
+  keepspaces=true,showstringspaces=false,frame=single,backgroundcolor=\color{codegray},
+  keywordstyle=\color{stitchblue},commentstyle=\color{gray},numbers=left,
+  numberstyle=\tiny\color{gray},numbersep=5pt,tabsize=4}
+\newcommand{\methodA}{SIFT--FLANN}
+\newcommand{\methodB}{SuperPoint--LightGlue}
+\newcommand{\methodC}{CosPlace}
+\newcommand{\methodD}{the hierarchical pipeline}
+\newcommand{\NA}{\textemdash}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\resultinput}[1]{\input{tables/#1}}
+\newcommand{\designnote}{\par\noindent\textit{Design scope.} The following specification describes an engineering extension; it is not a claim that a deployed multi-user service was measured.\par}
+\input{tables/numbers.tex}

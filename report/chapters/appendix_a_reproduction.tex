@@ -1,0 +1,89 @@
+\chapter{Reproduction Instructions\ifFullReport{} and Command Ledger\fi}\label{app:reproduction}
+\section{Environment and setup}
+All commands below are issued from the delivered project root unless a directory change is shown. The setup script selects a supported CPython interpreter, creates a local virtual environment, installs the pinned requirements and local package, obtains the official learned-matcher source at its recorded revision, and downloads the pretrained checkpoints. The data directory, model directory and environment are excluded from source control.
+\begin{lstlisting}[numbers=none]
+bash scripts/setup.sh
+make data
+make baseline
+make evaluate
+make train
+make export
+make demo
+make profile
+make test
+make thesis
+\end{lstlisting}
+The trained-head and export steps use the frozen data preparation. The demonstration and artifact generator consume the main evaluation results. The complete-query profile is executed after other heavy inference tasks finish. The output PDF is \code{report/thesis.pdf}; comparison clips and animation are in \code{demo/}. Exact arguments used in this run are preserved in \code{results/commands.jsonl}\ifFullReport{} and in the ledger later in this appendix\fi.
+
+\section{Direct CLI checks}
+\begin{lstlisting}[numbers=none]
+.venv/bin/python scripts/run_logged.py .venv/bin/stitch index data/places.json
+.venv/bin/python scripts/run_logged.py .venv/bin/stitch query data/places.json test.jpg results/raw/cli_query.png
+.venv/bin/python scripts/run_logged.py .venv/bin/stitch video data/places.json video.mp4 results/raw/cli_video.mp4 --limit 8
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/download_data.py --verify-only
+\end{lstlisting}
+The query image is already represented in this demonstration database, so this CLI check is a functional content-retrieval check rather than a held-out accuracy result. The video command exercises decoding, EOF/limit handling, recognition and writing. Bounded file inputs replace the unavailable private DroidCam stream; no live phone capture is claimed.
+
+\section{Data integrity and restoration}
+\code{results/data_manifest.json} pins downloaded filenames, lengths and SHA256 hashes. \code{results/preparation.json} pins generated synthetic inputs and the frozen benchmark manifest. Existing valid collections are verified and skipped by the downloader. Missing collections can be restored from the recorded public sources and checked against the supplied manifest. A corrupt existing file fails explicitly, preventing unnoticed input replacement.
+
+The original HPatches host and author mirror are documented in \cref{ch:datasets}. Tokyo subset members are verified against ZIP CRC and decompressed size before their local hashes are recorded. Full-archive transfer failures remain in the command journal. Reproduction depends on the continued availability and terms of the original sources; their presence in this artifact is not a promise that a remote URL will remain unchanged.
+
+\ifFullReport
+\section{Manual datasets for expanded evaluation}
+\subsection{Aachen Day-Night v1.1}
+The official landing page is \url{https://www.visuallocalization.net/datasets/}. The inspected public archive root is \url{https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Aachen-Day-Night/}. Follow both official README files, obtaining base images, the v1.1 extension, query intrinsics and the appropriate 3D reconstruction. The extension is not a substitute for every required base file. A proposed local layout is:
+\begin{lstlisting}[numbers=none]
+data/manual/aachen/
+  images/
+    database/
+    query/
+  queries/
+  3D-models/
+  aachen_v1_1/
+\end{lstlisting}
+Actual names should follow the archive README; an adapter should map them into explicit image, camera and 3D-point records. Query-pose evaluation may require the benchmark's evaluation procedure rather than public ground truth. The official image/model terms specify non-commercial academic restrictions. No Aachen pose score is supplied by the current artifact.
+
+\subsection{RobotCar Seasons}
+Use \url{https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/RobotCar-Seasons/}. Obtain the condition image archives, camera intrinsics/extrinsics, selected model and the correct version's split lists. A proposed adapter root is:
+\begin{lstlisting}[numbers=none]
+data/manual/robotcar/
+  images/<condition>/<camera>/
+  intrinsics/
+  extrinsics/
+  3D-models/
+  robotcar_v2_train.txt
+  robotcar_v2_test.txt
+\end{lstlisting}
+The saved official documentation describes the licensing and version distinctions. These images were not downloaded for the executed experiment. Their night and seasonal conditions could extend the present evidence, but must not be reported until acquisition, calibration and evaluation are actually run.
+
+\subsection{Extended CMU Seasons}
+Use \url{https://data.ciirc.cvut.cz/public/projects/2020VisualLocalization/Extended-CMU-Seasons/}. Each slice archive contains the corresponding images and map-related data; choose slices and conditions before inference and retain that selection. An expected adapter structure is:
+\begin{lstlisting}[numbers=none]
+data/manual/cmu/
+  intrinsics.txt
+  slice2/
+    database/
+    query/
+    sparse/
+    camera_poses/
+\end{lstlisting}
+Archive-internal directory names should be taken from the official README. The inspected source specifies attribution, non-commercial and share-alike restrictions. No CMU image or seasonal metric is included in this thesis.
+
+\subsection{MSLS and the full Tokyo street-view task}
+MSLS instructions are at \url{https://github.com/mapillary/mapillary_sls} and its linked download site \url{https://www.mapillary.com/dataset/places}. Preserve city, query/database and sequence metadata. The official structure uses \code{train_val/<city>/query/images/}, a corresponding database directory and associated CSV files. Test data and current ground-truth availability should follow the current official instructions rather than an assumed historical evaluation server.
+
+For the official Tokyo street-view experiment, follow \url{https://github.com/gmberton/VPR-datasets-downloader/blob/main/format_tokyo247.py} and the original dataset's access instructions. That formatting source explains that the database must be obtained separately; the publicly downloaded query archive alone does not reproduce the official benchmark. A suitable root retains street-view panorama crops, the dataset metadata and original queries in distinct directories.
+
+Pittsburgh/SF-XL, Oxford/Paris and Google Landmarks are alternative future collections, not failed downloads in this run. They should be documented with their own licences and split protocols if used later. None is needed to reproduce the results already presented.
+\fi
+
+\section{Build procedure}
+The installed TeX toolchain was used directly. The document uses the report class, numeric natbib citations, generated vector figures and a nomenclature index. From the project root, \code{make thesis} regenerates empirical artifacts and invokes latexmk. The thesis Makefile copies the completed PDF to the main deliverable path and runs the verification script. A clean TeX rebuild is available through the recorded clean/build commands.
+
+Authoring and environment-inspection commands performed before the command runner existed are summarised in \code{results/bootstrap_commands.json}. Subsequent substantive executions are recorded in \code{results/commands.jsonl} with exact command text and outcomes\ifFullReport{}, reproduced below\fi. File edits are represented by the delivered source, not presented as experiment commands. \ifFullReport The currently running build can appear as in progress when its own ledger is generated; the machine-readable journal records completion after the build returns.\fi
+
+\ifFullReport
+\section{Exact recorded execution ledger}
+\input{tables/commands.tex}
+\fi

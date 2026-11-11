@@ -1,0 +1,33 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrrr}
+\caption{Retrieval and correctly verified place rates (percent) on Tokyo protocols. Global-only retrieval does not produce an anchor. Full-pipeline recall uses its reranked complete list, with the unverified tail retained.}\label{tab:retrieval-tokyo}\\
+\toprule
+Split & Method & R@1 & R@5 & R@10 & Verified \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Split & Method & R@1 & R@5 & R@10 & Verified \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{Continued on next page}\\
+\endfoot
+\bottomrule\endlastfoot
+day\_to\_day & A: SIFT & 54.2 & 66.7 & 75.0 & 41.7 \\
+day\_to\_day & B: SP+LG & 58.3 & 70.8 & 75.0 & 54.2 \\
+day\_to\_day & C: CosPlace & 41.7 & 62.5 & 75.0 & \NA \\
+day\_to\_day & D: Full ($k=3$) & 41.7 & 62.5 & 75.0 & 37.5 \\
+day\_to\_night & A: SIFT & 58.3 & 91.7 & 91.7 & 33.3 \\
+day\_to\_night & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+day\_to\_night & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+day\_to\_night & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+night\_to\_day & A: SIFT & 50.0 & 70.8 & 91.7 & 33.3 \\
+night\_to\_day & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+night\_to\_day & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+night\_to\_day & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+day\_to\_sunset & A: SIFT & 83.3 & 95.8 & 100.0 & 66.7 \\
+day\_to\_sunset & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+day\_to\_sunset & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+day\_to\_sunset & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+\end{longtable}\endgroup

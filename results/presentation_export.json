@@ -1,0 +1,20 @@
+{
+  "pdf_pages": 30,
+  "pptx_slides": 30,
+  "aspect_ratio": "4:3",
+  "rendered_image_width_px": 1920,
+  "export_type": "Full-slide images preserving exact LaTeX layout; editable master is the supplied TeX",
+  "speaker_notes": "Extracted slide text",
+  "render_command": [
+    "pdftoppm",
+    "-scale-to-x",
+    "1920",
+    "-scale-to-y",
+    "-1",
+    "-png",
+    "/Users/bhattacharjee/Desktop/internship/Stitch-research/presentation/Stitch_IITR_Presentation.pdf",
+    "/Users/bhattacharjee/Desktop/internship/Stitch-research/presentation/build/rendered/slide"
+  ],
+  "pdf_sha256": "5fc0a622567fd554c4ca8262096acaf4e3cbc09414ba047a2234bb2acad33229",
+  "pptx_sha256": "1342f5ee46f622143a5b53d9a0899e51abdde50993541705f003da4e838dd133"
+}

@@ -1,0 +1,54 @@
+\chapter{Failure Taxonomy and Diagnostic Reasoning}\label{ch:failure-analysis}
+\section{Failures as different observable states}
+A missing overlay can arise from missing input, weak retrieval, insufficient correspondences, invalid geometry or absent content. Those states require different remedies. Treating all of them as a single tracking failure makes debugging difficult and can encourage an unsafe fallback that renders a stale anchor. This chapter describes a diagnostic framework grounded in the implemented module boundaries and the saved result fields. Proposed remedies are identified as future work unless the delivered code already implements them.
+
+The key distinction is between an unsupported anchor and an incorrectly supported identity. A rejection may reduce usefulness, but it avoids assigning a post to a place without sufficient evidence under the current policy. A wrong acceptance can display plausible content at the wrong physical location. The open-set and viewpoint results show why both outcomes must remain visible in the report.
+
+\section{Acquisition and preprocessing failures}
+An unreadable image fails at the decoding boundary. A camera or stream that cannot open fails before feature extraction. A video that opens but produces no decodable frame also fails explicitly in the CLI. These are operational failures, not zero-recall test queries, unless an evaluation protocol deliberately includes acquisition failure in its denominator.
+
+A subtler acquisition error occurs when a frame is valid but its coordinate metadata are wrong. Orientation changes, an unexpected crop or a mismatched resize transform can leave useful visual features while invalidating the ground-truth conversion. The current file-based experiments fix the preprocessing route and retain resize transforms. A phone implementation would need additional tests for sensor orientation, camera intrinsics and display cropping.
+
+Appearance enhancement is another boundary to monitor. Changing enhancement only for cached references or only for later queries alters descriptor comparability. The global index therefore includes the supported preprocessing configuration in its identity. A future adaptive enhancement policy should be evaluated as a separate method rather than introduced silently after inspecting difficult queries.
+
+\section{Descriptor ambiguity and gallery coverage}
+A global descriptor compresses an image into a vector and can discard information needed to distinguish nearby repetitive views. When the correct identity ranks outside the shortlist, local verification never sees it. The full hierarchy may then reject or accept a competing reference. This failure is different from a local matcher failing on a supplied true pair, and it cannot be diagnosed from the final inlier count alone.
+
+The Tokyo changed-direction split is particularly relevant because the reference and query can have limited shared visual content. The complete site atlas shows the retained front and left photographs alongside their ranks. Those photographs support inspection of reference coverage, but the report does not infer a numerical overlap percentage from visual judgement. A future study could annotate overlap independently and analyse it as a covariate.
+
+Adding references is a plausible remedy, yet it creates new responsibilities. More references can improve coverage while increasing storage and the number of competing hypotheses. Posts must remain tied to the view on which their polygon was defined, or be transferred through a validated relation. Simply duplicating a place ID across photographs does not make an existing polygon geometrically portable.
+
+\section{Insufficient or unstable local evidence}
+Low texture, blur, darkness or strong viewpoint change can reduce the number of repeatable local features. The implementation represents empty feature sets explicitly and returns an empty match list with stable dimensions. Geometry then rejects insufficient support. This behaviour prevents an application exception from being confused with a successful query that happened to return no content.
+
+The ratio filter for SIFT and the learned assignment policy for LightGlue do not produce interchangeable correspondence populations. A larger inlier count for one method can partly reflect the number and distribution of tentative matches it supplies. The pair tables therefore include acceptance and independent corner-error success. They allow a reader to identify a case with strong support but poor alignment without treating support count as a universal quality score.
+
+Spatial concentration is an additional limitation. A dozen inliers in one small repeated region can fit a transformation that extrapolates badly to the reference boundary. The current projected-boundary checks reject some implausible maps, but they are not a calibrated coverage test. A future spatial-support rule should measure point distribution and be validated on separate data before replacing the fixed comparison policy.
+
+\section{Consensus at the wrong identity}
+Geometric verification tests whether tentative correspondences support a model under specified thresholds. It does not directly test the semantic uniqueness of the place. Similar facades, signs or repeated architectural motifs can generate a consistent but wrong consensus. The correct response in evaluation is to retain that outcome as wrong-place acceptance, even when the fitted transformation has many inliers.
+
+The open-set diagnostic is deliberately narrow: HPatches queries are searched against a Tokyo gallery. It establishes that unrelated-collection inputs can still trigger acceptance in some variants. It does not bound the false-acceptance rate for nearby repeated buildings, screenshots of known references or maliciously crafted inputs. Those negative populations would require their own explicitly acquired and labelled test sets.
+
+A production policy could combine geometric support with reference identity margins, multiple observations or a coarse location prior. Each addition introduces new failure modes and privacy choices. A location prior can exclude the correct place when inaccurate, and temporal confirmation can preserve a wrong identity if all frames depict the same repeated structure. These mechanisms should be assessed through whole-session error rates, not assumed to solve the identity problem by construction.
+
+\section{Correct identity with inaccurate alignment}
+On HPatches and synthetic data, a query can identify the correct source yet fail the H5 criterion. Possible reasons include noisy correspondences, a biased spatial distribution or an unstable estimate. The end-to-end metric separates that case from a wrong identity and from an outright rejection. The oracle-pair table further indicates whether candidate search was responsible for losing a potentially accurate relation.
+
+On Tokyo, the equivalent alignment claim cannot be measured with the available labels. A correctly verified place is therefore not renamed a successful planar anchor. The site tables preserve that uncertainty. This is a substantive limit of the evidence rather than an omission that can be repaired by drawing a more convincing overlay.
+
+The displayed demo is selected by a documented illustrative rule. Its generated motion is applied to real still images, and actual pipeline outputs are rendered. That makes it useful for inspecting the implemented path. It remains insufficient for measuring temporal drift, recovery after occlusion or alignment under real camera translation, because those phenomena are not supplied by generated two-dimensional motion alone.
+
+\section{Content and cache failures}
+A verified place may have no post associated with the selected reference view. Returning an empty content list is then valid database behaviour. Copying another view's polygon to avoid an empty result would create a geometric error. The implemented binding rule defaults a post to the place's first reference unless an explicit reference field selects another photograph.
+
+Descriptor caches can fail more silently. A matrix can have the expected shape while containing values computed from an earlier checkpoint or different resize policy. The corrected index records a checkpoint hash, preprocessing identity, reference fingerprints and format version. It rejects incompatible or nonfinite data. The reference list and fingerprint count are checked before the matrix is used for ranking.
+
+These protections address consistency, not all forms of integrity. A service would need controlled model distribution, authenticated content changes and an atomic update policy. The local JSON/NumPy artifact is intentionally inspectable and does not claim concurrent transactional guarantees. Its failure checks should be understood as research-software contracts rather than a complete multi-user storage system.
+
+\section{Tracing a failure without changing the benchmark}
+Begin with the saved query identity and protocol. Check that the image hash and configuration match the frozen run. Inspect the correct identity's global rank, then determine whether it entered the configured shortlist. If it did, inspect the corresponding local pair row, support ratio and acceptance. On ground-truth collections, finally compare corner error with the declared threshold.
+
+This sequence avoids a common diagnostic mistake: changing a threshold or reference after seeing a failure and then presenting the repaired case as if it belonged to the original experiment. Repairs can be useful engineering work, but they require a new configuration and a clearly separated result artifact. The original row should remain available so the reader can understand what changed.
+
+The complete evidence chapters support this workflow without requiring readers to rerun all neural inference. They provide every selected scene, all main-method Tokyo decisions and every oracle-pair result. The associated machine-readable files retain the precise maps and ranked identities when a deeper inspection is needed. Interpretation can then proceed from the recorded evidence rather than from a selected screenshot alone.

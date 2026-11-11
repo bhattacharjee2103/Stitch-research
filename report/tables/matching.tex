@@ -1,0 +1,39 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrrrr}
+\caption{Oracle-pair matching under shared geometry settings. Inliers are medians, ratios are means over all pairs; $H_5$ requires accepted geometry and mean corner error at most five resized pixels. Tokyo has no homography ground truth.}\label{tab:matching}\\
+\toprule
+Protocol & Method & $n$ & Inliers & Ratio (\%) & Accept (\%) & $H_5$ (\%) \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Protocol & Method & $n$ & Inliers & Ratio (\%) & Accept (\%) & $H_5$ (\%) \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{Continued on next page}\\
+\endfoot
+\bottomrule\endlastfoot
+HP illum. & SIFT & 60 & 58.5 & 83.7 & 83.3 & 81.7 \\
+HP illum. & SP+LG & 60 & 317.0 & 94.6 & 100.0 & 100.0 \\
+HP view. & SIFT & 60 & 97.5 & 89.8 & 93.3 & 86.7 \\
+HP view. & SP+LG & 60 & 218.0 & 88.9 & 90.0 & 86.7 \\
+Tokyo D--D & SIFT & 24 & 9.0 & 51.7 & 41.7 & \NA \\
+Tokyo D--D & SP+LG & 24 & 39.0 & 61.1 & 54.2 & \NA \\
+Tokyo D--N & SIFT & 24 & 8.5 & 64.3 & 33.3 & \NA \\
+Tokyo D--N & SP+LG & 24 & 169.0 & 84.7 & 100.0 & \NA \\
+Tokyo N--D & SIFT & 24 & 7.0 & 64.9 & 33.3 & \NA \\
+Tokyo N--D & SP+LG & 24 & 169.5 & 86.0 & 100.0 & \NA \\
+Tokyo D--S & SIFT & 24 & 35.0 & 73.7 & 66.7 & \NA \\
+Tokyo D--S & SP+LG & 24 & 204.0 & 84.2 & 100.0 & \NA \\
+Synth. day & SIFT & 18 & 255.0 & 95.5 & 100.0 & 100.0 \\
+Synth. day & SP+LG & 18 & 416.5 & 96.5 & 100.0 & 100.0 \\
+Synth. night & SIFT & 18 & 130.5 & 82.0 & 94.4 & 88.9 \\
+Synth. night & SP+LG & 18 & 388.5 & 95.3 & 100.0 & 100.0 \\
+Synth. severe & SIFT & 18 & 10.0 & 41.8 & 33.3 & 33.3 \\
+Synth. severe & SP+LG & 18 & 188.0 & 87.6 & 100.0 & 100.0 \\
+Synth. warm & SIFT & 18 & 101.0 & 79.5 & 88.9 & 88.9 \\
+Synth. warm & SP+LG & 18 & 375.0 & 96.0 & 100.0 & 100.0 \\
+Synth. fog & SIFT & 18 & 76.0 & 84.5 & 100.0 & 100.0 \\
+Synth. fog & SP+LG & 18 & 402.0 & 96.3 & 100.0 & 100.0 \\
+\end{longtable}\endgroup

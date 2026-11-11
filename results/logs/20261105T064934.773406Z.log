@@ -1,0 +1,6 @@
+Collecting opencv-python==4.11.0.86
+  Downloading opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl.metadata (20 kB)
+Downloading opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl (37.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.3/37.3 MB 6.8 MB/s  0:00:05
+Saved ./.cache/wheels/opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl
+Successfully downloaded opencv-python

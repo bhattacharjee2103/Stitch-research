@@ -1,0 +1,39 @@
+/Users/bhattacharjee/Desktop/internship/Stitch-research/deliverables/README.txt | 1853 bytes
+/Users/bhattacharjee/Desktop/internship/Stitch-research/deliverables/Stitch_IITR_Presentation.pdf | 6080538 bytes
+/Users/bhattacharjee/Desktop/internship/Stitch-research/deliverables/Stitch_IITR_Presentation.pptx | 9254471 bytes
+/Users/bhattacharjee/Desktop/internship/Stitch-research/deliverables/Stitch_IITR_Presentation_LaTeX.zip | 9541673 bytes
+/Users/bhattacharjee/Desktop/internship/Stitch-research/deliverables/Stitch_IITR_Report.pdf | 5266091 bytes
+/Users/bhattacharjee/Desktop/internship/Stitch-research/deliverables/Stitch_IITR_Report_LaTeX.zip | 4582307 bytes
+/Users/bhattacharjee/Desktop/internship/Stitch-research/deliverables/manifest.json | 846 bytes
+[
+  {
+    "archive": "deliverables/Stitch_IITR_Report_LaTeX.zip",
+    "command": [
+      "latexmk",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-outdir=build",
+      "main.tex"
+    ],
+    "cwd": "/Users/bhattacharjee/Desktop/internship/Stitch-research/.cache/package-check/Stitch_IITR_Report",
+    "returncode": 0,
+    "pdf_pages": 125,
+    "outside_project_data_required": false
+  },
+  {
+    "archive": "deliverables/Stitch_IITR_Presentation_LaTeX.zip",
+    "command": [
+      "latexmk",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-outdir=build",
+      "Stitch_IITR_Presentation.tex"
+    ],
+    "cwd": "/Users/bhattacharjee/Desktop/internship/Stitch-research/.cache/package-check/Stitch_IITR_Presentation",
+    "returncode": 0,
+    "pdf_pages": 30,
+    "outside_project_data_required": false
+  }
+]

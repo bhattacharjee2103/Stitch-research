@@ -1,0 +1,25 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrrr}
+\caption{Retrieval and correctly verified place rates (percent) on HPatches protocols. Global-only retrieval does not produce an anchor. Full-pipeline recall uses its reranked complete list, with the unverified tail retained.}\label{tab:retrieval-hpatches}\\
+\toprule
+Split & Method & R@1 & R@5 & R@10 & Verified \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Split & Method & R@1 & R@5 & R@10 & Verified \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{Continued on next page}\\
+\endfoot
+\bottomrule\endlastfoot
+illumination & A: SIFT & 90.0 & 98.3 & 98.3 & 81.7 \\
+illumination & B: SP+LG & 98.3 & 100.0 & 100.0 & 98.3 \\
+illumination & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+illumination & D: Full ($k=3$) & 98.3 & 100.0 & 100.0 & 98.3 \\
+viewpoint & A: SIFT & 96.7 & 98.3 & 100.0 & 93.3 \\
+viewpoint & B: SP+LG & 91.7 & 93.3 & 93.3 & 90.0 \\
+viewpoint & C: CosPlace & 71.7 & 98.3 & 100.0 & \NA \\
+viewpoint & D: Full ($k=3$) & 83.3 & 98.3 & 100.0 & 78.3 \\
+\end{longtable}\endgroup

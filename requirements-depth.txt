@@ -1,0 +1,2 @@
+# Optional dependency for the depth3d placement workflow.
+transformers>=4.45.0,<5

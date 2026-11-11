@@ -1,0 +1,11 @@
+{
+  "interpreter": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "upstream_commit": "14a01a671d9b78751f817c4b8c2bc8c0e3d2f628",
+  "original_scripts_sha256": {
+    "tep.py": "16a4af1ed7d5e2ae385636760b1f31347e78b575e69b155864fb59a72fc9a75e",
+    "tep2.py": "08e3c8fd3504097d316479da9a54ec9b46de323ea16f15c3c18fa05e21cf2861",
+    "tep3.py": "ec1edc1565ed3b767d14c9da8474bf0f8e1c3941c874a08f06745f7f590feb39"
+  },
+  "original_scripts_unchanged": true
+}

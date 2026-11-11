@@ -1,0 +1,37 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrrr}
+\caption{Retrieval and correctly verified place rates (percent) on synthetic protocols. Global-only retrieval does not produce an anchor. Full-pipeline recall uses its reranked complete list, with the unverified tail retained.}\label{tab:retrieval-synthetic}\\
+\toprule
+Split & Method & R@1 & R@5 & R@10 & Verified \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Split & Method & R@1 & R@5 & R@10 & Verified \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{Continued on next page}\\
+\endfoot
+\bottomrule\endlastfoot
+day & A: SIFT & 100.0 & 100.0 & 100.0 & 100.0 \\
+day & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+day & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+day & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+night & A: SIFT & 100.0 & 100.0 & 100.0 & 94.4 \\
+night & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+night & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+night & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+night\_severe & A: SIFT & 61.1 & 83.3 & 83.3 & 33.3 \\
+night\_severe & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+night\_severe & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+night\_severe & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+warm\_night & A: SIFT & 88.9 & 100.0 & 100.0 & 88.9 \\
+warm\_night & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+warm\_night & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+warm\_night & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+fog & A: SIFT & 100.0 & 100.0 & 100.0 & 100.0 \\
+fog & B: SP+LG & 100.0 & 100.0 & 100.0 & 100.0 \\
+fog & C: CosPlace & 100.0 & 100.0 & 100.0 & \NA \\
+fog & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 & 100.0 \\
+\end{longtable}\endgroup

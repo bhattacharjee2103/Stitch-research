@@ -1,0 +1,41 @@
+seed: 17
+device: cuda
+threads: 8
+max_side: 640
+# Approximate horizontal camera FOV. Calibrate this value for the source camera
+# before relying on metric 3D placement. It is used with zero lens distortion.
+camera_fov_x_deg: 70.0
+# Total horizontal range (degrees, centred on the first view) from which people
+# should be able to rescan a 3D placement.
+capture_angle_sweep_deg: 30.0
+# How far (degrees) a rescan may deviate from a registered view and still match.
+# Sweep and tolerance together give the capture plan (`stitch plan`).
+view_tolerance_deg: 15.0
+# Local features for depth3d: sift (fast) or superpoint (SuperPoint+LightGlue,
+# more robust to lighting change but slower on CPU).
+depth3d_features: sift
+# Floating-overlay stability: quaternion/translation smoothing (1 = none) and
+# the number of failed frames that may reuse the last accepted pose.
+pose_smoothing: 0.5
+pose_hold_frames: 5
+# A depth3d pose needs inliers covering at least this fraction of the frame
+# (convex hull area); rejects degenerate poses from clustered matches.
+pose_min_support: 0.01
+# Optional outdoor metric monocular depth model; fetched on first 3D placement.
+depth_model_id: depth-anything/Depth-Anything-V2-Metric-Outdoor-Small-hf
+depth_max_m: 80.0
+max_keypoints: 512
+# Live camera use (app and `stitch scan/video/query`): SIFT keypoint budget and
+# the long side live frames are processed at. A reference crop covers only part
+# of the frame, so live scanning needs more keypoints than the research runs.
+scan_max_keypoints: 2048
+scan_query_side: 1280
+sift_ratio: 0.70
+ransac_px: 5.0
+min_inliers: 12
+min_inlier_ratio: 0.20
+top_k: 3
+cosplace_size: 224
+cosplace_weights: models/cosplace_r18_512.pth
+lightglue_depth_confidence: 0.95
+lightglue_width_confidence: 0.99

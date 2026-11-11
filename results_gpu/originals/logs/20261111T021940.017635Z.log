@@ -1,0 +1,10 @@
+Connecting to stream at video.mp4...
+{"script": "tep2.py", "source": "video.mp4", "limit": 90, "decoded_frames": 90, "displayed_frames": 90, "homography_calls": 90, "homography_nonnull": 90, "warp_calls": 90, "headless_file_adapter": true, "vision_code_modified": false, "status": "bounded_file_input_complete", "elapsed_s": 10.151441092137247, "ms_per_decoded_frame": 112.79378991263609}
+Traceback (most recent call last):
+  File "/home2/home/pronob_b/internship/Stitch-research/scripts/run_originals.py", line 74, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home2/home/pronob_b/internship/Stitch-research/scripts/run_originals.py", line 72, in main
+    Path(os.environ.get('STITCH_RESULTS','results'))/'original_baselines.json'.write_text(json.dumps(out,indent=2))
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'write_text'

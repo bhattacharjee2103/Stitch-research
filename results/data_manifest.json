@@ -1,0 +1,3440 @@
+{
+  "tokyo": {
+    "dataset": "tokyo_query_cross_time_subset",
+    "source": "https://data.ciirc.cvut.cz/public/projects/2015netVLAD/Tokyo247/queries/247query_subset_v2.zip",
+    "sites": 24,
+    "image_count": 96,
+    "metadata_count": 315,
+    "selection": [
+      [
+        "F",
+        "D"
+      ],
+      [
+        "L",
+        "D"
+      ],
+      [
+        "F",
+        "N"
+      ],
+      [
+        "F",
+        "S"
+      ]
+    ],
+    "official_benchmark": false,
+    "files": [
+      {
+        "path": "data/tokyo/00010.csv",
+        "bytes": 83,
+        "sha256": "8b63e163efc907243c1d526df9d67d80e952be1274aecb06405a7cc0b331e3ef"
+      },
+      {
+        "path": "data/tokyo/00010.jpg",
+        "bytes": 4632904,
+        "sha256": "66bdfaaf63e1b9ba1cd0829c6d18f943811d235ae287e6d0c1ef34f9e3e583dc"
+      },
+      {
+        "path": "data/tokyo/00011.csv",
+        "bytes": 83,
+        "sha256": "20227f68737012b6c0504e43698ab38a59a523d508b4cd1a05e3bd28251b1a64"
+      },
+      {
+        "path": "data/tokyo/00011.jpg",
+        "bytes": 3889039,
+        "sha256": "c7462d2010818f36d3acffe2f1fbcb5a2065a084106e0cc8eab5eedf26cc5de1"
+      },
+      {
+        "path": "data/tokyo/00012.csv",
+        "bytes": 83,
+        "sha256": "384a5e5c8bb038de03118490a0bb07ae554f48b577584e673366e8383b3bf841"
+      },
+      {
+        "path": "data/tokyo/00012.jpg",
+        "bytes": 3836753,
+        "sha256": "dd1f2dc0d294b027f4259843e09a78a1dc11b5a4101cd9e5ccae92720ea33644"
+      },
+      {
+        "path": "data/tokyo/00013.csv",
+        "bytes": 83,
+        "sha256": "693e341e8d1c7773d47bf2e8268d3ee5e41961cc7e65b90458bb2734122afba5"
+      },
+      {
+        "path": "data/tokyo/00014.csv",
+        "bytes": 83,
+        "sha256": "3699d6dd812e4d6de5a590ef4d4dd4acddcbd56231b972adc898fbe8c38f8a6b"
+      },
+      {
+        "path": "data/tokyo/00015.csv",
+        "bytes": 83,
+        "sha256": "8064836bee60be27f7a1b1891c411f11a5182ae19918f8b6f2f041bb29b55603"
+      },
+      {
+        "path": "data/tokyo/00016.csv",
+        "bytes": 83,
+        "sha256": "00a9cc5186bca63e0cf6a2a115a86751b9907ec6ee2b7937d05bf0844d6912a8"
+      },
+      {
+        "path": "data/tokyo/00016.jpg",
+        "bytes": 6047392,
+        "sha256": "17519ec7464cf180a8de4e11b682bf580468a70c2aaa1a5612e8e9d585056e5d"
+      },
+      {
+        "path": "data/tokyo/00017.csv",
+        "bytes": 83,
+        "sha256": "338e6fa67a8ee8e0cc2a1c86ccaf56c4356759ed2ec4eab6deda1efbce2c4870"
+      },
+      {
+        "path": "data/tokyo/00018.csv",
+        "bytes": 83,
+        "sha256": "1da17b03cafaf9013524fe0e1008dc3cf16a327198c772df0203a162d35a9d71"
+      },
+      {
+        "path": "data/tokyo/00019.csv",
+        "bytes": 82,
+        "sha256": "26461701c6db258f58716956da51e22547b7937c7fff8d0a76aff0ffc1c4c805"
+      },
+      {
+        "path": "data/tokyo/00019.jpg",
+        "bytes": 4512313,
+        "sha256": "cf202cb6715b39cdddeb6e467e65121d7aed173343de6d9fcf7e3e02554e9094"
+      },
+      {
+        "path": "data/tokyo/00020.csv",
+        "bytes": 82,
+        "sha256": "5456b987ed523836491e5d4a7c3565945807a503e9955970fe32730cdfa98f12"
+      },
+      {
+        "path": "data/tokyo/00020.jpg",
+        "bytes": 3903018,
+        "sha256": "8a14a1bd5ec3c2011ba73ac20648607f94847148b5eeb9c7b17aa31a17e76628"
+      },
+      {
+        "path": "data/tokyo/00021.csv",
+        "bytes": 82,
+        "sha256": "7e44a8953e6eb2edcf7fff158482d46bef77446ef96283dd45283d0e4ef7f4fb"
+      },
+      {
+        "path": "data/tokyo/00021.jpg",
+        "bytes": 3417409,
+        "sha256": "805d4f130da5633602f6c7d111b1350f7556c7c3281fb355d512c0b9189e1b3d"
+      },
+      {
+        "path": "data/tokyo/00022.csv",
+        "bytes": 82,
+        "sha256": "a85a89e5270c8fca799d5058127ef4fc3764c07d57226e29bcb98f7a40e537af"
+      },
+      {
+        "path": "data/tokyo/00023.csv",
+        "bytes": 82,
+        "sha256": "1e5e92abd240034ea531b686b0ba2206998bda4b27491712f84e5d94edb02936"
+      },
+      {
+        "path": "data/tokyo/00024.csv",
+        "bytes": 82,
+        "sha256": "b2b631bbf9270e40ddb7f9d344ba2961f3da54f2741fbe3ad9b33a4c0d7452f7"
+      },
+      {
+        "path": "data/tokyo/00025.csv",
+        "bytes": 82,
+        "sha256": "26372bfe2692995c441392b800ee88ae35877cc6a7ee2ea8edc4baef4e9fea7c"
+      },
+      {
+        "path": "data/tokyo/00025.jpg",
+        "bytes": 5873000,
+        "sha256": "4085cd5dccff195ad367333b7617b094aadf9216476aefcd4c9aef495d7703cb"
+      },
+      {
+        "path": "data/tokyo/00026.csv",
+        "bytes": 82,
+        "sha256": "743993c513921746ef7f6acd088847c0042c86ea566f03221c3c7be977746ed3"
+      },
+      {
+        "path": "data/tokyo/00027.csv",
+        "bytes": 82,
+        "sha256": "bd4c4a68ff735adc0af94460ff411d99807eb413172547e716c35aa2a93fefae"
+      },
+      {
+        "path": "data/tokyo/00028.csv",
+        "bytes": 82,
+        "sha256": "d2e4cf47f76158f050605bb4731b4146ae723d88790a0f75086069023bf39115"
+      },
+      {
+        "path": "data/tokyo/00028.jpg",
+        "bytes": 4901554,
+        "sha256": "7a0d377c1a35a76a2dca21bca8fe25e9873cc6bed1174db24cc87510a87a50a4"
+      },
+      {
+        "path": "data/tokyo/00029.csv",
+        "bytes": 82,
+        "sha256": "a33c022bc6f5272243a0b4ff1167639cfde4d61a45e6b085fdde0737ac075d85"
+      },
+      {
+        "path": "data/tokyo/00029.jpg",
+        "bytes": 1836690,
+        "sha256": "0c77238e589344d280d709739c33cf564b0d534bab77c2350dd59a6f08dfe817"
+      },
+      {
+        "path": "data/tokyo/00030.csv",
+        "bytes": 82,
+        "sha256": "ef440917ebde39757630be5d9d9690f8d5f1b51170fe1528a72ca522969d321c"
+      },
+      {
+        "path": "data/tokyo/00030.jpg",
+        "bytes": 3701274,
+        "sha256": "77276958e1ea852dcdf02c95e8f345bd4e5d0db35f3756c4d22bd5be6bc50949"
+      },
+      {
+        "path": "data/tokyo/00031.csv",
+        "bytes": 82,
+        "sha256": "e06661068f3961e47241a649f43c251a6ac888ab9131636588368421c0e79bac"
+      },
+      {
+        "path": "data/tokyo/00032.csv",
+        "bytes": 82,
+        "sha256": "3cf1e02862acfd296e0ded262858313f8d684477c2ae86ed60ddfb6970788188"
+      },
+      {
+        "path": "data/tokyo/00033.csv",
+        "bytes": 82,
+        "sha256": "924ead22273f0131edd5954a1c86d6de5d3160be322f2164e384bbb37fcd3787"
+      },
+      {
+        "path": "data/tokyo/00034.csv",
+        "bytes": 82,
+        "sha256": "893ddb4a5f23c9ff117717f558762bf9f8394f755479bf361f5495de05573cef"
+      },
+      {
+        "path": "data/tokyo/00034.jpg",
+        "bytes": 4849633,
+        "sha256": "3366e218dcbfee87656fdf3471700367c114e0505400591fe8f06accf1304ed0"
+      },
+      {
+        "path": "data/tokyo/00035.csv",
+        "bytes": 82,
+        "sha256": "9d58b4c0c483ebd71fa74fee5980f353f5d3f6345f7ac95388a57e6b05065f89"
+      },
+      {
+        "path": "data/tokyo/00036.csv",
+        "bytes": 82,
+        "sha256": "87ab9bf62b6dd99639c040efff28436ef3c3bb38d9fdf1183e5815f2deb45150"
+      },
+      {
+        "path": "data/tokyo/00037.csv",
+        "bytes": 83,
+        "sha256": "6a2ed808fe2e14e4d789da78a9d56975a5e850040b10e3476af6abe1d37f254a"
+      },
+      {
+        "path": "data/tokyo/00037.jpg",
+        "bytes": 4637082,
+        "sha256": "46be935c2310cba05417c51f8398e3304dfd7c08165e7f814dbf43794c42e8bb"
+      },
+      {
+        "path": "data/tokyo/00038.csv",
+        "bytes": 83,
+        "sha256": "4362a4f8ebff418b3fe45e023498b230e991e362c23370840dedac79fe8cc4df"
+      },
+      {
+        "path": "data/tokyo/00038.jpg",
+        "bytes": 3014934,
+        "sha256": "8a82441700a18cd0e5f5a8e6109fbb6c03b39192539b88cfb6ecb261e4aa3f0b"
+      },
+      {
+        "path": "data/tokyo/00039.csv",
+        "bytes": 83,
+        "sha256": "2b270190bad1528cdfa7a3f518c622eb53834fd6da6daf8ef3107c1f2e25f4b6"
+      },
+      {
+        "path": "data/tokyo/00039.jpg",
+        "bytes": 2664898,
+        "sha256": "f3c735498e87692eedaf9fb30dfe9e832f27500c3faf767222ca3e871c1ca161"
+      },
+      {
+        "path": "data/tokyo/00040.csv",
+        "bytes": 83,
+        "sha256": "916e3e1d587c7555b96775e813e378025e0e20619ce201e710063889324579b3"
+      },
+      {
+        "path": "data/tokyo/00041.csv",
+        "bytes": 83,
+        "sha256": "5c2b9d01987fc49eb3fab68d8bc6dea723ef3f50e8ccc5a1317a83120fce7eac"
+      },
+      {
+        "path": "data/tokyo/00042.csv",
+        "bytes": 83,
+        "sha256": "7c6ad3e6efee26010b21e51d7f22174ee8f1d8fcef4c0aba97dbd1f4820212c4"
+      },
+      {
+        "path": "data/tokyo/00043.csv",
+        "bytes": 83,
+        "sha256": "f0666c95b5e7b8c876d0b06c02cbc5efa723bc5cf57bd24639e7bbe97bc7e45f"
+      },
+      {
+        "path": "data/tokyo/00043.jpg",
+        "bytes": 5761004,
+        "sha256": "5bec2f9821a9c981ba7a67658438db076b21d66c21a0efe3c40b1a6fbe332b96"
+      },
+      {
+        "path": "data/tokyo/00044.csv",
+        "bytes": 83,
+        "sha256": "ee8e0dcce61a8f317941827a7fe2e4c01489bc8ccd73976fcf4bc8cb88d03946"
+      },
+      {
+        "path": "data/tokyo/00045.csv",
+        "bytes": 83,
+        "sha256": "0c8b7e4d41bbaad2db785df4a040e9314e722eea134c311cb8f9a6f13b1f5fed"
+      },
+      {
+        "path": "data/tokyo/00046.csv",
+        "bytes": 83,
+        "sha256": "62fa2005f980ff93d711f86a01f050e2531509fce3815a61b7ad1f2523367850"
+      },
+      {
+        "path": "data/tokyo/00046.jpg",
+        "bytes": 4729785,
+        "sha256": "874641558d03f851d3da78de1baa147888a8b75e4adeef6aec68dba39854310f"
+      },
+      {
+        "path": "data/tokyo/00047.csv",
+        "bytes": 83,
+        "sha256": "5a26860e5945ee2cb96445f213bb3afe521725f66ddb4d3519ab975816e3c719"
+      },
+      {
+        "path": "data/tokyo/00047.jpg",
+        "bytes": 3188825,
+        "sha256": "910b6dba1ae5728561ecf6f5f523122726bae9af16b7b861af709902bfd34f62"
+      },
+      {
+        "path": "data/tokyo/00048.csv",
+        "bytes": 83,
+        "sha256": "1a28e79afca37bde35c8dd6baf465a3192ef105821cbf5cd3ee2be58fdf45bd1"
+      },
+      {
+        "path": "data/tokyo/00048.jpg",
+        "bytes": 3183071,
+        "sha256": "aaf168f70d87a2ce187f20ee46d04148b6ee6704e77054f7a66e2c12092009c3"
+      },
+      {
+        "path": "data/tokyo/00049.csv",
+        "bytes": 83,
+        "sha256": "8bdbb440fe6334879ada6a18de07184852fb91a582a73c4d2a85d76534b21f70"
+      },
+      {
+        "path": "data/tokyo/00050.csv",
+        "bytes": 83,
+        "sha256": "f7cc2b8cd5bb25584f2eeae25acee168c22e40c5b8a626250294ee25d5e81ac4"
+      },
+      {
+        "path": "data/tokyo/00051.csv",
+        "bytes": 83,
+        "sha256": "75d8a4586b6d9e4cc05e9ea51ac7fd1444e33f534574166adfcb97bfdea4a63a"
+      },
+      {
+        "path": "data/tokyo/00052.csv",
+        "bytes": 83,
+        "sha256": "8a2aa0b93ed1994a5bbf87c7a92b255ede247afe857fe6157b00def25bc71a76"
+      },
+      {
+        "path": "data/tokyo/00052.jpg",
+        "bytes": 2520850,
+        "sha256": "262300dbab366c02b36dc9d10d78b10296b9aceb0caeca5d21cc387e8bb774a8"
+      },
+      {
+        "path": "data/tokyo/00053.csv",
+        "bytes": 83,
+        "sha256": "a0916f62294a0deba3e129b44bc445defea30fe25dad9747fd03ac586b2b0b6d"
+      },
+      {
+        "path": "data/tokyo/00054.csv",
+        "bytes": 83,
+        "sha256": "5ae31d1c1603dd73161e81335b4debf37bada3303bc7097dcc188f80f135ba21"
+      },
+      {
+        "path": "data/tokyo/00055.csv",
+        "bytes": 83,
+        "sha256": "a826bba3286eafa9f9a8724f451c066a89da842fdc292dfa4860024d86f61007"
+      },
+      {
+        "path": "data/tokyo/00055.jpg",
+        "bytes": 4430880,
+        "sha256": "7e5d4a3ea641c3fcc3a6fa6202ca73507c9fa6524f53586bf525fedf06506724"
+      },
+      {
+        "path": "data/tokyo/00056.csv",
+        "bytes": 83,
+        "sha256": "04598e9e27be956e7bb3740ffc32f4b00a6003803d8bdd7100d9ac5f58a5ebd7"
+      },
+      {
+        "path": "data/tokyo/00056.jpg",
+        "bytes": 2929200,
+        "sha256": "3f7eaee8a66156f517ef42ba2c1d383578d9601fc118f1f68d2be07cbe7d58da"
+      },
+      {
+        "path": "data/tokyo/00057.csv",
+        "bytes": 83,
+        "sha256": "cb56b556b566136a05ea849870e1f4553d1064c5c77a5e98fc38bb07ea2856cd"
+      },
+      {
+        "path": "data/tokyo/00057.jpg",
+        "bytes": 3593008,
+        "sha256": "e2b5f13c6d3333c0eb3f14f0fc31e5800d333843820315300e34a29322fea038"
+      },
+      {
+        "path": "data/tokyo/00058.csv",
+        "bytes": 83,
+        "sha256": "14cca48dfad85daa822db93bb80f6cfc5f1fe7b0de616a8be9e4fdd1a7c991fc"
+      },
+      {
+        "path": "data/tokyo/00059.csv",
+        "bytes": 83,
+        "sha256": "8ea927b45dc57a4ec200695d63e4fc7c7fd5aa3da83fcd0b879fe05c12cc266d"
+      },
+      {
+        "path": "data/tokyo/00060.csv",
+        "bytes": 83,
+        "sha256": "a067c96ddcb776c7a0d2d7fc4e99319b6dbf62bbe3fe7a8fb798dfbb88104cd5"
+      },
+      {
+        "path": "data/tokyo/00061.csv",
+        "bytes": 83,
+        "sha256": "aa5bdb66d4d9b103ebb825e6504e3a6782ce7210851f2cbe44e116611c98341f"
+      },
+      {
+        "path": "data/tokyo/00061.jpg",
+        "bytes": 4640191,
+        "sha256": "f8005fe90f9a859639f4c9978856f6de5037f63190baec0edd5c4684e7c3b53c"
+      },
+      {
+        "path": "data/tokyo/00062.csv",
+        "bytes": 83,
+        "sha256": "f31fa0d67f4670c8347f2657217a2ff374f6a01f8fdb2a534d524cfcb8795103"
+      },
+      {
+        "path": "data/tokyo/00063.csv",
+        "bytes": 83,
+        "sha256": "7288dc221081cf4146e7ea8178775fdc39c831a8d53e4d4bb68e6474b41434aa"
+      },
+      {
+        "path": "data/tokyo/00082.csv",
+        "bytes": 82,
+        "sha256": "8b23e3a1397d35e963bc4b6541262432988260c254c6026f2a7fe16362279df7"
+      },
+      {
+        "path": "data/tokyo/00083.csv",
+        "bytes": 82,
+        "sha256": "9f605ceb2b1e15dbd6012f330ac265d1b701aecea8f649693f209c3b68dcb1c9"
+      },
+      {
+        "path": "data/tokyo/00084.csv",
+        "bytes": 82,
+        "sha256": "8705dd7cbce36b3c311f7c8f293ca7882a7221f419c49287c7cd88470a3b02a8"
+      },
+      {
+        "path": "data/tokyo/00085.csv",
+        "bytes": 82,
+        "sha256": "1d367b6336dacc5ec50256efc3f2975aad6c5b44dc6003c58c9f8fd6b61314cd"
+      },
+      {
+        "path": "data/tokyo/00086.csv",
+        "bytes": 82,
+        "sha256": "b0ef69c2abf570abf38f551a8282cb50944a0ca9ba055ade6217beb48882678b"
+      },
+      {
+        "path": "data/tokyo/00087.csv",
+        "bytes": 82,
+        "sha256": "71e7876c82ff08d379674c20eedbe443356575a4cd024470189e20760b16cef1"
+      },
+      {
+        "path": "data/tokyo/00088.csv",
+        "bytes": 82,
+        "sha256": "4d6ceb00fbf3374831333d6b639a0a386ec19d9dfabb0364f796f430043f938e"
+      },
+      {
+        "path": "data/tokyo/00089.csv",
+        "bytes": 82,
+        "sha256": "6051377da8fe2d3ea998eb5367da397c74b22df2800e19b266f1278bf810bcc2"
+      },
+      {
+        "path": "data/tokyo/00090.csv",
+        "bytes": 82,
+        "sha256": "e4a8f5f49a7904326c39bc48c4c26eaa2017fe4f55b1030128df53169a27c70a"
+      },
+      {
+        "path": "data/tokyo/00091.csv",
+        "bytes": 83,
+        "sha256": "af365709f5db0f36c96a8166ecc4cdc64615cd203469204ccf29d6c63336a148"
+      },
+      {
+        "path": "data/tokyo/00091.jpg",
+        "bytes": 5300835,
+        "sha256": "fcb00aa6912285655e9a13c781f9f665a7ecdc5665af31cc8ced492dfa35fe5a"
+      },
+      {
+        "path": "data/tokyo/00092.csv",
+        "bytes": 83,
+        "sha256": "e7a847907790c4367faa80d9580fc95dc23039cb416c277061fd7d19686959a8"
+      },
+      {
+        "path": "data/tokyo/00092.jpg",
+        "bytes": 4475232,
+        "sha256": "420772708da6f461e1882e23e59985b222ac5b5316d644e665f5f6ba770cc3d0"
+      },
+      {
+        "path": "data/tokyo/00093.csv",
+        "bytes": 83,
+        "sha256": "438a54f1c48fa2340636ff7153d7953b5e6b11f40ce8fbc7b7ae1d37507ea9b6"
+      },
+      {
+        "path": "data/tokyo/00093.jpg",
+        "bytes": 4365018,
+        "sha256": "ca7620582ad70eff6ebb7fee12c715417bd2d24b9218649beaa508bf6934b39c"
+      },
+      {
+        "path": "data/tokyo/00094.csv",
+        "bytes": 83,
+        "sha256": "9aa0d1b0d5ec6ec1b7614f0a65e213fe9e66f9bd9a0cbf9515120bad12917834"
+      },
+      {
+        "path": "data/tokyo/00095.csv",
+        "bytes": 83,
+        "sha256": "0b174f2c2a99653ce3c89d8d70d1f3d4635c0d78f11288c0d8e94fb5f16744c2"
+      },
+      {
+        "path": "data/tokyo/00096.csv",
+        "bytes": 83,
+        "sha256": "c9b24f0d916492564d7cd2e47516e1062108308e870b164f341291983400342f"
+      },
+      {
+        "path": "data/tokyo/00097.csv",
+        "bytes": 83,
+        "sha256": "11d8c4ebaf51eefba147039d7eb842c380b957e88db1ec28feebc1da4f50c63a"
+      },
+      {
+        "path": "data/tokyo/00097.jpg",
+        "bytes": 2864123,
+        "sha256": "f965a2b4eb91dccce8d42f7b51cb92a783d5b1f5cbb1a2c682517bf1090c580d"
+      },
+      {
+        "path": "data/tokyo/00098.csv",
+        "bytes": 83,
+        "sha256": "56d5726fde00dedfe145f0baa13c458b1444fec0be5aa30c3e63d3126a573eb5"
+      },
+      {
+        "path": "data/tokyo/00099.csv",
+        "bytes": 83,
+        "sha256": "3a6a12a70fcfccb9da331f21c7cd9827962ecd29577686dff2093ebc8d312035"
+      },
+      {
+        "path": "data/tokyo/00100.csv",
+        "bytes": 83,
+        "sha256": "14771c5ca9c7a88cbdceb8494f03dff594cb30b8c46659c1a9217a1e5cd78f60"
+      },
+      {
+        "path": "data/tokyo/00100.jpg",
+        "bytes": 5227245,
+        "sha256": "6b96c6e4f2e327ab7507e441a1394b10f145b4d54072450be273b0237a493036"
+      },
+      {
+        "path": "data/tokyo/00101.csv",
+        "bytes": 83,
+        "sha256": "7ccf8ff38fd83a36058538bf24e79b19679d4d8063396b57958633f383263483"
+      },
+      {
+        "path": "data/tokyo/00101.jpg",
+        "bytes": 4420981,
+        "sha256": "0b7dc4f5853e3970cf504922521bb70a14e50d854e182761a5e56304bdecec23"
+      },
+      {
+        "path": "data/tokyo/00102.csv",
+        "bytes": 83,
+        "sha256": "693927d48e242b1bd5588046bc3bf2c56762d87421ddc68e23d72e4279117cc3"
+      },
+      {
+        "path": "data/tokyo/00102.jpg",
+        "bytes": 4525455,
+        "sha256": "2778f377f8ff9ffcfa64144b6f9e0d8f248ce541969013b117d19fb3739fa39c"
+      },
+      {
+        "path": "data/tokyo/00103.csv",
+        "bytes": 83,
+        "sha256": "692820fc1b62acbcad04dea44520414a93ea418f3bf3d3971af75f0ecf3f7cd3"
+      },
+      {
+        "path": "data/tokyo/00104.csv",
+        "bytes": 83,
+        "sha256": "f96b16ebbe972f5ee2061a229c239be9f298e2bebb08dce77cde1aeb49e36796"
+      },
+      {
+        "path": "data/tokyo/00105.csv",
+        "bytes": 83,
+        "sha256": "bbef6b13c336d3f25728a295cf060150f7b4a1aa2dbff52e9611e3ba7891b0a8"
+      },
+      {
+        "path": "data/tokyo/00106.csv",
+        "bytes": 83,
+        "sha256": "bf261d0d589c91f00b0f2a37def2c356e0ea69c503c3622f27d12ee633404037"
+      },
+      {
+        "path": "data/tokyo/00106.jpg",
+        "bytes": 5199209,
+        "sha256": "28249c031a20643b588182bd7d84506619ebdea3fbd0a170e7b6721f2f4eab6e"
+      },
+      {
+        "path": "data/tokyo/00107.csv",
+        "bytes": 83,
+        "sha256": "856bd7fce63ef9505f3e4b3b26d54fc2343124c7a8082a49d274977fa78e8f15"
+      },
+      {
+        "path": "data/tokyo/00108.csv",
+        "bytes": 83,
+        "sha256": "55e521b42b67894263292d57b8064e220e6dc5618b0f6c81c44e44f930a68e66"
+      },
+      {
+        "path": "data/tokyo/00109.csv",
+        "bytes": 83,
+        "sha256": "e4668d0d94d9969dea7cae50779c91e054264eb928747f086aa849adec7c5ff4"
+      },
+      {
+        "path": "data/tokyo/00109.jpg",
+        "bytes": 5059845,
+        "sha256": "2c91084da18372a1c1a412a6795fdbb7eafc4b6151bc340640c6d0b5d09205d6"
+      },
+      {
+        "path": "data/tokyo/00110.csv",
+        "bytes": 83,
+        "sha256": "cc54b273b72426c495437848c335135659d675ff57b8959fbc57ea6026d4d5e5"
+      },
+      {
+        "path": "data/tokyo/00110.jpg",
+        "bytes": 4870372,
+        "sha256": "0eff1455694bd6a4f97825f905e8a2fcb6607c584b7f5a6cd0a5ee582002c016"
+      },
+      {
+        "path": "data/tokyo/00111.csv",
+        "bytes": 83,
+        "sha256": "b98be1ab6c3ac72fba52ffc0662eabcd26de13821c85181473b02e23eccef0ce"
+      },
+      {
+        "path": "data/tokyo/00111.jpg",
+        "bytes": 4224902,
+        "sha256": "b721112df55ebe7ea69376bc2dadd5340c788604f7e3c123872d0df0ec578316"
+      },
+      {
+        "path": "data/tokyo/00112.csv",
+        "bytes": 83,
+        "sha256": "1b6eabe312a5963c982dbf52f855621a657228e792a47364fb4b8eb22f1ea1f4"
+      },
+      {
+        "path": "data/tokyo/00113.csv",
+        "bytes": 83,
+        "sha256": "ae1f6ed898461db5a7cf692ccc5213b027e3ae4fdd2de9c33efdf8a76a84639a"
+      },
+      {
+        "path": "data/tokyo/00114.csv",
+        "bytes": 83,
+        "sha256": "7fd4440ff18922800a470bbc24be7c91da6105a5fd6bf6fc05bdc28057724e9f"
+      },
+      {
+        "path": "data/tokyo/00115.csv",
+        "bytes": 83,
+        "sha256": "fda35af74b2b7dcf774ae7c8ed88446fc30d276bdd34127ccd6fe39f2b9684db"
+      },
+      {
+        "path": "data/tokyo/00115.jpg",
+        "bytes": 4208117,
+        "sha256": "77930f3722ff60ea661bc08ffe65f9313281485e91ae36f55e98a78e07b967fb"
+      },
+      {
+        "path": "data/tokyo/00116.csv",
+        "bytes": 83,
+        "sha256": "b1a53ec4717d82cb3dbd5e25c6244fffef1c42dc681644812643b80682b0bbbb"
+      },
+      {
+        "path": "data/tokyo/00117.csv",
+        "bytes": 83,
+        "sha256": "cf659cdbcda172840f31fbbab392f2b12347578c7d691b88b6b6ec6d003fdcec"
+      },
+      {
+        "path": "data/tokyo/00118.csv",
+        "bytes": 82,
+        "sha256": "e4b25b7a56744a4b0bfa35ae184e999f3436c642183ecdaaf2c9cf39ba7e3fdf"
+      },
+      {
+        "path": "data/tokyo/00118.jpg",
+        "bytes": 2695627,
+        "sha256": "32f90788c9864f412d6c30d990ac39f13a31dcefb8d543d08ed10f4f6fd35e58"
+      },
+      {
+        "path": "data/tokyo/00119.csv",
+        "bytes": 82,
+        "sha256": "7b1e8fa58289ae1eacd70ce89ac8e67ed5b2e12e1c9719cdea5427cdb766f701"
+      },
+      {
+        "path": "data/tokyo/00119.jpg",
+        "bytes": 2500157,
+        "sha256": "3f0d803b522fe4adfb988e5839e513f09b92e16a01f269a5f1e4fc1aab8527d2"
+      },
+      {
+        "path": "data/tokyo/00120.csv",
+        "bytes": 82,
+        "sha256": "7f705a0081666116eddfce316d67aee7aa032e3d51e723de3bce4bd36eab03ed"
+      },
+      {
+        "path": "data/tokyo/00120.jpg",
+        "bytes": 1413708,
+        "sha256": "8bcb30cd40e7cf8cda4301083a94f72fe558e41bb0c456fe204a5c1953a4b02a"
+      },
+      {
+        "path": "data/tokyo/00121.csv",
+        "bytes": 82,
+        "sha256": "a45bc6881a95a63fe025f70afb59fdc26b33c60a782c99c5d491396f97b33a42"
+      },
+      {
+        "path": "data/tokyo/00122.csv",
+        "bytes": 82,
+        "sha256": "e7260d05256e0189e521aa98733b7f1e725d871e88df44c258d274def9c8890a"
+      },
+      {
+        "path": "data/tokyo/00123.csv",
+        "bytes": 82,
+        "sha256": "839b7417cb2ecdba4e0012d23e5280826b97d9559b7766b3e2cca9e8fbe252a5"
+      },
+      {
+        "path": "data/tokyo/00124.csv",
+        "bytes": 82,
+        "sha256": "046edc80293fb7fe2914e55a9c52d40d734d51cdc8dd21713745ed4033fc0f43"
+      },
+      {
+        "path": "data/tokyo/00124.jpg",
+        "bytes": 4707167,
+        "sha256": "5ec7d2a16e09aba1578e80b2b9f306cd5ca29ccbbc95f5039f9c75fb91ada6d2"
+      },
+      {
+        "path": "data/tokyo/00125.csv",
+        "bytes": 82,
+        "sha256": "521cf3c2e3ac3fa8f47e55d446e06a2f05616016238a1d5d0b18b1002a7ce757"
+      },
+      {
+        "path": "data/tokyo/00126.csv",
+        "bytes": 82,
+        "sha256": "b01eb60fc878c489acccd229c02a04fdd722b926cafeba6c54d7b6df500da90b"
+      },
+      {
+        "path": "data/tokyo/00127.csv",
+        "bytes": 83,
+        "sha256": "6f8957952271a11d383606afe7b8ec0898a82afcf9a8d6f80e946edfd2c97d6e"
+      },
+      {
+        "path": "data/tokyo/00128.csv",
+        "bytes": 83,
+        "sha256": "3696a5d4fb3f49ca54df187a1223bea437c9e84a8d0dc8216f56f44584e7b1f3"
+      },
+      {
+        "path": "data/tokyo/00129.csv",
+        "bytes": 83,
+        "sha256": "868ca3139dbddf46b4b39ab89f694ff543308298e6b6e7ee9d1ba6e3a40cab60"
+      },
+      {
+        "path": "data/tokyo/00130.csv",
+        "bytes": 83,
+        "sha256": "89b88c3d30149c96acde2fe30ae6b6a624526c889e646b1e279197ef9fcb0a0d"
+      },
+      {
+        "path": "data/tokyo/00131.csv",
+        "bytes": 83,
+        "sha256": "1fc94990d4f720a5a3d6c4c122df6cc08c17cdf54f664ae926b7fcb2e0066c9f"
+      },
+      {
+        "path": "data/tokyo/00132.csv",
+        "bytes": 83,
+        "sha256": "770d6cd376e2ee4972e1b72e7cf8487073fdcdcb50fade72ba83aa54e34ce8b9"
+      },
+      {
+        "path": "data/tokyo/00133.csv",
+        "bytes": 83,
+        "sha256": "ebd6467bb0c974baece15fc87ec2474000ce2c64b6fe3a3c183d0f5ef7a67a8a"
+      },
+      {
+        "path": "data/tokyo/00134.csv",
+        "bytes": 83,
+        "sha256": "17683ece6abaae899d40571dafba8a5d16bbd56464cd923359810b6d4bc8dd26"
+      },
+      {
+        "path": "data/tokyo/00135.csv",
+        "bytes": 83,
+        "sha256": "190dcc1d7eaa48cab891a11acc622abe18d91af8b624ec76aabb713011a2924c"
+      },
+      {
+        "path": "data/tokyo/00145.csv",
+        "bytes": 82,
+        "sha256": "9c12b0801d2ef1ba620e8bd7b713c15578d21cd13578f2494c0aab3fde451d2f"
+      },
+      {
+        "path": "data/tokyo/00146.csv",
+        "bytes": 82,
+        "sha256": "b22928bb95c6689d0b7d4cd91d4bdcf230db3f3336be51d58df4b1d047394da8"
+      },
+      {
+        "path": "data/tokyo/00147.csv",
+        "bytes": 82,
+        "sha256": "f60804f71be9a629f97c496593dd1e09d73a80601e5bf33972e01b2da9669137"
+      },
+      {
+        "path": "data/tokyo/00148.csv",
+        "bytes": 82,
+        "sha256": "7c46708d576f9a529f8703cde874fe779c1d8d0b2a34cae2ade653613523e170"
+      },
+      {
+        "path": "data/tokyo/00149.csv",
+        "bytes": 82,
+        "sha256": "b9d297631a238455c8d9fa1bd9288d097977741b8e11160ac6d23af4c5c302e1"
+      },
+      {
+        "path": "data/tokyo/00150.csv",
+        "bytes": 82,
+        "sha256": "b2f484054ab4b63c7c0788406a2013dc402bbaf40f150aa43c97b4a09606c7df"
+      },
+      {
+        "path": "data/tokyo/00151.csv",
+        "bytes": 82,
+        "sha256": "0dd75e3d779e61c68c1c760da1e939b0289e024cb6b3d7c6c6eb1f2aadb6bead"
+      },
+      {
+        "path": "data/tokyo/00152.csv",
+        "bytes": 82,
+        "sha256": "e084357e4ff4f082e7be061a81e8d66e0bcdcefc7ffba255a1585572a0686b63"
+      },
+      {
+        "path": "data/tokyo/00153.csv",
+        "bytes": 82,
+        "sha256": "6118a4c06b9825b88c5f88f181d1bc6679558275ffce63f4bfb8e051a8d0d12a"
+      },
+      {
+        "path": "data/tokyo/00154.csv",
+        "bytes": 82,
+        "sha256": "0e579f780c401f8f994d3f04a1dfb18c713e852ec1bacd4e86f4ef1ac4f3d0af"
+      },
+      {
+        "path": "data/tokyo/00155.csv",
+        "bytes": 82,
+        "sha256": "c9c3229d4c3b23b23e795224eb3fa99d437aae9947be06bda3394ee0c20131b3"
+      },
+      {
+        "path": "data/tokyo/00156.csv",
+        "bytes": 82,
+        "sha256": "891f16d23a52385265326b3255af24a154872402af1b140da0defee9be9a0985"
+      },
+      {
+        "path": "data/tokyo/00157.csv",
+        "bytes": 82,
+        "sha256": "a9c89fd2aa68f02e7ec0bd7ade098458995c7750ad31b5c1f1a50ed81da39fcc"
+      },
+      {
+        "path": "data/tokyo/00158.csv",
+        "bytes": 82,
+        "sha256": "709354912ce89df916445fae10960b88467756d2e311e05abe4806414aeb833f"
+      },
+      {
+        "path": "data/tokyo/00159.csv",
+        "bytes": 82,
+        "sha256": "b96d7586d6fbba05375b17f1abe197037c61ae88ad7c00cdea9e2cd0ce51b7a2"
+      },
+      {
+        "path": "data/tokyo/00160.csv",
+        "bytes": 82,
+        "sha256": "e5a72f54a595caeb68a6f02bfd6f1b6488adfffc1e796efe41b44aea422f5688"
+      },
+      {
+        "path": "data/tokyo/00161.csv",
+        "bytes": 82,
+        "sha256": "042f358bd0af85380cdf3dccd1118874a694d8adb6d194954f29a662537b3168"
+      },
+      {
+        "path": "data/tokyo/00162.csv",
+        "bytes": 82,
+        "sha256": "78e39cf7e84eb16feeb806cf665ff9f04897a9fae447307ce4d2d20c70f03ec1"
+      },
+      {
+        "path": "data/tokyo/00163.csv",
+        "bytes": 82,
+        "sha256": "0169cca4b90c398e271f976715ef4467afabefd0840de4715d540a69df0a52e2"
+      },
+      {
+        "path": "data/tokyo/00164.csv",
+        "bytes": 82,
+        "sha256": "c2fe180ff922c7a5688418f2ea4ecb2c3bb60580ff904d7feab010e590b32b48"
+      },
+      {
+        "path": "data/tokyo/00165.csv",
+        "bytes": 82,
+        "sha256": "cad79b091f1a808558c7a40f808382ca1dfd059445cadc62aefb0bac6ddddb1e"
+      },
+      {
+        "path": "data/tokyo/00166.csv",
+        "bytes": 82,
+        "sha256": "d0273419660ea3cdbd24cb3fc0fbe34082e11fe741b70d17d9a1fd6f096df319"
+      },
+      {
+        "path": "data/tokyo/00167.csv",
+        "bytes": 82,
+        "sha256": "49e690a9d3c0db17b3affccee0e90b31816768c39019167b288ceb5157a2c917"
+      },
+      {
+        "path": "data/tokyo/00168.csv",
+        "bytes": 82,
+        "sha256": "c6910562ce20820bea84bbdcfcf0b978d44027d8e27e5e942d071e67d7087315"
+      },
+      {
+        "path": "data/tokyo/00169.csv",
+        "bytes": 82,
+        "sha256": "c767e302065126b0ff2b4d4aff816c42a06cf8efbcb07735ff6202c3d34da695"
+      },
+      {
+        "path": "data/tokyo/00170.csv",
+        "bytes": 82,
+        "sha256": "cd267dd24a178cef7cb98c996d89d5da21f276638f11a32e4b7b7761a808cf10"
+      },
+      {
+        "path": "data/tokyo/00171.csv",
+        "bytes": 82,
+        "sha256": "ac6dfc5215175e9fe5cf18676e9088c27855c14bdf3c3da6b41636acdb663f9d"
+      },
+      {
+        "path": "data/tokyo/00172.csv",
+        "bytes": 83,
+        "sha256": "b293d7524b26261be27a5b47b15be53d49dcca197807653834b5361a31fe6780"
+      },
+      {
+        "path": "data/tokyo/00173.csv",
+        "bytes": 83,
+        "sha256": "532e6e8668a7f021a65b3537df411f353c1200a6cf91d1948682744483070070"
+      },
+      {
+        "path": "data/tokyo/00174.csv",
+        "bytes": 83,
+        "sha256": "eae8afa12fc16bb567be9e5ffbbdfa0d7523979b19f9fe70a76bb008acdb6f07"
+      },
+      {
+        "path": "data/tokyo/00175.csv",
+        "bytes": 83,
+        "sha256": "d0fb4c7af416fccfe31e5e4171b335110e645101cd99b638f714b50cb2a01a5b"
+      },
+      {
+        "path": "data/tokyo/00176.csv",
+        "bytes": 83,
+        "sha256": "e7abad8f572b9301334826dc678d6806a9b8d7cbeaa2e4d2e1597d9ce6feafd3"
+      },
+      {
+        "path": "data/tokyo/00177.csv",
+        "bytes": 83,
+        "sha256": "2829562a1403c1f269b19510057f17ca3ce0efb7181b3662b66635172acaa3f5"
+      },
+      {
+        "path": "data/tokyo/00178.csv",
+        "bytes": 83,
+        "sha256": "1d9ebffcbdab7a1f5e9b5dc17ff3523e0d87ea2d9e35a2ab5a87f0be320b5b53"
+      },
+      {
+        "path": "data/tokyo/00179.csv",
+        "bytes": 83,
+        "sha256": "706d643a12389000e8ef9cf69bec86782f598db955b02cc9710b9d233cd092e1"
+      },
+      {
+        "path": "data/tokyo/00180.csv",
+        "bytes": 83,
+        "sha256": "c1f0c0331e2639f5b084063e512992f05d806d2a83c1c6bd28cfeb98b242de7b"
+      },
+      {
+        "path": "data/tokyo/00181.csv",
+        "bytes": 83,
+        "sha256": "6fe1e35be088f8c0850a9f849a7fc52c5ccd04b5c647fbf5aa8efd877e94c5d0"
+      },
+      {
+        "path": "data/tokyo/00182.csv",
+        "bytes": 83,
+        "sha256": "7c639044ad37e39848e11c773f17371d2820c0be2c22fb6e4b2d9d85048dbd04"
+      },
+      {
+        "path": "data/tokyo/00183.csv",
+        "bytes": 83,
+        "sha256": "294ed9d32954749c5169481931beba8f1db3d02e173930bf7bb848315360b72f"
+      },
+      {
+        "path": "data/tokyo/00184.csv",
+        "bytes": 83,
+        "sha256": "4eaf3e3e7fa52a7ff9a6b67ffa24967351d3fb88074d79306e2424779a7a2676"
+      },
+      {
+        "path": "data/tokyo/00185.csv",
+        "bytes": 83,
+        "sha256": "d168083b74ba6328f584e334117c74bccf7da1eae4b9a0252e1928d67fd318a7"
+      },
+      {
+        "path": "data/tokyo/00186.csv",
+        "bytes": 83,
+        "sha256": "2b63d7fee99ed3dbceef90977a7ae614ed1a5e76e07619f0824802b00ad4e564"
+      },
+      {
+        "path": "data/tokyo/00187.csv",
+        "bytes": 83,
+        "sha256": "7537b662d7edb7498a0ba5ac76301590d4a0a3aa770c3b6c60ba1b2d8660cc82"
+      },
+      {
+        "path": "data/tokyo/00188.csv",
+        "bytes": 83,
+        "sha256": "11111c88e969a9f692268ff227a09d5d820a3f29ee028ba577d398aa9342468f"
+      },
+      {
+        "path": "data/tokyo/00189.csv",
+        "bytes": 83,
+        "sha256": "fc99af7f8af5854f770ebdc1767ee6b9eb339ad21dcd7d1ee4e28a601ca5516f"
+      },
+      {
+        "path": "data/tokyo/00190.csv",
+        "bytes": 83,
+        "sha256": "d6e7de1e24715fd36213487a96e59b07f671cc512553b4e3e3296b8acd2aef9f"
+      },
+      {
+        "path": "data/tokyo/00191.csv",
+        "bytes": 83,
+        "sha256": "df3c4008d72bc06a1d6cfddd27e4a58aab4749a95f53c8f988ef38291db69e81"
+      },
+      {
+        "path": "data/tokyo/00192.csv",
+        "bytes": 83,
+        "sha256": "c9f5d2d0687b72c98810abbe6de5ae5aec1e22aa974573c9333545b12b7cb776"
+      },
+      {
+        "path": "data/tokyo/00193.csv",
+        "bytes": 83,
+        "sha256": "db651b6a80e1d828b3c0a3479d5a69283556141f43f984461a8b04ca247ba83d"
+      },
+      {
+        "path": "data/tokyo/00194.csv",
+        "bytes": 83,
+        "sha256": "87d8a95b2cfbb6b372e4f139e64bfb462a7c89c76283bfa8d3af025f32479f11"
+      },
+      {
+        "path": "data/tokyo/00195.csv",
+        "bytes": 83,
+        "sha256": "ff639f422f5f2db2eaa1fec444c46e647f6b94824e2dd2dee35dadcbc1f7759a"
+      },
+      {
+        "path": "data/tokyo/00196.csv",
+        "bytes": 83,
+        "sha256": "27dace868a01d9ae4a33877d0200f319249dc2e3d726f5a26458f07d1af26f26"
+      },
+      {
+        "path": "data/tokyo/00197.csv",
+        "bytes": 83,
+        "sha256": "ff715014f73ad5a4d7716fe31151a05ddace0ddab440f194cefe602c712a6984"
+      },
+      {
+        "path": "data/tokyo/00198.csv",
+        "bytes": 83,
+        "sha256": "a5264d502239577045edca7b239e95a1e9f5c4403b57831b0c52106e49e77091"
+      },
+      {
+        "path": "data/tokyo/00199.csv",
+        "bytes": 83,
+        "sha256": "38b735fbb336a17705198a32e7ad64a3721dd35da584a45fd3f3259942ec3136"
+      },
+      {
+        "path": "data/tokyo/00200.csv",
+        "bytes": 83,
+        "sha256": "72f08522cf606c6236de108d771e073cd29e238cdac983480c68b0f2394365fc"
+      },
+      {
+        "path": "data/tokyo/00201.csv",
+        "bytes": 83,
+        "sha256": "911ee59cb0d2a3e2b5ec9510b4278b322d7abb0a25f123dd1340a70cf074b434"
+      },
+      {
+        "path": "data/tokyo/00202.csv",
+        "bytes": 83,
+        "sha256": "b2b6f56698c4eb5a437ddb97f11a4eb7e6785119a3ee00bf8abbe3438cc5d379"
+      },
+      {
+        "path": "data/tokyo/00203.csv",
+        "bytes": 83,
+        "sha256": "9a888f565a96a5b20575e8dd5b89901dfee317e40bd1882f8099038bc12b9b71"
+      },
+      {
+        "path": "data/tokyo/00204.csv",
+        "bytes": 83,
+        "sha256": "2ffba7f823683d5a269595dc35fd74823dda7c877532b200c6f80d559fc68381"
+      },
+      {
+        "path": "data/tokyo/00205.csv",
+        "bytes": 83,
+        "sha256": "69a66291286c70444398bfaaaad36512ddc5e067d3f95345873c6df22fc43beb"
+      },
+      {
+        "path": "data/tokyo/00206.csv",
+        "bytes": 83,
+        "sha256": "baecce0d62f4fd0fdc9aee2ecdde0b2ad62122039b0763737a22f0dae120bf51"
+      },
+      {
+        "path": "data/tokyo/00207.csv",
+        "bytes": 83,
+        "sha256": "23b009c747287f9626e04e1d54605a1932e319f65c1c15b44eac08def7463f94"
+      },
+      {
+        "path": "data/tokyo/00208.csv",
+        "bytes": 82,
+        "sha256": "43c54950e596486bd0db6ceebd620c8af86cdd3a78a03b679933d1486c7770ce"
+      },
+      {
+        "path": "data/tokyo/00209.csv",
+        "bytes": 82,
+        "sha256": "cc2f3b619e24f56615fcce55d69e772c21296deff31aba9480a0cad9daf36fcb"
+      },
+      {
+        "path": "data/tokyo/00210.csv",
+        "bytes": 82,
+        "sha256": "0ab0151529ee13fab51673d51e2d06f462bcc087eda4885ad78b75b78aa9326b"
+      },
+      {
+        "path": "data/tokyo/00211.csv",
+        "bytes": 82,
+        "sha256": "04f72dec2c250758b583717bcc2bedd06e585316336311e6be3d95295fa9dcf7"
+      },
+      {
+        "path": "data/tokyo/00212.csv",
+        "bytes": 82,
+        "sha256": "abaf3bc3df4093ce8997163ff4e326a74f0e4d2a3c312f5036458337b5121927"
+      },
+      {
+        "path": "data/tokyo/00213.csv",
+        "bytes": 82,
+        "sha256": "07ba2a10a9a8734ce48330f52d0723e4293d1fac5366d77076b9eba752b8cc3d"
+      },
+      {
+        "path": "data/tokyo/00214.csv",
+        "bytes": 82,
+        "sha256": "36da1eea088e35f22b6c23c55be39298753f2e4ad4de3db3fd7f4a0076b35aac"
+      },
+      {
+        "path": "data/tokyo/00215.csv",
+        "bytes": 82,
+        "sha256": "352af014ee48ff667003eff619cf8255ce68511cd7381c8d2cefbd000f081941"
+      },
+      {
+        "path": "data/tokyo/00216.csv",
+        "bytes": 82,
+        "sha256": "8677820557de8ba16ff42630f40fb985a959ace7c481d5ea7d33def8b2a86d8a"
+      },
+      {
+        "path": "data/tokyo/00217.csv",
+        "bytes": 83,
+        "sha256": "b9099b7cd5e4a36c11f1a7653c16efbae30aca7356d01e8c42a035b446bc4051"
+      },
+      {
+        "path": "data/tokyo/00218.csv",
+        "bytes": 83,
+        "sha256": "6e45570cc2582e00025ec9d6468054205abf488f435c44cb628cc5938760abad"
+      },
+      {
+        "path": "data/tokyo/00219.csv",
+        "bytes": 83,
+        "sha256": "b9d5a447fc91e341dc24fcf05ba42680c73c73539b4abb9e448897ad4eaeab71"
+      },
+      {
+        "path": "data/tokyo/00220.csv",
+        "bytes": 83,
+        "sha256": "70dc312bf873f8e61562927f10bfa5f9d235de571eb547b7b7eb003f32e4e1a3"
+      },
+      {
+        "path": "data/tokyo/00221.csv",
+        "bytes": 83,
+        "sha256": "d3161b013f0c41e308cce37e4a13fcae528e806916bf7e71fac148560364b033"
+      },
+      {
+        "path": "data/tokyo/00222.csv",
+        "bytes": 83,
+        "sha256": "bc1bce7627b75c787f413741f76e506874eba564a8a3d66d0a3d28da34ef390d"
+      },
+      {
+        "path": "data/tokyo/00223.csv",
+        "bytes": 83,
+        "sha256": "235ce7cee65b48027c632cef955f1d1a8dd552152493bb10da863f96963b7735"
+      },
+      {
+        "path": "data/tokyo/00224.csv",
+        "bytes": 83,
+        "sha256": "a0ae20963eef34bd42204d37aa95eb04684596a59ce7308d13cf2257da8f16a2"
+      },
+      {
+        "path": "data/tokyo/00225.csv",
+        "bytes": 83,
+        "sha256": "c9495488e8c727cd2cb5b0e0921e2076a3eb08dd240210dd989c8468745a5c67"
+      },
+      {
+        "path": "data/tokyo/00226.csv",
+        "bytes": 82,
+        "sha256": "41685cc830e6a8c271ed90d9c7b6aaec42108d113969d70d190896611e0e95be"
+      },
+      {
+        "path": "data/tokyo/00226.jpg",
+        "bytes": 3059032,
+        "sha256": "16329d01dd6ce4d08e37809ac9d2ecf09531445bf755b6eb48d237e0ee1b5e5d"
+      },
+      {
+        "path": "data/tokyo/00227.csv",
+        "bytes": 82,
+        "sha256": "f919812f8289f610ed90d51138b1b712b6cea7e0036c8c3a23f11c8ac2c0e5c9"
+      },
+      {
+        "path": "data/tokyo/00227.jpg",
+        "bytes": 3016836,
+        "sha256": "4005f8c04c74e1281eca6c00c2df98495e40fdde98c935d7c8a455090e8e344d"
+      },
+      {
+        "path": "data/tokyo/00228.csv",
+        "bytes": 82,
+        "sha256": "854d03b37c03aa1a963ccac9d0e4d8cdece516f652321ef77a64ea911f6f2801"
+      },
+      {
+        "path": "data/tokyo/00228.jpg",
+        "bytes": 2004410,
+        "sha256": "c6e5fc4576e784546a10c8ea4b70a8355ea44cc47e72e7eedaeeaaf66202f560"
+      },
+      {
+        "path": "data/tokyo/00229.csv",
+        "bytes": 82,
+        "sha256": "ea6b99681e09496778376832c4bd397947f07d2966485802a9ef99a776d3eb17"
+      },
+      {
+        "path": "data/tokyo/00230.csv",
+        "bytes": 82,
+        "sha256": "a0699ccfbeebaee923866062239497839649b82e495ab40b7eea2862d5e9bd6b"
+      },
+      {
+        "path": "data/tokyo/00231.csv",
+        "bytes": 82,
+        "sha256": "878be357de1143fa720d92c25829661024062d7d9729d5e4d328c4a3452706e3"
+      },
+      {
+        "path": "data/tokyo/00232.csv",
+        "bytes": 82,
+        "sha256": "0197a4610f46e4f2f43d4067a18d9a70b647c3d2d05267dccc638c8159aae44a"
+      },
+      {
+        "path": "data/tokyo/00232.jpg",
+        "bytes": 4837250,
+        "sha256": "fcf71d31cb61a79fe926c657283f48204fa86053d4fb0c8ff7750ad413897ff3"
+      },
+      {
+        "path": "data/tokyo/00233.csv",
+        "bytes": 82,
+        "sha256": "1d0be3e712ac852ea365f1a46a01b78fc3c930ee20283a70220121f3335402ac"
+      },
+      {
+        "path": "data/tokyo/00234.csv",
+        "bytes": 82,
+        "sha256": "d0a18584b5f952fec1e4478028d9cc69bd6493caa8c63fa31f1dd9ddbf342a51"
+      },
+      {
+        "path": "data/tokyo/00235.csv",
+        "bytes": 82,
+        "sha256": "8c5e28c823262b26adebad715e00f200822388d85b504672185332ccf7b9a11b"
+      },
+      {
+        "path": "data/tokyo/00235.jpg",
+        "bytes": 3500091,
+        "sha256": "09f98ae69d320c9714e994f20b625f5d5c8177d67d55a173feaee9aa91271f29"
+      },
+      {
+        "path": "data/tokyo/00236.csv",
+        "bytes": 82,
+        "sha256": "f50100ad1fd32477cc974b6f5a4f663e6783794276771ebe793affd2e7fec3eb"
+      },
+      {
+        "path": "data/tokyo/00236.jpg",
+        "bytes": 5535501,
+        "sha256": "ab32c12b3f675172cbe101847ca877778d4be3956749a6a0c86617cb18a82e4a"
+      },
+      {
+        "path": "data/tokyo/00237.csv",
+        "bytes": 82,
+        "sha256": "51024114af045fe9d35181edf3ebd1f201dcb88eb1942de63469bce5c99cdbdb"
+      },
+      {
+        "path": "data/tokyo/00237.jpg",
+        "bytes": 2061761,
+        "sha256": "4f4eb1c9cd5ef1447e2533b0fa6510dd688f4b2db79d206c340dab47fce5df02"
+      },
+      {
+        "path": "data/tokyo/00238.csv",
+        "bytes": 82,
+        "sha256": "057e2e13e9b128ebdd49e67b43bdfe98084cb2d52d0b3c17b911cfdf680a8b77"
+      },
+      {
+        "path": "data/tokyo/00239.csv",
+        "bytes": 82,
+        "sha256": "c5871d8ed74a43afe21ded847b185847c3e6b27ac0807b18b49258bf3f40f4e5"
+      },
+      {
+        "path": "data/tokyo/00240.csv",
+        "bytes": 82,
+        "sha256": "eb6881a0123d550039dd4da14957d0ec4181942c4d9722ffc1f279f3899c3a79"
+      },
+      {
+        "path": "data/tokyo/00241.csv",
+        "bytes": 82,
+        "sha256": "af2156e8f86d05e7cd9ac56528f4c254ce0b6bb432f4338ab2d723399c7eaada"
+      },
+      {
+        "path": "data/tokyo/00241.jpg",
+        "bytes": 5573103,
+        "sha256": "db995c49d11cf56f70fc05e7511830635145ba83f98dd342578a3ccd352432e7"
+      },
+      {
+        "path": "data/tokyo/00242.csv",
+        "bytes": 82,
+        "sha256": "27368e68f7d33a5ec28f4c3f5c718da342128140180243abc535b06942985443"
+      },
+      {
+        "path": "data/tokyo/00243.csv",
+        "bytes": 82,
+        "sha256": "f29700e5ab8f8fe6d294928fad6642651887f06cbc94981bf8ae80fc2030564f"
+      },
+      {
+        "path": "data/tokyo/00262.csv",
+        "bytes": 83,
+        "sha256": "70795e99d02f344f2f443dcc5603700b02a8aa6ab11ef279c6053b02513dcb71"
+      },
+      {
+        "path": "data/tokyo/00262.jpg",
+        "bytes": 4134955,
+        "sha256": "3504367b3fe7f01bd8351540f87848c0b6f7f3af114f7dda14c6f6c12a7ac658"
+      },
+      {
+        "path": "data/tokyo/00263.csv",
+        "bytes": 83,
+        "sha256": "3b187839c509a01872ca994b2619ce9829619adaaa6b19980ceebf4858ccf75d"
+      },
+      {
+        "path": "data/tokyo/00263.jpg",
+        "bytes": 4198337,
+        "sha256": "5e7566735c06c75e640dd0848c3cba33554c7b2c4c689927306992f36116dab4"
+      },
+      {
+        "path": "data/tokyo/00264.csv",
+        "bytes": 83,
+        "sha256": "a55535ea5d2ca201f70edcf3bbfe38f5f7e5046401c4dc4205933f1d56ac1128"
+      },
+      {
+        "path": "data/tokyo/00264.jpg",
+        "bytes": 2982163,
+        "sha256": "550a54b283a25fd331d64814b6a5e04e5675e4069fbe4b7ceb02c7362a65fa84"
+      },
+      {
+        "path": "data/tokyo/00265.csv",
+        "bytes": 83,
+        "sha256": "51ca8ceca68316d46ff3ae7f6e4911d18ce09b8dd792bf7475d8be52ce1376fd"
+      },
+      {
+        "path": "data/tokyo/00266.csv",
+        "bytes": 83,
+        "sha256": "024be3799c83ea652914773957049833b63bcf266eb9987a94e9139c02c4b112"
+      },
+      {
+        "path": "data/tokyo/00267.csv",
+        "bytes": 83,
+        "sha256": "8242c7ab1f1099164cded79dfcc9104290111537a40f9f99f1d45fdb60731d12"
+      },
+      {
+        "path": "data/tokyo/00268.csv",
+        "bytes": 83,
+        "sha256": "5962ec4263d0a0b17d9326c1107bc0a2b04b4a5c0ee662582dbd5039d7bc8f6d"
+      },
+      {
+        "path": "data/tokyo/00268.jpg",
+        "bytes": 4354376,
+        "sha256": "15ef5b44280531bfd9a5e326d1f1fbdf7775364fc7df61bd00e38d79578c6c30"
+      },
+      {
+        "path": "data/tokyo/00269.csv",
+        "bytes": 83,
+        "sha256": "65a4d6d09bd2f5e28fa3ea23a40b81b0068e1fd2cabc7f547db9526a09c0979b"
+      },
+      {
+        "path": "data/tokyo/00270.csv",
+        "bytes": 83,
+        "sha256": "6257154c844eb83a303ecf05f935bd0be6814a9cf8caea02072fd84306361b81"
+      },
+      {
+        "path": "data/tokyo/00271.csv",
+        "bytes": 83,
+        "sha256": "b782be4735d94bc50e99b70d44ca98fe9a308238afe3f3ebde770eebfdf629cb"
+      },
+      {
+        "path": "data/tokyo/00271.jpg",
+        "bytes": 4535382,
+        "sha256": "cd7d0e7e530a0fd7ece33cd763c2d87fd93c448b27689af8f5267876d8f01ac7"
+      },
+      {
+        "path": "data/tokyo/00272.csv",
+        "bytes": 83,
+        "sha256": "0b0c313a18ceedc869262987c0d95f26b2f6a1b16511e2cba344cfdde19af571"
+      },
+      {
+        "path": "data/tokyo/00272.jpg",
+        "bytes": 3825892,
+        "sha256": "c9ca747bf79c4a49ac3ddff51f3cafcfe6d1f80507901be6e0233dfcab7dcad2"
+      },
+      {
+        "path": "data/tokyo/00273.csv",
+        "bytes": 83,
+        "sha256": "0d1cc99ed6f09b2008863ce34d30a17543ee04052b1ed53127095519bc102042"
+      },
+      {
+        "path": "data/tokyo/00273.jpg",
+        "bytes": 3290334,
+        "sha256": "2b886a467c57d9d3aebe04b2d50ca06a1d0fbf8efbb6c6f080af4b3439bbdf4f"
+      },
+      {
+        "path": "data/tokyo/00274.csv",
+        "bytes": 83,
+        "sha256": "ef607c8a38307169a08a159a5a5fa5133dc641287a88e27376499b150130f797"
+      },
+      {
+        "path": "data/tokyo/00275.csv",
+        "bytes": 83,
+        "sha256": "fdc99381565dcc16bed0fdeaa382a481c188f470b922ba00735abae051b9b559"
+      },
+      {
+        "path": "data/tokyo/00276.csv",
+        "bytes": 83,
+        "sha256": "74a4d3d3349997074ee8f81844e28ded91ebf7214f4e9f998259dba935f6dc82"
+      },
+      {
+        "path": "data/tokyo/00277.csv",
+        "bytes": 83,
+        "sha256": "8111860bfa3bea6902de1fabe828e66e656c2919b6257430eb3bcb4fbfca9451"
+      },
+      {
+        "path": "data/tokyo/00277.jpg",
+        "bytes": 4137476,
+        "sha256": "9c12167c29c81072daf721f89f77820fb9a3b55e2c1e294320aa6be76e252de9"
+      },
+      {
+        "path": "data/tokyo/00278.csv",
+        "bytes": 83,
+        "sha256": "8b40c174357b397c35494045f11cbcf54a3e99b61fde19ae1d1af5faecaab426"
+      },
+      {
+        "path": "data/tokyo/00279.csv",
+        "bytes": 83,
+        "sha256": "6fa893e0d21393069d5f1d8d365b62de1868245369c36ab4b9159476436fbaa3"
+      },
+      {
+        "path": "data/tokyo/00379.csv",
+        "bytes": 83,
+        "sha256": "a77f832850f9f50dc147c94b3863fc5082a9f46927fef73a16c527b6f2d8d0ee"
+      },
+      {
+        "path": "data/tokyo/00379.jpg",
+        "bytes": 4092910,
+        "sha256": "f20b5aabfa2137ef0d5e002400d032074478fdb361abd27ca8624bffbf1bb73c"
+      },
+      {
+        "path": "data/tokyo/00380.csv",
+        "bytes": 83,
+        "sha256": "0933a85aaa409620e1cd765f065c30f990ebd1c52f3126d89cf389bf55f3134f"
+      },
+      {
+        "path": "data/tokyo/00380.jpg",
+        "bytes": 3355895,
+        "sha256": "d7dfe452a2c0905797d1664c14658a733c26288826b970875d3def1db1ad2ad0"
+      },
+      {
+        "path": "data/tokyo/00381.csv",
+        "bytes": 83,
+        "sha256": "cb173d8b9daa59969d38f0755b1e49bb324968d968235001880ceceb0164c013"
+      },
+      {
+        "path": "data/tokyo/00381.jpg",
+        "bytes": 3336891,
+        "sha256": "be50fc2cebedc705689fe24c5383b3ca65cb341fff68a640cf6d735a376a653b"
+      },
+      {
+        "path": "data/tokyo/00382.csv",
+        "bytes": 83,
+        "sha256": "59a7d5141f0dee771adf0916965ace49538aec7eed7fcd7a38d16f4497b0ce63"
+      },
+      {
+        "path": "data/tokyo/00383.csv",
+        "bytes": 83,
+        "sha256": "7bafdf208d8e44b061ded96c2677e129cd53e43468b682ec8fbbd839e770391f"
+      },
+      {
+        "path": "data/tokyo/00384.csv",
+        "bytes": 83,
+        "sha256": "717cb10c3f38395a5e4123323e02307aff9a9882eb7e33cc18b615cce3303adb"
+      },
+      {
+        "path": "data/tokyo/00385.csv",
+        "bytes": 83,
+        "sha256": "7690198b4cd8fd3e37f8835f7fe7a5a6d2d2e7a4570dfa6b9716843eacd9c06e"
+      },
+      {
+        "path": "data/tokyo/00385.jpg",
+        "bytes": 3731334,
+        "sha256": "0724ef7bde4f921a0c34dd0dfb7a02b7f3b3e8c8ff3981dcfadc4a83eaf5a207"
+      },
+      {
+        "path": "data/tokyo/00386.csv",
+        "bytes": 83,
+        "sha256": "ca469d70db5e9a7ba914010a336fd9551ffba4761d24a133444d0a1bdc6707f3"
+      },
+      {
+        "path": "data/tokyo/00387.csv",
+        "bytes": 83,
+        "sha256": "b4b75048591db2cdf6f770d94019d0e11b84cfca3cc98cd7f03c21c85ef2117c"
+      },
+      {
+        "path": "data/tokyo/00388.csv",
+        "bytes": 83,
+        "sha256": "8a4b6958905ac2bafa847cc9d9f842609c824bb2eff51d1626f34182460e3783"
+      },
+      {
+        "path": "data/tokyo/00388.jpg",
+        "bytes": 4004053,
+        "sha256": "3413ba1774870d8a9bd34216a758ec4906b611094e52e1f89422d72e5b63f833"
+      },
+      {
+        "path": "data/tokyo/00389.csv",
+        "bytes": 83,
+        "sha256": "95cf4459b2b4e0bed766d4ca1dd646e39b992140f9eae3628888857540f73239"
+      },
+      {
+        "path": "data/tokyo/00389.jpg",
+        "bytes": 3359007,
+        "sha256": "bba4b39665b8e2feb03a2746ce146482d38cf9c16c21571db5be9180f525ba18"
+      },
+      {
+        "path": "data/tokyo/00390.csv",
+        "bytes": 83,
+        "sha256": "872a50ef3a4620e79ac5e5732353222c1a9ecd03b51af2c00cbd1fbd97570981"
+      },
+      {
+        "path": "data/tokyo/00390.jpg",
+        "bytes": 2928287,
+        "sha256": "b73462764eaa555b5ca8771694fa5e934c7529dacf34a28d4ba2c2d62bfbe342"
+      },
+      {
+        "path": "data/tokyo/00391.csv",
+        "bytes": 83,
+        "sha256": "d8e3fe28b0d2dedc6addd3a365214853403f311e25153118da0a2d2c801c2e03"
+      },
+      {
+        "path": "data/tokyo/00392.csv",
+        "bytes": 83,
+        "sha256": "81a3929ba4c8da240cb18fbc46496cc007b970a372f926d524f753ce66f17c42"
+      },
+      {
+        "path": "data/tokyo/00393.csv",
+        "bytes": 83,
+        "sha256": "53754e63f43a640b0853026a57729337235e124fd2d3cebc1ae57531b1d94a26"
+      },
+      {
+        "path": "data/tokyo/00394.csv",
+        "bytes": 83,
+        "sha256": "ab37b629424da6edfe9b43e01ee91fbbb2bafa53329e1db0298fd35ece7b85b7"
+      },
+      {
+        "path": "data/tokyo/00394.jpg",
+        "bytes": 5626362,
+        "sha256": "c9e8a58183079e0b5831f07cb0ac79d4b96779fd41e060c5ce1a98b0e455344a"
+      },
+      {
+        "path": "data/tokyo/00395.csv",
+        "bytes": 83,
+        "sha256": "8092fd9a86b164159488bc52c66d2926e4d434a6fc39a83ad8082f0015d1bfc3"
+      },
+      {
+        "path": "data/tokyo/00396.csv",
+        "bytes": 83,
+        "sha256": "16d772fd075449af5b97c22fe3769f2a3d2d0618e464cb2931e1fd1a0d482406"
+      },
+      {
+        "path": "data/tokyo/00397.csv",
+        "bytes": 83,
+        "sha256": "2fccd9bbcce39a3f3d86276c16bcc7d62a4faa74e1ee335af07b64a6c5377871"
+      },
+      {
+        "path": "data/tokyo/00397.jpg",
+        "bytes": 4400916,
+        "sha256": "d0e7d820e0bd9ddb5b2cd605837e9c02ca4d337a3252c8d654a8867ad16695e1"
+      },
+      {
+        "path": "data/tokyo/00398.csv",
+        "bytes": 83,
+        "sha256": "e702da5a034f9708cd27037878d6d7f6e85c9bd982a26fdc32bd534ab5e12035"
+      },
+      {
+        "path": "data/tokyo/00398.jpg",
+        "bytes": 3077524,
+        "sha256": "83c8c7874c0b48aa8aa84cb08313a3d7a33dd8ba7f65c63dfcf6badc83889867"
+      },
+      {
+        "path": "data/tokyo/00399.csv",
+        "bytes": 83,
+        "sha256": "1bf2fd6d459df64d08b2d831b2b88c25fd09e325ca455f6a517ba9d78bb9470f"
+      },
+      {
+        "path": "data/tokyo/00399.jpg",
+        "bytes": 2835085,
+        "sha256": "a1fb85203bc6012d961f652093aa001f29c6560f8b9172ca629a8790b40f403a"
+      },
+      {
+        "path": "data/tokyo/00400.csv",
+        "bytes": 83,
+        "sha256": "0c39f0911204c0d337f07c1fcc1caa054f81f099ed1abf77f6491569464cb7ec"
+      },
+      {
+        "path": "data/tokyo/00401.csv",
+        "bytes": 83,
+        "sha256": "463e7953f5504d8957331964b24bec75bd62afc2d5c777e3599d3f20dc300cd1"
+      },
+      {
+        "path": "data/tokyo/00402.csv",
+        "bytes": 83,
+        "sha256": "981d551dfaf67d6b68d2816ee51d16b2bc03963c23ff75b5f7749716b0c84718"
+      },
+      {
+        "path": "data/tokyo/00403.csv",
+        "bytes": 83,
+        "sha256": "5e7a6d93bfb2cd0dc17f8ad93123cc7b837e7df31797f6307a005d0743ae95df"
+      },
+      {
+        "path": "data/tokyo/00403.jpg",
+        "bytes": 4646198,
+        "sha256": "149e63ab3d227a1ed025143350232aa33000929caf6b58f5fe80c2f6fcaa0155"
+      },
+      {
+        "path": "data/tokyo/00404.csv",
+        "bytes": 83,
+        "sha256": "2f9e5f1a52b8c427936f80ebdf16d0d2c937d4092b0b1ca02d1c95cbacf3d586"
+      },
+      {
+        "path": "data/tokyo/00405.csv",
+        "bytes": 83,
+        "sha256": "d0728cc257bd11eb269bb4baecdc0d95c0e5fd64f03244c31bd43483229fd791"
+      },
+      {
+        "path": "data/tokyo/00406.csv",
+        "bytes": 83,
+        "sha256": "67140664a3350a7488777805102c52b54953294909fed0c99776ff9ef0251c66"
+      },
+      {
+        "path": "data/tokyo/00406.jpg",
+        "bytes": 2950371,
+        "sha256": "04e37ec603b78301522f553defa0fa65785a7c274b33ef281e3bc22653247d25"
+      },
+      {
+        "path": "data/tokyo/00407.csv",
+        "bytes": 83,
+        "sha256": "37f2fdae799d772be1b1b19a53a43950dfb8cc037747b67201534267ed9edb3a"
+      },
+      {
+        "path": "data/tokyo/00407.jpg",
+        "bytes": 3688966,
+        "sha256": "3919327679270157cdde35d9cc0c5848118f779ac9430727f6b1ad0d52ac4d0a"
+      },
+      {
+        "path": "data/tokyo/00408.csv",
+        "bytes": 83,
+        "sha256": "07e4bbf94d0d97ddd2168d61f561ff5c340c30769c173e09eafe1f120617ab16"
+      },
+      {
+        "path": "data/tokyo/00408.jpg",
+        "bytes": 3426470,
+        "sha256": "5690c503735452d6a308e4476d1ca1eaf5bbd5fa6c954bb40af5aa5cf35816b7"
+      },
+      {
+        "path": "data/tokyo/00409.csv",
+        "bytes": 83,
+        "sha256": "fa030e9cfb25382c668aaa230304382d5c6f9b281a51fb52383113d8b438876f"
+      },
+      {
+        "path": "data/tokyo/00410.csv",
+        "bytes": 83,
+        "sha256": "dd105a2cbd8a99a538392d0ed698f74e214a1aabe7429aef75bb829fcba264fd"
+      },
+      {
+        "path": "data/tokyo/00411.csv",
+        "bytes": 83,
+        "sha256": "8bc14357395d483e56521f3fa35387197d61fe40aefc72733bc78670dd415e2d"
+      },
+      {
+        "path": "data/tokyo/00412.csv",
+        "bytes": 83,
+        "sha256": "3181ac5aaff73b02aab49aaae34003e1ca5024deacebb1cbd79aefbd9b0062aa"
+      },
+      {
+        "path": "data/tokyo/00412.jpg",
+        "bytes": 2712031,
+        "sha256": "602529269e56b04730296b8987d79256e5757f546bfc447d095e65dc8c5ad328"
+      },
+      {
+        "path": "data/tokyo/00413.csv",
+        "bytes": 83,
+        "sha256": "552d50c0f4d073e1109725c76c2fa4a5055ae6f38c8358584f129ca9c43f980d"
+      },
+      {
+        "path": "data/tokyo/00414.csv",
+        "bytes": 83,
+        "sha256": "b69037231d0e3760721ed791b2cdae077771429a0f1e4f8ee1ef379012cf40d2"
+      },
+      {
+        "path": "data/tokyo/00415.csv",
+        "bytes": 83,
+        "sha256": "23de038f893e7f55dd889361d7825b4f4b1e9838b4e693cc7d5f797dacf09fac"
+      },
+      {
+        "path": "data/tokyo/00415.jpg",
+        "bytes": 5175064,
+        "sha256": "d4ec70cbc4da6709242b2d0ac991b07513c5042aac14c6311203b62fb03ccb61"
+      },
+      {
+        "path": "data/tokyo/00416.csv",
+        "bytes": 83,
+        "sha256": "9ad5ede39af225d5cc152bba4bbf3d65992ebd4fff07fa63e3f555b1950908dc"
+      },
+      {
+        "path": "data/tokyo/00416.jpg",
+        "bytes": 3595123,
+        "sha256": "2aac37d5f6cf855680dbe36b8e1e3adbf6555c07a7cd0daf653cb59ab3dcb4e9"
+      },
+      {
+        "path": "data/tokyo/00417.csv",
+        "bytes": 83,
+        "sha256": "cff17afb6e872fed7b16312a4162dc2c40cc29d96e9693d3585b01bd8b80503f"
+      },
+      {
+        "path": "data/tokyo/00417.jpg",
+        "bytes": 3209801,
+        "sha256": "67901ba5af8a9889c1eec4354b8c24c9743178f23a1dbdb0222b91e41aa980e9"
+      },
+      {
+        "path": "data/tokyo/00418.csv",
+        "bytes": 83,
+        "sha256": "02019983e0167c2477357cec00921235013391c79138aa39454568f350f788de"
+      },
+      {
+        "path": "data/tokyo/00419.csv",
+        "bytes": 83,
+        "sha256": "7ff7c21cac7cecdfcadd31e1212bad0a5c6bff65c81c2f2943af5255429fd1dc"
+      },
+      {
+        "path": "data/tokyo/00420.csv",
+        "bytes": 83,
+        "sha256": "ee0e0943c79770cc095819afe93652df7aac79e2c7f5e705f15c7462f76f39ef"
+      },
+      {
+        "path": "data/tokyo/00421.csv",
+        "bytes": 83,
+        "sha256": "c9af7362b7295426760fb9d875fdd0393f46430d7a5c8d9ea4075f8dd4819d1e"
+      },
+      {
+        "path": "data/tokyo/00421.jpg",
+        "bytes": 3814820,
+        "sha256": "131f7d179ecb2fae620e58cf1ee91ff89af5a9c9aa3fa828b4c7cafd2449b954"
+      },
+      {
+        "path": "data/tokyo/00422.csv",
+        "bytes": 83,
+        "sha256": "119cbd6191a0d0defe1401b19ab47b8e0a8e4ea34d1fc460375faf00e315a374"
+      },
+      {
+        "path": "data/tokyo/00423.csv",
+        "bytes": 83,
+        "sha256": "a4a0a870de61beccb07aa4357b157aafbb4657f6bc716ad34272cbcf6da79a25"
+      },
+      {
+        "path": "data/tokyo/00424.csv",
+        "bytes": 84,
+        "sha256": "99b6651278448717282401d6db5d9fa61b4a164a0d2455636177d695503e7ca4"
+      },
+      {
+        "path": "data/tokyo/00424.jpg",
+        "bytes": 4511567,
+        "sha256": "5e1ce9bf8d30b85a2e92f995abecb12e52af8a67f643972d96b886c81f88bd97"
+      },
+      {
+        "path": "data/tokyo/00425.csv",
+        "bytes": 84,
+        "sha256": "6e1d6d29ece2e6b217dca83f26e718f2ca11e6a3dadae5fa9b158f51954e72c0"
+      },
+      {
+        "path": "data/tokyo/00425.jpg",
+        "bytes": 3779108,
+        "sha256": "5d5eb30ff1f2c58efe5e0f0bf442ebd17c2aaacf8e999771e8935299c7c8acb6"
+      },
+      {
+        "path": "data/tokyo/00426.csv",
+        "bytes": 84,
+        "sha256": "b8977ad6196a2f30226fb3909439ac95dffb6e77913e85e42df717f24ac290d8"
+      },
+      {
+        "path": "data/tokyo/00426.jpg",
+        "bytes": 3078183,
+        "sha256": "31cb8fde1a9e5c8de7e705ccc4c4d62ba57d0c675b3eccdd0b286909285a1d6e"
+      },
+      {
+        "path": "data/tokyo/00427.csv",
+        "bytes": 84,
+        "sha256": "89e7e3a8bec881f2ad279d63efc1245ef4f0d0966379d795934a572280d631aa"
+      },
+      {
+        "path": "data/tokyo/00428.csv",
+        "bytes": 84,
+        "sha256": "fd1cee757c8ce2088f482df2a911228d9ce58e421c084c028079de8ed5849265"
+      },
+      {
+        "path": "data/tokyo/00429.csv",
+        "bytes": 84,
+        "sha256": "407b458dfb46eae9dfbac03021f2d7ef37b50eae972fd8c2c5f86c6b50176e6f"
+      },
+      {
+        "path": "data/tokyo/00430.csv",
+        "bytes": 84,
+        "sha256": "be9656e3ddc4e3bdabdf279385ce8d6f8c60496d632588da0deaf16a11fee370"
+      },
+      {
+        "path": "data/tokyo/00430.jpg",
+        "bytes": 4759419,
+        "sha256": "fa7c190bc7bb5f796d077dedffc293afb584cb29c76c6f68e17ff4deb9fd65dd"
+      },
+      {
+        "path": "data/tokyo/00431.csv",
+        "bytes": 84,
+        "sha256": "c35b8e93a3341c7e196e9e2b8d46774082c1cd7b2fa907953ed3e1bab52463b7"
+      },
+      {
+        "path": "data/tokyo/00432.csv",
+        "bytes": 84,
+        "sha256": "df0e35cb968251e708df6a73d061d668996e62a6fc7b8aedf5daada58275817c"
+      },
+      {
+        "path": "data/tokyo/00433.csv",
+        "bytes": 83,
+        "sha256": "da8e5eb417a306fb6400a394c0a772f46cf2aa1fba8224cceb5d6368a89a89f4"
+      },
+      {
+        "path": "data/tokyo/00433.jpg",
+        "bytes": 4135538,
+        "sha256": "04a3908e2220378ba00e5f2205efa1dc2b844145e50c83a1e6f8acbc46f8218c"
+      },
+      {
+        "path": "data/tokyo/00434.csv",
+        "bytes": 83,
+        "sha256": "9ea21de6b9a6ed323fe9838bc36635c7cae8b23cfa4d773fa2fea43ad7734c35"
+      },
+      {
+        "path": "data/tokyo/00434.jpg",
+        "bytes": 3543748,
+        "sha256": "7efbc14af41a49cfbbd84cabfd93dac83726baed4863a1b7764d62662e2ad210"
+      },
+      {
+        "path": "data/tokyo/00435.csv",
+        "bytes": 83,
+        "sha256": "a0af8e981b5f2fe73eb35bd68657e105fafee592377eecddbd547abf11cbe019"
+      },
+      {
+        "path": "data/tokyo/00435.jpg",
+        "bytes": 3250748,
+        "sha256": "de95db59269aef4e9ae864a4065446ae9c8f15726ad628b2c1605ff416f8fb68"
+      },
+      {
+        "path": "data/tokyo/00436.csv",
+        "bytes": 83,
+        "sha256": "aae1b34266aa68064cb714828fe626cc46e98228ee1e73389f6b6386395fa077"
+      },
+      {
+        "path": "data/tokyo/00437.csv",
+        "bytes": 83,
+        "sha256": "3c160abb7d5d87be48013c67a405cd00ce0337a7e45c149a1c0e9ba5e91dec69"
+      },
+      {
+        "path": "data/tokyo/00438.csv",
+        "bytes": 83,
+        "sha256": "2b3dff3905491c4404085d5c0cc33a1355d6a60bbfff0714a8f28d018cf49cfc"
+      },
+      {
+        "path": "data/tokyo/00439.csv",
+        "bytes": 83,
+        "sha256": "41cff90a87eaa61384c20169f6aeeb72e517e9652b60c54888a8f89cac8d6542"
+      },
+      {
+        "path": "data/tokyo/00439.jpg",
+        "bytes": 4370341,
+        "sha256": "eca39bad1719d8697627cc5b2a8b95cef1164ecb115f1d1e3f32b979f6f29119"
+      },
+      {
+        "path": "data/tokyo/00440.csv",
+        "bytes": 83,
+        "sha256": "725f69dba24b761054138d925ef5da67fe572a92efc9a9a2a7b18633cc1bd368"
+      },
+      {
+        "path": "data/tokyo/00441.csv",
+        "bytes": 83,
+        "sha256": "023294f5895547645d8ad2bad07aca5de565076c7199d4bb7e0d1b32dd8cfe3a"
+      },
+      {
+        "path": "data/tokyo/00442.csv",
+        "bytes": 83,
+        "sha256": "80d9920c159ee1ae1d2abdce6a91e7fa91c04fcd71dc7cdb337ae851cce8541a"
+      },
+      {
+        "path": "data/tokyo/00442.jpg",
+        "bytes": 4554283,
+        "sha256": "899ca0a3c199f79f68f35fdf6745614f941743f4e015ba6434b694a545b8ef6c"
+      },
+      {
+        "path": "data/tokyo/00443.csv",
+        "bytes": 83,
+        "sha256": "1daeba3e6f87ac13b0454cf4b4c793416ba309e1693194838ba026c68cb9122b"
+      },
+      {
+        "path": "data/tokyo/00443.jpg",
+        "bytes": 3259957,
+        "sha256": "52daab31a5c91fa3cd4a00d4b83d2d0848c0bd532870757a8589b657030b1f2f"
+      },
+      {
+        "path": "data/tokyo/00444.csv",
+        "bytes": 83,
+        "sha256": "51e6539ffccce75e3d5a771ab4fd619d30d465b0cbfb5b73bbf1f02ae1a39e39"
+      },
+      {
+        "path": "data/tokyo/00444.jpg",
+        "bytes": 3077322,
+        "sha256": "0369f4f7dbb639c4ea685f0a1e0547722ba5ddb298ef2b16014b0fc648216b8c"
+      },
+      {
+        "path": "data/tokyo/00445.csv",
+        "bytes": 83,
+        "sha256": "7cae2de812183e1ad33f7b47b563ff2d5f7bd566b4b8c8ba0f920924eca4e694"
+      },
+      {
+        "path": "data/tokyo/00446.csv",
+        "bytes": 83,
+        "sha256": "7616168779f9b9bbb7d76514586ab839752f01d6b5f28761074a4ecb4ed650d9"
+      },
+      {
+        "path": "data/tokyo/00447.csv",
+        "bytes": 83,
+        "sha256": "b1c1c69d54c4a9f13832b06b6c90dab0ea0074f66fdea58900840cbdb996a0c5"
+      },
+      {
+        "path": "data/tokyo/00448.csv",
+        "bytes": 83,
+        "sha256": "e06f3d1133b2bab1c3cc7a4d0e5476e622d93a7e153a418e090b482b2a6f4f29"
+      },
+      {
+        "path": "data/tokyo/00448.jpg",
+        "bytes": 4944441,
+        "sha256": "b8de817bc71eb02738bae999245b61a7fed82c8b5e9b150241748b751081b07a"
+      },
+      {
+        "path": "data/tokyo/00449.csv",
+        "bytes": 83,
+        "sha256": "e22fdac6355534733662863d9d3405e69997d31be4f50669339da83d0ac79ab9"
+      },
+      {
+        "path": "data/tokyo/00450.csv",
+        "bytes": 83,
+        "sha256": "69b87dd84451dcd97133e1893303cd97058f06c8e640a7b8be4afb2da18b8606"
+      },
+      {
+        "path": "data/tokyo/00685.csv",
+        "bytes": 191,
+        "sha256": "c38e47584350de3620fbb717f9391e2335c6ec3422786ac24429ba14aaece1b6"
+      },
+      {
+        "path": "data/tokyo/00685.jpg",
+        "bytes": 6937664,
+        "sha256": "3b1885c1b1b9a6fb8a35171b7c2093647e7964c5e7878ba690aae29d209483af"
+      },
+      {
+        "path": "data/tokyo/00686.csv",
+        "bytes": 191,
+        "sha256": "c011a93e0ca2cfe05b5771d59aa097419ca0277e2634c60a160cfdebc311a13e"
+      },
+      {
+        "path": "data/tokyo/00686.jpg",
+        "bytes": 6382485,
+        "sha256": "3d6b3fe24c164f2b50df9d5e1dbed4d1b9c717a30e10054cdeec8012c941cf00"
+      },
+      {
+        "path": "data/tokyo/00687.csv",
+        "bytes": 191,
+        "sha256": "1844775a94d1ff184fde409116c0530528c5fcd18de54aedf3876a001a2f01b2"
+      },
+      {
+        "path": "data/tokyo/00687.jpg",
+        "bytes": 3696753,
+        "sha256": "215592bb129cf96bec5ef6fdd1b7e02ad7be573cdeb6e262fa007a0e6ac2947d"
+      },
+      {
+        "path": "data/tokyo/00688.csv",
+        "bytes": 191,
+        "sha256": "b43d6fe6594f480da1999ca5b880cea17f3fbb4c3b44f97c7c0b7ee312ee195b"
+      },
+      {
+        "path": "data/tokyo/00689.csv",
+        "bytes": 191,
+        "sha256": "30d4f71a38840c7103bbea731b9b3f7e56da039eccd92974b8bb862682f55ab1"
+      },
+      {
+        "path": "data/tokyo/00690.csv",
+        "bytes": 191,
+        "sha256": "3e96b357ab0ac1a7b4b420b1d2269915d8955be06ff3ab7703d540a17e82e24b"
+      },
+      {
+        "path": "data/tokyo/00691.csv",
+        "bytes": 191,
+        "sha256": "b27b28e8eebf90bec851f56a61ecf4bff7490f8c46773b257dc43e0261aa07a6"
+      },
+      {
+        "path": "data/tokyo/00691.jpg",
+        "bytes": 6393425,
+        "sha256": "93a3236d3430904360fa0493f1f0f8b0b4d5c9f8d64dc9ebbeb319bff38a958e"
+      },
+      {
+        "path": "data/tokyo/00692.csv",
+        "bytes": 191,
+        "sha256": "7d8d413ec8cadfe6201e4627b26ceedb5ab0954d795179a5fdbabf2097ab85d7"
+      },
+      {
+        "path": "data/tokyo/00693.csv",
+        "bytes": 191,
+        "sha256": "d764a5ee8b9350f309d5e30a4996383ef8140ce23a06fe1783b57284fc31d95a"
+      },
+      {
+        "path": "data/tokyo/00730.csv",
+        "bytes": 189,
+        "sha256": "f427fa727e21b98f64b1a1e70012a15fd53994a9d3490fcebaa98a1df5223aac"
+      },
+      {
+        "path": "data/tokyo/00730.jpg",
+        "bytes": 6456111,
+        "sha256": "6c8904c9b1f9081cfca22057b06e555dce71de5e7f76449715ac8047acef71dd"
+      },
+      {
+        "path": "data/tokyo/00731.csv",
+        "bytes": 189,
+        "sha256": "95f8ac9880fb592c1f21acc6b769a5d8e47c56399c52395e25146715ae04d52f"
+      },
+      {
+        "path": "data/tokyo/00731.jpg",
+        "bytes": 1778829,
+        "sha256": "ec5d7050fa68f7a0ec47de23f41b470098d2f2c38c54e13b2d6e7f4872de6f42"
+      },
+      {
+        "path": "data/tokyo/00732.csv",
+        "bytes": 189,
+        "sha256": "b467b99b72718be41de674630809158f86f96a650ce196362e4907078c05021c"
+      },
+      {
+        "path": "data/tokyo/00732.jpg",
+        "bytes": 1674459,
+        "sha256": "6fedee3b6fe7e46b497ab9081e1cad35f634b1939b05c84c4fb7d436e4990b63"
+      },
+      {
+        "path": "data/tokyo/00733.csv",
+        "bytes": 189,
+        "sha256": "7686e460202d183f75fcec0a84a7ab2297326fee33dff8a09c08089f0b3627c1"
+      },
+      {
+        "path": "data/tokyo/00734.csv",
+        "bytes": 189,
+        "sha256": "313688f68a7cf75a00326bd22da7a5f5d960dc83e8e81a320067262966c22b5e"
+      },
+      {
+        "path": "data/tokyo/00735.csv",
+        "bytes": 189,
+        "sha256": "886d2128cb13254c9bc120196af5f027e622b5594fdb897ff6026961dbc31030"
+      },
+      {
+        "path": "data/tokyo/00736.csv",
+        "bytes": 189,
+        "sha256": "e9cd67ff9495e907b398f42bbfcd97b53abf109dece42c81adc325773ec05582"
+      },
+      {
+        "path": "data/tokyo/00736.jpg",
+        "bytes": 2302468,
+        "sha256": "992930990f9e0d98fece06723e50f9e3c1cb2bfba36d2fc0dc4ef982e4366b99"
+      },
+      {
+        "path": "data/tokyo/00737.csv",
+        "bytes": 189,
+        "sha256": "f733d4a88de25c807d39d27755d946878682f1a99666c3c416fb28f27d930296"
+      },
+      {
+        "path": "data/tokyo/00738.csv",
+        "bytes": 189,
+        "sha256": "2c6e104ac5e702459b5533292259ccbf6e20dcf91ce6fd0eb95e43fb740fe81d"
+      }
+    ]
+  },
+  "hpatches": {
+    "dataset": "hpatches_subset",
+    "source": "https://huggingface.co/datasets/vbalnt/hpatches/resolve/main/hpatches-sequences-release.zip",
+    "sequences": [
+      "i_ajuntament",
+      "i_autannes",
+      "i_bologna",
+      "i_books",
+      "i_boutique",
+      "i_bridger",
+      "i_brooklyn",
+      "i_castle",
+      "i_chestnuts",
+      "i_contruction",
+      "i_crownday",
+      "i_crownnight",
+      "v_abstract",
+      "v_adam",
+      "v_apprentices",
+      "v_artisans",
+      "v_astronautis",
+      "v_azzola",
+      "v_bark",
+      "v_bees",
+      "v_beyus",
+      "v_bip",
+      "v_bird",
+      "v_birdwoman"
+    ],
+    "image_count": 144,
+    "pair_count": 120,
+    "selection": "First N sequences per prefix in lexicographic order",
+    "files": [
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/1.ppm",
+        "bytes": 921626,
+        "sha256": "0c94142a89a41170c070c8ab611b4a96349edd93e65af10c5ad52d372d72319d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/2.ppm",
+        "bytes": 921626,
+        "sha256": "14203da9b499a9918d6d8e903d75f0ce41b3e887d29e54f9e929a4ad6fbe5c64"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/3.ppm",
+        "bytes": 921626,
+        "sha256": "a2bcc7087b0fc3e42cef48adde849bf0c557e4dfa4d79af69865d03887cb08f3"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/4.ppm",
+        "bytes": 921626,
+        "sha256": "33448246f3d6a0ca3cf0f1e0dbd9d3dca78de151baa947a5beadd62bca985eeb"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/5.ppm",
+        "bytes": 921626,
+        "sha256": "df769c997e1532b375f10f98f2db954da1271ca0e7c3369be590840de1c173aa"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/6.ppm",
+        "bytes": 921626,
+        "sha256": "b9f71fffddbf6a8e69bbc1871d82b68953345b4080aedcccca5f9330993b9da9"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_ajuntament/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/1.ppm",
+        "bytes": 3340821,
+        "sha256": "6001ab56a61c0c481498f27bb89716624847fd88525777cca64e76b1613af78c"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/2.ppm",
+        "bytes": 3340821,
+        "sha256": "b6ce191ecb3bbe51bc94c77c9cdc832bd88d8f9038b2828d8872bed79004f0e2"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/3.ppm",
+        "bytes": 3340821,
+        "sha256": "d4f5bbf681c421e590d3ee5da3149a0ee1ff9aa75e9e256aa393cd3946b7d5b9"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/4.ppm",
+        "bytes": 3340821,
+        "sha256": "322d0fc154cad4cd8a4166600fb6b8d1f86627dd6fc8b21b78fc4ec3a35b6378"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/5.ppm",
+        "bytes": 3340821,
+        "sha256": "af7e3f8c5bbba534519243a4d626835a54d76ea12388af2b9bd95b31fe4da178"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/6.ppm",
+        "bytes": 3340821,
+        "sha256": "4c8022fbd45397647ba0d32c9a0ab2f0177a373574ce1ea0c1a7f241d63de2f6"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_autannes/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/1.ppm",
+        "bytes": 787220,
+        "sha256": "7ea595e80212cc1a6b4eb3dd71957d60e49cd5a0aeba4db97a06b53691889adb"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/2.ppm",
+        "bytes": 787220,
+        "sha256": "954c6f3be1f98b27dc6702b50fd93813c5e4484c9d6131f6da4ef8f90cde7016"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/3.ppm",
+        "bytes": 787220,
+        "sha256": "a057f9991fb0fffac9b645d2a6ca08863a7c335a7fd94e936f060be570c12ab9"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/4.ppm",
+        "bytes": 787220,
+        "sha256": "51555284f344b886064e8bcc575c76ba0e050cd7ac1cda2e4f7b37a3580a2b2b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/5.ppm",
+        "bytes": 787220,
+        "sha256": "d4b29c05bb10da7c9a2dda99c3955a9a052624225baf84e9ebc5aaecbd89614b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/6.ppm",
+        "bytes": 787220,
+        "sha256": "664e91a670a6df8ff6a47d26ac1a860490095e183b700dae0da2cc9c96ca77af"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bologna/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/1.ppm",
+        "bytes": 1440015,
+        "sha256": "41b428e67610b2290fb14ec2e5f98c71b2a97fb802071a1cf2d27ac390da993c"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/2.ppm",
+        "bytes": 1440015,
+        "sha256": "7195c4e4543775c06330bc9220ad06826857ca2e45b106147aee99d0f13583ed"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/3.ppm",
+        "bytes": 1440015,
+        "sha256": "341b923fb11b80f6bd099d8aa54049c2399d2b451329d2baa9e6cc683f35f0f8"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/4.ppm",
+        "bytes": 1440015,
+        "sha256": "c2180ec40ef13cf0a997b606e7a07daf6f30b08979fbf54bd8aec4009e4330f6"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/5.ppm",
+        "bytes": 1440015,
+        "sha256": "b22eeb7f3726b739d2bd2cb10b242adddc0b9cfc22a44a1189877ce9d1604295"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/6.ppm",
+        "bytes": 1440015,
+        "sha256": "5ca46ad4809077a841357d51066c6dd3c86bb7bc9e948b4eefe071faf404f5db"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_books/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/1.ppm",
+        "bytes": 1440015,
+        "sha256": "36cbf4f0539e5f1d48f07a2b4872312a868e965397381cf279b207d086a31d4c"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/2.ppm",
+        "bytes": 1440015,
+        "sha256": "0cbd8fd7a2b79f3d82ade0f5f5cb4d27776d0f2bca002d92436869fe6109f443"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/3.ppm",
+        "bytes": 1440015,
+        "sha256": "8120f829d44738159d1eb923dfc37db9bd1cd5fd9dbd77816385e3142933af67"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/4.ppm",
+        "bytes": 1440015,
+        "sha256": "0f2be827bdd05d78bd7efefa223730a33ead85340336bf919e3d08ee4f451b8d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/5.ppm",
+        "bytes": 1440015,
+        "sha256": "16060f4a1c5582e64c4b68dfd4cc7ced9bb70ee330b6d0abe35e1bfa85a50684"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/6.ppm",
+        "bytes": 1440015,
+        "sha256": "468da30e58942f79302217b3f280f01f86aae91993bbf36bc4643977c87ef27b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_boutique/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/1.ppm",
+        "bytes": 2688019,
+        "sha256": "80320ac5bad40d170e6069f7edb1911dc2a8b9b19611fd10c97a09a59184c69d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/2.ppm",
+        "bytes": 2688019,
+        "sha256": "f5a2710f645f0bfcd6fe57f493606d20bd66868179d4455ba3356c83799afcf0"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/3.ppm",
+        "bytes": 2688019,
+        "sha256": "c5e600f43c6a12c71e57a8e3cdfac2c26a30148d250956848f79ec84492e862d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/4.ppm",
+        "bytes": 2688019,
+        "sha256": "39f9bfe29b3f220cc8da4c892fe5204352bc291eea85d32b0e50885e4bf202d3"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/5.ppm",
+        "bytes": 2688019,
+        "sha256": "e08ab1ad8a8e047bd9143d3883e2b42de61de7aceeeb49dbfa2e0f52bdcffb91"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/6.ppm",
+        "bytes": 2688019,
+        "sha256": "7894716ea3c118d1709abe218ca5b756eb414ecd701b7eee72098eab9b429ae6"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_bridger/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/1.ppm",
+        "bytes": 3150263,
+        "sha256": "c89f5202b10d620a3c84b868324dfe16811604664d27cd85bff8ddc244aa18e5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/2.ppm",
+        "bytes": 3150264,
+        "sha256": "78519dc5998b38feabc66a673eb5a8136db745da4f957a1d638a8cad08607208"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/3.ppm",
+        "bytes": 3150260,
+        "sha256": "976a85369a7add390e95930f69ef1771804b9e0e65e08f2658ea69ba3deb4141"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/4.ppm",
+        "bytes": 3150262,
+        "sha256": "4f7e0bd8e350c1722ee0d0864312f9a5b9a7eefcf84b8b6215a0cb13bd07917e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/5.ppm",
+        "bytes": 3150264,
+        "sha256": "327398e410e550337653c70f45357fdf0bd23bd03d3092e477c8f1cc1c7ba419"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/6.ppm",
+        "bytes": 3150265,
+        "sha256": "69ef5a6cd753b90481468c3dc932b630ee4a29882c0b1761bfd01711ade76420"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_brooklyn/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/1.ppm",
+        "bytes": 903568,
+        "sha256": "41813432a6513dd7bf0035824da2d357c5fa48b0d4ecd3c936c89cf4ac701b4b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/2.ppm",
+        "bytes": 903569,
+        "sha256": "b835f951729c3b9d9ff49ff1a2e93abf4d6969ba4e95f869e6ffbe02cb8a542a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/3.ppm",
+        "bytes": 903568,
+        "sha256": "361eccf076cc0736181f2ffcb8b7d4b358e028f05c3768578fa75c2ab06f0783"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/4.ppm",
+        "bytes": 903567,
+        "sha256": "0ac8df6600e465a2a231bcabb660abd5078bea52ae3d037dbe4a620826cb1a26"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/5.ppm",
+        "bytes": 903565,
+        "sha256": "3236288d6d032703f55c7dd2fde4f32ef8a99b5e342ec5d0a5a1e818e55963cf"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/6.ppm",
+        "bytes": 903572,
+        "sha256": "4f791326f480ed070ca97bb3cd169e6463cca24f75f9546b18d3883ca8a16f83"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_castle/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/1.ppm",
+        "bytes": 1440015,
+        "sha256": "473ad0c89fd0521e339bcc775240bf07e67aca086258b9b641309f024a2c7684"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/2.ppm",
+        "bytes": 1440015,
+        "sha256": "22dd5a11052701442da37ea1b1fd8063c788f1fd924b45cade8c6475d37325be"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/3.ppm",
+        "bytes": 1440015,
+        "sha256": "19cd5c54409a75afa0696ba2b12bd6b31e88323597fdfb165fcf95539d4e24c6"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/4.ppm",
+        "bytes": 1440015,
+        "sha256": "7e6020aaace8b45360f3a2600cf7cad1d1fa5c6200d87d9d0d58635fdfbc558e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/5.ppm",
+        "bytes": 1440015,
+        "sha256": "f8156647cf5441d0b8853e02cc05fc9d13e7138ba7209dec5cc9b77bdbc04154"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/6.ppm",
+        "bytes": 1440015,
+        "sha256": "5f73f9b442c0fe69976a7760aaf2e6b8f82d67cef8fcfece696feaf1f44da38b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_chestnuts/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/1.ppm",
+        "bytes": 9437204,
+        "sha256": "7084a794ffb692ddb2b1de5a7db5a218cb32d9bddb7abed8636800940761f4f7"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/2.ppm",
+        "bytes": 9437204,
+        "sha256": "c43f1e1809916e419d044c745b38a45dbf3c66c6082833aa90bbc06219885c7b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/3.ppm",
+        "bytes": 9437204,
+        "sha256": "ec2192b3279b36d1c1524c6d74c5a4678ebee6dab2543c5d930278c3aa7d3533"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/4.ppm",
+        "bytes": 9437204,
+        "sha256": "59f1d52a41511df0cc22a08243799bb8072b1b029c927047064cf96fa6f9ee23"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/5.ppm",
+        "bytes": 9437204,
+        "sha256": "44b1a2ae1ac1828d7283eb881fb780fbe10c578e7f99ebf8a47debd2e3e44554"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/6.ppm",
+        "bytes": 9437204,
+        "sha256": "967eda1765f3023edf5cb5278206099bb92f290ee2a9ef0dd9d7f63e6c7b44f1"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_contruction/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/1.ppm",
+        "bytes": 4299419,
+        "sha256": "00a1c80268057d4df6a652ae0ec21d3603e62a99736a541d207ce88b1181b5f0"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/2.ppm",
+        "bytes": 4299419,
+        "sha256": "2c01f596f64db3029a15a29f4b4d9af2f35480726d2fe286e4a10d8dec9dd225"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/3.ppm",
+        "bytes": 4299419,
+        "sha256": "611721eb6f6fbf9c5762e00836abae97206fe8a43b7b14ecfd1c889b3bf1d334"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/4.ppm",
+        "bytes": 4299419,
+        "sha256": "05edc04ad4b89a2abf1513186d6d8693dab5522d4001e3006c2b0e1db3ed7a27"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/5.ppm",
+        "bytes": 4299419,
+        "sha256": "50753d5fcdcb0d6b73fa2e634291fd191f6d26cc9d47ef62efa9136320e46962"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/6.ppm",
+        "bytes": 4299419,
+        "sha256": "bc83dd80971515ecb5401e20efdb23476af3d0318ba944d652838e216a6cd965"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownday/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/1.ppm",
+        "bytes": 5982353,
+        "sha256": "35d3ff63d4923b3b894fb0c74bafa2e8d41ee0cda80d6d4328a18d555526fd90"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/2.ppm",
+        "bytes": 5982353,
+        "sha256": "664f67376e21588dc1b42ea2aaef6967db9fa1a99e3919b71196ad2a963fd6a2"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/3.ppm",
+        "bytes": 5982353,
+        "sha256": "fbb5bf058af22c00a39ad510eb62c0f9284cdf12e758e14da99f7453068ec25e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/4.ppm",
+        "bytes": 5982353,
+        "sha256": "d2f94490a888b101b622c73fd423768ea32ab9a77114df35e58b3c99607392dc"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/5.ppm",
+        "bytes": 5982353,
+        "sha256": "a74924153afeae82cf407547cd4a2143f08e1ce940da5c8f25ebad303a8c0051"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/6.ppm",
+        "bytes": 5982353,
+        "sha256": "91e5f3d250d28aa728fb475d891c6b16a35828a934f0084c9fb6c870dff495c0"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/H_1_2",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/H_1_3",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/H_1_4",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/H_1_5",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/i_crownnight/H_1_6",
+        "bytes": 18,
+        "sha256": "bf284252c00be268976cb5f85fe21220797083556c200aa90e9f159123e71873"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/1.ppm",
+        "bytes": 3399430,
+        "sha256": "7bcb997ad6df0043efb92a20d815a9eaf24766515dc4409230ac96477217ee6c"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/2.ppm",
+        "bytes": 3399430,
+        "sha256": "0278abd717b24d784d0f752db823418063c2a068ff56320dd0288fa4c37ba55e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/3.ppm",
+        "bytes": 3399430,
+        "sha256": "e36370740c40ad526e6483ef2e7bc44fdf981c2a142575b3678485009736ba8e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/4.ppm",
+        "bytes": 3399430,
+        "sha256": "853b334ba40c60e7594288d215a213ee405edb55ac7dc334c4026d21f499af8b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/5.ppm",
+        "bytes": 3399430,
+        "sha256": "2e80e88e713ae110de7711e5436350b146d15587432fd0cc31281063089cb280"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/6.ppm",
+        "bytes": 3399430,
+        "sha256": "5c0aa6e6791d4a46b9d97b9babaf8e648d8979fe7fa10a3c3a0f556a390a99c4"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/H_1_2",
+        "bytes": 79,
+        "sha256": "18b7c4ad2dd77f8ebc0847cf18b6e7b2d15fa4e8fc975a8f3298dac845b5e57a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/H_1_3",
+        "bytes": 77,
+        "sha256": "1d2554fc7ace94253756c64cca1f89d7e4fd059311b48906f551c4c75dca5d4b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/H_1_4",
+        "bytes": 76,
+        "sha256": "41e5d7bbc4da47f512c771715c0aa266cfc6b8b96b6a7e05e716ebb592023d8c"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/H_1_5",
+        "bytes": 80,
+        "sha256": "6a16dccc266048dfc34afa7138db3478e6791d72d50a91e80d3ffe20d5fd8f79"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_abstract/H_1_6",
+        "bytes": 77,
+        "sha256": "da9133bc24132ae800bf0f037f3301ff1312c5d8fe6e336a0609354c12422298"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/1.ppm",
+        "bytes": 810015,
+        "sha256": "2cab2a786f3d70aafda2b8cefab651f73430c7f1d58ac29713e6cde54ec05cc5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/2.ppm",
+        "bytes": 810015,
+        "sha256": "26c4ae10017ab9e7f48ab9f6a423db5250b11ec1f729a16aec12cf0a26020cdf"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/3.ppm",
+        "bytes": 810015,
+        "sha256": "85148d993b01d0abd203f0608ba7cccc7e379d9a1fcd5599ac16c4d15035735a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/4.ppm",
+        "bytes": 810015,
+        "sha256": "06e0ec18156f2ba756141d119e4fcef2614821c9fbf2546cca5639c6abb78e5b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/5.ppm",
+        "bytes": 810015,
+        "sha256": "eb04a8ab7567e9043cf91673ab2d8a181f9f48c16f9e45d761a743a01bb8a4c1"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/6.ppm",
+        "bytes": 810015,
+        "sha256": "7ae3462426c007b197c872cb30391c79a36db145c47f69766158e166986d7d40"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/H_1_2",
+        "bytes": 78,
+        "sha256": "7774a931dc70b0d224ca3dfce1379d5d72eff56ca05ef0c0e22706aa17ba27dd"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/H_1_3",
+        "bytes": 82,
+        "sha256": "492fa254b6ce77f6bdb93cefacddeb47d50c2cfafc6d5c3c54254e5a441bcb30"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/H_1_4",
+        "bytes": 79,
+        "sha256": "146faa95c5fd9e0a2f7a138540cb703b712acdcc79c30c9de9fcb575b0761d57"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/H_1_5",
+        "bytes": 74,
+        "sha256": "99d28436b9390f7939c3c07349421220792e994982ab6ed4d357e3c025dd3749"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_adam/H_1_6",
+        "bytes": 79,
+        "sha256": "984b18333f38aa01d95411887cceadd73eba1139c617f1e667487994c528dc36"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/1.ppm",
+        "bytes": 3985030,
+        "sha256": "b1db8c76fa6e5a5fb1e9e1bc8aaf875d1f73dd3e60f5a82f76e9bf7e23dda774"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/2.ppm",
+        "bytes": 3985030,
+        "sha256": "87b30fc94ccd2886f683410b53095642b9eade923a92b25cf1eb9877b7a0f753"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/3.ppm",
+        "bytes": 3985030,
+        "sha256": "2076056176dabb7b04423ad1078f27ea51b1c91dc875b31827825b4386b15c7f"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/4.ppm",
+        "bytes": 3985030,
+        "sha256": "08375311a860ebb442f79bdcc01b176a0f026fddbfad7b92480f7aca4883bd77"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/5.ppm",
+        "bytes": 3985030,
+        "sha256": "07e42604254b5d97d3a44e832189a2cae9b0a0c05277d3e4db4eb36e916cd8a9"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/6.ppm",
+        "bytes": 3985030,
+        "sha256": "339f6135af93cc7034a7456a36e0df1366ffb9edf4e81713acf6245f574e8745"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/H_1_2",
+        "bytes": 77,
+        "sha256": "1bbd38e08c95521eecdb453a614833979d286dbeefeb25ef4dfe5bf929db1aec"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/H_1_3",
+        "bytes": 81,
+        "sha256": "c65b09fb60f7e81677ed77aec27b0367e069c18caa39c5ebcc8a2f81548af5cf"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/H_1_4",
+        "bytes": 79,
+        "sha256": "e04922fc39f6bc2ed697dc66270af4c5db24b765f2306418f1812d385683b959"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/H_1_5",
+        "bytes": 79,
+        "sha256": "a080889f1a35131816b8bc6913a0b40a5926699213361f7201e35e425f692231"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_apprentices/H_1_6",
+        "bytes": 75,
+        "sha256": "4593796c456f0c20b35dd084027e13e7c8b9e87254e363d7ce3ecf8fe30b9860"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/1.ppm",
+        "bytes": 4166926,
+        "sha256": "eae4dd891547415ed9eeedd945c4c6e5ee18a4c201db377459aa171923bf4c15"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/2.ppm",
+        "bytes": 1931589,
+        "sha256": "1dc44e1a085a90b00a6d0e36900e3067a5f15515f47152c50448865863874da5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/3.ppm",
+        "bytes": 1931589,
+        "sha256": "c60bae1cc800004e3a91a6dd073bb7412d8597eae5705acce612a4edf0e00796"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/4.ppm",
+        "bytes": 1931589,
+        "sha256": "90db5ca3de90b1b6842f848003807ae596753da6a1c544e6ebb0cff1c88f9ac6"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/5.ppm",
+        "bytes": 1931589,
+        "sha256": "4f05ac5f71804ad6b0d930217adaa8a90b705d1ad71f23cbfc0bc65a1a58bdf7"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/6.ppm",
+        "bytes": 1931589,
+        "sha256": "3244d7bba9ac046cbd4bf23ab33b3953ccfb64e28f1890e83e3de873266d53b6"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/H_1_2",
+        "bytes": 75,
+        "sha256": "05978414b16d85bfe92b4a828d67d6fc854d18965a3203a4e33c9c87dfeab7eb"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/H_1_3",
+        "bytes": 75,
+        "sha256": "42ef35703840b122e061a42dc912b6dc90ee565f698a102bec8535df704a187d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/H_1_4",
+        "bytes": 78,
+        "sha256": "17d4a2817ccd96851d1a52f497ada24f2db46ece9c648bc4304c48184556b738"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/H_1_5",
+        "bytes": 78,
+        "sha256": "e546c0038e1ed293f723cfe0c21964319c4c9c37b8895217441680bce1404e62"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_artisans/H_1_6",
+        "bytes": 80,
+        "sha256": "1acb4905615c51e75785ad6661b0529c7a01e0009af80967bc933525681ac388"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/1.ppm",
+        "bytes": 3554476,
+        "sha256": "bd50437973ef1f1057a9ac8b02b397ee53c565e3634e8a7ce7d855445a463121"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/2.ppm",
+        "bytes": 5855207,
+        "sha256": "484dfe0c67e36d6450685ea9c64674d6bf8c863da5c4c8b63cb7f509f428bb03"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/3.ppm",
+        "bytes": 5855207,
+        "sha256": "1ce9b44deab9e204328fa52a3413481c5be874fddd1d60dd7638db7534f3061b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/4.ppm",
+        "bytes": 5855207,
+        "sha256": "0ed1cc05767c78c4267d38b1fe7e9aa279b2e31f6c1dcce07af85c91d4e19a51"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/5.ppm",
+        "bytes": 5855207,
+        "sha256": "a7071a131ffe5a404141d7244e7f32e58048cd27963fbdfa6a26b681504911ad"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/6.ppm",
+        "bytes": 5855207,
+        "sha256": "5042ba584551e5dcf6f02ab340038629ad9bb0d29ca03b623158000742c33af5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/H_1_2",
+        "bytes": 76,
+        "sha256": "a4cee50fc3a50d0e356c83204d38c8cc2adb9e1925af4152fe9983fc963b88b2"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/H_1_3",
+        "bytes": 78,
+        "sha256": "1cd69a985366dbeeb387622e94d5dfaae1c86ea28951c79b9247bfd3ac814dc4"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/H_1_4",
+        "bytes": 74,
+        "sha256": "ec1e2120167104aace22e0039342bafd5ab96e71aa18c435cf0333db4ea0128d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/H_1_5",
+        "bytes": 74,
+        "sha256": "544198e2c361e03492d8135a1af4b9983d09eb071c02ba7e0ee8df09815b73d2"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_astronautis/H_1_6",
+        "bytes": 76,
+        "sha256": "98ee171234b9ce259e6572beb6e098e798d4fcd068a62144959d637e483d8841"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/1.ppm",
+        "bytes": 2854426,
+        "sha256": "19f0cb9567009cae3c30a6b02a94e1b5dba849c9425ba828d0633b9c41a563ca"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/2.ppm",
+        "bytes": 2854426,
+        "sha256": "98f21831103272b55eb3c95d38f558a0dedf4dd7e46d94ad2e271c2618b84212"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/3.ppm",
+        "bytes": 2854426,
+        "sha256": "69f0ee874ced4311500622f2c6c96df928da105959caaa414d1b37db1708de0b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/4.ppm",
+        "bytes": 2854426,
+        "sha256": "20767ddfe6c4b30250d9ccf3de7509d817f550f80e7fc9a0802db15d8d75a21a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/5.ppm",
+        "bytes": 2854426,
+        "sha256": "975060f517846115e0d331411d6a231a4d4fd47334bfe99e54067036c387d0a3"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/6.ppm",
+        "bytes": 2854426,
+        "sha256": "9b697f283dca5240f5a4f1a5d9cd6af28e44a34234df20fefb91103a5f0e875e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/H_1_2",
+        "bytes": 79,
+        "sha256": "4f9db305be38ab4c087c2cba84ede76318162abc016e3cc5c3e6377974b2f54b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/H_1_3",
+        "bytes": 82,
+        "sha256": "42d286592dcc758a62c6c38db061b1527f55cec32f1c7d2d9ba31e601f5bf7fa"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/H_1_4",
+        "bytes": 76,
+        "sha256": "ba53295c81538240fe4ff0851735acca816414813d1f172c2669487d3b6710ad"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/H_1_5",
+        "bytes": 77,
+        "sha256": "a1c2e195c4af98278da8664ba97256f6a09c8789a15f6ae598e3a12eed1eeef4"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_azzola/H_1_6",
+        "bytes": 74,
+        "sha256": "7415ae2a76d8b025eb7cca48eb7384395c1a2c39a0459f5025d1edbd194f3703"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/1.ppm",
+        "bytes": 1175055,
+        "sha256": "cf8de954348fc1682ce80e611911e3dded9d4cc638b9ebaaea692fca58b332ef"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/2.ppm",
+        "bytes": 1175055,
+        "sha256": "b3aab9a4e84465e49b8280b5db7d24b502ca8608f4546cc8833f30b2522a289a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/3.ppm",
+        "bytes": 1175055,
+        "sha256": "dd42a02b41055a9ad90ca8e2da46ff17577e3d0c905832b09f8edbf9a713a0e5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/4.ppm",
+        "bytes": 1175055,
+        "sha256": "6655ef438836596cd1dea6c048d7fd15327bd5b42755c0bc6e7a4e48a11a3edb"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/5.ppm",
+        "bytes": 1175055,
+        "sha256": "155156f2661b0f1156f98eb76a750747e70aad8c6617c6f091cf8414d925f23f"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/6.ppm",
+        "bytes": 1175055,
+        "sha256": "8b0d508999e88e9cd4ff7860d988786af9680011b5cdc6ac803536e4ad05a4af"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/H_1_2",
+        "bytes": 77,
+        "sha256": "6f4d59ae1c3d20ce514881f0673aa30157fc6105d7cb014b2b8af52497d6053a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/H_1_3",
+        "bytes": 79,
+        "sha256": "efe235682f094c3b5dc115d98e91f769e51404562854b470d10d9ab56c6bd7dc"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/H_1_4",
+        "bytes": 74,
+        "sha256": "cc498d61f8c8c17737716459a3221a6a0a4e99f871ee3eabf4c2185fb8729025"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/H_1_5",
+        "bytes": 72,
+        "sha256": "ddb492c6eaab282935a24e13cc8aeb5d6ccec864869afebf1b9bb3bf6f2ecea5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bark/H_1_6",
+        "bytes": 78,
+        "sha256": "14509eac938509f3e3417185663ca139eeb4c1e456fc9db031a13cbcf5d0d3b8"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/1.ppm",
+        "bytes": 2865418,
+        "sha256": "8bc2f12a2c692d21a06eb79960dc405e7665b104910cbe60d3c61f4922db183f"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/2.ppm",
+        "bytes": 2865418,
+        "sha256": "aecba465649c75c72fe5255d6b1d2977e032e2a9d1bfb7bd348a8541dac2cb6b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/3.ppm",
+        "bytes": 2865418,
+        "sha256": "9919d0cafdded1f7f1302f465d11ad96fa92b077ed018bd54b05c93bca83815d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/4.ppm",
+        "bytes": 2865418,
+        "sha256": "22a88326a37c06b8a5ff3c95432bdd7f6de569c8491cba48a8d696130c8bf1d7"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/5.ppm",
+        "bytes": 2865418,
+        "sha256": "b32d6357ef38c7ed518852e2af86b019e8b70875d096524dc4eeec872256ab68"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/6.ppm",
+        "bytes": 2865418,
+        "sha256": "7dc16252cd3a20582f2414c97b96401257fb036279b90897a6e575c6ba3e5021"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/H_1_2",
+        "bytes": 76,
+        "sha256": "ac0246b46338b00fcdc381ac7a80eb5ac908a586618a23dd260d0f200381ba82"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/H_1_3",
+        "bytes": 80,
+        "sha256": "ce12873d6755008f13a511cd07e128a1dbc5f7e34133570c0ddcbc38604e02ba"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/H_1_4",
+        "bytes": 80,
+        "sha256": "b010ca6f24f1e18ae368dba5fe3219030ebaae35f90bbc51492f6e538c87fd25"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/H_1_5",
+        "bytes": 78,
+        "sha256": "3146980bf8cc54f4d577c87516574db34ec0b9de108a8af6f28242db4e0406b0"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bees/H_1_6",
+        "bytes": 76,
+        "sha256": "9d9a2ca2df0ed53135624d498e947fd8079e97cfa04ccc54721582addc789c77"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/1.ppm",
+        "bytes": 2854426,
+        "sha256": "2a93885b0f252d254ffa60f9e7543df44764ca7ace185b751dd9edfdcb22459e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/2.ppm",
+        "bytes": 2854426,
+        "sha256": "570710e28c1f4f6f061f220a3eee95985236216dbf8ab02dac9443d4cf9fe43b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/3.ppm",
+        "bytes": 2854426,
+        "sha256": "472774a7d5f377acb88c4813977f76d0c32dae018da1c99c595b8b88fae33548"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/4.ppm",
+        "bytes": 2854426,
+        "sha256": "9a6204584bb88aa22eed43f371b052934b4a3814ae999f43a3f3dcf19aaeafb4"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/5.ppm",
+        "bytes": 2854426,
+        "sha256": "d547bb5eb3baaa232492bac5344bddb2c74af976d915f66a0ce9cb0eee4d0bd5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/6.ppm",
+        "bytes": 2854426,
+        "sha256": "8f2ad821e47c3be8e28c25f63cbf3109fa8a7d6d86ee259a106b48b3bc5a780f"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/H_1_2",
+        "bytes": 77,
+        "sha256": "5c384a741c58ae25ca8acfb2a6064e3f52c07f12918859c4ad8f38e3271fa55b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/H_1_3",
+        "bytes": 74,
+        "sha256": "3d520f89e180ad7fcc3fe282ef58248ba5896624b5d05c265f62e88d63ec759b"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/H_1_4",
+        "bytes": 78,
+        "sha256": "efd83a20b461c8f175d94c0db76a5d76b087945ee499b32eda06295f46606720"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/H_1_5",
+        "bytes": 78,
+        "sha256": "922d011ba21d5957dad86edf2db7c5d2af1f6a7da674882db61660bed8779fbd"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_beyus/H_1_6",
+        "bytes": 75,
+        "sha256": "146ec2f702a71b5babc36a0082f6566645006884bfb513af2ce7e2c6b42ce73f"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/1.ppm",
+        "bytes": 1322511,
+        "sha256": "acce094609e4ba14ca5d344696bd084467ed3c5116d80e5bd76820db6642d748"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/2.ppm",
+        "bytes": 1322511,
+        "sha256": "a739db09f6a4e523891c55581930076178411a6ca54b6656a008e882f69c97d3"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/3.ppm",
+        "bytes": 1322571,
+        "sha256": "740cfe1a6bd6b6ded92aee69059c73cd048895def22c73fde8ea275e4a463dac"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/4.ppm",
+        "bytes": 1322511,
+        "sha256": "10f07b9cef1b6558e38dff084bc6344b7bc825d72af5ed4c863a446f15150a9a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/5.ppm",
+        "bytes": 1322511,
+        "sha256": "7649f707ed71a04830c8a5ec9a9472296730ad8e0eed569271532817023b548f"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/6.ppm",
+        "bytes": 1322511,
+        "sha256": "f6d13d0729eae504e67a9851e807dd471db07a07540d8e66773ba9ba05bee89e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/H_1_2",
+        "bytes": 73,
+        "sha256": "4410d647716d7521811d200ccaf8905e163f5ffcdc3e36d85eb8767310a1c353"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/H_1_3",
+        "bytes": 76,
+        "sha256": "e32e8da2c869f1de34261b9fbd078398ac37666acde11d26d99367399298380a"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/H_1_4",
+        "bytes": 72,
+        "sha256": "e263df4790dde40c150218484fdcfcc1d892733b68483841e2ff2477e5680827"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/H_1_5",
+        "bytes": 76,
+        "sha256": "67c6e8c394942e5ede9919f98fa5f8e2e370540610e5fb42e962f8a7815633bc"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bip/H_1_6",
+        "bytes": 76,
+        "sha256": "a6be4217cfbdf9a7e3ca520ffb5e40e057e84d9832ca78cdbb401f2b572cd09e"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/1.ppm",
+        "bytes": 3117508,
+        "sha256": "10edace45ed2ee106caa638ada2a9dcb5710a4ba2fba316eb2f2980cb4737732"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/2.ppm",
+        "bytes": 1931589,
+        "sha256": "ebd1e9ccf9efbacfd6ebfac993c17341465fbc8198574b18251e349de1b8f2f5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/3.ppm",
+        "bytes": 1931589,
+        "sha256": "3907bc00f07685252704bbb95ef3de61ba4733f4b830cceb608d75650ec2d5d9"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/4.ppm",
+        "bytes": 1931589,
+        "sha256": "171db31b03fe2cb7e3dc32a990844eb3fc6782e33e6534d021185d2ec32bb25d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/5.ppm",
+        "bytes": 3015952,
+        "sha256": "b86ac4aa5fba993807e3bdc9bd4461665cbf2d9631c0c4c65dea88ca80066e46"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/6.ppm",
+        "bytes": 1931589,
+        "sha256": "b9809ed4cf0aef015dc463751461d8faf6ecf87edd9a2e3ca229576480fbd352"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/H_1_2",
+        "bytes": 82,
+        "sha256": "bc95ce73c4472420b760339d2b8eb5ea63e52b583ac9b7bc23399cbfbb1b69ef"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/H_1_3",
+        "bytes": 76,
+        "sha256": "da4085f3db35a9c224190d16a8390d06f6f85ab14171c174fe9eb0d8ea013997"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/H_1_4",
+        "bytes": 77,
+        "sha256": "50e84f24cce2a4ab7fa8ca526ff8db0179730edd83733e2d24394ae03c45dec3"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/H_1_5",
+        "bytes": 76,
+        "sha256": "46d6207dfe5ef8aa137d1d252ffa705a37933a74012576460505c9b759d35f3d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_bird/H_1_6",
+        "bytes": 82,
+        "sha256": "5c54d04e0e34090e1e20868f33fe144b941ddc21fdbfa150662025eafcf20889"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/1.ppm",
+        "bytes": 2682916,
+        "sha256": "897a6ae8c1e469d8e5e657c7c54ef77ea8e74d0ec9d3389da19f7c1e1d3f3de4"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/2.ppm",
+        "bytes": 1931589,
+        "sha256": "c949a15d47f38a9d085e57748c48b2ff75a9ceb33fa24deb343deff5670bb798"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/3.ppm",
+        "bytes": 1931589,
+        "sha256": "7622ce74dfc2249ec51fe9b679d81d46b16b7956ff807c684990899b14f5a4a5"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/4.ppm",
+        "bytes": 1931589,
+        "sha256": "da53ffa8abe31ff0bdbe4ce2a3d7e3e3db71c634bd70ff7ea5748b0ff22a677d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/5.ppm",
+        "bytes": 1931589,
+        "sha256": "28c3ca390f2380572d33ba6f93ae5949269045754abe7c62b470f8d3e6597a69"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/6.ppm",
+        "bytes": 1931589,
+        "sha256": "291685e64b972a7f1287b726e5b2f207b37ec61271f05618a233332a8ecad60d"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/H_1_2",
+        "bytes": 79,
+        "sha256": "1dfbe013510c5f3bc36364e354d0b3e1c011d478887310ed27329357ef8630ba"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/H_1_3",
+        "bytes": 79,
+        "sha256": "c5773bc10cf8b6f813cd0db9ec7c37434fcf0ce0f979cb99add3f1dbd6f84142"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/H_1_4",
+        "bytes": 78,
+        "sha256": "2fec5b0100f67492f9f249af399cfdb7fe27a35d90577c5e3a00b670c2aebfd0"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/H_1_5",
+        "bytes": 77,
+        "sha256": "56fd8441362c81980fabb510812b2ea5b9957e9eb2c071ebd9afebedadb7a121"
+      },
+      {
+        "path": "data/hpatches-sequences-release/v_birdwoman/H_1_6",
+        "bytes": 81,
+        "sha256": "c83f08f65f3387c30d24ab5d12281e3c3e23f2151064fc44fa73eb65e49c97bb"
+      }
+    ]
+  }
+}

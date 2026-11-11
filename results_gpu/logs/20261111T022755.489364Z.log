@@ -1,0 +1,8 @@
+........................................................                 [100%]
+=============================== warnings summary ===============================
+tests/test_gpu.py::test_depth_model_runs_on_gpu
+  /home2/home/pronob_b/internship/Stitch-research/.venv-linux/lib/python3.12/site-packages/huggingface_hub/file_download.py:1727: DeprecationWarning: hf_xet.download_files() is deprecated. Use XetSession().new_file_download_group().start_download_file() instead.
+    xet_get(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+56 passed, 1 warning in 32.28s

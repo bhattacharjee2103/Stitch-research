@@ -1,0 +1,69 @@
+\chapter{Ethics, Privacy and Safety}\label{ch:ethics}
+\section{Why the application changes the risk model}
+Stitch associates digital content with physical places and retrieves it through camera observations. That combination can reveal more than a conventional image-processing demonstration. A query may expose where a person is standing, which private space they are visiting, or which content they are permitted to see. A persistent post can also affect a person who never installed the application if it is attached to their home or workplace.
+
+The present artifact is a local research prototype. It does not upload user camera frames to a service, publish posts, authenticate users or enforce production moderation. This boundary reduces the actions performed during the experiment but does not resolve the requirements of the proposed application. The following analysis treats those requirements as design obligations and identifies where the current software supplies no guarantee.
+
+\section{Captured faces, vehicles and private details}
+Reference and query images can include people, number plates, documents, screens and interiors. Even when these details are irrelevant to place recognition, they may remain in stored imagery or be recoverable from distributed assets. The research therefore uses documented public datasets and the supplied repository media rather than collecting new unconsented live footage. Dataset availability is not treated as proof that every depicted person's privacy concern has disappeared.
+
+A deployment should minimise the imagery retained for localisation and review whether redaction is needed before storage or sharing. Face and number-plate filtering itself can fail, so an implementation should not label a map ``anonymous'' merely because a detector ran. Human review, a reporting channel and bounded retention may still be appropriate. No face or plate detector is evaluated in this artifact, and no redaction accuracy is claimed.
+
+The map's visual requirements can conflict with privacy. A repeated window pattern or storefront sign may be useful for recognition while also identifying a sensitive place. Replacing pixels with descriptors can reduce direct image exposure but does not prove that the resulting representation contains no location or identity information. The thesis consequently avoids calling local descriptors or global embeddings inherently anonymous.
+
+\section{Location privacy and retrieval logs}
+A sequence of recognised places can become a movement history. Such a history may be more sensitive than an individual query because it reveals routines and associations. An engineering design should therefore separate transient inference from persistent analytics. A client can use a place hypothesis to render authorised content without retaining a timestamped record of every unsuccessful or successful observation.
+
+A GPS prior should be optional and purpose-limited. Its accuracy and retention policy should be separate from the camera-processing policy. If location permission is denied, the application should expose a constrained visual-only mode or explain the functional limitation without covertly reconstructing a movement log. The current benchmark uses site metadata for evaluation labels, not a live tracking service.
+
+The public legislative text of the GDPR articulates purpose limitation, data minimisation and storage limitation among its principles \citep{gdpr}. These principles inform the proposed design; the thesis does not certify compliance in any jurisdiction. Deployment would require review of the actual data flows, roles, lawful basis and applicable local law. A research dataset licence and an application privacy notice address different questions and cannot substitute for one another.
+
+\section{Consent and control over persistent content}
+The social concept needs more than permission from the person creating a post. A virtual object attached to another person's property or image may affect that person and later visitors. The application should define who can create public anchors at a place, whether owners or community managers can request removal, and how private or restricted locations are handled. Technical visibility of a surface does not itself establish permission to use it as a public message board.
+
+Posts should have explicit visibility and expiry rules. Private content should be retrieved only after authorisation, even if the place is correctly recognised. Shared spatial coordinates can support several audiences without exposing all content to every visitor. The current JSON schema illustrates author and content identifiers, but it contains no authentication or access-control engine. Those fields are examples, not security guarantees.
+
+Deletion should cover more than a row in the post database. Cached assets, thumbnails, search indexes and map associations may retain the content or its location. A proposed service should define how those copies are invalidated and what minimal audit information remains. The file-based prototype makes no distributed deletion claim, and its research outputs should not be mistaken for a retention policy for production users.
+
+\section{Moderation and misuse of place-bound posts}
+Persistent AR can be used for harassment, impersonation, targeted advertising, offensive content or deceptive navigation cues. Attaching a message to a real building may imply endorsement by the building's occupants. Even a harmless image can be abusive when repeatedly placed at a particular person's home. Moderation must therefore consider the relation among content, target place, audience and author, not only a classifier score on the uploaded asset.
+
+A proposed moderation flow should support reporting, temporary hiding, appeal and removal. Limits on repeated posting and duplicate anchors can reduce spam, but limits should not be described as protection against all abuse. Human escalation is likely to be required for context-dependent cases. The present artifact implements none of these workflows and does not send any posts to an external service.
+
+The original ``digital garbage'' metaphor should also be treated carefully in product design. It motivates playful spatial content, but uncontrolled accumulation can obscure the real environment or overwhelm an intended public place. User-controlled density, visibility and content categories are therefore important interface choices. These are requirements inferred from the application's persistence and public-space setting, rather than measured user-experience findings.
+
+\section{False localisation as an application hazard}
+The measured open-set diagnostic in \cref{tab:open-set} shows that geometric support can still produce a wrong-place acceptance. Such an error can display content on an unintended facade or suggest that a message belongs to the current location. A recogniser should therefore communicate uncertainty and avoid presenting a weakly supported anchor as authoritative spatial guidance.
+
+This concern becomes more serious when AR content resembles instructions, warnings, official signage or emergency information. The current prototype is an image-post demonstration and should not be treated as a navigation or safety system. A future product should restrict misleading presentation and preserve a clear distinction between application content and real-world authority. The thesis makes no claim that the existing verifier is sufficient for safety-critical use.
+
+Visual replay is another unresolved threat. A photograph or display showing a known place can trigger appearance-based recognition without the device being physically present there. Neither a correct descriptor rank nor a homography alone proves physical presence. A stronger presence claim would require additional signals and a threat model, and those signals should be evaluated without creating disproportionate location surveillance.
+
+\ifFullReport
+\section{Map integrity and adversarial changes}
+A map can become incorrect through ordinary environmental change or malicious manipulation. An attacker might submit a misleading reference image, poison a shared place identity or attach content using an obsolete map relation. A proposed service should therefore authenticate map updates, version references and record who is authorised to modify them. The current local database trusts its input files and is not a hardened ingestion service.
+
+Reference fingerprints in the artifact help detect accidental stale caches, but a file hash is not proof that a scene is genuine. It identifies bytes, not their truthfulness or consent status. Similarly, the command log makes the research process auditable without certifying every dataset label. Security controls and scientific provenance are related forms of accountability but solve different problems.
+\fi
+
+\section{Dataset and model licensing}
+The artifact separates imagery, software implementations, pretrained checkpoints and generated results. Each may carry different conditions. Official Aachen and RobotCar documentation, for example, specifies non-commercial academic restrictions; those datasets were not imported into the executed image set. HPatches includes source-specific attribution, and the Tokyo archive should not be assumed to grant unrestricted commercial redistribution.
+
+The learned implementations are obtained from their official repositories and model hashes are recorded. Retaining a repository licence is necessary but may not resolve all terms associated with third-party weights or source datasets. The thesis therefore supplies provenance and links rather than a blanket assertion that the resulting application is commercially cleared. A production release should review every dependency and data source actually distributed.
+
+\ifFullReport
+\section{Third-party platform privacy}
+If the proposed client uses ARCore Cloud Anchors or related geospatial services, it must consider the platform's current privacy disclosure requirements. Google's documentation specifically addresses disclosure of sensor-data processing for these APIs \citep{arprivacy}. The experiments do not invoke those services, so no consent screen or remote-processing claim is fabricated in the artifact.
+
+An ARKit world-map integration would likewise change the stored spatial state and sharing model. Native platform capability does not remove the application's responsibility for asset visibility, consent or retention. A clear architecture should document which processing happens on the device, which observations leave it, which identifiers are shared, and how a user can stop or remove persistent participation.
+\fi
+
+\ifFullReport
+\section{Research integrity}
+Ethical reporting also concerns the experiment itself. The thesis retains failed download checks, negative adaptation results, false accepted places and unavailable pose metrics. It does not turn a synthetic low-light transformation into a claimed real-night capture. It labels generated camera motion in the demo, distinguishes custom subsets from official benchmarks, and avoids presenting host CPU timings as phone measurements.
+
+Author and institution details follow the supplied IIT Roorkee reference documents, and the supervisor was explicitly selected by the author. Signatures and institutional acceptance are not manufactured; the certification remains unsigned for review. Bibliographic entries refer to real verified sources, and empirical figures derive from preserved outputs. These choices keep the artifact reviewable without manufacturing the social or institutional context around the research.
+\fi
+
+\section{Responsible progression beyond the prototype}
+A limited pilot should first use a small consented set of places and non-sensitive content, with clear deletion and reporting mechanisms. It should measure wrong-place acceptance, tracking loss and content exposure alongside recognition recall. A later public system would need a broader place and device population, operational moderation and independent review of its data practices. The current evidence supports beginning that engineering evaluation; it does not support bypassing it.

@@ -1,0 +1,875 @@
+{
+  "source_images": [
+    "data/tokyo/00271.jpg",
+    "data/tokyo/00273.jpg"
+  ],
+  "selection_rule": "First real night query where full top3 verifies the right place and SIFT does not; otherwise first query",
+  "simulated_camera_motion": true,
+  "real_temporal_video": false,
+  "rows": [
+    {
+      "condition": "day",
+      "frame": 0,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 273.6290590837598,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 0,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 116.3608580827713,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 1,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 257.0829982869327,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 1,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 49.47086004540324,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 2,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 254.42535104230046,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 2,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 85.27346514165401,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 3,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 263.0565850995481,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 3,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 88.18879909813404,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 4,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 270.0025411322713,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 4,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 63.224072102457285,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 5,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 254.23040194436908,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 5,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 53.73312812298536,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 6,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 251.7285430803895,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 6,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 48.71746804565191,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 7,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 249.67913702130318,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 7,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 55.761212948709726,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 8,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 262.4223721213639,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 8,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 71.55983010306954,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 9,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 252.59394105523825,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 9,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 41.28609923645854,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 10,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 251.3622068800032,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 10,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 59.421957936137915,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 11,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 261.9563480839133,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 11,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 60.88350107893348,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 12,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 252.83907819539309,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 12,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 51.405525766313076,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 13,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 246.63641396909952,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 13,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 63.68263578042388,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 14,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 249.37822995707393,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 14,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 73.83831311017275,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 15,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 248.88026621192694,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 15,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 37.855940870940685,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 16,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 253.15766409039497,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 16,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 55.92054035514593,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 17,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 248.5827491618693,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 17,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 66.97802618145943,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 18,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 247.67487961798906,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 18,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 66.61878013983369,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 19,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 257.7272979542613,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 19,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 51.60940298810601,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 20,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 255.53902424871922,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 20,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 46.1672879755497,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 21,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 254.67207422479987,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 21,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 59.67889400199056,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 22,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 258.68303468450904,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 22,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 48.30604325979948,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 23,
+      "method": "classical",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 249.53488679602742,
+      "accepted": true
+    },
+    {
+      "condition": "day",
+      "frame": 23,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 46.231558080762625,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 0,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 272.2820299677551,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 0,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 52.896257024258375,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 1,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 255.8209588751197,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 1,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 65.72934100404382,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 2,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 250.87151024490595,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 2,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 72.87086406722665,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 3,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 251.06778694316745,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 3,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 67.65767699107528,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 4,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 257.939413189888,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 4,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 57.353341951966286,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 5,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 254.61316388100386,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 5,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 48.64140786230564,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 6,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 249.68560319393873,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 6,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 69.80474200099707,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 7,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 252.5578592903912,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 7,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 48.11860481277108,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 8,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 256.1236349865794,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 8,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 71.09586475417018,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 9,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 257.08770332857966,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 9,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 35.02916404977441,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 10,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 249.437696300447,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 10,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 75.73795784264803,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 11,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 256.91976537927985,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 11,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 75.73555922135711,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 12,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 259.89226810634136,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 12,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 53.80792496725917,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 13,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 257.3749287985265,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 13,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 44.33247074484825,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 14,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 248.92133101820946,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 14,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 42.115187738090754,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 15,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 254.86497906967998,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 15,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 46.60100396722555,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 16,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 278.9564859122038,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 16,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 55.188429076224566,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 17,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 258.38915491476655,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 17,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 41.63096286356449,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 18,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 258.08179983869195,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 18,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 49.70509512349963,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 19,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 251.09177408739924,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 19,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 42.10482770577073,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 20,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 250.2978229895234,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 20,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 40.91394180431962,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 21,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 257.7955420129001,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 21,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 55.23488810285926,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 22,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 265.09771263226867,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 22,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 58.48610820248723,
+      "accepted": true
+    },
+    {
+      "condition": "night",
+      "frame": 23,
+      "method": "classical",
+      "predicted": null,
+      "true_place": "tokyo_000",
+      "latency_ms": 252.97683104872704,
+      "accepted": false
+    },
+    {
+      "condition": "night",
+      "frame": 23,
+      "method": "full",
+      "predicted": "tokyo_000",
+      "true_place": "tokyo_000",
+      "latency_ms": 62.2313329949975,
+      "accepted": true
+    }
+  ]
+}

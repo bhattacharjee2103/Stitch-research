@@ -1,0 +1,51 @@
+{
+  "inputs": {
+    "pairs.json": "a09cbdef9825dbcf3743c33b4f75254172ad4c392db5f96a3dffb1a3523347b1",
+    "predictions.json": "ab13c9d805eb4e1df02f8dbe18a5690486d5343bb56e383a3682944e56d5c128",
+    "data_manifest.json": "7a82536c1aa601b0bca2f49c15e168e8770c7d6f73e6740014675893bcae161a",
+    "preparation.json": "fda7eee5b16c66f7b76bc8b3021f2d4d5734d6c6ac2d0673ffdc414b89061b20",
+    "original_baselines.json": "559b7d7febb54dd08f4ac4480c863ea7998fcbfeb9fe937b0f2ce43990f355d7",
+    "export.json": "7e28972a6f6deb4561048367695c40f5bdff8ce7c915da043de7351f34dd8117",
+    "training.json": "f5c0854f84d4f5ca55196798ce574ab146c3b014889f93f7425d9d5e4a6037dd",
+    "models.json": "0b2ff4a7337ca7ecda260d4361db3506f28d9597d9e7b03e9306abb26894242d",
+    "profiles.json": "963ff9b8651df4c14ea838e1ce7c00b6181b2e912f6bb52f0cea78ff445f75e1"
+  },
+  "generated_tables": [
+    "ablations.tex",
+    "commands.tex",
+    "confidence.tex",
+    "datasets.tex",
+    "exports.tex",
+    "matching.tex",
+    "models.tex",
+    "numbers.tex",
+    "open-set.tex",
+    "originals.tex",
+    "pipeline-geometry.tex",
+    "pose-unavailable.tex",
+    "profiles.tex",
+    "protocols.tex",
+    "quant-retrieval.tex",
+    "retrieval_hpatches.tex",
+    "retrieval_synthetic.tex",
+    "retrieval_tokyo.tex",
+    "sequence_names.tex",
+    "training.tex"
+  ],
+  "generated_figures": [
+    "corner_ecdf.pdf",
+    "efficiency.pdf",
+    "hpatches_success.pdf",
+    "matches_hpatches_illumination.pdf",
+    "matches_hpatches_viewpoint.pdf",
+    "matches_tokyo_day_to_day.pdf",
+    "matches_tokyo_day_to_night.pdf",
+    "qualitative_overlays.pdf",
+    "quantization.pdf",
+    "stage_ablation.pdf",
+    "synthetic_contact.pdf",
+    "tokyo_contact.pdf",
+    "tokyo_retrieval.pdf",
+    "training_loss.pdf"
+  ]
+}

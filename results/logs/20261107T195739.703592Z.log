@@ -1,0 +1,21 @@
+Obtaining file:///Users/bhattacharjee/Desktop/internship/Stitch-research/vendor/LightGlue
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: lightglue
+  Building editable for lightglue (pyproject.toml): started
+  Building editable for lightglue (pyproject.toml): finished with status 'done'
+  Created wheel for lightglue: filename=lightglue-0.0-0.editable-py3-none-any.whl size=14990 sha256=29e9a1447c819b658015b83a43592af9e4116a69c92b0db972bc39541a6edbfb
+  Stored in directory: /private/var/folders/lb/j6x3z82d17z292m4k0yh7vyh0000gn/T/pip-ephem-wheel-cache-1dqyutph/wheels/c9/de/a8/1d3cc91be0df0709d41370e67d8e8fba9d1a84d2b340caaf11
+Successfully built lightglue
+Installing collected packages: lightglue
+  Attempting uninstall: lightglue
+    Found existing installation: lightglue 0.0
+    Uninstalling lightglue-0.0:
+      Successfully uninstalled lightglue-0.0
+Successfully installed lightglue-0.0

@@ -1,0 +1,2311 @@
+cd .. && .venv/bin/python scripts/generate_artifacts.py
+Generated 20 tables/macros and 14 figures from actual results
+latexmk -pdf -outdir=build main.tex
+Rc files read (in order):
+  ./.latexmkrc
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex -interaction=nonstopmode -halt-on-error  -recorder -output-directory="build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo)) (./preamble.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/nomencl/nomencl.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty))))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(./tables/numbers.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(build/main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+[1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] [1] [2] [3]
+[4]
+No file main.toc.
+[5]
+No file main.lof.
+[6]
+No file main.lot.
+[7] (build/main.loa) (build/main.nls [8]
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg)) [9{/usr/lo
+cal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texliv
+e/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+(./chapters/01_introduction.tex
+Chapter 1.
+
+Package natbib Warning: Citation `stitchrepo' on page 1 undefined on input line
+ 3.
+
+
+Package natbib Warning: Citation `sattler2018' on page 1 undefined on input lin
+e 9.
+
+[1] [2{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/lo
+cal/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [3]
+
+Package natbib Warning: Citation `balntas2017' on page 4 undefined on input lin
+e 42.
+
+
+Package natbib Warning: Citation `torii2015' on page 4 undefined on input line 
+42.
+
+[4]
+
+LaTeX Warning: Reference `ch:background' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ch:existing' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ch:architecture' on page 1 undefined on input line 58
+.
+
+
+LaTeX Warning: Reference `ch:datasets' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ch:methodology' on page 1 undefined on input line 58.
+
+
+
+LaTeX Warning: Reference `ch:setup' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ch:results' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ch:deployment' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ch:ethics' on page 1 undefined on input line 58.
+
+
+LaTeX Warning: Reference `ch:conclusion' on page 1 undefined on input line 58.
+
+) (./chapters/02_background.tex [5]
+Chapter 2.
+
+Package natbib Warning: Citation `sattler2018' on page 6 undefined on input lin
+e 3.
+
+
+Package natbib Warning: Citation `lowe2004' on page 6 undefined on input line 1
+1.
+
+[6]
+
+Package natbib Warning: Citation `muja2009' on page 7 undefined on input line 1
+6.
+
+
+Package natbib Warning: Citation `detone2018' on page 7 undefined on input line
+ 22.
+
+[7]
+
+Package natbib Warning: Citation `sarlin2020' on page 8 undefined on input line
+ 27.
+
+
+Package natbib Warning: Citation `lindenberger2023' on page 8 undefined on inpu
+t line 30.
+
+
+Package natbib Warning: Citation `lightgluerepo' on page 8 undefined on input l
+ine 30.
+
+
+Package natbib Warning: Citation `sun2021' on page 8 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `arandjelovic2016' on page 8 undefined on inpu
+t line 39.
+
+[8]
+
+Package natbib Warning: Citation `berton2022' on page 9 undefined on input line
+ 42.
+
+
+Package natbib Warning: Citation `cosplacerepo' on page 9 undefined on input li
+ne 42.
+
+
+Package natbib Warning: Citation `alibey2023' on page 9 undefined on input line
+ 45.
+
+
+Package natbib Warning: Citation `oquab2023' on page 9 undefined on input line 
+45.
+
+[9]
+
+Package natbib Warning: Citation `hartley2004' on page 10 undefined on input li
+ne 53.
+
+
+Package natbib Warning: Citation `lepetit2009' on page 10 undefined on input li
+ne 53.
+
+
+Package natbib Warning: Citation `fischler1981' on page 10 undefined on input l
+ine 55.
+
+
+Package natbib Warning: Citation `sarlin2019' on page 10 undefined on input lin
+e 58.
+
+
+Package natbib Warning: Citation `balntas2017' on page 10 undefined on input li
+ne 63.
+
+
+Package natbib Warning: Citation `hpatchesrepo' on page 10 undefined on input l
+ine 63.
+
+[10]
+
+Package natbib Warning: Citation `torii2015' on page 11 undefined on input line
+ 65.
+
+
+Package natbib Warning: Citation `sattler2018' on page 11 undefined on input li
+ne 67.
+
+
+Package natbib Warning: Citation `localizationbenchmark' on page 11 undefined o
+n input line 67.
+
+
+Package natbib Warning: Citation `warburg2020' on page 11 undefined on input li
+ne 67.
+
+
+Package natbib Warning: Citation `arcore' on page 11 undefined on input line 70
+.
+
+
+Package natbib Warning: Citation `arkit' on page 11 undefined on input line 70.
+
+
+
+Package natbib Warning: Citation `azure' on page 11 undefined on input line 72.
+
+
+) (./chapters/03_existing_system.tex [11]
+Chapter 3.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd)
+
+Package natbib Warning: Citation `stitchrepo' on page 12 undefined on input lin
+e 3.
+
+[12] [13] [14] (./tables/originals.tex)
+
+LaTeX Warning: Reference `tab:originals' on page 1 undefined on input line 48.
+
+[15]) (./chapters/04_architecture.tex [16]
+Chapter 4.
+
+LaTeX Warning: Reference `fig:architecture' on page 1 undefined on input line 2
+1.
+
+[17] [18] (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty)
+[19]
+
+LaTeX Warning: Reference `lst:schema' on page 1 undefined on input line 69.
+
+[20]
+
+LaTeX Warning: Reference `fig:multiuser' on page 1 undefined on input line 100.
+
+
+[21]) (./chapters/05_datasets.tex [22] [23]
+Chapter 5.
+(./tables/datasets.tex)
+
+LaTeX Warning: Reference `tab:datasets' on page 1 undefined on input line 8.
+
+[24]
+
+LaTeX Warning: Reference `app:structure' on page 1 undefined on input line 16.
+
+
+Package natbib Warning: Citation `balntas2017' on page 25 undefined on input li
+ne 19.
+
+
+Package natbib Warning: Citation `hpatchesrepo' on page 25 undefined on input l
+ine 19.
+
+[25]
+
+Package natbib Warning: Citation `torii2015' on page 26 undefined on input line
+ 28.
+
+
+Package natbib Warning: Citation `tokyodownload' on page 26 undefined on input 
+line 28.
+
+
+LaTeX Warning: Reference `fig:tokyo-data' on page 1 undefined on input line 39.
+
+
+[26] [27 <./figures/tokyo_contact.pdf>] [28]
+
+LaTeX Warning: Reference `fig:synthetic-data' on page 1 undefined on input line
+ 67.
+
+[29 <./figures/synthetic_contact.pdf>] [30]
+
+Package natbib Warning: Citation `warburg2020' on page 31 undefined on input li
+ne 87.
+
+
+LaTeX Warning: Reference `app:reproduction' on page 1 undefined on input line 8
+7.
+
+) (./chapters/06_methodology.tex [31]
+Chapter 6.
+
+Package natbib Warning: Citation `lowe2004' on page 32 undefined on input line 
+20.
+
+[32]
+
+Package natbib Warning: Citation `muja2009' on page 33 undefined on input line 
+30.
+
+
+Package natbib Warning: Citation `detone2018' on page 33 undefined on input lin
+e 35.
+
+
+Package natbib Warning: Citation `lindenberger2023' on page 33 undefined on inp
+ut line 42.
+
+[33]
+
+Package natbib Warning: Citation `berton2022' on page 34 undefined on input lin
+e 48.
+
+
+Package natbib Warning: Citation `cosplacerepo' on page 34 undefined on input l
+ine 48.
+
+[34]
+
+Package natbib Warning: Citation `hartley2004' on page 35 undefined on input li
+ne 79.
+
+
+Package natbib Warning: Citation `fischler1981' on page 35 undefined on input l
+ine 92.
+
+[35]
+
+LaTeX Warning: Reference `alg:verification' on page 1 undefined on input line 1
+14.
+
+
+LaTeX Warning: Reference `alg:verification' on page 1 undefined on input line 1
+26.
+
+
+LaTeX Warning: Reference `alg:full' on page 1 undefined on input line 139.
+
+
+LaTeX Warning: Reference `ch:background' on page 1 undefined on input line 139.
+
+
+[36] [37]
+
+Package natbib Warning: Citation `lepetit2009' on page 38 undefined on input li
+ne 169.
+
+[38]
+
+LaTeX Warning: Reference `alg:training' on page 1 undefined on input line 206.
+
+[39]) (./chapters/07_experimental_setup.tex [40]
+Chapter 7.
+(./tables/models.tex)
+
+LaTeX Warning: Reference `tab:models' on page 1 undefined on input line 10.
+
+[41]
+
+LaTeX Warning: Reference `tab:configuration' on page 1 undefined on input line 
+31.
+
+(./tables/protocols.tex [42])
+
+LaTeX Warning: Reference `tab:protocols' on page 1 undefined on input line 39.
+
+[43] [44]
+
+Package natbib Warning: Citation `localizationbenchmark' on page 45 undefined o
+n input line 77.
+
+[45] [46]) (./chapters/08_results.tex [47]
+Chapter 8.
+(./tables/matching.tex [48])
+
+LaTeX Warning: Reference `tab:matching' on page 1 undefined on input line 9.
+
+
+LaTeX Warning: Reference `fig:hpatches-success' on page 1 undefined on input li
+ne 19.
+
+
+LaTeX Warning: Reference `fig:corner-ecdf' on page 1 undefined on input line 25
+.
+
+[49] [50 <./figures/hpatches_success.pdf> <./figures/corner_ecdf.pdf>]
+(./tables/retrieval_tokyo.tex)
+
+LaTeX Warning: Reference `tab:retrieval-tokyo' on page 1 undefined on input lin
+e 29.
+
+[51]
+
+LaTeX Warning: Reference `fig:tokyo-retrieval' on page 1 undefined on input lin
+e 39.
+
+(./tables/retrieval_hpatches.tex [52 <./figures/tokyo_retrieval.pdf>])
+
+LaTeX Warning: Reference `tab:retrieval-hpatches' on page 1 undefined on input 
+line 45.
+
+(./tables/pipeline-geometry.tex [53])
+
+LaTeX Warning: Reference `tab:pipeline-geometry' on page 1 undefined on input l
+ine 48.
+
+(./tables/retrieval_synthetic.tex [54])
+
+LaTeX Warning: Reference `tab:retrieval-synthetic' on page 1 undefined on input
+ line 54.
+
+
+LaTeX Warning: Reference `fig:synthetic-data' on page 1 undefined on input line
+ 56.
+
+(./tables/ablations.tex [55])
+
+LaTeX Warning: Reference `tab:ablations' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Reference `fig:ablation' on page 1 undefined on input line 68.
+
+
+LaTeX Warning: Reference `ch:deployment' on page 1 undefined on input line 68.
+
+(./tables/open-set.tex)
+
+LaTeX Warning: Reference `tab:open-set' on page 1 undefined on input line 72.
+
+
+LaTeX Warning: Reference `ch:ethics' on page 1 undefined on input line 74.
+
+[56 <./figures/stage_ablation.pdf>] (./tables/training.tex)
+
+LaTeX Warning: Reference `tab:training' on page 1 undefined on input line 78.
+
+[57]
+
+LaTeX Warning: Reference `fig:training-loss' on page 1 undefined on input line 
+84.
+
+
+LaTeX Warning: Reference `fig:matches-illum' on page 1 undefined on input line 
+93.
+
+
+LaTeX Warning: Reference `fig:overlays' on page 1 undefined on input line 99.
+
+
+LaTeX Warning: Reference `app:qualitative' on page 1 undefined on input line 99
+.
+
+[58 <./figures/training_loss.pdf>] [59 <./figures/matches_hpatches_illumination
+.pdf>] [60 <./figures/qualitative_overlays.pdf>] (./tables/confidence.tex)
+
+LaTeX Warning: Reference `tab:confidence' on page 1 undefined on input line 105
+.
+
+(./tables/pose-unavailable.tex)
+
+LaTeX Warning: Reference `tab:poses' on page 1 undefined on input line 108.
+
+[61] [62]) (./chapters/09_deployment.tex [63]
+Chapter 9.
+(./tables/profiles.tex)
+
+LaTeX Warning: Reference `tab:profiles' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Reference `fig:efficiency' on page 1 undefined on input line 12.
+
+
+
+LaTeX Warning: Reference `tab:originals' on page 1 undefined on input line 12.
+
+[64]
+
+LaTeX Warning: Reference `tab:exports' on page 1 undefined on input line 15.
+
+(./tables/exports.tex) [65 <./figures/efficiency.pdf>]
+
+Package natbib Warning: Citation `onnxquant' on page 66 undefined on input line
+ 24.
+
+(./tables/quant-retrieval.tex [66])
+
+LaTeX Warning: Reference `tab:quant-retrieval' on page 1 undefined on input lin
+e 41.
+
+
+LaTeX Warning: Reference `fig:quantization' on page 1 undefined on input line 4
+1.
+
+[67]
+
+Package natbib Warning: Citation `arcore' on page 68 undefined on input line 62
+.
+
+
+Package natbib Warning: Citation `arkit' on page 68 undefined on input line 62.
+
+
+
+Package natbib Warning: Citation `azure' on page 68 undefined on input line 62.
+
+
+[68 <./figures/quantization.pdf>] [69]) (./chapters/10_ethics.tex [70] [71]
+Chapter 10.
+[72]
+
+Package natbib Warning: Citation `gdpr' on page 73 undefined on input line 19.
+
+[73]
+
+LaTeX Warning: Reference `tab:open-set' on page 1 undefined on input line 36.
+
+[74]
+
+Package natbib Warning: Citation `arprivacy' on page 75 undefined on input line
+ 53.
+
+[75]) (./chapters/11_conclusion.tex [76]
+Chapter 11.
+[77] [78] [79]) [80] (build/main.bbl
+Underfull \hbox (badness 3209) in paragraph at lines 39--46
+[]\T1/lmr/m/n/12 (+20) Akihiko Torii, Relja Arand-jelovi¢, Josef Sivic, Masatos
+hi Oku-tomi, and
+
+Underfull \hbox (badness 3260) in paragraph at lines 66--73
+\T1/lmr/m/n/12 (+20) Self-supervised in-ter-est point de-tec-tion and de-scrip-
+tion.  In \T1/lmr/m/it/12 (+20) IEEE/CVF
+
+Underfull \hbox (badness 1688) in paragraph at lines 66--73
+\T1/lmr/m/it/12 (+20) Con-fer-ence on Com-puter Vi-sion and Pat-tern Recog-ni-t
+ion Work-shops\T1/lmr/m/n/12 (+20) , 2018.
+[81]
+Underfull \hbox (badness 1270) in paragraph at lines 76--82
+\T1/lmr/m/it/12 (+20) Con-fer-ence on Com-puter Vi-sion and Pat-tern Recog-ni-t
+ion\T1/lmr/m/n/12 (+20) , pages 4938--4947,
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
+\T1/lmtt/m/n/12 SuperGlue _ Learning _ Feature _ Matching _ With _ Graph _ Neur
+al _ Networks _ CVPR _
+
+Underfull \hbox (badness 3058) in paragraph at lines 85--91
+[]\T1/lmr/m/n/12 (+20) Philipp Lin-den-berger, Paul-Edouard Sar-lin, and Marc P
+olle-feys.  Light-
+
+Underfull \hbox (badness 2689) in paragraph at lines 85--91
+\T1/lmr/m/n/12 (+20) Glue: Lo-cal fea-ture match-ing at light speed.  In \T1/lm
+r/m/it/12 (+20) IEEE/CVF In-ter-na-
+
+Underfull \hbox (badness 2359) in paragraph at lines 85--91
+\T1/lmr/m/it/12 (+20) tional Con-fer-ence on Com-puter Vi-sion\T1/lmr/m/n/12 (+
+20) , pages 17627--17638, 2023.  URL
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
+[]$\T1/lmtt/m/n/12 https : / / openaccess . thecvf . com / content / ICCV2023 /
+ html / Lindenberger _
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--106
+\T1/lmtt/m/n/12 openaccess . thecvf . com / content / CVPR2021 / html / Sun _ L
+oFTR _ Detector-[]Free _
+
+Underfull \hbox (badness 1509) in paragraph at lines 109--117
+[]\T1/lmr/m/n/12 (+20) Relja Arand-jelovi¢, Petr Gronat, Ak-i-hiko Torii, Tomas
+ Pa-jdla, and Josef
+
+Underfull \hbox (badness 1824) in paragraph at lines 109--117
+\T1/lmr/m/n/12 (+20) Sivic.  NetVLAD: CNN ar-chi-tec-ture for weakly su-per-vis
+ed place recog-ni-
+
+Underfull \hbox (badness 1533) in paragraph at lines 109--117
+\T1/lmr/m/n/12 (+20) tion.  In \T1/lmr/m/it/12 (+20) IEEE Con-fer-ence on Com-p
+uter Vi-sion and Pat-tern Recog-ni-tion\T1/lmr/m/n/12 (+20) ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--125
+\T1/lmtt/m/n/12 content / CVPR2022 / papers / Berton _ Rethinking _ Visual _ Ge
+o-[]Localization _
+
+Underfull \hbox (badness 1248) in paragraph at lines 134--140
+[]\T1/lmr/m/n/12 (+20) Amar Ali-bey, Brahim Chaib-draa, and Philippe Giguère.  
+MixVPR: Fea-
+
+Underfull \hbox (badness 1776) in paragraph at lines 134--140
+\T1/lmr/m/n/12 (+20) ture mix-ing for vi-sual place recog-ni-tion.  In \T1/lmr/
+m/it/12 (+20) IEEE/CVF Win-ter Con-fer-
+
+Underfull \hbox (badness 1721) in paragraph at lines 134--140
+\T1/lmr/m/it/12 (+20) ence on Ap-pli-ca-tions of Com-puter Vi-sion\T1/lmr/m/n/1
+2 (+20) , pages 2998--3007, 2023.  URL
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--140
+[]$\T1/lmtt/m/n/12 https : / / openaccess . thecvf . com / content / WACV2023 /
+ html / Ali-[]bey _ MixVPR _
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 163--171
+\T1/lmr/m/n/12 (+20) URL []$\T1/lmtt/m/n/12 https : / / www . sri . com / publi
+cation / artificial-[]intelligence-[]pubs /
+
+Overfull \hbox (302.5796pt too wide) in paragraph at lines 163--171
+\T1/lmtt/m/n/12 random-[]sample-[]consensus-[]a-[]paradigm-[]for-[]model-[]fitt
+ing-[]with-[]applications-[]to-[]image-[]analysis-[]and-[]automated-[]cartograp
+hy-[]2/$[]\T1/lmr/m/n/12 (-20) . 
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--179
+\T1/lmtt/m/n/12 Coarse _ to _ Fine _ Robust _ Hierarchical _ Localization _ at 
+_ Large _ Scale _ CVPR _
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--204
+\T1/lmtt/m/n/12 content _ CVPR _ 2020 / html / Warburg _ Mapillary _ Street-[]L
+evel _ Sequences _ A _
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+[]\T1/lmr/m/n/12 (+20) Microsoft Re-search.  En-abling in-ter-ac-tion be-tween 
+mixed
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+\T1/lmr/m/n/12 (+20) re-al-ity and robots via cloud-based lo-cal-iza-tion, 2020
+.
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+\T1/lmr/m/n/12 (+20) URL []$\T1/lmtt/m/n/12 https : / / www . microsoft . com /
+ en-[]us / research / blog /
+
+Overfull \hbox (89.6295pt too wide) in paragraph at lines 220--227
+\T1/lmtt/m/n/12 enabling-[]interaction-[]between-[]mixed-[]reality-[]and-[]robo
+ts-[]via-[]cloud-[]based-[]localization/$[]\T1/lmr/m/n/12 (-20) .
+
+Underfull \hbox (badness 3058) in paragraph at lines 229--235
+[]\T1/lmr/m/n/12 (+20) Gabriele Berton and con-trib-u-tors.  Tokyo 24/7 dataset
+ for-mat-ting and
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--235
+\T1/lmr/m/n/12 (+20) pub-lic query down-load, 2026.  URL []$\T1/lmtt/m/n/12 htt
+ps : / / github . com / gmberton /
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--235
+\T1/lmtt/m/n/12 VPR-[]datasets-[]downloader / blob / main / format _ tokyo247 .
+ py$[]\T1/lmr/m/n/12 (+20) .  Ac-cessed 5
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--242
+\T1/lmtt/m/n/12 onnxruntime . ai / docs / performance / model-[]optimizations /
+ quantization . html$[]\T1/lmr/m/n/12 (+20) .
+) (./chapters/appendix_a_reproduction.tex [84]
+Appendix A.
+[85]
+
+LaTeX Warning: Reference `ch:datasets' on page 1 undefined on input line 30.
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 34--35
+\T1/lmr/m/n/12 (+20) in-spected pub-lic archive root is []$\T1/lmtt/m/n/12 http
+s : / / data . ciirc . cvut . cz / public / projects /
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+\T1/lmr/m/n/12 (+20) Use []$\T1/lmtt/m/n/12 https : / / data . ciirc . cvut . c
+z / public / projects / 2020VisualLocalization /
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+\T1/lmr/m/n/12 (+20) Use []$\T1/lmtt/m/n/12 https : / / data . ciirc . cvut . c
+z / public / projects / 2020VisualLocalization /
+
+Underfull \hbox (badness 4531) in paragraph at lines 73--74
+\T1/lmr/m/n/12 (+20) MSLS in-struc-tions are at []$\T1/lmtt/m/n/12 https : / / 
+github . com / mapillary / mapillary _ sls$[] \T1/lmr/m/n/12 (+20) and
+
+Underfull \hbox (badness 4819) in paragraph at lines 73--74
+\T1/lmr/m/n/12 (+20) its linked down-load site []$\T1/lmtt/m/n/12 https : / / w
+ww . mapillary . com / dataset / places$[]\T1/lmr/m/n/12 (+20) . Pre-
+[87] (./tables/commands.tex [88] [89] [90] [91] [92] [93] [94] [95]))
+(./chapters/appendix_b_structure.tex [96]
+Appendix B.
+[97] (./tables/sequence_names.tex) [98]) (./chapters/appendix_c_qualitative.tex
+ [99]
+Appendix C.
+
+LaTeX Warning: Reference `fig:matches-viewpoint' on page 1 undefined on input l
+ine 9.
+
+
+LaTeX Warning: Reference `fig:matches-night' on page 1 undefined on input line 
+15.
+
+
+LaTeX Warning: Reference `fig:matches-day' on page 1 undefined on input line 21
+.
+
+[100] [101 <./figures/matches_hpatches_viewpoint.pdf>] [102 <./figures/matches_
+tokyo_day_to_night.pdf>] [103 <./figures/matches_tokyo_day_to_day.pdf>])
+(./chapters/appendix_d_code.tex [104]
+Appendix D.
+
+LaTeX Warning: Reference `lst:geometry' on page 1 undefined on input line 3.
+
+(../src/stitch/geometry.py [105])
+
+LaTeX Warning: Reference `lst:features' on page 1 undefined on input line 7.
+
+(../src/stitch/features.py [106] [107])
+
+LaTeX Warning: Reference `lst:pipeline' on page 1 undefined on input line 11.
+
+(../src/stitch/pipeline.py [108])
+
+LaTeX Warning: Reference `lst:render' on page 1 undefined on input line 15.
+
+(../src/stitch/rendering.py [109])
+
+LaTeX Warning: Reference `lst:configuration' on page 1 undefined on input line 
+19.
+
+(../configs/default.yaml))
+
+Package natbib Warning: There were undefined citations.
+
+[110] (build/main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/lm/lmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/lm/lmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm
+/lmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2026/texmf-d
+ist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/lm/lmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+lm/lmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pf
+b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive
+/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/lm/lmtt8.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/main.pdf (120 pages, 4744342 bytes).
+Transcript written on build/main.log.
+Latexmk: Getting log file 'build/main.log'
+Latexmk: Examining 'build/main.fls'
+Latexmk: Examining 'build/main.log'
+Latexmk: Missing input file 'main.toc' message in .log file:
+  No file main.toc.
+Latexmk: Missing input file 'main.lof' message in .log file:
+  No file main.lof.
+Latexmk: Missing input file 'main.lot' message in .log file:
+  No file main.lot.
+Latexmk: Found input bbl file 'build/main.bbl'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'build/main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'build/main.bbl' for 'pdflatex'
+Create bibtex build/main
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'cusdep nlo nls build/main'...
+Rule 'cusdep nlo nls build/main':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.nlo
+
+------------
+Run number 1 of rule 'cusdep nlo nls build/main'
+------------
+This is makeindex, version 2.18 [TeX Live 2026] (kpathsea + Thai support).
+Scanning style file /usr/local/texlive/2026/texmf-dist/makeindex/nomencl/nomencl.ist............done (12 attributes redefined, 3 ignored).
+Scanning input file build/main.nlo....done (16 entries accepted, 1 rejected).
+Sorting entries....done (81 comparisons).
+Generating output file build/main.nls....done (21 lines written, 0 warnings).
+Output written in build/main.nls.
+Transcript written in build/main.ilg.
+Latexmk: applying rule 'bibtex build/main'...
+Rule 'bibtex build/main':  Reasons for rerun
+Category 'other':
+  Rerun of 'bibtex build/main' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'bibtex build/main'
+------------
+====== ENV{BIBINPUTS} changed to '/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis:build:/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis/build:'
+Latexmk: Change directory to 'build/'.
+To assist finding of files in document directory, I set
+  BIBINPUTS='/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis:build:/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis/build:'
+  BSTINPUTS='/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis:'.
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (TeX Live 2026)
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: references.bib
+Latexmk: Change directory back to '/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.aux
+  build/main.loa
+  build/main.lof
+  build/main.lot
+  build/main.out
+  build/main.toc
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex -interaction=nonstopmode -halt-on-error  -recorder -output-directory="build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo)) (./preamble.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/nomencl/nomencl.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty))))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(./tables/numbers.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(build/main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(build/main.out) (build/main.out) [1{/usr/local/texlive/2026/texmf-var/fonts/ma
+p/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/
+lm/lm-ec.enc}] [1] [2] [3] [4] (build/main.toc
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg) [5]
+[6] [7] [8] [9] [10]) [11] (build/main.lof [12]) [13] (build/main.lot [14{/usr/
+local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texl
+ive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]) [15] (build/main.loa)
+(build/main.nls [16]) [17{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm
+/lm-mathsy.enc}] (./chapters/01_introduction.tex
+Chapter 1.
+[1] [2{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+[3] [4]) (./chapters/02_background.tex [5]
+Chapter 2.
+[6] [7] [8] [9] [10]) (./chapters/03_existing_system.tex [11]
+Chapter 3.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd) [12] [13] [14]
+(./tables/originals.tex) [15]) (./chapters/04_architecture.tex [16]
+Chapter 4.
+[17] [18] (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty)
+[19] [20] [21]) (./chapters/05_datasets.tex [22] [23]
+Chapter 5.
+(./tables/datasets.tex) [24] [25] [26] [27 <./figures/tokyo_contact.pdf>]
+[28] [29 <./figures/synthetic_contact.pdf>] [30])
+(./chapters/06_methodology.tex [31]
+Chapter 6.
+[32] [33] [34] [35] [36] [37] [38] [39]) (./chapters/07_experimental_setup.tex
+[40]
+Chapter 7.
+(./tables/models.tex) [41] (./tables/protocols.tex [42]) [43] [44] [45]
+[46]) (./chapters/08_results.tex [47]
+Chapter 8.
+(./tables/matching.tex [48]) [49] [50 <./figures/hpatches_success.pdf> <./figur
+es/corner_ecdf.pdf>] (./tables/retrieval_tokyo.tex) [51]
+(./tables/retrieval_hpatches.tex [52 <./figures/tokyo_retrieval.pdf>])
+(./tables/pipeline-geometry.tex [53]) (./tables/retrieval_synthetic.tex
+[54]) (./tables/ablations.tex [55]) (./tables/open-set.tex) [56 <./figures/stag
+e_ablation.pdf>] (./tables/training.tex) [57] [58 <./figures/training_loss.pdf>
+] [59 <./figures/matches_hpatches_illumination.pdf>] [60 <./figures/qualitative
+_overlays.pdf>] (./tables/confidence.tex) (./tables/pose-unavailable.tex)
+[61] [62]) (./chapters/09_deployment.tex [63]
+Chapter 9.
+(./tables/profiles.tex) [64] (./tables/exports.tex) [65 <./figures/efficiency.p
+df>] (./tables/quant-retrieval.tex [66]) [67] [68 <./figures/quantization.pdf>]
+ [69]) (./chapters/10_ethics.tex [70] [71]
+Chapter 10.
+[72] [73] [74] [75]) (./chapters/11_conclusion.tex [76]
+Chapter 11.
+[77] [78] [79]) [80] (build/main.bbl
+Underfull \hbox (badness 3209) in paragraph at lines 39--46
+[]\T1/lmr/m/n/12 (+20) Akihiko Torii, Relja Arand-jelovi¢, Josef Sivic, Masatos
+hi Oku-tomi, and
+
+Underfull \hbox (badness 3260) in paragraph at lines 66--73
+\T1/lmr/m/n/12 (+20) Self-supervised in-ter-est point de-tec-tion and de-scrip-
+tion.  In \T1/lmr/m/it/12 (+20) IEEE/CVF
+
+Underfull \hbox (badness 1688) in paragraph at lines 66--73
+\T1/lmr/m/it/12 (+20) Con-fer-ence on Com-puter Vi-sion and Pat-tern Recog-ni-t
+ion Work-shops\T1/lmr/m/n/12 (+20) , 2018.
+[81]
+Underfull \hbox (badness 1270) in paragraph at lines 76--82
+\T1/lmr/m/it/12 (+20) Con-fer-ence on Com-puter Vi-sion and Pat-tern Recog-ni-t
+ion\T1/lmr/m/n/12 (+20) , pages 4938--4947,
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
+\T1/lmtt/m/n/12 SuperGlue _ Learning _ Feature _ Matching _ With _ Graph _ Neur
+al _ Networks _ CVPR _
+
+Underfull \hbox (badness 3058) in paragraph at lines 85--91
+[]\T1/lmr/m/n/12 (+20) Philipp Lin-den-berger, Paul-Edouard Sar-lin, and Marc P
+olle-feys.  Light-
+
+Underfull \hbox (badness 2689) in paragraph at lines 85--91
+\T1/lmr/m/n/12 (+20) Glue: Lo-cal fea-ture match-ing at light speed.  In \T1/lm
+r/m/it/12 (+20) IEEE/CVF In-ter-na-
+
+Underfull \hbox (badness 2359) in paragraph at lines 85--91
+\T1/lmr/m/it/12 (+20) tional Con-fer-ence on Com-puter Vi-sion\T1/lmr/m/n/12 (+
+20) , pages 17627--17638, 2023.  URL
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
+[]$\T1/lmtt/m/n/12 https : / / openaccess . thecvf . com / content / ICCV2023 /
+ html / Lindenberger _
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--106
+\T1/lmtt/m/n/12 openaccess . thecvf . com / content / CVPR2021 / html / Sun _ L
+oFTR _ Detector-[]Free _
+
+Underfull \hbox (badness 1509) in paragraph at lines 109--117
+[]\T1/lmr/m/n/12 (+20) Relja Arand-jelovi¢, Petr Gronat, Ak-i-hiko Torii, Tomas
+ Pa-jdla, and Josef
+
+Underfull \hbox (badness 1824) in paragraph at lines 109--117
+\T1/lmr/m/n/12 (+20) Sivic.  NetVLAD: CNN ar-chi-tec-ture for weakly su-per-vis
+ed place recog-ni-
+
+Underfull \hbox (badness 1533) in paragraph at lines 109--117
+\T1/lmr/m/n/12 (+20) tion.  In \T1/lmr/m/it/12 (+20) IEEE Con-fer-ence on Com-p
+uter Vi-sion and Pat-tern Recog-ni-tion\T1/lmr/m/n/12 (+20) ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--125
+\T1/lmtt/m/n/12 content / CVPR2022 / papers / Berton _ Rethinking _ Visual _ Ge
+o-[]Localization _
+
+Underfull \hbox (badness 1248) in paragraph at lines 134--140
+[]\T1/lmr/m/n/12 (+20) Amar Ali-bey, Brahim Chaib-draa, and Philippe Giguère.  
+MixVPR: Fea-
+
+Underfull \hbox (badness 1776) in paragraph at lines 134--140
+\T1/lmr/m/n/12 (+20) ture mix-ing for vi-sual place recog-ni-tion.  In \T1/lmr/
+m/it/12 (+20) IEEE/CVF Win-ter Con-fer-
+
+Underfull \hbox (badness 1721) in paragraph at lines 134--140
+\T1/lmr/m/it/12 (+20) ence on Ap-pli-ca-tions of Com-puter Vi-sion\T1/lmr/m/n/1
+2 (+20) , pages 2998--3007, 2023.  URL
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--140
+[]$\T1/lmtt/m/n/12 https : / / openaccess . thecvf . com / content / WACV2023 /
+ html / Ali-[]bey _ MixVPR _
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 163--171
+\T1/lmr/m/n/12 (+20) URL []$\T1/lmtt/m/n/12 https : / / www . sri . com / publi
+cation / artificial-[]intelligence-[]pubs /
+
+Overfull \hbox (302.5796pt too wide) in paragraph at lines 163--171
+\T1/lmtt/m/n/12 random-[]sample-[]consensus-[]a-[]paradigm-[]for-[]model-[]fitt
+ing-[]with-[]applications-[]to-[]image-[]analysis-[]and-[]automated-[]cartograp
+hy-[]2/$[]\T1/lmr/m/n/12 (-20) . 
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--179
+\T1/lmtt/m/n/12 Coarse _ to _ Fine _ Robust _ Hierarchical _ Localization _ at 
+_ Large _ Scale _ CVPR _
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--204
+\T1/lmtt/m/n/12 content _ CVPR _ 2020 / html / Warburg _ Mapillary _ Street-[]L
+evel _ Sequences _ A _
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+[]\T1/lmr/m/n/12 (+20) Microsoft Re-search.  En-abling in-ter-ac-tion be-tween 
+mixed
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+\T1/lmr/m/n/12 (+20) re-al-ity and robots via cloud-based lo-cal-iza-tion, 2020
+.
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+\T1/lmr/m/n/12 (+20) URL []$\T1/lmtt/m/n/12 https : / / www . microsoft . com /
+ en-[]us / research / blog /
+
+Overfull \hbox (89.6295pt too wide) in paragraph at lines 220--227
+\T1/lmtt/m/n/12 enabling-[]interaction-[]between-[]mixed-[]reality-[]and-[]robo
+ts-[]via-[]cloud-[]based-[]localization/$[]\T1/lmr/m/n/12 (-20) .
+
+Underfull \hbox (badness 3058) in paragraph at lines 229--235
+[]\T1/lmr/m/n/12 (+20) Gabriele Berton and con-trib-u-tors.  Tokyo 24/7 dataset
+ for-mat-ting and
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--235
+\T1/lmr/m/n/12 (+20) pub-lic query down-load, 2026.  URL []$\T1/lmtt/m/n/12 htt
+ps : / / github . com / gmberton /
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--235
+\T1/lmtt/m/n/12 VPR-[]datasets-[]downloader / blob / main / format _ tokyo247 .
+ py$[]\T1/lmr/m/n/12 (+20) .  Ac-cessed 5
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--242
+\T1/lmtt/m/n/12 onnxruntime . ai / docs / performance / model-[]optimizations /
+ quantization . html$[]\T1/lmr/m/n/12 (+20) .
+) (./chapters/appendix_a_reproduction.tex [84]
+Appendix A.
+[85]
+Underfull \hbox (badness 1052) in paragraph at lines 34--35
+\T1/lmr/m/n/12 (+20) in-spected pub-lic archive root is []$\T1/lmtt/m/n/12 http
+s : / / data . ciirc . cvut . cz / public / projects /
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+\T1/lmr/m/n/12 (+20) Use []$\T1/lmtt/m/n/12 https : / / data . ciirc . cvut . c
+z / public / projects / 2020VisualLocalization /
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+\T1/lmr/m/n/12 (+20) Use []$\T1/lmtt/m/n/12 https : / / data . ciirc . cvut . c
+z / public / projects / 2020VisualLocalization /
+
+Underfull \hbox (badness 4531) in paragraph at lines 73--74
+\T1/lmr/m/n/12 (+20) MSLS in-struc-tions are at []$\T1/lmtt/m/n/12 https : / / 
+github . com / mapillary / mapillary _ sls$[] \T1/lmr/m/n/12 (+20) and
+
+Underfull \hbox (badness 4819) in paragraph at lines 73--74
+\T1/lmr/m/n/12 (+20) its linked down-load site []$\T1/lmtt/m/n/12 https : / / w
+ww . mapillary . com / dataset / places$[]\T1/lmr/m/n/12 (+20) . Pre-
+[87] (./tables/commands.tex [88] [89] [90] [91] [92] [93] [94] [95]))
+(./chapters/appendix_b_structure.tex [96]
+Appendix B.
+[97] (./tables/sequence_names.tex) [98]) (./chapters/appendix_c_qualitative.tex
+ [99]
+Appendix C.
+[100] [101 <./figures/matches_hpatches_viewpoint.pdf>] [102 <./figures/matches_
+tokyo_day_to_night.pdf>] [103 <./figures/matches_tokyo_day_to_day.pdf>])
+(./chapters/appendix_d_code.tex [104]
+Appendix D.
+(../src/stitch/geometry.py [105]) (../src/stitch/features.py [106] [107])
+(../src/stitch/pipeline.py [108]) (../src/stitch/rendering.py [109])
+(../configs/default.yaml)) [110] (build/main.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/lm/lmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/lm/lmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm
+/lmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2026/texmf-d
+ist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/lm/lmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+lm/lmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pf
+b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive
+/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/lm/lmtt8.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/main.pdf (128 pages, 4790026 bytes).
+Transcript written on build/main.log.
+Latexmk: Getting log file 'build/main.log'
+Latexmk: Examining 'build/main.fls'
+Latexmk: Examining 'build/main.log'
+Latexmk: Found input bbl file 'build/main.bbl'
+Latexmk: Log file says output to 'build/main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'build/main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'cusdep nlo nls build/main'...
+Rule 'cusdep nlo nls build/main':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.nlo
+
+------------
+Run number 2 of rule 'cusdep nlo nls build/main'
+------------
+This is makeindex, version 2.18 [TeX Live 2026] (kpathsea + Thai support).
+Scanning style file /usr/local/texlive/2026/texmf-dist/makeindex/nomencl/nomencl.ist............done (12 attributes redefined, 3 ignored).
+Scanning input file build/main.nlo....done (16 entries accepted, 1 rejected).
+Sorting entries....done (81 comparisons).
+Generating output file build/main.nls....done (21 lines written, 0 warnings).
+Output written in build/main.nls.
+Transcript written in build/main.ilg.
+Latexmk: applying rule 'bibtex build/main'...
+Rule 'bibtex build/main':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.aux
+
+------------
+Run number 2 of rule 'bibtex build/main'
+------------
+====== ENV{BIBINPUTS} changed to '/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis:build:/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis/build:'
+Latexmk: Change directory to 'build/'.
+To assist finding of files in document directory, I set
+  BIBINPUTS='/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis:build:/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis/build:'
+  BSTINPUTS='/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis:'.
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (TeX Live 2026)
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: references.bib
+Latexmk: Change directory back to '/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  build/main.aux
+  build/main.nls
+  build/main.toc
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex -interaction=nonstopmode -halt-on-error  -recorder -output-directory="build"  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo)) (./preamble.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/nomencl/nomencl.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/tocbasic.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/koma-script/scrlogo.sty))))))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(./tables/numbers.tex))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(build/main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(build/main.out) (build/main.out) [1{/usr/local/texlive/2026/texmf-var/fonts/ma
+p/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/
+lm/lm-ec.enc}] [1] [2] [3] [4] (build/main.toc
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg) [5]
+[6] [7] [8] [9] [10]) [11] (build/main.lof [12]) [13] (build/main.lot [14{/usr/
+local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texl
+ive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]) [15] (build/main.loa)
+(build/main.nls [16]) [17{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm
+/lm-mathsy.enc}] (./chapters/01_introduction.tex
+Chapter 1.
+[1] [2{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+[3] [4]) (./chapters/02_background.tex [5]
+Chapter 2.
+[6] [7] [8] [9] [10]) (./chapters/03_existing_system.tex [11]
+Chapter 3.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd) [12] [13] [14]
+(./tables/originals.tex) [15]) (./chapters/04_architecture.tex [16]
+Chapter 4.
+[17] [18] (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty)
+[19] [20] [21]) (./chapters/05_datasets.tex [22] [23]
+Chapter 5.
+(./tables/datasets.tex) [24] [25] [26] [27 <./figures/tokyo_contact.pdf>]
+[28] [29 <./figures/synthetic_contact.pdf>] [30])
+(./chapters/06_methodology.tex [31]
+Chapter 6.
+[32] [33] [34] [35] [36] [37] [38] [39]) (./chapters/07_experimental_setup.tex
+[40]
+Chapter 7.
+(./tables/models.tex) [41] (./tables/protocols.tex [42]) [43] [44] [45]
+[46]) (./chapters/08_results.tex [47]
+Chapter 8.
+(./tables/matching.tex [48]) [49] [50 <./figures/hpatches_success.pdf> <./figur
+es/corner_ecdf.pdf>] (./tables/retrieval_tokyo.tex) [51]
+(./tables/retrieval_hpatches.tex [52 <./figures/tokyo_retrieval.pdf>])
+(./tables/pipeline-geometry.tex [53]) (./tables/retrieval_synthetic.tex
+[54]) (./tables/ablations.tex [55]) (./tables/open-set.tex) [56 <./figures/stag
+e_ablation.pdf>] (./tables/training.tex) [57] [58 <./figures/training_loss.pdf>
+] [59 <./figures/matches_hpatches_illumination.pdf>] [60 <./figures/qualitative
+_overlays.pdf>] (./tables/confidence.tex) (./tables/pose-unavailable.tex)
+[61] [62]) (./chapters/09_deployment.tex [63]
+Chapter 9.
+(./tables/profiles.tex) [64] (./tables/exports.tex) [65 <./figures/efficiency.p
+df>] (./tables/quant-retrieval.tex [66]) [67] [68 <./figures/quantization.pdf>]
+ [69]) (./chapters/10_ethics.tex [70] [71]
+Chapter 10.
+[72] [73] [74] [75]) (./chapters/11_conclusion.tex [76]
+Chapter 11.
+[77] [78] [79]) [80] (build/main.bbl
+Underfull \hbox (badness 3209) in paragraph at lines 39--46
+[]\T1/lmr/m/n/12 (+20) Akihiko Torii, Relja Arand-jelovi¢, Josef Sivic, Masatos
+hi Oku-tomi, and
+
+Underfull \hbox (badness 3260) in paragraph at lines 66--73
+\T1/lmr/m/n/12 (+20) Self-supervised in-ter-est point de-tec-tion and de-scrip-
+tion.  In \T1/lmr/m/it/12 (+20) IEEE/CVF
+
+Underfull \hbox (badness 1688) in paragraph at lines 66--73
+\T1/lmr/m/it/12 (+20) Con-fer-ence on Com-puter Vi-sion and Pat-tern Recog-ni-t
+ion Work-shops\T1/lmr/m/n/12 (+20) , 2018.
+[81]
+Underfull \hbox (badness 1270) in paragraph at lines 76--82
+\T1/lmr/m/it/12 (+20) Con-fer-ence on Com-puter Vi-sion and Pat-tern Recog-ni-t
+ion\T1/lmr/m/n/12 (+20) , pages 4938--4947,
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
+\T1/lmtt/m/n/12 SuperGlue _ Learning _ Feature _ Matching _ With _ Graph _ Neur
+al _ Networks _ CVPR _
+
+Underfull \hbox (badness 3058) in paragraph at lines 85--91
+[]\T1/lmr/m/n/12 (+20) Philipp Lin-den-berger, Paul-Edouard Sar-lin, and Marc P
+olle-feys.  Light-
+
+Underfull \hbox (badness 2689) in paragraph at lines 85--91
+\T1/lmr/m/n/12 (+20) Glue: Lo-cal fea-ture match-ing at light speed.  In \T1/lm
+r/m/it/12 (+20) IEEE/CVF In-ter-na-
+
+Underfull \hbox (badness 2359) in paragraph at lines 85--91
+\T1/lmr/m/it/12 (+20) tional Con-fer-ence on Com-puter Vi-sion\T1/lmr/m/n/12 (+
+20) , pages 17627--17638, 2023.  URL
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
+[]$\T1/lmtt/m/n/12 https : / / openaccess . thecvf . com / content / ICCV2023 /
+ html / Lindenberger _
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--106
+\T1/lmtt/m/n/12 openaccess . thecvf . com / content / CVPR2021 / html / Sun _ L
+oFTR _ Detector-[]Free _
+
+Underfull \hbox (badness 1509) in paragraph at lines 109--117
+[]\T1/lmr/m/n/12 (+20) Relja Arand-jelovi¢, Petr Gronat, Ak-i-hiko Torii, Tomas
+ Pa-jdla, and Josef
+
+Underfull \hbox (badness 1824) in paragraph at lines 109--117
+\T1/lmr/m/n/12 (+20) Sivic.  NetVLAD: CNN ar-chi-tec-ture for weakly su-per-vis
+ed place recog-ni-
+
+Underfull \hbox (badness 1533) in paragraph at lines 109--117
+\T1/lmr/m/n/12 (+20) tion.  In \T1/lmr/m/it/12 (+20) IEEE Con-fer-ence on Com-p
+uter Vi-sion and Pat-tern Recog-ni-tion\T1/lmr/m/n/12 (+20) ,
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--125
+\T1/lmtt/m/n/12 content / CVPR2022 / papers / Berton _ Rethinking _ Visual _ Ge
+o-[]Localization _
+
+Underfull \hbox (badness 1248) in paragraph at lines 134--140
+[]\T1/lmr/m/n/12 (+20) Amar Ali-bey, Brahim Chaib-draa, and Philippe Giguère.  
+MixVPR: Fea-
+
+Underfull \hbox (badness 1776) in paragraph at lines 134--140
+\T1/lmr/m/n/12 (+20) ture mix-ing for vi-sual place recog-ni-tion.  In \T1/lmr/
+m/it/12 (+20) IEEE/CVF Win-ter Con-fer-
+
+Underfull \hbox (badness 1721) in paragraph at lines 134--140
+\T1/lmr/m/it/12 (+20) ence on Ap-pli-ca-tions of Com-puter Vi-sion\T1/lmr/m/n/1
+2 (+20) , pages 2998--3007, 2023.  URL
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--140
+[]$\T1/lmtt/m/n/12 https : / / openaccess . thecvf . com / content / WACV2023 /
+ html / Ali-[]bey _ MixVPR _
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 163--171
+\T1/lmr/m/n/12 (+20) URL []$\T1/lmtt/m/n/12 https : / / www . sri . com / publi
+cation / artificial-[]intelligence-[]pubs /
+
+Overfull \hbox (302.5796pt too wide) in paragraph at lines 163--171
+\T1/lmtt/m/n/12 random-[]sample-[]consensus-[]a-[]paradigm-[]for-[]model-[]fitt
+ing-[]with-[]applications-[]to-[]image-[]analysis-[]and-[]automated-[]cartograp
+hy-[]2/$[]\T1/lmr/m/n/12 (-20) . 
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--179
+\T1/lmtt/m/n/12 Coarse _ to _ Fine _ Robust _ Hierarchical _ Localization _ at 
+_ Large _ Scale _ CVPR _
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--204
+\T1/lmtt/m/n/12 content _ CVPR _ 2020 / html / Warburg _ Mapillary _ Street-[]L
+evel _ Sequences _ A _
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+[]\T1/lmr/m/n/12 (+20) Microsoft Re-search.  En-abling in-ter-ac-tion be-tween 
+mixed
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+\T1/lmr/m/n/12 (+20) re-al-ity and robots via cloud-based lo-cal-iza-tion, 2020
+.
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
+\T1/lmr/m/n/12 (+20) URL []$\T1/lmtt/m/n/12 https : / / www . microsoft . com /
+ en-[]us / research / blog /
+
+Overfull \hbox (89.6295pt too wide) in paragraph at lines 220--227
+\T1/lmtt/m/n/12 enabling-[]interaction-[]between-[]mixed-[]reality-[]and-[]robo
+ts-[]via-[]cloud-[]based-[]localization/$[]\T1/lmr/m/n/12 (-20) .
+
+Underfull \hbox (badness 3058) in paragraph at lines 229--235
+[]\T1/lmr/m/n/12 (+20) Gabriele Berton and con-trib-u-tors.  Tokyo 24/7 dataset
+ for-mat-ting and
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--235
+\T1/lmr/m/n/12 (+20) pub-lic query down-load, 2026.  URL []$\T1/lmtt/m/n/12 htt
+ps : / / github . com / gmberton /
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--235
+\T1/lmtt/m/n/12 VPR-[]datasets-[]downloader / blob / main / format _ tokyo247 .
+ py$[]\T1/lmr/m/n/12 (+20) .  Ac-cessed 5
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--242
+\T1/lmtt/m/n/12 onnxruntime . ai / docs / performance / model-[]optimizations /
+ quantization . html$[]\T1/lmr/m/n/12 (+20) .
+) (./chapters/appendix_a_reproduction.tex [84]
+Appendix A.
+[85]
+Underfull \hbox (badness 1052) in paragraph at lines 34--35
+\T1/lmr/m/n/12 (+20) in-spected pub-lic archive root is []$\T1/lmtt/m/n/12 http
+s : / / data . ciirc . cvut . cz / public / projects /
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+\T1/lmr/m/n/12 (+20) Use []$\T1/lmtt/m/n/12 https : / / data . ciirc . cvut . c
+z / public / projects / 2020VisualLocalization /
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+\T1/lmr/m/n/12 (+20) Use []$\T1/lmtt/m/n/12 https : / / data . ciirc . cvut . c
+z / public / projects / 2020VisualLocalization /
+
+Underfull \hbox (badness 4531) in paragraph at lines 73--74
+\T1/lmr/m/n/12 (+20) MSLS in-struc-tions are at []$\T1/lmtt/m/n/12 https : / / 
+github . com / mapillary / mapillary _ sls$[] \T1/lmr/m/n/12 (+20) and
+
+Underfull \hbox (badness 4819) in paragraph at lines 73--74
+\T1/lmr/m/n/12 (+20) its linked down-load site []$\T1/lmtt/m/n/12 https : / / w
+ww . mapillary . com / dataset / places$[]\T1/lmr/m/n/12 (+20) . Pre-
+[87] (./tables/commands.tex [88] [89] [90] [91] [92] [93] [94] [95]))
+(./chapters/appendix_b_structure.tex [96]
+Appendix B.
+[97] (./tables/sequence_names.tex) [98]) (./chapters/appendix_c_qualitative.tex
+ [99]
+Appendix C.
+[100] [101 <./figures/matches_hpatches_viewpoint.pdf>] [102 <./figures/matches_
+tokyo_day_to_night.pdf>] [103 <./figures/matches_tokyo_day_to_day.pdf>])
+(./chapters/appendix_d_code.tex [104]
+Appendix D.
+(../src/stitch/geometry.py [105]) (../src/stitch/features.py [106] [107])
+(../src/stitch/pipeline.py [108]) (../src/stitch/rendering.py [109])
+(../configs/default.yaml)) [110] (build/main.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2026/texmf-dist/f
+onts/type1/public/lm/lmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/lm/lmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm
+/lmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/loca
+l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2
+026/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2026/texmf-d
+ist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/t
+ype1/public/lm/lmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+lm/lmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pf
+b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
+cal/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive
+/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/lm/lmtt8.pfb></usr/local/texlive/2026/texmf-dist/font
+s/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/main.pdf (128 pages, 4790027 bytes).
+Transcript written on build/main.log.
+Latexmk: Getting log file 'build/main.log'
+Latexmk: Examining 'build/main.fls'
+Latexmk: Examining 'build/main.log'
+Latexmk: Found input bbl file 'build/main.bbl'
+Latexmk: Log file says output to 'build/main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'build/main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: All targets (build/main.pdf) are up-to-date
+
+cp build/main.pdf thesis.pdf
+../.venv/bin/python ../scripts/verify_thesis.py
+Traceback (most recent call last):
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis/../scripts/verify_thesis.py", line 75, in <module>
+    if __name__=='__main__':main()
+  File "/Users/bhattacharjee/Desktop/internship/Stitch-research/thesis/../scripts/verify_thesis.py", line 64, in main
+    overfull=len(re.findall('Overfull \\hbox',log))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/re.py", line 241, in findall
+    return _compile(pattern, flags).findall(string)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/re.py", line 304, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/sre_compile.py", line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/sre_parse.py", line 948, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/sre_parse.py", line 443, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/sre_parse.py", line 525, in _parse
+    code = _escape(source, this, state)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/sre_parse.py", line 426, in _escape
+    raise source.error("bad escape %s" % escape, len(escape))
+re.error: bad escape \h at position 9
+make[1]: *** [thesis] Error 1

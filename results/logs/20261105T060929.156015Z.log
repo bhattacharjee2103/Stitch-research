@@ -1,0 +1,1 @@
+{'gs': '/opt/homebrew/bin/gs', 'pdftoppm': '/opt/homebrew/bin/pdftoppm', 'mutool': None, 'latexmk': '/Library/TeX/texbin/latexmk', 'bibtex': '/Library/TeX/texbin/bibtex', 'makeindex': '/Library/TeX/texbin/makeindex'}

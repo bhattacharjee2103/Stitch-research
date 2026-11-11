@@ -1,0 +1,26 @@
+{
+  "Stitch_IITR_Presentation.pptx": {
+    "bytes": 9254471,
+    "sha256": "d84f4213c405f9b88edba8918384f9033b0ebe062b13efb170ea2edb6c1b1e45"
+  },
+  "Stitch_IITR_Presentation_LaTeX.zip": {
+    "bytes": 9541682,
+    "sha256": "7bbe3119810231903a2e86090ebfb798441e72828b36d931176e8a6e675199c4"
+  },
+  "Stitch_IITR_Presentation.pdf": {
+    "bytes": 6080536,
+    "sha256": "69a29aa2346b8a5ed6b65b3945a2efb5693e1d6760f53263ac38c3c3029c1c03"
+  },
+  "Stitch_IITR_Report_LaTeX.zip": {
+    "bytes": 43480137,
+    "sha256": "3548061b6c4bce2f48671b5328dbf8157528cfb8cbaa86101ed7be351dd2e932"
+  },
+  "Stitch_IITR_Report.pdf": {
+    "bytes": 44396258,
+    "sha256": "e44b66cc698f741c1cdeab6ffd027e3fb55f067e2fb3e63e6d92c47539ee764d"
+  },
+  "README.txt": {
+    "bytes": 1853,
+    "sha256": "e271e5c290d7fc53c381f77a2790325911402d55d4e0e8ffc2b843a64c95ab09"
+  }
+}

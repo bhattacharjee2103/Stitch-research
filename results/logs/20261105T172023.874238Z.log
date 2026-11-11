@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "input_files_sha256_verified": 768,
+  "vendor_revisions_verified": true,
+  "benchmark_hash_verified": true,
+  "training_test_places_disjoint": true,
+  "prediction_decisions_independently_reconstructed": 2226,
+  "oracle_pairs_cross_checked": 612,
+  "candidate_pairs": 15624,
+  "retrieval_csv_consistent": true,
+  "homography_success_recomputed": true,
+  "inference_rerun": false
+}

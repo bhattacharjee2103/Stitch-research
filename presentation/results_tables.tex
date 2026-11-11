@@ -1,0 +1,80 @@
+% Generated solely from recorded results; do not edit numerical cells.
+
+\newcommand{\NightTable}{%
+\begin{tabular}{lrrr}
+\toprule
+Method & R@1 & R@5 & Verified \\
+\midrule
+SIFT + FLANN & 58.3 & 91.7 & 33.3 \\
+SuperPoint + LightGlue & 100.0 & 100.0 & 100.0 \\
+CosPlace only & 100.0 & 100.0 & -- \\
+Full pipeline ($k=3$) & 100.0 & 100.0 & 100.0 \\
+\bottomrule
+\end{tabular}}
+
+\newcommand{\ViewTable}{%
+\begin{tabular}{lrrr}
+\toprule
+Method & R@1 & R@5 & Verified \\
+\midrule
+SIFT + FLANN & 54.2 & 66.7 & 41.7 \\
+SuperPoint + LightGlue & 58.3 & 70.8 & 54.2 \\
+CosPlace only & 41.7 & 62.5 & -- \\
+Full pipeline ($k=3$) & 41.7 & 62.5 & 37.5 \\
+\bottomrule
+\end{tabular}}
+
+\newcommand{\MatchingTable}{%
+\begin{tabular}{lrr}
+\toprule
+HPatches split & SIFT & SuperPoint + LightGlue \\
+\midrule
+Illumination & 81.7 & 100.0 \\
+Viewpoint & 86.7 & 86.7 \\
+\bottomrule
+\end{tabular}}
+
+\newcommand{\RuntimeTable}{%
+\begin{tabular}{lrr}
+\toprule
+Method & Median ms & Peak RSS MB \\
+\midrule
+Classical & 186.2 & 568.3 \\
+Exhaustive learned & 3020.4 & 1435.5 \\
+Retrieval only & 18.5 & 537.2 \\
+Full pipeline & 1332.5 & 1492.3 \\
+\bottomrule
+\end{tabular}}
+
+\newcommand{\QuantizationTable}{%
+\begin{tabular}{lrrr}
+\toprule
+Descriptor & MB & Median ms & View R@1 \\
+\midrule
+FP32 & 45.75 & 24.04 & 41.7 \\
+INT8 & 11.52 & 17.32 & 33.3 \\
+\bottomrule
+\end{tabular}}
+
+\newcommand{\AdaptationTable}{%
+\begin{tabular}{lrrr}
+\toprule
+Held-out split & Pretrained & Head & Head + aug. \\
+\midrule
+HP viewpoint & 77.5 & 75.8 & 74.2 \\
+Tokyo view & 41.7 & 30.6 & 37.5 \\
+Tokyo night & 100.0 & 94.4 & 94.4 \\
+\bottomrule
+\end{tabular}}
+
+\newcommand{\OpenSetTable}{%
+\begin{tabular}{lrr}
+\toprule
+Variant & False accepts & Unknowns \\
+\midrule
+SIFT + FLANN & 0 & 12 \\
+SuperPoint + LightGlue & 2 & 12 \\
+Full pipeline ($k=3$) & 0 & 12 \\
+No geometry & 12 & 12 \\
+\bottomrule
+\end{tabular}}

@@ -1,0 +1,112 @@
+\chapter{Experimental Setup}\label{ch:setup}
+\section{Recorded execution environment}
+The experiments ran on the available Apple M2 laptop with the memory configuration recorded in \code{results/environment.json}. The software environment is a clean project-local CPython virtual environment. The initial default interpreter was unsuitable for the pinned dependency set, so the available system CPython interpreter was used. Dependency versions were installed and recorded rather than assumed from pre-existing user packages.
+
+The runtime reported neither CUDA nor an available MPS backend for these runs. All reported inference therefore uses the CPU. Both PyTorch and OpenCV are configured to use two threads in the controlled scripts. This restriction makes the workload explicit and avoids silently changing thread counts between methods. It does not establish that this is the fastest possible host configuration.
+
+The primary installed versions are listed in the environment artifact and dependency specification. The reproducibility bundle also records the official LightGlue and CosPlace code revisions and SHA256 hashes of all downloaded checkpoints. Model parameter counts and checkpoint sizes are obtained from actual loaded models and files. They are not inferred by counting the number of layers in a paper diagram.
+
+\resultinput{models.tex}
+\Cref{tab:models} separates trainable-parameter count from serialised checkpoint size. Checkpoint bytes include format metadata and any stored buffers. Runtime memory is larger because it includes model objects, image tensors, local features, library imports and allocator state. A separate complete-process peak measurement is consequently reported in the deployment analysis.
+
+\section{Configuration and fixed controls}
+\begin{table}[htbp]\centering\small
+\caption{Executed comparison configuration. Values are explicit experimental settings, not measured outcomes.}\label{tab:configuration}
+\begin{tabular}{ll}\toprule
+Setting & Value\\\midrule
+Working-image maximum side & 640 pixels\\
+Requested local-feature budget & 512\\
+SIFT ratio threshold & 0.70\\
+RANSAC transfer threshold & 5 working pixels\\
+RANSAC confidence / maximum iterations & 0.999 / 3000\\
+Minimum inliers / inlier ratio & 12 / 0.20\\
+Primary full-pipeline shortlist & 3 references\\
+Shortlist ablations & 1 and 5 references\\
+CosPlace input / descriptor & $224\times224$ / 512 dimensions\\
+PyTorch / OpenCV threads & 2 / 2\\
+Main seed & 17\\
+Synthetic-query and training-head seeds & 17, 23, 42\\
+\bottomrule\end{tabular}
+\end{table}
+\Cref{tab:configuration} states the settings shared across compared methods. The feature budget and RANSAC thresholds are not tuned separately on each test split. Reference extraction is cached. Query local features are extracted once per method and reused across the gallery. Global-only retrieval follows its own smaller input shape, which is documented because global descriptors and pixel correspondences have different computational needs.
+
+PyTorch, NumPy and OpenCV random states are set. Candidate matching receives a deterministic seed derived from its method and image-path identities so repeated comparisons do not depend on the order in which a cache is populated. This improves repeatability within the installed environment. Floating-point kernels and library changes can still produce differences on another machine, so exact input hashes and environment versions remain necessary.
+
+\section{Evaluation populations}
+The frozen benchmark contains \OraclePairs{} labelled positive reference-query pairs, which produce \OraclePairs{} measurements per local method and therefore twice that many oracle-pair rows. The query protocols additionally include unknown-place diagnostics. The executed exhaustive comparison produced \PredictionRows{} query-method prediction rows. These counts are generated from the saved preparation and result files.
+
+\resultinput{protocols.tex}
+\Cref{tab:protocols} gives the denominator for each protocol. The same query list is evaluated by A, B, C and the full pipeline. Stage ablations use those same lists. A query failure remains in its denominator; it is not removed because a model produced no descriptors or a homography could not be estimated.
+
+The principal unit of evidence is a place or source image rather than an individual pixel correspondence. HPatches targets from one sequence share a reference and scene. Synthetic variants share a source image. Tokyo condition splits reuse physical sites. These dependencies limit the interpretation of aggregate counts, especially when uncertainty intervals are calculated from a small, selected set.
+
+\section{Retrieval metrics}
+Let $Q$ be a query set and $\mathcal P(q)$ the valid gallery-place identities for query $q$. With ranked identities $r_1(q),r_2(q),\ldots$, recall is
+\begin{equation}
+ R@k=\frac1{|Q|}\sum_{q\in Q}
+ \mathbf1\{\mathcal P(q)\cap\{r_1(q),\ldots,r_k(q)\}\neq\varnothing\}.
+\end{equation}
+The implemented benchmark has one correct place identity per positive query. Recall@1, @5 and @10 share a query denominator and use the same ordered result list. Larger values of $k$ are necessarily easier in these small galleries, so high Recall@10 is not interpreted as high-precision anchoring.
+
+For exhaustive local methods, the ranking uses inlier support even if the top candidate is not accepted. This permits a correct retrieval with insufficient evidence to render. For the full pipeline, shortlisted references are reranked locally and the remaining global ranking is retained as an unverified tail. Its Recall@5 or @10 may therefore include references that were never locally verified. Correctly verified-place rate is reported separately to show actual decisions.
+
+The global-only method does not declare an anchor. It is inappropriate to compare its absence of a geometric result with a zero homography success rate as if a model had attempted and failed to fit a transform. Tables mark that field unavailable. The no-geometry ablation instead explicitly makes an unverified acceptance decision, allowing its false-acceptance consequences to be measured.
+
+\section{Matching and planar geometry metrics}
+\subsection{Correspondence support}
+For $M$ tentative matches and $N$ RANSAC inliers, inlier ratio is $N/M$ when $M>0$ and zero otherwise. Median inlier counts and mean ratios are computed across all evaluated positive pairs, including failures. A high ratio from a very small correspondence set is not equivalent to a well-supported surface map, which is why the verifier also requires an absolute count.
+
+Geometric acceptance rate is the fraction of pairs satisfying the configured support and validity conditions. On Tokyo it is the strongest available geometric decision metric, but it is not ground-truth alignment accuracy. On HPatches and synthetic pairs, independent ground-truth homographies make a stronger evaluation possible.
+
+\subsection{Corner-error success}
+Let $\mathbf c_1,\ldots,\mathbf c_4$ be the working reference corners. Mean corner error is
+\begin{equation}
+ e_H=\frac14\sum_{i=1}^4
+ \norm{\pi(\widehat H\widetilde{\mathbf c}_i)-\pi(H^{\mathrm{gt}}\widetilde{\mathbf c}_i)}_2.
+\end{equation}
+An oracle-pair homography success requires acceptance and $e_H\leq5$ working pixels. Invalid estimates are failures. For cumulative error curves, they remain at infinite error so the curve denominator includes all queries. A conditional median over finite errors is interpreted only alongside the failure rate.
+
+End-to-end planar success additionally requires the selected place to be correct. A highly accurate homography to a wrong reference is not counted. This stricter metric measures the chain from candidate selection to anchoring, while oracle-pair success isolates local geometry when the correct reference is supplied. Their difference reveals search-stage losses.
+
+\ifFullReport
+\section{Metric localisation criteria}
+The requested position-and-orientation thresholds require calibrated ground-truth camera poses. For world-to-camera parameters $(R,t)$ and $(R_g,t_g)$, the corresponding errors would be
+\begin{align}
+ e_t&=\norm{-R^\top t+R_g^\top t_g}_2,\\
+ e_R&=\arccos\!\left(\operatorname{clip}\left(\frac{\operatorname{tr}(RR_g^\top)-1}{2},-1,1\right)\right).
+\end{align}
+The utility function returns camera-centre distance and angle in degrees. Neither utility execution on a unit test nor GPS site metadata supplies the real query poses needed for a benchmark measurement. The result table therefore records the three requested criteria as unavailable. Official map-based benchmarks provide the proper route for future evaluation \citep{localizationbenchmark}.
+\fi
+
+\section{Timing, memory and model-size protocols}
+The upstream measurements time bounded script execution including initialisation and file I/O. The main evaluation records feature-extraction and matching-plus-geometry times, reusing cached reference computation. Its query stage sum adds the realised query extraction and selected pair costs; it is useful for accounting but excludes some application work and is not a direct end-to-end stopwatch measurement.
+
+The separate runtime profiler starts an isolated process for each method. It builds the reference cache, warms the path, and times actual query and rendering calls on a fixed small set of predecoded Tokyo images with repeated execution. It reports median, mean and upper-tail latency, and stores every timing sample. Asset loading during rendering remains inside the measured call. Camera decoding, network transfer and display are excluded.
+
+Peak RSS is obtained from the operating system's process resource accounting, with platform-specific units converted into bytes. It includes imports, model weights, gallery caches and transient allocation. It is not presented as the exclusive tensor memory of the selected model. Serialised model size is measured from file length and reported separately. No phone power, thermal, battery or neural-accelerator measurement is claimed.
+
+\section{Uncertainty and statistical interpretation}
+For a binary site-level outcome with $k$ successes among $n$ sites, the report computes a Wilson interval. With $\widehat p=k/n$ and a normal quantile $z$, its centre and half-width are
+\begin{align}
+ \mu_W&=\frac{\widehat p+z^2/(2n)}{1+z^2/n},\\
+ h_W&=\frac{z}{1+z^2/n}
+ \sqrt{\frac{\widehat p(1-\widehat p)}{n}+\frac{z^2}{4n^2}}.
+\end{align}
+The interval remains nonzero even when every selected query succeeds. It describes finite-sample uncertainty under an independent-site approximation, not a correction for the metadata-based geographic selection or the changed Tokyo benchmark task.
+
+HPatches uncertainty is also computed with a cluster bootstrap that samples sequence identities and includes their associated targets. Synthetic variants are discussed as repeated observations of a few sources, not independent places. For projection training, three fixed seeds yield a mean, sample standard deviation and a small-sample $t$ interval. With so few seeds the interval is unstable; it communicates uncertainty rather than establishing a precise population effect.
+
+No significance claim is based on selecting the best seed, dropping rejected queries or treating thousands of pixel matches as independent successful places. No hyperparameters are chosen using the test-set result tables. The design is an exploratory reproducible comparison, with the limited data coverage made explicit.
+
+\section{Ablations and failure inspection}
+The shortlist-size ablation compares one, three and five candidates. Exhaustive learned matching removes the global stage, and global-only retrieval removes local geometric evidence. A no-geometry acceptance diagnostic shows the distinction between a candidate rank and a supported anchor. Projection training compares available sequence images with and without extra synthetic night variants. Export validation compares native, float ONNX and QDQ INT8 descriptors.
+
+Qualitative selections follow documented rules: prefer a case where learned local verification succeeds while SIFT rejects, otherwise use a fixed fallback. Correspondence coordinates and masks are saved by an actual rerun, and overlay figures use saved estimates. This is a deliberately illustrative selection rather than a random sample of success. Failure examples and aggregate tables prevent the selected demo from standing in for overall accuracy.
+
+\ifFullReport
+\section{Reproducibility controls}
+Every substantive execution command is recorded with its argument vector, working directory, start time, output-log path, elapsed time and exit code. Failed actions remain in the journal. Build scripts derive tables and figures from measured files and record input hashes. A final checker scans the PDF build log for errors and unresolved citations/references, checks data-to-table consistency, and verifies that required demonstration files can be decoded.
+
+These controls do not make future results bitwise identical across all hardware. They do make the experiment inspectable: a reader can determine the source images, exact model bytes, protocol definitions, configuration and command that produced a reported value. The appendices provide those routes without presenting an unexecuted command as an observed result.
+\fi
+

@@ -1,0 +1,64 @@
+GRAPHICS 1
+b'cm' [1, 0, 0, 1, 266.528, 179.266]
+b'cm' [0.06218, 0, 0, 0.06218, 0, 0]
+b'cm' [2026, 0, 0, 2048, 0, 0]
+b'Do' ['/Im1']
+b'cm' [1, 0, 0, 1, -266.528, -179.266]
+GRAPHICS 2
+b'cm' [1, 0, 0, 1, 266.528, 201.502]
+b'cm' [0.06218, 0, 0, 0.06218, 0, 0]
+b'cm' [2026, 0, 0, 2048, 0, 0]
+b'Do' ['/Im1']
+b'cm' [1, 0, 0, 1, -266.528, -201.502]
+'Chapter 1' [99.212, 641.179] 20.6625
+'Introduction' [99.212, 584.999] 24.7871
+'1.1 Background and Motivation' [99.212, 523.397] 14.3462
+'Deep neural networks (DNNs) have achieved remarkable perform' [99.212, 496.159] 10.9091
+'artificial intelligence tasks, including image classificatio' [99.212, 479.724] 10.9091
+'1' [380.927, 479.724] 10.9091
+'], [' [386.49, 479.724] 10.9091
+'2' [399.525, 479.724] 10.9091
+'], audio recognition, and mathe-' [405.088, 479.724] 10.9091
+'matical reasoning [' [99.212, 463.29] 10.9091
+'3' [189.836, 463.29] 10.9091
+']. Their ability to learn complex, high-dimensional represen' [195.307, 463.29] 10.9091
+'data has made them central components in safety-critical sys' [99.212, 446.855] 10.9091
+'healthcare diagnostics, security surveillance, and voice-act' [99.212, 430.42] 10.9091
+'4' [468.711, 430.42] 10.9091
+'], [' [474.143, 430.42] 10.9091
+'5' [486.816, 430.42] 10.9091
+']. Despite this' [492.249, 430.42] 10.9091
+'progress, DNNs exhibit a fundamental and persistent fragilit' [99.212, 413.985] 10.9091
+'adversarial perturbations, that is, inputs that have been de' [99.212, 397.55] 10.9091
+'imperceptible or inaudible to humans yet cause the model to ' [99.212, 381.115] 10.9091
+'6' [532.707, 381.115] 10.9091
+'], [' [538.069, 381.115] 10.9091
+'7' [550.63, 381.115] 10.9091
+'].' [555.992, 381.115] 10.9091
+'This vulnerability is not confined to any single modality or' [116.148, 364.68] 10.9091
+'across computer vision systems, audio classifiers, and langu' [99.212, 348.245] 10.9091
+'In computer vision, carefully crafted pixel-level perturbati' [99.212, 331.81] 10.9091
+'classifiers with high confidence [' [99.212, 315.375] 10.9091
+'8' [252.647, 315.375] 10.9091
+'], [' [258.123, 315.375] 10.9091
+'9' [270.876, 315.375] 10.9091
+']. In the audio domain, subtle waveform modifications that' [276.353, 315.375] 10.9091
+'are imperceptible to the human ear can cause speech command ' [99.212, 298.941] 10.9091
+'incorrect outputs [' [99.212, 282.506] 10.9091
+'10' [190.105, 282.506] 10.9091
+']. In the domain of language and symbolic reasoning, the int' [201.232, 282.506] 10.9091
+'semantically irrelevant distractors or locally contradictory' [99.212, 266.071] 10.9091
+'mathematical reasoning accuracy of large language models (LL' [99.212, 249.635] 10.9091
+'11' [491.039, 249.635] 10.9091
+']. Across all' [502.089, 249.635] 10.9091
+'these settings, a common thread emerges: the representations' [99.212, 233.2] 10.9091
+'are statistically brittle and do not generalize robustly to ' [99.212, 216.765] 10.9091
+'by an adversary.' [99.212, 200.331] 10.9091
+'The severity of this problem is compounded by the increasing' [116.148, 183.896] 10.9091
+'real-world environments where adversarial manipulation is pl' [99.212, 167.461] 10.9091
+'autonomous driving system, an incorrectly recognized voice c' [99.212, 151.026] 10.9091
+'an erroneous arithmetic conclusion drawn by a reasoning assi' [99.212, 134.59] 10.9091
+'They represent genuine safety and security risks. Understand' [98.819, 118.156] 10.9091
+'adversarial vulnerability, and developing principled defense' [99.212, 101.721] 10.9091
+'problem of both theoretical depth and practical importance.\n' [99.212, 85.286] 10.9091
+'1' [326.524, 35.433] 10.9091

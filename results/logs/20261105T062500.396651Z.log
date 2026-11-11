@@ -1,0 +1,226 @@
+
+FILE ../PRONOB-BHATTACHARJEE-latex/PRONOB BHATTACHARJEE.pdf PAGES 109 SIZE RectangleObject([0, 0, 595.276, 841.89])
+NOVEL ADVERSARIAL ATTACKS ON VISION, AUDIO
+MODELS AND DEFENSE FOR LLM REASONING
+A DISSERTATION
+by
+PRONOB BHATTACHARJEE
+Enrollment No: 24565022
+Mehta Family School of Data Science and Artificial Intelligence
+INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+ROORKEE – 247667, INDIA
+May, 2026
+NOVEL ADVERSARIAL ATTACKS ON VISION, AUDIO
+MODELS AND DEFENSE FOR LLM REASONING
+A DISSERTATION
+Submitted in partial fulfilment of the
+requirements for the award of the degree
+of
+MASTER OF TECHNOLOGY
+in
+Artificial intelligence
+by
+PRONOB BHATTACHARJEE
+Enrollment No: 24565022
+Mehta Family School of Data Science and Artificial Intelligence
+INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+ROORKEE – 247667, INDIA
+May, 2026
+©INDIAN INSTITUTE OF TECHNOLOGY ROORKEE, ROORKEE – 2026
+ALL RIGHTS RESERVED
+Candidate’s Declaration
+I, PRONOB BHATTACHARJEE, hereby certify that the work which is being presented in the dis-
+sertation entitled “NOVEL ADVERSARIAL ATTACKS ON VISION, AUDIO MOD-
+ELS AND DEFENSE FOR LLM REASONING”, in partial fulfilment of the requirements
+for the award of the degree ofMASTER OF TECHNOLOGYin Artificial intelligence, sub-
+mitted to the Mehta Family School of Data Science and Artificial Intelligence in the Indian
+Institute of Technology Roorkee, is an authentic record of my own work carried out under the
+supervision of Dr. Sparsh Mittal, Associate Professor, Mehta Family School of Data Science and
+Artificial Intelligence, Indian Institute of Technology Roorkee.
+The matter embodied in this dissertation has not been submitted for the award of any other degree
+or diploma.
+Date: May 22, 2026
+Place: Roorkee
+(PRONOB BHATTACHARJEE)
+CERTIFICATION
+This is to certify that the above statement made by the candidate is correct to the best of my
+knowledge and belief.
+Dr. Sparsh Mittal
+Associate Professor
+Mehta Family School of Data Science and Artificial Intelligence
+Indian Institute of Technology Roorkee
+Dedicated to
+My Math Teacher,
+Partha Pratim Das
+and My Sister,
+Anonnya Das
+iii
+Acknowledgement
+I would like to express my deepest gratitude to my supervisor, Dr. Sparsh Mittal, for his constant
+support, guidance, and encouragement throughout my M.Tech journey. His mentorship has had a
+profound impact on both my research journey and personal growth. He continuously motivated
+me to pursue research with curiosity, sincerity, and confidence, even during the most difficult
+phases of this journey. He always kept his door open for me in every situation, offering guidance,
+support, and encouragement whenever I needed it most. His trust, encouragement, and belief in
+my potential gave me the confidence to grow. I feel truly fortunate and grateful to have had Dr.
+Sparsh Mittal as my supervisor.
+During this journey, I had the opportunity to work with many talented individuals, and these
+collaborations greatly enriched my research experience. I would especially like to thank Arnav
+Singh, B.Tech CSE student at IIT Kharagpur, for our collaboration on the k-Sparse Audio Attack
+project. I am also thankful to Swadesh Swain, B.Tech ECE student at IIT Roorkee, for his valuable
+support and contribution to RN-Attack.
+Finally, I sincerely thank everyone who directly or indirectly supported, encouraged, and stood by
+me throughout this journey.
+iv
+
+FILE ../PRONOB-BHATTACHARJEE-Overleaf/main.pdf PAGES 109 SIZE RectangleObject([0, 0, 595.276, 841.89])
+NOVEL ADVERSARIAL ATTACKS ON VISION, AUDIO
+MODELS AND DEFENSE FOR LLM REASONING
+A DISSERTATION
+by
+PRONOB BHATTACHARJEE
+Enrollment No: 25565017
+Mehta Family School of Data Science and Artificial Intelligence
+INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+ROORKEE – 247667, INDIA
+May, 2026
+NOVEL ADVERSARIAL ATTACKS ON VISION, AUDIO
+MODELS AND DEFENSE FOR LLM REASONING
+A DISSERTATION
+Submitted in partial fulfilment of the
+requirements for the award of the degree
+of
+MASTER OF TECHNOLOGY
+in
+Artificial intelligence
+by
+PRONOB BHATTACHARJEE
+Enrollment No: 24565022
+Mehta Family School of Data Science and Artificial Intelligence
+INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+ROORKEE – 247667, INDIA
+May, 2026
+©INDIAN INSTITUTE OF TECHNOLOGY ROORKEE, ROORKEE – 2026
+ALL RIGHTS RESERVED
+Candidate’s Declaration
+I, PRONOB BHATTACHARJEE, hereby certify that the work which is being presented in the dis-
+sertation entitled “NOVEL ADVERSARIAL ATTACKS ON VISION, AUDIO MOD-
+ELS AND DEFENSE FOR LLM REASONING”, in partial fulfilment of the requirements
+for the award of the degree ofMASTER OF TECHNOLOGYin Artificial intelligence, sub-
+mitted to the Mehta Family School of Data Science and Artificial Intelligence in the Indian
+Institute of Technology Roorkee, is an authentic record of my own work carried out under the
+supervision of Dr. Sparsh Mittal, Associate Professor, Mehta Family School of Data Science and
+Artificial Intelligence, Indian Institute of Technology Roorkee.
+The matter embodied in this dissertation has not been submitted for the award of any other degree
+or diploma.
+Date: May 22, 2026
+Place: Roorkee
+(PRONOB BHATTACHARJEE)
+CERTIFICATION
+This is to certify that the above statement made by the candidate is correct to the best of my
+knowledge and belief.
+Dr. Sparsh Mittal
+Associate Professor
+Mehta Family School of Data Science and Artificial Intelligence
+Indian Institute of Technology Roorkee
+Dedicated to
+My Math Teacher,
+Partha Pratim Das
+and My Sister,
+Anonnya Das
+iii
+Acknowledgement
+I would like to express my deepest gratitude to my supervisor, Dr. Sparsh Mittal, for his constant
+support, guidance, and encouragement throughout my M.Tech journey. His mentorship has had a
+profound impact on both my research journey and personal growth. He continuously motivated
+me to pursue research with curiosity, sincerity, and confidence, even during the most difficult
+phases of this journey. He always kept his door open for me in every situation, offering guidance,
+support, and encouragement whenever I needed it most. His trust, encouragement, and belief in
+my potential gave me the confidence to grow. I feel truly fortunate and grateful to have had Dr.
+Sparsh Mittal as my supervisor.
+During this journey, I had the opportunity to work with many talented individuals, and these
+collaborations greatly enriched my research experience. I would especially like to thank Arnav
+Singh, B.Tech CSE student at IIT Kharagpur, for our collaboration on the k-Sparse Audio Attack
+project. I am also thankful to Swadesh Swain, B.Tech ECE student at IIT Roorkee, for his valuable
+support and contribution to RN-Attack.
+Finally, I sincerely thank everyone who directly or indirectly supported, encouraged, and stood by
+me throughout this journey.
+iv
+
+FILE ../IITR_template.pdf PAGES 21 SIZE RectangleObject([0, 0, 362.835, 272.126])
+Image Denoising using U-Net Architecture
+DAC-700 Seminar
+INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+
+PRONOB
+BHATTACHARJEE
+25565017
+M.Tech Artificial Intelligence
+2025 – 2027
+Mehta Family School of Data Science
+and Artificial Intelligence
+Under the guidance of
+Dr. R. Balasubramanian
+Professor (HAG) and Head
+Department of Computer Science
+and Engineering
+Joint Faculty
+Mehta Family School of Data Science
+and Artificial Intelligence
+IIT ROORKEE·MEHTA FAMILY SCHOOL OF DATA SCIENCE AND ARTIFICIAL INTELLIGENCE
+INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+
+Table of Contents
+1 Introduction
+2 Image Noise and Its Types
+3 Traditional Image Denoising Methods
+4 U-Net Architecture
+5 MRI Image Denoising using U-Net
+6 Satellite Image Denoising Detection
+7 Traditional vs Deep Learning
+8 Deep Learning for Image Denoising
+9 Performance Evaluation
+10 MRI U-Net Training History
+11 Applications
+12 Limitations
+13 Future Research Directions
+14 Summary
+15 References
+3 / 21
+
+Introduction
+❑Image denoising removes unwanted noise from digital images.
+❑Noise may occur during image capture, transmission, or storage.
+❑Traditional denoising methods may remove important image
+details.
+❑U-Net is a CNN-based deep learning architecture.
+❑It uses encoder-decoder structure with skip connections.
+❑Applications include:
+❑MRI Denoising
+❑CT Scan Enhancement
+❑Satellite Imaging
+❑Low-Light Photography
+4 / 21
+
+Image Noise and Its Types
+❑Gaussian Noise
+❑Salt and Pepper Noise
+❑Speckle Noise
+❑Poisson Noise
+Goal
+To improve image quality and visual appearance.
+5 / 21
+
+Traditional Image Denoising Methods
+1. Median Filter
+❑Removes salt-and-pepper noise
+❑Preserves image edges
+2. Gaussian Filter
+❑Smoothens Gaussian noise
+❑Fast implementation
+❑May blur details
+3. Non-Local Means (NLM)
+❑Uses patch similarity
+❑Better detail preservation
+6 / 21
+

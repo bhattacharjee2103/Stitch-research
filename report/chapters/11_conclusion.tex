@@ -1,0 +1,46 @@
+\chapter{Conclusion and Future Work}\label{ch:conclusion}
+\section{Summary of the implemented work}
+This thesis converted Stitch's classical reference-overlay demonstration into a reproducible research artifact for place recognition and planar content anchoring. The original scripts were retained and executed through a bounded file-input adapter. A modular package adds global retrieval, learned local matching, shared geometric verification, explicit alpha rendering, a place/content database, configuration and CLI operation. The report is built from saved predictions, data and checkpoint manifests, exact execution logs and generated figures and tables.
+
+The evaluated data comprise \HpImages{} selected HPatches images with \HpPairs{} ground-truth planar pairs, \TokyoImages{} real Tokyo photographs from \TokyoSites{} selected sites, and \SyntheticQueries{} seeded synthetic queries. These collections establish different evidence levels. The artifact reports true planar accuracy where homographies exist, place correctness where site labels exist, and unavailable metric pose rates where the necessary calibration and map are absent.
+
+\section{Answers to the research questions}
+\subsection{Local correspondence under appearance change}
+The selected HPatches illumination comparison improves from \HpIllumSift\% SIFT homography success to \HpIllumLearned\% with SuperPoint--LightGlue. This supports the use of pretrained local representations for the tested illumination changes. The viewpoint comparison yields \HpViewSift\% and \HpViewLearned\%, respectively, and does not support a universal learned-method advantage. Geometric support and actual boundary accuracy must both be measured.
+
+\subsection{Global retrieval and candidate search}
+On the selected Tokyo day-to-night protocol, SIFT Recall@1 is \DayNightSiftRecall\%, while the learned local and CosPlace methods reach the observed saturated rate reported in the generated tables. The hierarchy correctly verifies \DayNightFullVerified\% of those queries with a small shortlist. On the different-view daytime protocol, however, its correctly verified rate is \DayViewFullVerified\%, showing that the global shortlist can discard references recoverable by exhaustive local search.
+
+The answer is therefore conditional: global retrieval is an effective search reduction when the useful view remains near the top of the global ranking. It is also an accuracy bottleneck when scene overlap or viewpoint reduces that ranking quality. The small custom Tokyo gallery and aligned cross-time views prevent direct comparison with official city-scale benchmark claims.
+
+\subsection{Verification and anchoring}
+Retrieval success is insufficient evidence for rendering. SIFT correctly verifies \NightSiftVerified\% of the selected day-to-night queries despite a higher retrieval recall, illustrating the difference between a ranked identity and accepted geometric support. The open-set diagnostic further shows that local verification can still accept a wrong candidate. The implemented rejection path is necessary, but a production identity or physical-presence guarantee requires stronger evaluation and controls.
+
+The planar pipeline successfully connects a verified place record to its stored content and a rendered image overlay. It does not establish arbitrary three-dimensional persistence, occlusion correctness, world-scale pose or cross-device anchor consistency. Those require calibrated mapping and a native tracking integration beyond the current image-to-image homography model.
+
+\subsection{Short adaptation}
+The executed projection-head training does not provide a consistent held-out improvement over the pretrained global descriptor. Three fixed seeds expose variability, and synthetic night augmentation does not remove the mismatch between the limited training scenes and the evaluation conditions. The pretrained descriptor remains the primary pipeline choice. This negative result narrows the roadmap: broader data and a compression control are needed before attributing improvement to appearance adaptation.
+
+\subsection{Deployment trade-offs}
+The descriptor-only ONNX export and QDQ quantisation both execute. File size changes from \FpModelMB{} MB to \IntModelMB{} MB, and the recorded ONNX CPU descriptor latency changes from \FpLatency{} ms to \IntLatency{} ms. The difficult viewpoint split loses some retrieval accuracy, so quantisation must be validated through task outcomes as well as file size.
+
+The complete learned pipeline's isolated host median is \LatencyFull{} ms. It improves on exhaustive learned search but does not support per-display-frame recognition on this configuration. A mobile design should use occasional recognition to establish a map relation and native tracking to maintain it. No phone runtime, thermal or power result is claimed.
+
+\section{Principal limitations}
+The strongest limitation is coverage. The gallery is small, geographic diversity is narrow, and real seasonal/weather transitions were not evaluated. Synthetic transformations cannot replace those observations. The optional training uses very few place identities, and its seed intervals do not represent the uncertainty of collecting a new city or device population.
+
+The second limitation is geometric scope. A homography is appropriate for a plane-induced map, not a complete street scene. Tokyo supplies no independent homography or calibrated pose for the selected pairs. An accepted overlay there is consequently a demonstration of the implemented decision, not a quantified metric-localisation result. The requested translation-and-rotation thresholds remain unavailable.
+
+The third limitation is deployment completeness. The package is a local CPU research implementation, with a compact on-disk database and image-post renderer. It has no authenticated multi-user backend, distributed deletion, map revision service or operational moderation. Export covers the global descriptor only. The proposed service and mobile sections define requirements rather than claim an existing product.
+
+\section{Staged future work}
+The first stage should broaden evaluation before changing model complexity. A consented multi-direction reference set and larger public galleries can test the observed viewpoint bottleneck. RobotCar, Extended CMU and MSLS can add genuine seasonal and weather transitions. Their acquisition and label conventions should be frozen before inference, following the same manifest and command-log discipline used here.
+
+The second stage should add calibrated map-relative localisation. A sparse reconstruction with known intrinsics and validated 2D--3D associations would support PnP and the requested metric thresholds. Anchor regions should be represented in map or plane coordinates, with uncertainty and explicit conventions. This stage should evaluate boundary error, reprojection support and actual camera pose separately.
+
+The third stage should establish native mobile feasibility. It should export or otherwise deploy the local feature and matching stages, profile their supported backend operators, and measure complete camera-to-render latency on representative devices. Recognition scheduling, tracking drift, loss recovery, memory pressure, thermal behaviour and power should be measured under sustained operation rather than inferred from a short warmed host run.
+
+The fourth stage should address persistent social operation. Place/map revisions, access-controlled content, consent, deletion and moderation must be implemented together. A pilot should measure false content placement and user-visible failure behaviour, not only retrieval recall. The open-set results show why a visually plausible map cannot be treated as complete authorisation or identity evidence.
+
+\section{Closing assessment}
+The work provides a concrete, auditable path from Stitch's supplied demonstration to a learned planar-AR research system. Its contribution lies in executed integration, controlled comparison and honest boundaries. The evidence supports improved illumination correspondence and useful coarse retrieval on the selected data, while exposing viewpoint, false-acceptance, adaptation and runtime limitations that must shape the next implementation.

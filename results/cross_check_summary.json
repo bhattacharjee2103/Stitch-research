@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-06",
+  "status": "passed",
+  "regression_tests_passed": 31,
+  "dependency_check": "No broken requirements found",
+  "syntax_check": "passed",
+  "cli_image_query": "passed",
+  "cli_video_frames_decoded": 2,
+  "demo_frames_decoded": 48,
+  "all_30_slides_visually_reviewed": true,
+  "research": {
+    "status": "passed",
+    "input_files_sha256_verified": 768,
+    "vendor_revisions_verified": true,
+    "benchmark_hash_verified": true,
+    "training_test_places_disjoint": true,
+    "prediction_decisions_independently_reconstructed": 2226,
+    "oracle_pairs_cross_checked": 612,
+    "candidate_pairs": 15624,
+    "candidate_acceptance_decisions_recomputed": 15624,
+    "retrieval_csv_consistent": true,
+    "homography_success_recomputed": true,
+    "inference_rerun": false
+  },
+  "documents": {
+    "report_pages": 254,
+    "slides": 30,
+    "powerpoint_slides": 30,
+    "metadata_verified": true,
+    "original_asset_copies_verified": 27,
+    "measured_result_sources_verified": true,
+    "latex_errors": 0,
+    "undefined_references_or_citations": 0,
+    "overfull_boxes": 0,
+    "oversized_floats": 0,
+    "supervisor": "Dr. R. Balasubramanian",
+    "enrollment": "25565017",
+    "original_reference_documents_modified": false,
+    "reference_chapter_geometry": {
+      "Chapter 1": [
+        99.212,
+        641.179,
+        20.6625
+      ],
+      "Introduction": [
+        99.212,
+        584.999,
+        24.7871
+      ]
+    },
+    "stitch_chapter_geometry": {
+      "Chapter 1": [
+        99.213,
+        641.179,
+        20.6625
+      ],
+      "Introduction": [
+        99.213,
+        584.999,
+        24.7871
+      ]
+    },
+    "reference_pdf_available": true,
+    "chapter_heading_alignment_tolerance_pdf_points": 0.01,
+    "powerpoint_editing": "Edit supplied LaTeX master; PPTX is a faithful rendered-slide export"
+  },
+  "standalone_packages": [
+    {
+      "archive": "deliverables/Stitch_IITR_Report_LaTeX.zip",
+      "command": [
+        "latexmk",
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-outdir=build",
+        "main.tex"
+      ],
+      "clean_temporary_directory": true,
+      "manifest_sha256_verified": true,
+      "bundled_sources_match_current_project": true,
+      "final_latex_log_clean": true,
+      "returncode": 0,
+      "pdf_pages": 254,
+      "outside_project_data_required": false
+    },
+    {
+      "archive": "deliverables/Stitch_IITR_Presentation_LaTeX.zip",
+      "command": [
+        "latexmk",
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-outdir=build",
+        "Stitch_IITR_Presentation.tex"
+      ],
+      "clean_temporary_directory": true,
+      "manifest_sha256_verified": true,
+      "bundled_sources_match_current_project": true,
+      "final_latex_log_clean": true,
+      "returncode": 0,
+      "pdf_pages": 30,
+      "outside_project_data_required": false
+    }
+  ],
+  "original_scripts_unchanged": true,
+  "model_artifacts": {
+    "status": "passed",
+    "trained_heads_replayed": 6,
+    "training_result_rows_reproduced": 72,
+    "exported_models": [
+      {
+        "variant": "fp32",
+        "images_replayed": 96,
+        "retrieval_scores_match": true,
+        "max_abs_error_to_native_cache": 5.53671270608902e-07
+      },
+      {
+        "variant": "int8",
+        "images_replayed": 96,
+        "retrieval_scores_match": true,
+        "max_abs_error_to_native_cache": 0.06979671120643616
+      }
+    ],
+    "profile_aggregates_checked": 4,
+    "retraining_performed": false,
+    "latency_rebenchmarked": false
+  },
+  "document_portability": {
+    "status": "passed",
+    "external_reference_pdf_absent": true,
+    "checks_used_bundled_layout_fingerprint": true,
+    "canonical_project_outputs_preserved": true
+  },
+  "parallel_package_build": "passed with make -j2 PYTHON=.venv/bin/python package",
+  "report": {
+    "pdf_pages": 254,
+    "substantive_chapter_pages": 176,
+    "minimum_required_pdf_pages": 200,
+    "evidence_scene_entries": 48,
+    "complete_oracle_register_rows": 612,
+    "intro_pdf_page": 26,
+    "bibliography_pdf_page": 202,
+    "latex_errors": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "cited_entries": 30,
+    "bibliography_entries": 30,
+    "result_groups_checked": 84,
+    "demo_decoding": "passed",
+    "overfull_box_warnings": 0,
+    "pdf_sha256": "e44b66cc698f741c1cdeab6ffd027e3fb55f067e2fb3e63e6d92c47539ee764d"
+  },
+  "extended_evidence": {
+    "inputs": {
+      "pairs.json": "24e2dd5c101e11be09122d4921a50b620799bf3f734d83070190fee88fe93f3b",
+      "derived_predictions.json": "a14fd4163f55ab9fe003c6ab1fe8db6200526b3a875ba067aa0c332b0239b861",
+      "data_manifest.json": "7a82536c1aa601b0bca2f49c15e168e8770c7d6f73e6740014675893bcae161a",
+      "training.json": "6837e3f97faf4e80b110b3a5eabe0aae0a863930fc70a465f2d850f1c5ab57db"
+    },
+    "extra_inputs": {
+      "data/benchmark.json": "67eeffb4ea5181e41ee96ac5997eaa050b573057239d9f54996bf5fbfb880d82",
+      "data/tokyo/selected.json": "241f97912488c300fad52871313a073a70c0f57341ade237942910d6cf4fad95"
+    },
+    "generated_outputs": {
+      "thesis/chapters/12_hpatches_evidence.tex": "b66635000244b98ae2a77bf8ce353c9a7bc1e121477e7454f0295181b24b2e30",
+      "thesis/chapters/13_tokyo_evidence.tex": "e51bab4fd9f0421a3d47494fed21593a818417332fdb649c88d473f213ffba77",
+      "thesis/chapters/appendix_e_pair_register.tex": "73ba7444ba5106977faea702237d10b4ce1f40266e851d7a0bef3730a7c77218",
+      "thesis/figures/evidence/tokyo_00.pdf": "01ea0e31e2a1e769166c7f2efacd1927343f4d2ab9afc8fdf2087ee7a86b2f0c",
+      "thesis/figures/evidence/tokyo_14.pdf": "469edd687510fc108b541e50459ba24e55e3f885f0bf843d9163e08eb4f0e321",
+      "thesis/figures/evidence/hp_03.pdf": "4c8aa508d5256cd3d5425f52a7494308a328c6de69e0ed2e238449775a6c9a1b",
+      "thesis/figures/evidence/hp_17.pdf": "1710b8a199fd3b817331bd709a6aad08def69f1f9a3c13be6619f85464677a4d",
+      "thesis/figures/evidence/hp_16.pdf": "dc3c9a75dd74838ea9a5f49c5957f918367649d7f0fa5f538d4f979035b0d939",
+      "thesis/figures/evidence/hp_02.pdf": "3481cb65f9ac8b36e384307be5e180027357d2407c988801c8c436b73403e3f4",
+      "thesis/figures/evidence/tokyo_15.pdf": "532c978f4cd5b4d22a587347cfdcb2570c74a9a53c288aac66d821f475532746",
+      "thesis/figures/evidence/tokyo_01.pdf": "29d763000f7d98c035ed522ddd1392ecc5123fd47b3766a90998ab4e4feb15c2",
+      "thesis/figures/evidence/tokyo_17.pdf": "25d3bde8599ce72e279aa7641f86b46998f4b2000a17128275a620fa295ac67b",
+      "thesis/figures/evidence/tokyo_03.pdf": "818c039126afc7d253eddfdc2f44186bfc0d86623c62694208cf8639fc3771af",
+      "thesis/figures/evidence/hp_14.pdf": "563d9298a07258356f152f05477213226e1cfd3f1e27cd911a1c0476160caa1b",
+      "thesis/figures/evidence/hp_00.pdf": "56ba10bbcb2b65c92e2d30fe6143ba8b10923d9a2073865a0a52bf76603bfd80",
+      "thesis/figures/evidence/hp_01.pdf": "2316d5f43b30991ca4995bad5d13ca8fe2273819cd3a5eb5e8a32e1a96cfa90b",
+      "thesis/figures/evidence/hp_15.pdf": "3597a225a32a0ae34399472f91c5c1c81244b3fabbb1fd82b3f13b2b599c08f1",
+      "thesis/figures/evidence/tokyo_02.pdf": "940da2c41eb27205fa855506a0cf67dcd00c0d238e70d1d60e49e70af7d86df3",
+      "thesis/figures/evidence/tokyo_16.pdf": "796968e9d488fe28c591f200a21fa956c4a9dc5c49b0d7de320932bb4bb9bd4e",
+      "thesis/figures/evidence/tokyo_12.pdf": "b197fce5e706cfea5297f2e9c824053c42cde5b1835495844df8c0673e4627c5",
+      "thesis/figures/evidence/tokyo_06.pdf": "345ab8697034fb413a493e62d4c6cd40c49187688309db9ce2f00959cfa31e10",
+      "thesis/figures/evidence/hp_11.pdf": "9fae142c7f2ed178ef9db0b88bdb17c6b83295584f717f91cd903c76dfe414f7",
+      "thesis/figures/evidence/hp_05.pdf": "2ad3dd4604360e6efabd2f9c9d3d629b9384db0f9414dff62028059b7314c4f9",
+      "thesis/figures/evidence/hp_04.pdf": "297ef3e701ed3c406ac3b6f480a34a304501d80c71166bb71a980d5db1245972",
+      "thesis/figures/evidence/hp_10.pdf": "8056b1380f902ff88bcde6b877d7947883a8a1b25d3b44d4d4d955a9f9212472",
+      "thesis/figures/evidence/tokyo_07.pdf": "6218bc4cbbae8ee3cdc744ce1a64b7456429ed860f06f95e58b02bebcb533dc7",
+      "thesis/figures/evidence/tokyo_13.pdf": "684189181b4cf13ddbef31773396a51fd59d8df7744d22b4ba49768c94e1f87c",
+      "thesis/figures/evidence/tokyo_05.pdf": "56de79993a9a5b59a81f5ca123efcda77f4125198e26baa31fbc0048a57bd61d",
+      "thesis/figures/evidence/tokyo_11.pdf": "caff2295f6ec2c1061d63eaa284601653f7ee9107caccfe68cda815d2fa196b4",
+      "thesis/figures/evidence/hp_06.pdf": "65f33420795a1fbf8a78700caed0ef0584867559bb7bea68478476e8baa6633d",
+      "thesis/figures/evidence/hp_12.pdf": "e55701e0e3a2280836630c63eae222617d1aac16cdfa5f228530bbc1165df5a4",
+      "thesis/figures/evidence/hp_13.pdf": "0dbb64eff83203367e8d5165664dcda5baa67ed642cc168f346f2b66d558679d",
+      "thesis/figures/evidence/hp_07.pdf": "5e5974756e118e7ab16d409e28521914b141104070bde0375488e1cdc7996689",
+      "thesis/figures/evidence/tokyo_10.pdf": "27a3daf41b260b6035d48a4fcc83de31b4281e97438d6501074fd09c2fcc5670",
+      "thesis/figures/evidence/tokyo_04.pdf": "7522d5653e4223a78d05b75760b9bbdf2bc945ecd20732399c3dff62b85f0916",
+      "thesis/figures/evidence/tokyo_21.pdf": "70755dd12890cd9cc92af944c9533f6e5ae9c6de8776a4d411428c20abea9751",
+      "thesis/figures/evidence/tokyo_09.pdf": "461a222cfdaa2fa187a40c58137c63dc3f07b6cbd4e1a10ea53ea4ebb884dccc",
+      "thesis/figures/evidence/hp_22.pdf": "c034c7d5436806f08705097d174c2d59254489d5cf353a3f176b19182625b160",
+      "thesis/figures/evidence/hp_23.pdf": "7c22689e317ea5e56f0f2bc8f89b2204cddfeb18913cf12f28910d6b4e620763",
+      "thesis/figures/evidence/tokyo_08.pdf": "4310d68b83ebcdb1895a6f4d4e23f49cb8f906ce6a372772b92bb37b3a1c10c4",
+      "thesis/figures/evidence/tokyo_20.pdf": "9981a067c11e4fb0b380c788d688ebad3efed37391344314d61ab4feada0744b",
+      "thesis/figures/evidence/tokyo_22.pdf": "1d325a8fbc037e6f4fdeba2f77383dc3b2a0ea8d79722566aacf4e8770940933",
+      "thesis/figures/evidence/hp_09.pdf": "a6ed42467258be5aae9d03c9b638f3a61e21173652ea71c2c3173eec807b41d3",
+      "thesis/figures/evidence/hp_21.pdf": "32a2c1b79709ef87550200269710f7082516478c7c542bc5cc5394e777b2994e",
+      "thesis/figures/evidence/hp_20.pdf": "6dfff79ab1b244f84bff6a1782343f720985ff37ffeaf775b37cd52c6af90158",
+      "thesis/figures/evidence/hp_08.pdf": "3cf6492ce126cedc4c0749e681cfbfc11820c8b6273b6f0a9b794cfac5612e55",
+      "thesis/figures/evidence/tokyo_23.pdf": "23132e91d3e962cd62e4055e799fd086adca034abb1764797d1bd1ecb9d4b7df",
+      "thesis/figures/evidence/hp_18.pdf": "a80d4f9c7e6f650a5649a5910d098022b0b75f3ea546954032071b66c40eabd3",
+      "thesis/figures/evidence/hp_19.pdf": "a5108114f89e86b168b31c760108346597cebbef44e9456aa45eb17d65bbf0e9",
+      "thesis/figures/evidence/tokyo_18.pdf": "9c21ecd7baa14e33b3e1b9ef960d9660541eaffd305c6ecb24d0be68986803c2",
+      "thesis/figures/evidence/tokyo_19.pdf": "403185d169649eeed1f97fedf49468047710154bbf77b2b8f223fdcd193f98fb"
+    },
+    "hpatches_sequences": 24,
+    "tokyo_sites": 24,
+    "figures_generated": 48,
+    "oracle_pair_rows": 612,
+    "experiment_inference_rerun": false
+  },
+  "pdf_pages": 254,
+  "minimum_pdf_pages": 200,
+  "pages_below_minimum": false,
+  "pdf_page_boundaries_checked": true,
+  "words_outside_page": 0,
+  "blank_pages": 0,
+  "pdf_sha256": "e44b66cc698f741c1cdeab6ffd027e3fb55f067e2fb3e63e6d92c47539ee764d",
+  "expanded_report_final_review": "passed"
+}

@@ -1,0 +1,32 @@
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{lrrrr}
+\caption{Stage ablations on identical queries. Exhaustive learned matching removes global retrieval; the no-geometry variant accepts the highest global result without an estimated transform.}\label{tab:ablations}\\
+\toprule
+Protocol & Variant & R@1 & Correct (\%) & Accept (\%) \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\tablename\ \thetable\ (continued)}\\
+\toprule
+Protocol & Variant & R@1 & Correct (\%) & Accept (\%) \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{Continued on next page}\\
+\endfoot
+\bottomrule\endlastfoot
+Tokyo D--D & B: SP+LG & 58.3 & 54.2 & 75.0 \\
+Tokyo D--D & Full ($k=1$) & 41.7 & 37.5 & 41.7 \\
+Tokyo D--D & D: Full ($k=3$) & 41.7 & 37.5 & 50.0 \\
+Tokyo D--D & Full ($k=5$) & 41.7 & 41.7 & 54.2 \\
+Tokyo D--D & No geometry & 41.7 & 41.7 & 100.0 \\
+Tokyo D--N & B: SP+LG & 100.0 & 100.0 & 100.0 \\
+Tokyo D--N & Full ($k=1$) & 100.0 & 100.0 & 100.0 \\
+Tokyo D--N & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 \\
+Tokyo D--N & Full ($k=5$) & 100.0 & 100.0 & 100.0 \\
+Tokyo D--N & No geometry & 100.0 & 100.0 & 100.0 \\
+Synth. severe & B: SP+LG & 100.0 & 100.0 & 100.0 \\
+Synth. severe & Full ($k=1$) & 100.0 & 100.0 & 100.0 \\
+Synth. severe & D: Full ($k=3$) & 100.0 & 100.0 & 100.0 \\
+Synth. severe & Full ($k=5$) & 100.0 & 100.0 & 100.0 \\
+Synth. severe & No geometry & 100.0 & 100.0 & 100.0 \\
+\end{longtable}\endgroup

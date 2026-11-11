@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "statistics.json": "61123eef5dfe0f848ecd648cf0e63aae8ed83ab7873537dec9fafbc35f743fa1",
+    "profiles.json": "963ff9b8651df4c14ea838e1ce7c00b6181b2e912f6bb52f0cea78ff445f75e1",
+    "export.json": "7e28972a6f6deb4561048367695c40f5bdff8ce7c915da043de7351f34dd8117",
+    "training.json": "f5c0854f84d4f5ca55196798ce574ab146c3b014889f93f7425d9d5e4a6037dd",
+    "predictions.json": "ab13c9d805eb4e1df02f8dbe18a5690486d5343bb56e383a3682944e56d5c128"
+  },
+  "experiment_outputs_modified": false,
+  "tables_generated": [
+    "NightTable",
+    "ViewTable",
+    "MatchingTable",
+    "RuntimeTable",
+    "QuantizationTable",
+    "AdaptationTable",
+    "OpenSetTable"
+  ]
+}

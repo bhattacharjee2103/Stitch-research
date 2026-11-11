@@ -1,0 +1,7 @@
+/Library/Developer/CommandLineTools/usr/bin/make -C thesis clean
+latexmk -C -outdir=build main.tex
+Rc files read (in order):
+  ./.latexmkrc
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Doing full clean up for 'main.tex'
+

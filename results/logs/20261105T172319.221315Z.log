@@ -1,0 +1,15 @@
+{
+  "pdf_pages": 130,
+  "substantive_chapter_pages": 74,
+  "intro_pdf_page": 20,
+  "bibliography_pdf_page": 94,
+  "latex_errors": 0,
+  "undefined_references": 0,
+  "undefined_citations": 0,
+  "cited_entries": 30,
+  "bibliography_entries": 30,
+  "result_groups_checked": 84,
+  "demo_decoding": "passed",
+  "overfull_box_warnings": 0,
+  "pdf_sha256": "aad545aa0442e16be77a2874b8b8a3c8d68ffd7b188aa007835fb641e8359c29"
+}

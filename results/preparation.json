@@ -1,0 +1,428 @@
+{
+  "pairs": 306,
+  "protocols": {
+    "hpatches_illumination": {
+      "gallery": 24,
+      "queries": 60
+    },
+    "hpatches_viewpoint": {
+      "gallery": 24,
+      "queries": 60
+    },
+    "tokyo_day_to_day": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "tokyo_day_to_night": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "tokyo_night_to_day": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "tokyo_day_to_sunset": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "synthetic_day": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_night": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_night_severe": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_warm_night": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_fog": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "open_set": {
+      "gallery": 24,
+      "queries": 12
+    }
+  },
+  "synthetic_conditions": [
+    "day",
+    "night",
+    "night_severe",
+    "warm_night",
+    "fog"
+  ],
+  "seeds": [
+    17,
+    23,
+    42
+  ],
+  "generated_files": [
+    {
+      "path": "data/synthetic/repo_reference_day_17.png",
+      "sha256": "0c735ebcd20ca026b8c6dbc0b4a1e1c1af186a17b12595d4322007fa997d6dea"
+    },
+    {
+      "path": "data/synthetic/repo_reference_night_17.png",
+      "sha256": "cece5a62e6d4f9305640862bd57ad5c5a12f3085f444c6d9258eeb0eb67b155f"
+    },
+    {
+      "path": "data/synthetic/repo_reference_night_severe_17.png",
+      "sha256": "51ae4ab964d4d00a13aabac9779aaf5882fe883a69ef121529bd5c0073afe013"
+    },
+    {
+      "path": "data/synthetic/repo_reference_warm_night_17.png",
+      "sha256": "98d6bcbbb7e79ea01b147aebffd0045036ef258b24d7894d0d00a8df2d4de0a0"
+    },
+    {
+      "path": "data/synthetic/repo_reference_fog_17.png",
+      "sha256": "d93b947b9bb63facd817f71fbfe4f63e97279e79a5ae5265df5494a2c8fd38b6"
+    },
+    {
+      "path": "data/synthetic/repo_reference_day_23.png",
+      "sha256": "675c92e13b3bc8cb1356ab64c7e1ae32336d47a77b01687513bd5b784dca076a"
+    },
+    {
+      "path": "data/synthetic/repo_reference_night_23.png",
+      "sha256": "b93e969dce5a10c70691d72eee38a1ecfa9609484a126e24c5ce3b9b5b2992a8"
+    },
+    {
+      "path": "data/synthetic/repo_reference_night_severe_23.png",
+      "sha256": "35387a2e294e4903fb909f59a269e840beeed60c2e8489060625f3bbe4c956f6"
+    },
+    {
+      "path": "data/synthetic/repo_reference_warm_night_23.png",
+      "sha256": "2a61b28127b0ffec7581d3929cd87b8942db56ec7ba3f862668ea1d9aaa33a47"
+    },
+    {
+      "path": "data/synthetic/repo_reference_fog_23.png",
+      "sha256": "50f91a9b7086a1a44767bbb1b53648edaaa7cc41a220a4f216845545ddd8c4ce"
+    },
+    {
+      "path": "data/synthetic/repo_reference_day_42.png",
+      "sha256": "328e9988b8f57e3d47fe6f76cf7266556a9e14a9d7bbd6bfea5b87b5eea13794"
+    },
+    {
+      "path": "data/synthetic/repo_reference_night_42.png",
+      "sha256": "b17b42848455e4408d8b7002dd80dee274de204a2312c23f642fd820eb935e90"
+    },
+    {
+      "path": "data/synthetic/repo_reference_night_severe_42.png",
+      "sha256": "4d10680a1ee573853fec1f55cbc6888b530eedf0651523aa407cabe994a42536"
+    },
+    {
+      "path": "data/synthetic/repo_reference_warm_night_42.png",
+      "sha256": "f200bb6b243fd42021f1c65bbaf21921b33fd4db9ef51e755aacb6a6901d5770"
+    },
+    {
+      "path": "data/synthetic/repo_reference_fog_42.png",
+      "sha256": "83d94add4942f48225bbd7f2e7bd2c3ff4c598b753251dc351ed5e1d4cc68a1c"
+    },
+    {
+      "path": "data/synthetic/repo_test_day_17.png",
+      "sha256": "ffc7d625ce271169da7ec389f37ebfcc9f20a925dfb205f4f9320b5ba8fb6d75"
+    },
+    {
+      "path": "data/synthetic/repo_test_night_17.png",
+      "sha256": "168cbc764e81f7136fdbeafedaf38a3e1c598c57de41bde6f862030fe60b86e6"
+    },
+    {
+      "path": "data/synthetic/repo_test_night_severe_17.png",
+      "sha256": "6d005144fe9c0ed3aa96339e29f95ca230b5b2e2e4ee12ba754468c4b3a7913e"
+    },
+    {
+      "path": "data/synthetic/repo_test_warm_night_17.png",
+      "sha256": "517d8c86327cf531fede60312886ca5abf8718351b60eae49703780a0ad9c9a1"
+    },
+    {
+      "path": "data/synthetic/repo_test_fog_17.png",
+      "sha256": "22097aec03d56c8914ae51d624f687767ad1f8b155c69055ec2c8eeb984fbabd"
+    },
+    {
+      "path": "data/synthetic/repo_test_day_23.png",
+      "sha256": "d04bd9c312db836a719548831ac634f7a512c353446207361f2140d39b97ee76"
+    },
+    {
+      "path": "data/synthetic/repo_test_night_23.png",
+      "sha256": "e062d41c47b73a383321616592b04069d2e716c4dc478430b009e794961320a9"
+    },
+    {
+      "path": "data/synthetic/repo_test_night_severe_23.png",
+      "sha256": "07407dc3cab7df27344053d7b4387d14ef6d21e54778949be68b2dbcd304d03d"
+    },
+    {
+      "path": "data/synthetic/repo_test_warm_night_23.png",
+      "sha256": "8952666dd2076a32c0c8ecf062ccaf38a374b4a7a30f0acf305b01092d03134c"
+    },
+    {
+      "path": "data/synthetic/repo_test_fog_23.png",
+      "sha256": "297f6f7acc5f34f00942de6b10e95eb60c16e0edce67f7cb8f4e91cdfb594a4c"
+    },
+    {
+      "path": "data/synthetic/repo_test_day_42.png",
+      "sha256": "29dab4fffc02faf09491a256207ce7e2357704afc9a2dd600473e7dda77d2073"
+    },
+    {
+      "path": "data/synthetic/repo_test_night_42.png",
+      "sha256": "9cf30dd197bc8891aa9b1a7f613f0e7ca977cd2f8a4acb9a0e9b2188698452d9"
+    },
+    {
+      "path": "data/synthetic/repo_test_night_severe_42.png",
+      "sha256": "e963d863db2c4ab682865d9ab857cb69603795665f0f1ba4d984e423ec05ac87"
+    },
+    {
+      "path": "data/synthetic/repo_test_warm_night_42.png",
+      "sha256": "e04c1ebe0515d4b6f1177f6100a715207d1496d3d4f8f5f4baeb605f8f6b7be6"
+    },
+    {
+      "path": "data/synthetic/repo_test_fog_42.png",
+      "sha256": "c3ad430325daf423249409168dc17bfb55b3540d80c562afb6933e78d8c71c94"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_day_17.png",
+      "sha256": "14da7f4587a3084360dba9d3bc21ad143b3021b974b84e2afb5fd841e1555ed7"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_night_17.png",
+      "sha256": "c840a529dc7523fbe27dfdde0438c86c5f665f5668e4852f12050a3c971ea368"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_night_severe_17.png",
+      "sha256": "1a67a0cdb6c8a6f7878bbc743bda8637aff7d966a35cf58d11515cc246d5f01c"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_warm_night_17.png",
+      "sha256": "f0a5aab2b5e840ee713b29a2402ef5f77195de59d5726ddc743020bf031f2b4a"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_fog_17.png",
+      "sha256": "a961377a2ae47e85c0ff3c11223688dc732f61368a964fa76d9e43fa97b22ac9"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_day_23.png",
+      "sha256": "8fd9b6bdc8bf201e15a9bb5c327b0a6bb64f842f7df2bf4d2a0ab2c833384397"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_night_23.png",
+      "sha256": "a9f769cfecc6c34b99f49bff4c4c38c40a4ce81afada566ceed2fdb53cb91d6a"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_night_severe_23.png",
+      "sha256": "cdc5937f3f5dd73010d67c0547a5ce85dddb5c49168381ea31a1a7919f9c3b7a"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_warm_night_23.png",
+      "sha256": "2b86cf36c3c40973a5baabe7e866242d10f67ddf96c853b1b8c06d87d390ca8f"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_fog_23.png",
+      "sha256": "f7ad15b1fbb7cde1d1e47fc9043e8f728d1db069be479f3fefbac381c5786341"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_day_42.png",
+      "sha256": "2f77a38c57ed6c198f1dae86fe47dc6d084e60d3b1b08f78df63fc15325a45fc"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_night_42.png",
+      "sha256": "a020e94cebc68d662c6263ce8d31d06c11bf83636ce0e4594f85ca4cf9f02eb3"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_night_severe_42.png",
+      "sha256": "b062a57b4d54aa269a1a32d0468a97bd27716668d4406fcc321b4b2457ec196b"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_warm_night_42.png",
+      "sha256": "a58259e221d2ac14637df7940824fe8605ed162eb0251735bfccd1102fa388c6"
+    },
+    {
+      "path": "data/synthetic/i_ajuntament_fog_42.png",
+      "sha256": "a33d765d9faa0cf2aea23fd3bf86736a062d98651f69715f540cbd2c4ddbad52"
+    },
+    {
+      "path": "data/synthetic/i_autannes_day_17.png",
+      "sha256": "30f62b38577bb052db6da78f0f3af58d7550f4a5bfa8665e24e1291f655a9fa5"
+    },
+    {
+      "path": "data/synthetic/i_autannes_night_17.png",
+      "sha256": "99a386e66624822cc3fb3045cce60661dd8467243a6de4d213f1136d4faeab1c"
+    },
+    {
+      "path": "data/synthetic/i_autannes_night_severe_17.png",
+      "sha256": "698dc3b78406ab8b261569aef5f478477556f7cf31e4a3410b534dfb98bf5714"
+    },
+    {
+      "path": "data/synthetic/i_autannes_warm_night_17.png",
+      "sha256": "bb13c6ae7a4d516b529dad3803a62a80fe45341e3e68d732aba7d5a5b1fe0097"
+    },
+    {
+      "path": "data/synthetic/i_autannes_fog_17.png",
+      "sha256": "3f7ed6b7aeda97de6998ce93abb677735b7bf8f31ae69a92cc2caaef1ceb8a22"
+    },
+    {
+      "path": "data/synthetic/i_autannes_day_23.png",
+      "sha256": "738111efb826afbc5ef177c756b1718144e3e48d528fdbbbdc85306f3c5c25b5"
+    },
+    {
+      "path": "data/synthetic/i_autannes_night_23.png",
+      "sha256": "fc20aabca4b7b5734c9087382d03088b1c7d806d7ce881f2683972b21c914734"
+    },
+    {
+      "path": "data/synthetic/i_autannes_night_severe_23.png",
+      "sha256": "6133f8d8c5656a59b3dca9f71932d6ecabe5926e854579f14e7bbe4446e2b7de"
+    },
+    {
+      "path": "data/synthetic/i_autannes_warm_night_23.png",
+      "sha256": "d3c1c353c7cefa89b7b746c8fb569b726b76e77ed532d3a444395bb15677a0a4"
+    },
+    {
+      "path": "data/synthetic/i_autannes_fog_23.png",
+      "sha256": "1e2a47994a0c33f4102672e2677414115b507009e802218a6a780d5da2d526d2"
+    },
+    {
+      "path": "data/synthetic/i_autannes_day_42.png",
+      "sha256": "8a01908d0650996b548bf026e6528bab8bbc14c82c14e24d715297d7d6531f2a"
+    },
+    {
+      "path": "data/synthetic/i_autannes_night_42.png",
+      "sha256": "de539e8a35d1b002aabaa7fb3d29a12ef2a4d4c37e794ddbcde38555a4f75bf1"
+    },
+    {
+      "path": "data/synthetic/i_autannes_night_severe_42.png",
+      "sha256": "bcceb6983129e68f1ea797052ce7f0c91ca1cbf1a9f6886307f06972a6330b3c"
+    },
+    {
+      "path": "data/synthetic/i_autannes_warm_night_42.png",
+      "sha256": "248d97f22f4a68547294fffd3790cc03e79045d9be37176216b3d182619b0440"
+    },
+    {
+      "path": "data/synthetic/i_autannes_fog_42.png",
+      "sha256": "214ec01db27d170fee824878b795bdf2d9e620f9be818a1eca695b9531aebb4c"
+    },
+    {
+      "path": "data/synthetic/v_abstract_day_17.png",
+      "sha256": "e4face42c286e706e0d958278895ba087b241aeefee6c3a45e9216ac5a89e906"
+    },
+    {
+      "path": "data/synthetic/v_abstract_night_17.png",
+      "sha256": "a14f1d2255f3e8468eb80ee428b23d0882ba0577d5bad8e2cc558dd672acb494"
+    },
+    {
+      "path": "data/synthetic/v_abstract_night_severe_17.png",
+      "sha256": "b7c313d609ca4c9a4ff86052dbe3e2dfa34b442e22efe521b9fd78a83bbb422b"
+    },
+    {
+      "path": "data/synthetic/v_abstract_warm_night_17.png",
+      "sha256": "716cd3d5913ecb1d8ac2ab949f944d65ecc25d00dfb9276def6180b501f28722"
+    },
+    {
+      "path": "data/synthetic/v_abstract_fog_17.png",
+      "sha256": "4926e79c611466d2f8328375e3002356aa78541efd4bde80c66071f5b05cbc72"
+    },
+    {
+      "path": "data/synthetic/v_abstract_day_23.png",
+      "sha256": "44de92909064e756753bcc9e5a46f12c7789e64d3f411d91522542d874f07b4a"
+    },
+    {
+      "path": "data/synthetic/v_abstract_night_23.png",
+      "sha256": "0b723112afa2f78dc496092533c03fe3910cbfd704aed827a3013b221e5613da"
+    },
+    {
+      "path": "data/synthetic/v_abstract_night_severe_23.png",
+      "sha256": "a13b9b746360b66253128f544efd7a0c81a60b2ef46d15590963eacb7f22c003"
+    },
+    {
+      "path": "data/synthetic/v_abstract_warm_night_23.png",
+      "sha256": "e88e5cf34552b643069648198c9b65e1d46acfe00e1374b62712f4d39c53b862"
+    },
+    {
+      "path": "data/synthetic/v_abstract_fog_23.png",
+      "sha256": "27b1608b406a126924b6e89cae9c9206f6b31ff14ea7dd497f074b3b19c19ae6"
+    },
+    {
+      "path": "data/synthetic/v_abstract_day_42.png",
+      "sha256": "b76818826113ff445bae09d7fee7ced8f4e84b0c0065b54879efe4f30db017c9"
+    },
+    {
+      "path": "data/synthetic/v_abstract_night_42.png",
+      "sha256": "c52042186f22aac8cd550adda68f112557735489db4465e0290529baff53a011"
+    },
+    {
+      "path": "data/synthetic/v_abstract_night_severe_42.png",
+      "sha256": "c42b3b4b79e88f8240bf3763056a3e7c4748e5dee0a9ebfd8f3b25ac37a6bac8"
+    },
+    {
+      "path": "data/synthetic/v_abstract_warm_night_42.png",
+      "sha256": "43057d7983518d510e9111e785b53362178de7c008598a7271138993684b485d"
+    },
+    {
+      "path": "data/synthetic/v_abstract_fog_42.png",
+      "sha256": "5ef79755191ffc68d17a0f56d1a3810d0da80a85e5e606125da7c12b5ef06668"
+    },
+    {
+      "path": "data/synthetic/v_adam_day_17.png",
+      "sha256": "07e3cf1882d24cf75357b82a4dc1b8d4c5c95da4c8bae15f9c592c38ad787e7d"
+    },
+    {
+      "path": "data/synthetic/v_adam_night_17.png",
+      "sha256": "49e07244793d892fc06267214e8adff99b02448f9e7dfe2c1d8c29e785507dcd"
+    },
+    {
+      "path": "data/synthetic/v_adam_night_severe_17.png",
+      "sha256": "412a1e2a03909f1982977ce7caaec91095029d524f4763366ab2bee9dce0907e"
+    },
+    {
+      "path": "data/synthetic/v_adam_warm_night_17.png",
+      "sha256": "fff811e4c742dbbec240fba6451b352e194a8e1ff1bf03b93f35171158aba0ed"
+    },
+    {
+      "path": "data/synthetic/v_adam_fog_17.png",
+      "sha256": "e856b6cc59335d66cacf051ef6040f27e63a67d858a9b68484fd76f5a92cb86e"
+    },
+    {
+      "path": "data/synthetic/v_adam_day_23.png",
+      "sha256": "38fd8eef4566430a034de04604f8c320297d8cbec1d6bbb7724104245e869853"
+    },
+    {
+      "path": "data/synthetic/v_adam_night_23.png",
+      "sha256": "3e0b0aeab8397b5b273222e274100cd84152aef3e718fb5a31dd770065bc9efb"
+    },
+    {
+      "path": "data/synthetic/v_adam_night_severe_23.png",
+      "sha256": "a17af5854ef72e042b1f02ca21bdfa7344b3037c1231ecc5a8344fefda88c519"
+    },
+    {
+      "path": "data/synthetic/v_adam_warm_night_23.png",
+      "sha256": "81c8aec474713e96a2625220f256d2cf2579349479e00309847eefb61a3c71d6"
+    },
+    {
+      "path": "data/synthetic/v_adam_fog_23.png",
+      "sha256": "e5160470c8a1391478b013549bc257c06c0bac024246cf39255f51831fee7957"
+    },
+    {
+      "path": "data/synthetic/v_adam_day_42.png",
+      "sha256": "fa553a8bef35da593ca2c476667a8d454206d2c848b2aef41b95291f28b0f190"
+    },
+    {
+      "path": "data/synthetic/v_adam_night_42.png",
+      "sha256": "eeedc720c725ae137387078b12b8285045f72b0628e742fc733b1174cbc92586"
+    },
+    {
+      "path": "data/synthetic/v_adam_night_severe_42.png",
+      "sha256": "8e8d6c96bddca89a76b3349e989189cd40812ef35e3128d2682642a3a0a82ecd"
+    },
+    {
+      "path": "data/synthetic/v_adam_warm_night_42.png",
+      "sha256": "9c61f7fd39803a9594ee650ba43ffe4315d2dc1d9173846a379918a480c09de4"
+    },
+    {
+      "path": "data/synthetic/v_adam_fog_42.png",
+      "sha256": "8874437bf198ce46d54197379950844fceb69208272dacaf795c6874afbed0b3"
+    }
+  ],
+  "benchmark_sha256": "67eeffb4ea5181e41ee96ac5997eaa050b573057239d9f54996bf5fbfb880d82"
+}

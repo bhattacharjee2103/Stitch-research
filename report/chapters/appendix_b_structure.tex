@@ -1,0 +1,67 @@
+\chapter{Directory Structure and Data Identities}\label{app:structure}
+\section{Delivered project structure}
+\begin{lstlisting}[numbers=none]
+Stitch-research/
+  src/stitch/
+    app.py            augmentation.py cli.py
+    database.py       depth.py        features.py
+    geometry.py       io.py           pipeline.py
+    pose3d.py         rendering.py    retrieval.py
+  scripts/
+    setup.sh             run_logged.py
+    run_originals.py     download_data.py
+    remote_zip.py        download_models.py
+    prepare_data.py      evaluate.py
+    train.py             export_models.py
+    demo.py              benchmark_runtime.py
+    qualitative.py       generate_artifacts.py
+    probe_data.py        verify_thesis.py
+    generate_extended_evidence.py
+    verify_research.py   verify_model_artifacts.py
+    prepare_iitr_assets.py
+    generate_presentation_data.py
+    export_presentation.py
+    package_iitr_documents.py
+    verify_iitr_documents.py
+    check_document_packages.py
+    restyle_iitr_report.py
+    snapshot_environment.py
+  configs/default.yaml
+  tests/
+  data/                  # ignored downloaded/generated inputs
+  models/                # ignored weights, heads and ONNX graphs
+  vendor/                # official source checkouts
+  results/
+    commands.jsonl       environment.json
+    data_manifest.json   preparation.json
+    pairs.json           predictions.json
+    candidate_pairs.json retrieval.csv
+    training.json        export.json
+    profiles.json        statistics.json
+    logs/                sources/       raw/
+  figures/               # plots derived from results
+  report/
+    main.tex             preamble.tex
+    frontmatter.tex      metadata.tex
+    references.bib       chapters/
+    figures/             tables/
+    Makefile             .latexmkrc
+    build/               thesis.pdf
+  demo/comparison.mp4     demo/comparison.gif
+  branding/project_metadata.tex
+  branding/reference_layout.json
+  presentation/           # original IITR theme, slides and assets
+  deliverables/           # PDFs, PowerPoint and standalone LaTeX ZIPs
+  README.md              requirements.txt
+  requirements-lock.txt  pyproject.toml  Makefile
+  tep.py  tep2.py  tep3.py # unchanged upstream scripts
+\end{lstlisting}
+
+\section{Selected HPatches sequence identities}
+The following names are generated from the actual downloaded-subset manifest. Selection preceded inference and retained every target pair from each sequence.
+\begin{small}\input{tables/sequence_names.tex}\end{small}
+
+\section{Provenance chain}
+Image bytes are identified in the data manifest. Generated query bytes and their seeds are identified in preparation records. Model bytes and official implementation revisions are identified in the model manifest. The evaluation configuration pins the benchmark manifest hash. Raw pair and prediction rows support generated statistics, and \code{artifact_provenance.json} records the result-file hashes consumed by figure/table generation.
+
+This chain separates input provenance from output interpretation. A filename or hash does not prove that a public label is correct, but it makes the precise source of a reported outcome inspectable. A future extension should preserve that distinction when adding metric maps or a service-side database.

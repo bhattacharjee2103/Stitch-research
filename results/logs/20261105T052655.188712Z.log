@@ -1,0 +1,27 @@
+{
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.9.6",
+  "cpu": "arm",
+  "physical_memory_bytes": 8589934592,
+  "torch_mps_available": false,
+  "torch_cuda_available": false,
+  "packages": {
+    "numpy": "2.0.2",
+    "opencv-contrib-python": "4.11.0.86",
+    "torch": "2.7.1",
+    "torchvision": "0.22.1",
+    "kornia": "0.8.1",
+    "scipy": "1.13.1",
+    "matplotlib": "3.9.4",
+    "Pillow": "11.3.0",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.19.2"
+  },
+  "video": {
+    "width": 848.0,
+    "height": 480.0,
+    "fps": 29.796284872490478,
+    "frames": 139.0
+  }
+}

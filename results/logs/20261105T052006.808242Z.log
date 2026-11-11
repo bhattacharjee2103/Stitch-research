@@ -1,0 +1,46 @@
+HTTP/2 302 
+content-type: text/plain; charset=utf-8
+content-length: 1200
+location: https://us.aws.cdn.hf.co/xet-bridge-us/67e3e06b388d76021c8bfec0/9df11ca526095d0577e2b6ea0aabd16a981b831880766935812204cc8fe5e051?response-content-type=application%2Fzip&xip=v6qZ1ggA32I&user_id=public&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27hpatches-sequences-release.zip%3B+filename%3D%22hpatches-sequences-release.zip%22%3B&Expires=1793859607&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjdlM2UwNmIzODhkNzYwMjFjOGJmZWMwLzlkZjExY2E1MjYwOTVkMDU3N2UyYjZlYTBhYWJkMTZhOTgxYjgzMTg4MDc2NjkzNTgxMjIwNGNjOGZlNWUwNTFcXD9yZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZ6aXAmeGlwPXY2cVoxZ2dBMzJJJnVzZXJfaWQ9cHVibGljJlgtWGV0LUNhcy1VaWQ9cHVibGljJnJlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249aW5saW5lJTNCK2ZpbGVuYW1lJTJBJTNEVVRGLTglMjclMjdocGF0Y2hlcy1zZXF1ZW5jZXMtcmVsZWFzZS56aXAlM0IrZmlsZW5hbWUlM0QlMjJocGF0Y2hlcy1zZXF1ZW5jZXMtcmVsZWFzZS56aXAlMjIlM0IiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkVwb2NoVGltZSI6MTc5Mzg1OTYwN319fV19&Signature=MEQCIA1pyw1%7ENanDlqKVK84iG%7EK44W117lLkxJ6myzbSwim7AiAshaLiC2uqpzEhQ784Yc0KqZDWuf8%7E0%7E3NzHNe4GRBTg__&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256
+date: Thu, 05 Nov 2026 05:20:07 GMT
+x-powered-by: huggingface-moon
+x-request-id: Root=1-6aec1207-7a7b0364286f8e6f4e556fa8
+ratelimit: "resolvers";r=2998;t=35
+ratelimit-policy: "fixed window";"resolvers";q=3000;w=300
+cross-origin-opener-policy: same-origin
+referrer-policy: strict-origin-when-cross-origin
+access-control-max-age: 86400
+access-control-allow-origin: https://huggingface.co
+vary: Origin, Accept
+access-control-expose-headers: X-Repo-Commit,X-HF-Warning,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash,RateLimit,RateLimit-Policy
+x-repo-commit: 594f211e80b75081ad84a396c93960c8653235f8
+accept-ranges: bytes
+x-hf-warning: unauthenticated; Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+x-hub-cache: MISS
+x-linked-size: 1279545572
+x-linked-etag: "99cf7e1ca167896eb4ca2fe3d903beff6566243a3c0c8e07a13a2596648ad670"
+cache-control: no-store
+x-xet-hash: 9df11ca526095d0577e2b6ea0aabd16a981b831880766935812204cc8fe5e051
+link: <https://huggingface.co/api/datasets/vbalnt/hpatches/xet-read-token/594f211e80b75081ad84a396c93960c8653235f8>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/9df11ca526095d0577e2b6ea0aabd16a981b831880766935812204cc8fe5e051>; rel="xet-reconstruction-info"
+x-cache: Miss from cloudfront
+via: 1.1 a36fed0f3b9234ec40dd5ab946c6136e.cloudfront.net (CloudFront)
+x-amz-cf-pop: DEL51-P7
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: KvVT192ScXnJ_VMwWdnA8wX44hWG33joklxiRwmqbM7PaQV1kXJRvg==
+strict-transport-security: max-age=31536000
+
+HTTP/2 200 
+content-type: application/zip
+accept-ranges: bytes
+content-disposition: inline; filename*=UTF-8''hpatches-sequences-release.zip; filename="hpatches-sequences-release.zip";
+etag: "9df11ca526095d0577e2b6ea0aabd16a981b831880766935812204cc8fe5e051"
+content-security-policy: default-src 'none'; media-src 'self'; sandbox allow-same-origin
+access-control-allow-headers: Content-Range, Content-Type, Content-Disposition, ETag
+access-control-expose-headers: *
+content-length: 1279545572
+vary: origin, access-control-request-method, access-control-request-headers
+access-control-allow-origin: *
+x-request-id: 01M6N2CVVJYF2SV7YZWQ3VW962
+x-hf-cdn-pop: aws-ap-southeast-1
+date: Thu, 05 Nov 2026 05:20:08 GMT
+

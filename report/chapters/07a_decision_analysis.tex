@@ -1,0 +1,61 @@
+\chapter{Decision Analysis and Statistical Interpretation}\label{ch:decision-analysis}
+\section{The unit of success}
+An evaluation of Stitch can count descriptors, tentative matches, image pairs, queries, sites or user sessions. Those units answer different questions. A system may improve the number of inliers without improving the number of users who see a correctly attached post. The present evaluation makes the query the decision unit and retains site or sequence identities for interpreting dependence. Pixel correspondences provide evidence within a decision; they are not independent repetitions of the application task.
+
+This distinction also limits claims about large sample counts. The 90 synthetic queries originate from six source images. Increasing the number of seeded transformations makes the stress test more repeatable and exposes variability within those sources, but it does not add 90 independently sampled physical places. Likewise, the five HPatches targets for a sequence remain related observations of the same source. The scene atlases preserve these groupings rather than presenting every row as independent geographic coverage.
+
+\section{A decision tree for one query}
+The first branch asks whether the correct place is represented in the gallery. The known-place protocols answer yes by construction, while the open-set diagnostic answers no. A retrieval ranking is meaningful in the first case. In the second, an anchoring system must decide whether to reject despite having a nearest neighbour. Every finite gallery can produce a top-ranked image; the existence of that rank does not establish a valid match.
+
+For a known query, the next branch asks whether candidate generation retains a useful reference. The full method considers only its shortlist for local verification. A correct reference outside the shortlist cannot be rescued by improving RANSAC on the candidates already selected. An exhaustive learned-local method removes that search restriction but incurs more pair comparisons. The two methods therefore expose a cost--coverage trade-off rather than an unconditional ordering in quality.
+
+The final branches distinguish rejection, wrong-place acceptance and correct-place acceptance. On collections with independent homography ground truth, correct-place acceptance is subdivided into accurate and inaccurate planar alignment. These leaves explain why retrieval recall, correctly verified-place rate and end-to-end H5 appear separately. Combining them into one unnamed accuracy number would hide the stage at which an apparent improvement occurs.
+
+\section{Coverage, precision and conditional denominators}
+Let $N$ be the number of queries, $A$ the number of accepted decisions, $C$ the number of correctly accepted identities and $W=A-C$ the wrong accepted identities. Acceptance coverage is $A/N$, correctly verified-place rate is $C/N$, and accepted-identity precision is $C/A$ when $A>0$. The identity
+\begin{equation}
+ \frac{C}{N}=\frac{A}{N}\frac{C}{A}
+\end{equation}
+shows why a highly selective system can achieve strong conditional precision while returning few useful anchors. The report's primary verified rate uses the full query denominator. A future application study should additionally report coverage and precision together, including an explicit convention for the no-acceptance case.
+
+On homography datasets, define $G$ as correctly accepted queries whose corner error is within the declared tolerance. Then $G/N$ measures the full recognition-to-alignment chain. Reporting $G/C$ alone would answer how often an already correct accepted identity has accurate geometry. That conditional measure can be informative, but omitting $C/N$ would conceal search and rejection failures. The atlas includes both stages so the reader can inspect this separation at sequence level.
+
+\section{Paired comparisons and discordant cases}
+Two methods evaluated on the same query should be compared as paired outcomes. Partition the queries into both correct, neither correct, method A only correct and method B only correct. If the two discordant counts are $n_{10}$ and $n_{01}$, the difference in full-denominator success rates is
+\begin{equation}
+ \Delta=\frac{n_{01}-n_{10}}{N}.
+\end{equation}
+The two methods can have equal aggregate scores while succeeding on different images. That pattern matters operationally: combining reference coverage or improving a particular failure mode may be more useful than choosing one method globally.
+
+Each HPatches atlas entry reports learned-only and SIFT-only oracle successes for its five targets. These counts describe the observed paired evidence. They are not presented as independent significance tests for every sequence. Testing many small subsets after inspecting their results would invite selection effects, especially when the same images appear in several method comparisons and ablations.
+
+The Tokyo site atlas uses an analogous paired view across conditions. A site's changed-direction daytime query and front-facing night query share a physical identity but differ in overlap and acquisition conditions. Their comparison is valuable for diagnosing reference coverage. It does not isolate an illumination treatment because view direction is not held fixed between those two protocols.
+
+\section{Confidence intervals and saturated scores}
+A score of 100 percent on 24 selected sites is a statement about those 24 decisions. It is not a proof that the system succeeds on all future night queries. The Wilson intervals in the results chapter retain finite uncertainty at the boundary. Their assumptions remain limited by the subset's metadata-based selection and geographic coverage. A wider nominal interval cannot repair a gallery that excludes difficult scene types before evaluation.
+
+For repeated targets within HPatches sequences, a sequence-level bootstrap respects more of the grouping than resampling individual targets independently. In each bootstrap replicate, whole sequence identities are sampled and all their associated outcomes contribute. This preserves within-sequence dependence in the resampling design. It still cannot create new locations, camera models or weather conditions that were absent from the selected data.
+
+The three-seed projection experiment measures a different source of variability. Its seed standard deviation concerns the short optimisation procedure on a fixed train/test partition. It does not measure uncertainty over all possible partitions, all training collections or all urban environments. The corresponding small-sample interval is therefore interpreted as a description of this bounded adaptation exercise, with no broad claim of statistical superiority.
+
+\section{Selection bias and the reference gallery}
+The gallery is part of the task definition. A small gallery of distinct scenes can make global retrieval easier than a large gallery containing adjacent views and repeated structures. Adding distractors changes the ranking problem even when the query photographs remain identical. Consequently, the custom Tokyo scores cannot be transferred to the official street-view task by changing the dataset name in a caption.
+
+The subset requires complete front/day, left/day, front/night and front/sunset observations. That rule supports controlled paired comparisons, but it selects the sites for which all required metadata combinations are available. It may exclude sites whose observations are incomplete or otherwise difficult to group. The chosen lexicographic ordering further fixes a reproducible subset without making it a random sample of the entire city.
+
+HPatches contributes independent image-to-image homographies, which strengthens the geometric evaluation. Its cropped or scene-specific image pairs nevertheless differ from arbitrary visitor camera motion and world-map persistence. A successful H5 result supports the stated planar relation; it does not establish performance for nonplanar scenes or for an AR session that continues after the recognised surface leaves the frame.
+
+\section{Threshold tuning and locked evaluation}
+The current support and geometry thresholds are shared across the compared local methods. A future deployment may reasonably tune a decision policy, but that tuning should use a separate validation population. Selecting thresholds on the final test rows and then reporting the resulting rates as an untouched evaluation would make the apparent improvement partly a consequence of selection.
+
+A useful future protocol would reserve sites for threshold calibration, keep test sites unseen, and evaluate the entire policy at a declared operating point. Rejection costs and wrong-anchor costs should be chosen from product requirements before examining the final test outcome. The current report does not claim to have completed such a policy-calibration study. Its fixed-threshold comparison is an exploratory research baseline.
+
+\section{Latency as a distribution of defined work}
+The isolated profiler records actual warm query and rendering calls. Its median and upper quantile summarise a small set of predecoded queries repeated under a fixed host configuration. Those statistics should not be interpreted as a city-scale service latency distribution. The six chosen queries and their repetitions provide evidence about this local workload; they do not include network contention, camera startup, phone thermals or concurrent users.
+
+The evaluation stage sum has an even narrower definition. It reuses measured extraction and cached pair costs to account for selected work. It is useful for comparing candidate counts, but it excludes parts of the complete application call. Mixing that sum with an end-to-end runtime from another path would produce an unfair comparison. Tables retain the distinction and state whether references, decoding and rendering are included.
+
+\section{A claim-to-evidence reading rule}
+Every empirical claim should be connected to its denominator, input population, output artifact and metric definition. For example, a statement about day-to-night verified places refers to the custom Tokyo protocol, 24 selected sites, accepted identity decisions and the saved prediction rows. A statement about model size refers to produced file lengths. A statement about future native tracking is a design proposal and has no measured result in this artifact.
+
+This reading rule is especially important in an expanded report. More pages provide room for derivations, failure inspection and reproducibility records, but they do not increase the experimental population. The additional scene-level chapters reorganise existing evidence so that readers can inspect all selected cases. They do not multiply the sample size or convert a narrow observation into a general benchmark claim.

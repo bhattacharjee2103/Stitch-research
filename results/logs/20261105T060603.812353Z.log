@@ -1,0 +1,72 @@
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/download_data.py
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Already downloaded and SHA256-verified: hpatches
+Already downloaded and SHA256-verified: tokyo
+.venv/bin/python scripts/run_logged.py .venv/bin/python scripts/prepare_data.py
+{
+  "pairs": 306,
+  "protocols": {
+    "hpatches_illumination": {
+      "gallery": 24,
+      "queries": 60
+    },
+    "hpatches_viewpoint": {
+      "gallery": 24,
+      "queries": 60
+    },
+    "tokyo_day_to_day": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "tokyo_day_to_night": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "tokyo_night_to_day": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "tokyo_day_to_sunset": {
+      "gallery": 24,
+      "queries": 24
+    },
+    "synthetic_day": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_night": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_night_severe": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_warm_night": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "synthetic_fog": {
+      "gallery": 26,
+      "queries": 18
+    },
+    "open_set": {
+      "gallery": 24,
+      "queries": 12
+    }
+  },
+  "synthetic_conditions": [
+    "day",
+    "night",
+    "night_severe",
+    "warm_night",
+    "fog"
+  ],
+  "seeds": [
+    17,
+    23,
+    42
+  ],
+  "benchmark_sha256": "67eeffb4ea5181e41ee96ac5997eaa050b573057239d9f54996bf5fbfb880d82"
+}

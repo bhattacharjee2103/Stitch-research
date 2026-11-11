@@ -1,0 +1,21 @@
+Obtaining file:///Users/bhattacharjee/Desktop/internship/Stitch-research
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: stitch-ar-research
+  Building editable for stitch-ar-research (pyproject.toml): started
+  Building editable for stitch-ar-research (pyproject.toml): finished with status 'done'
+  Created wheel for stitch-ar-research: filename=stitch_ar_research-0.1.0-0.editable-py3-none-any.whl size=1650 sha256=1d213c6560a9bee103039cd57e9d15cabf859599766b34559f06f46a4580c455
+  Stored in directory: /private/var/folders/lb/j6x3z82d17z292m4k0yh7vyh0000gn/T/pip-ephem-wheel-cache-i_ikxb48/wheels/4d/1a/78/acbf4ac6e8cb9c81361f64467d3b7268ddfc3148ade0207ae2
+Successfully built stitch-ar-research
+Installing collected packages: stitch-ar-research
+  Attempting uninstall: stitch-ar-research
+    Found existing installation: stitch-ar-research 0.1.0
+    Uninstalling stitch-ar-research-0.1.0:
+      Successfully uninstalled stitch-ar-research-0.1.0
+Successfully installed stitch-ar-research-0.1.0

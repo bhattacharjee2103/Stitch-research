@@ -1,0 +1,6 @@
+cd .. && /Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python scripts/generate_artifacts.py
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python ../scripts/generate_extended_evidence.py
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python ../scripts/prepare_iitr_assets.py
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+cp build/main.pdf thesis.pdf
+/Users/bhattacharjee/Desktop/internship/Stitch-research/.venv/bin/python ../scripts/verify_thesis.py

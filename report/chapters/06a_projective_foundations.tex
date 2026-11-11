@@ -1,0 +1,85 @@
+\chapter{Projective Geometry: Derivation and Worked Examples}\label{ch:projective-foundations}
+\section{Why the coordinate model deserves a separate analysis}
+The complete Stitch query connects three image domains: the posted asset, a stored reference photograph and the visitor's camera frame. A visually plausible result can still be geometrically wrong if any boundary uses the inverse transformation or a different resizing convention. This chapter derives those boundaries and explains the numerical checks used in the implementation. The numerical examples are algebraic illustrations, not additional benchmark measurements. The projective model follows the standard image-geometry treatment in \citet{hartley2004}; the experiment remains a planar image-to-image study.
+
+A point in a photograph has two pixel coordinates. A persistent physical point would additionally require information about camera calibration and scene depth. The distinction is easy to lose because both a homography and a pose can be represented by matrices. Their dimensions, domains and observable constraints are different. Here, the output of local verification is a relation between two image planes. It cannot be interpreted as metres of displacement or as the visitor's absolute orientation.
+
+\section{Homogeneous representation and scale freedom}
+Represent an image point as $\widetilde{\mathbf x}=(u,v,1)^\top$. For a nonsingular $3\times3$ matrix $H$, the corresponding point is
+\begin{equation}
+ \begin{bmatrix}a\\b\\c\end{bmatrix}=H\widetilde{\mathbf x},
+ \qquad \pi(H\widetilde{\mathbf x})=(a/c,b/c)^\top.
+\end{equation}
+Multiplying $H$ by any nonzero scalar leaves the result unchanged wherever $c\ne0$. Consequently, matrix entries cannot be interpreted independently of their homogeneous scale. A numerical validity check must not reject $10^{-12}H$ while accepting $H$ solely because its unnormalised entries are smaller.
+
+The implementation normalises an admissible map before applying absolute denominator tolerances. For the rectangular reference domain used here, the upper-left point is included. A zero bottom-right entry maps that point onto the projective horizon and is therefore rejected by the boundary policy. This is an application-domain restriction, not a statement that every projective matrix with a zero bottom-right entry is globally meaningless.
+
+Normalisation can itself overflow if the entries span a range beyond the floating-point representation. The corrected verifier checks finiteness again after division and rejects an unrepresentable map before invoking matrix decompositions. Rejection is preferable to returning an exception from an otherwise routine candidate comparison. The regression suite exercises both very small homogeneous scales and a matrix whose normalisation cannot be represented reliably.
+
+\section{The correspondence equations}
+For a reference point $(u,v)$ and query point $(u',v')$, the reference-to-query mapping implies
+\begin{align}
+ u'(h_{31}u+h_{32}v+h_{33})&=h_{11}u+h_{12}v+h_{13},\\
+ v'(h_{31}u+h_{32}v+h_{33})&=h_{21}u+h_{22}v+h_{23}.
+\end{align}
+Each correspondence therefore contributes two linear constraints on the nine homogeneous matrix entries. Four correspondences provide eight constraints, which is the minimum count for a general eight-degree-of-freedom homography when the configuration is nondegenerate. More correspondences do not automatically provide more independent information: repeated points or a nearly collinear arrangement can still leave the estimate unstable.
+
+Stitch delegates robust estimation to OpenCV rather than implementing a separate direct linear solver. The equations nevertheless explain two important rejection cases. A blank image supplies no constraints, so it must yield no map. A set of points along one edge may supply many tentative matches but insufficient two-dimensional support. An absolute inlier count cannot diagnose either case by itself; matrix and projected-boundary checks remain necessary.
+
+\section{Resizing as a change of coordinate system}
+Let the original reference size be $(w_r,h_r)$ and the working size be $(\bar w_r,\bar h_r)$. The implemented pixel transform is
+\begin{equation}
+ S_r=\operatorname{diag}(\bar w_r/w_r,\bar h_r/h_r,1).
+\end{equation}
+There is a separate transform $S_q$ for the query. If $H_o$ maps original reference coordinates to original query coordinates, the working-resolution relation is
+\begin{equation}
+ H_w=S_qH_oS_r^{-1}.
+\end{equation}
+This equation follows by substituting $\widetilde{\mathbf x}_r=S_r^{-1}\widetilde{\mathbf x}_{r,w}$ into the original mapping and then applying $S_q$. It is a coordinate conversion; it does not estimate a new physical relation.
+
+Consider an illustrative reference reduced from $1000\times800$ to $500\times400$, and a query retained at its original size. An original reference point $(200,100)$ becomes $(100,50)$ in the working reference. If the original relation is a translation of $(20,10)$ pixels, directly applying that translation matrix to $(100,50)$ gives $(120,60)$, which is wrong for the unchanged query domain. The conjugated relation produces $(220,110)$, as required. The translation did not change physically; its input coordinate unit changed.
+
+Integer rounding makes horizontal and vertical scale values slightly different for some dimensions. The implementation records the realised output size rather than assuming an ideal shared scale. This matters when corner-error thresholds are only a few working pixels. A resizing approximation that is negligible to a global descriptor can still affect a geometric pass/fail boundary.
+
+\section{Forward and backward transfer error}
+The reference-to-query direction is fixed throughout the prototype. A forward transfer residual for a correspondence is
+\begin{equation}
+ r_f=\left\|\pi(H\widetilde{\mathbf x}_r)-\mathbf x_q\right\|_2.
+\end{equation}
+Its unit is a query pixel. A backward residual uses $H^{-1}$ and has reference-pixel units. Adding the two without accounting for image scale can mix different units. A future symmetric error policy should therefore specify the coordinate systems and normalisation explicitly, rather than describing an unspecified bidirectional error as universally stricter.
+
+The reported corner metric is a different quantity. It compares the estimated and ground-truth maps at the same four reference corners. It is not the average RANSAC correspondence residual, and it can remain large when a small interior cluster fits well. This is why the report retains both local support statistics and independent corner-error success on collections that provide ground truth.
+
+On Tokyo, no independent corner relation is available for the retained cross-time pairs. Measuring the residual of the very correspondences used to estimate the map would not replace that missing ground truth. Such a residual could describe self-consistency, but it would not establish correct surface alignment. The site atlas consequently reports identity and decision states without inventing a Tokyo corner-error score.
+
+\section{RANSAC success probability and its limits}
+In an idealised sampling calculation, let $w$ be the probability that a tentative correspondence is a genuine inlier and let a minimal sample contain $s$ correspondences. If samples are independent, the probability of at least one all-inlier sample after $N$ attempts is
+\begin{equation}
+ P=1-(1-w^s)^N.
+\end{equation}
+Solving for a desired probability gives
+\begin{equation}
+ N\geq\frac{\log(1-P)}{\log(1-w^s)}.
+\end{equation}
+For a homography, $s=4$ in the generic minimal case. The expression explains why a lower inlier fraction can increase robust-estimation work sharply \citep{fischler1981}. It is an analytical sampling model, not a guarantee that a selected sample is nondegenerate or that the scene satisfies a planar relation.
+
+Repeated windows illustrate the distinction. A matcher may return many mutually consistent correspondences between different but similar structures. RANSAC can fit those correspondences and return strong support. Its success at finding a consensus does not prove the gallery identity or the physical presence of the user. The open-set diagnostic tests that broader decision problem and records wrong acceptances rather than reclassifying them as successful geometry.
+
+\section{The projective horizon and boundary policy}
+The projective denominator at a reference point is the affine function $d(u,v)=h_{31}u+h_{32}v+h_{33}$. On a rectangular domain, its extrema occur at vertices. If all four vertex values have the same strict sign, the denominator does not cross zero anywhere inside the rectangle. Opposite signs imply a horizon crossing and potentially unbounded image coordinates. This supplies an inexpensive domain-level validity check before rendering.
+
+The verifier also checks projected convexity and a minimum projected area. These are practical filters for a stable reference boundary. They do not establish that the entire physical scene is planar, that occluders are absent or that a target surface is safe for displaying content. A highly foreshortened but genuine target can be rejected by the area policy; the resulting loss should be counted as rejection rather than hidden by changing the denominator of an accuracy metric.
+
+A condition-number threshold serves a related numerical purpose. It identifies matrices for which inversion or perturbation may be sensitive. Its value depends on the coordinate representation, so it should be treated as an implementation policy evaluated at the recorded working resolution. It is not a universal physical plausibility score or a calibrated probability of anchor correctness.
+
+\section{Content coordinates and alpha compositing}
+The asset has its own corners, which generally differ from reference-image corners. A content-to-reference map $A$ is constructed from the asset corners and its stored reference polygon. The rendered content map is $HA$. The multiplication order is essential: $AH$ applies a reference/query relation in the wrong input domain. Normalised anchor coordinates are first converted using the actual working reference width and height.
+
+An anchor polygon must contain four finite corners in a consistent boundary order and form a noncollapsed convex quadrilateral. A crossed polygon is not a harmless alternative ordering: it can induce a folded or unbounded warp. The renderer rejects that input, and database validation additionally checks that stored normalised coordinates lie in $[0,1]$. Associating the polygon with a specific photograph prevents an anchor defined on a front view from being copied onto an unrelated side view.
+
+Alpha compositing uses premultiplied colour. If the asset colour is $C$, its opacity mask is $\alpha$, and the frame is $F$, the compositor evaluates the warped premultiplied colour plus $F(1-\alpha_w)$. Warping unpremultiplied colour separately can mix invisible border colours into partially transparent edge pixels. Explicit alpha also preserves opaque black content, which would be lost by treating every black pixel as background.
+
+\section{What these derivations validate}
+The derivations justify coordinate conjugation, transform direction, homogeneous scale handling and explicit alpha. The numerical regression tests validate concrete examples of those contracts. Neither form of validation substitutes for independent real-world alignment measurements. The HPatches corner metric provides one such measurement within its image-plane scope, while metric pose and long-term persistent-world tests remain future work.
+
+The practical outcome is a narrower and more defensible interface. A query either returns a supported reference-to-query map with an associated reference-bound post, or returns no anchor. It does not return a nominal world pose merely because a matrix was computed. This keeps subsequent deployment design aligned with the evidence the implemented estimator can actually provide.

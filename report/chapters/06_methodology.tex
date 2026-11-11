@@ -1,0 +1,218 @@
+\chapter{Methodology}\label{ch:methodology}
+\section{Notation and coordinate conventions}
+An original reference image is denoted $I_r^o$ and an original query $I_q^o$. Their working-resolution forms are $I_r$ and $I_q$. Pixel coordinates use the conventional horizontal-then-vertical ordering $(x,y)$. A homogeneous point is $\widetilde{\mathbf x}=(x,y,1)^\top$, and the inhomogeneous projection is $\pi(a,b,c)=(a/c,b/c)$ when $c\neq0$. Every estimated homography in the implementation maps reference pixels into query pixels.
+
+Let $S_r$ and $S_q$ map original coordinates into their resized images. An original ground-truth map $H^o$ is converted by
+\begin{equation}\label{eq:resize-h}
+ H_{r\rightarrow q}=S_q H^o S_r^{-1}.
+\end{equation}
+This follows by substituting $\widetilde{\mathbf x}_r^o=S_r^{-1}\widetilde{\mathbf x}_r$ into the original mapping and then applying $S_q$. The implementation records actual rounded image dimensions, so $S$ contains the realised horizontal and vertical ratios rather than a nominal scalar alone.
+
+This convention also applies to generated queries. Their saved homography includes the original-reference-to-generation scale. Ground truth and estimated points are compared only after both have been expressed in the same working coordinate frame. A numerical unit test verifies a known projective transformation with outliers; the reproduction tests do not depend on benchmark-model downloads.
+
+\section{Method A: classical local matching}
+\subsection{Feature extraction}
+For an image $I$, SIFT returns coordinates and descriptors
+\begin{equation}
+ \mathcal L_A(I)=\{(\mathbf x_j,\mathbf d_j)\}_{j=1}^{K},\qquad
+ \mathbf d_j\in\R^{128}.
+\end{equation}
+The representation is based on local gradient structure and scale/orientation normalisation \citep{lowe2004}. The controlled experiment limits the requested feature budget through the common configuration. The original script budgets and preprocessing remain in the separate upstream execution.
+
+The normalised comparison converts each working image to grayscale and extracts features once. Empty descriptor sets are represented explicitly. No claim is made that the common budget yields an identical number of points for the two detectors: each detector selects its own repeatable structures, and SIFT may return multiple oriented features at related locations. The recorded feature and match counts describe the realised outputs.
+
+\subsection{Descriptor matching}
+For each reference descriptor $\mathbf d_i$, approximate search identifies its first and second query neighbours, $\mathbf e_{j_1}$ and $\mathbf e_{j_2}$. The tentative correspondence survives when
+\begin{equation}\label{eq:ratio}
+ \norm{\mathbf d_i-\mathbf e_{j_1}}_2 < \rho
+ \norm{\mathbf d_i-\mathbf e_{j_2}}_2,
+\end{equation}
+with $\rho$ fixed in the configuration. FLANN settings match the recorded index strategy \citep{muja2009}. The matcher guards against fewer than two returned neighbours. Its output is a coordinate correspondence set, not a place decision.
+
+To extend the one-reference baseline to place recognition, Method A verifies every gallery reference. Candidates are ranked by RANSAC inlier support and then by inlier ratio, with stable order for remaining ties. The best accepted candidate supplies the anchor. A ranking is still retained when no candidate is accepted so retrieval quality and anchoring rejection can be analysed separately.
+
+\section{Method B: pretrained learned local matching}
+SuperPoint supplies keypoint positions, descriptors and the feature tensors required by LightGlue \citep{detone2018}. The pretrained networks are loaded in evaluation mode and executed without gradient recording. The input is the same working-resolution grayscale image used by the comparison; additional internal resizing is disabled. The model is not fine-tuned in the main A--D experiment.
+
+LightGlue returns a partial set of descriptor-index correspondences. Its contextual interaction can be written schematically as
+\begin{equation}
+ (\widehat{\mathcal D}_r,\widehat{\mathcal D}_q)
+ =\Phi_\theta(\mathcal D_r,\mathcal D_q,\mathcal X_r,\mathcal X_q),
+\end{equation}
+followed by learned assignment and filtering. This notation describes the role of the pretrained matcher rather than rederiving all of its layers. The official model supplies the adaptive depth and feature-pruning behaviour \citep{lindenberger2023}. Recorded configuration values identify the executed path.
+
+Method B is evaluated in two ways. Oracle-pair evaluation supplies the correct reference pair so local correspondence quality can be isolated. Exhaustive gallery evaluation performs learned matching against every reference, allowing retrieval and verification to be compared with Method A on identical queries. Exhaustive matching is an informative accuracy reference but may have unacceptable query cost as the gallery grows.
+
+\section{Method C: global retrieval}
+\subsection{Descriptor construction}
+The global encoder is the released CosPlace ResNet18 model with generalised mean pooling, a learned projection and final normalisation \citep{berton2022,cosplacerepo}. If $F_{c,u,v}$ denotes a channel activation, the pooling operation is
+\begin{equation}
+ g_c=\left(\frac{1}{UV}\sum_{u,v}\max(F_{c,u,v},\epsilon)^p\right)^{1/p}.
+\end{equation}
+The pretrained parameter $p$ is loaded with the checkpoint. The global descriptor is
+\begin{equation}
+ \mathbf z(I)=\frac{W\mathbf g+\mathbf b}{\norm{W\mathbf g+\mathbf b}_2},
+ \qquad \mathbf z\in\R^{512},
+\end{equation}
+with the implementation retaining the official architecture's normalisation placement. Input channel means and scales are fixed, and gallery and query images use the same descriptor input size.
+
+\subsection{Ranking and identity}
+For a gallery matrix $Z$ whose rows are normalised descriptors, similarity to a query is
+\begin{equation}
+ s_i=\mathbf z(I_i)^\top\mathbf z(I_q).
+\end{equation}
+Sorting these scores yields a complete reference ranking. A reference's place identifier is then used for correctness. With multiple references per place, a production evaluator would need an explicit reference-to-place aggregation policy; the implemented database supports multiple references, while the frozen benchmark galleries use one per identity.
+
+Method C alone does not estimate a homography or render an anchored post. Its anchor-accuracy columns are consequently unavailable rather than zero-performance geometric estimates. The no-geometry ablation additionally treats its top retrieval as accepted, solely to expose the consequence of replacing verification with similarity. That variant does not produce a valid projective transform.
+
+\section{Robust homography estimation}
+\subsection{Linear constraints and minimal evidence}
+A planar correspondence obeys
+\begin{equation}
+ \widetilde{\mathbf x}_q \sim H\widetilde{\mathbf x}_r,
+ \qquad H\in\R^{3\times3},\quad \operatorname{rank}(H)=3.
+\end{equation}
+The equivalence is up to a nonzero scalar. Expanding the cross-product constraint
+\begin{equation}
+ \widetilde{\mathbf x}_q\times H\widetilde{\mathbf x}_r=\mathbf0
+\end{equation}
+gives two independent linear constraints per point pair. A nondegenerate minimal sample has four correspondences. Collinear or nearly collinear evidence cannot constrain a stable general planar map. These projective principles motivate the rank and boundary checks used after robust fitting \citep{hartley2004}.
+
+The comparison uses OpenCV's RANSAC homography estimation with a fixed pixel threshold, confidence and iteration cap. For a candidate $H$, forward transfer error is
+\begin{equation}
+ e_j=\norm{\mathbf x_{q,j}-\pi(H\widetilde{\mathbf x}_{r,j})}_2.
+\end{equation}
+The inlier mask indicates correspondences compatible with the fitted model at the configured threshold. The thesis retains this support even if the final acceptance policy rejects the matrix.
+
+\subsection{Sampling interpretation}
+For an idealised inlier fraction $w$, minimal sample size $s$ and desired sampling confidence $c$, the familiar RANSAC relation is
+\begin{equation}\label{eq:ransac-iterations}
+ N\geq\frac{\log(1-c)}{\log(1-w^s)}.
+\end{equation}
+It follows by requiring the probability of never selecting an all-inlier sample, $(1-w^s)^N$, to be no larger than $1-c$ \citep{fischler1981}. The relation illustrates why descriptor ambiguity can raise geometric-estimation cost. It is a theoretical interpretation, not a claim that each recorded call used exactly this number of iterations.
+
+\subsection{Acceptance policy}
+The verifier requires a minimum inlier count, a minimum inlier ratio, a finite full-rank map and an admissible projected boundary. After normalising the homogeneous scale, it rejects severe numerical conditioning, collapsed projected area and a reference boundary crossing the projective horizon. The latter is checked through denominator signs at the corners. Convexity of the projected quadrilateral supplies an additional sanity check.
+
+Homogeneous scale normalisation precedes numerical threshold checks: multiplying a valid map by a small nonzero constant must not change its validity, projected points or rendered content. Anchor polygons are independently checked for finite, ordered, convex corners. Stored normalised coordinates must lie within the reference image; crossed or collapsed polygons are rejected before warping.
+
+These conditions reduce obvious geometric failures but do not certify a correct physical anchor. A wrong repeated facade can produce a consistent planar map. A correct place can contain several depth layers that violate a single homography. A large region can project outside the visible query. The acceptance flag is therefore treated as a decision made by the prototype, while true homography success requires independent ground truth.
+
+\begin{algorithm}[htbp]
+\caption{Shared local verification}\label{alg:verification}
+\begin{algorithmic}[1]
+\Require Reference/query features, reference image shape, fixed thresholds
+\State Match descriptors and recover coordinate pairs $(\mathbf x_{r,j},\mathbf x_{q,j})$
+\If{fewer than four pairs exist}
+\State \Return rejection with empty support
+\EndIf
+\State Estimate $H$ and an inlier mask with RANSAC
+\State Count inliers and compute their fraction of tentative matches
+\State Normalise $H$ and test finiteness, rank, conditioning and boundary validity
+\State \Return $H$, mask, support statistics, and the combined acceptance decision
+\end{algorithmic}
+\end{algorithm}
+
+\Cref{alg:verification} applies unchanged to the two normalised local methods. This is important for attributing an improvement to correspondence rather than to a weaker geometric acceptance rule. The implementation stores failures as rows, so a method cannot improve its reported accuracy by excluding difficult pairs from the denominator.
+
+\section{Method D: hierarchical recognition and anchoring}
+The full pipeline ranks the gallery globally, selects a fixed-size shortlist, and performs Method B's local verification on that shortlist. It selects the accepted candidate with the strongest inlier support, breaking ties by ratio. An absent accepted candidate yields no place and no rendered post. The primary configuration uses the recorded shortlist size; additional runs vary that size and remove stages.
+
+\begin{algorithm}[htbp]
+\caption{Hierarchical place and content query}\label{alg:full}
+\begin{algorithmic}[1]
+\Require Query $I_q$, cached reference features, descriptor matrix $Z$, place database
+\State Compute global query descriptor $\mathbf z_q$ and a ranked candidate list
+\State Compute local query features once
+\For{each of the first $k$ reference candidates}
+\State Run \cref{alg:verification} against the cached reference features
+\State Retain diagnostics and any accepted transformation
+\EndFor
+\If{no candidate is accepted}
+\State \Return no anchor and the candidate diagnostics
+\EndIf
+\State Select the strongest accepted reference and its place identifier
+\State Retrieve that place's posted-content records
+\State Compose content-to-reference and reference-to-query transformations
+\State Render content with explicit alpha and return the verified place
+\end{algorithmic}
+\end{algorithm}
+
+\Cref{alg:full} implements the hierarchy reviewed in \cref{ch:background}. Global retrieval limits search, while geometry supplies the map needed by the renderer. It does not provide an independent world-scale estimate. Reference caching and one-time query extraction reduce duplicated work but do not remove the cost of matching several candidates.
+
+\subsection{A decomposition of failure}
+Let $G$ denote that a usable correct reference enters the shortlist, $L$ that sufficient correct local evidence is recovered, and $V$ that the verifier accepts an adequate map. Then the desired event is bounded by the upstream stages:
+\begin{equation}
+ P(G\cap L\cap V)=P(G)P(L\mid G)P(V\mid G,L).
+\end{equation}
+This is a probability identity, not an independence assumption. It explains why increasing local accuracy cannot recover a reference excluded by retrieval, and why perfect retrieval cannot ensure anchoring when the images do not overlap. The ablation tables expose these failure pathways using recorded intermediate decisions.
+
+False acceptance is a different event: a candidate may pass $V$ without being the correct place or without satisfying ground-truth planar accuracy. Reporting only the acceptance rate would reward such failures. The results therefore pair acceptance with correctly verified identity and, where available, actual corner-error success.
+
+\section{Content coordinates and rendering}
+A content asset has its own pixel domain. Let $A_{c\rightarrow r}$ map its four corners to a normalised reference-anchor quadrilateral converted into reference pixels. The composed transform is
+\begin{equation}
+ H_{c\rightarrow q}=H_{r\rightarrow q}A_{c\rightarrow r}.
+\end{equation}
+This order follows directly from applying the content-to-reference mapping first. A reversed order would generally produce an unrelated projection and is not interchangeable even though both matrices are $3\times3$.
+
+For premultiplied content colour $\alpha C$ and warped alpha $\alpha'$, compositing is
+\begin{equation}
+ I_{\mathrm{out}}=\operatorname{warp}(\alpha C,H_{c\rightarrow q})+
+ (1-\alpha')I_q.
+\end{equation}
+An asset without an alpha channel receives an explicit opaque mask before the configured opacity is applied. This preserves black pixels as valid content. Rendering is skipped when the selected transformation is invalid or no candidate is accepted. The current application supports planar image posts; world-space occlusion and illumination-consistent three-dimensional rendering are future requirements.
+
+\ifFullReport
+\section{Calibrated alternatives and their prerequisites}
+For calibrated image points $\mathbf u_r$ and $\mathbf u_q$, two-view geometry can constrain an essential matrix through $\mathbf u_q^\top E\mathbf u_r=0$. Relative translation remains scale-ambiguous without additional information. A known 3D map instead supplies correspondences satisfying
+\begin{equation}
+ \widetilde{\mathbf x}_q\sim K(R\mathbf X+t),
+\end{equation}
+which supports PnP and metric map-relative pose estimation \citep{lepetit2009}. The thesis presents these equations to define an integration route; neither essential-matrix nor PnP results are claimed for the uncalibrated selected subsets.
+
+A calibrated extension should return camera-to-map transforms with a documented convention. If $R,t$ are world-to-camera parameters, the camera centre is $-R^\top t$, not $t$ itself. The supplied pose-error utility and its unit test make this convention explicit. Actual metric error reporting still requires independent ground-truth poses, a common map scale and correctly associated camera intrinsics.
+\fi
+
+\section{Short appearance-adaptation experiment}
+\subsection{Restricted learning scope}
+The optional experiment freezes the CosPlace backbone and learns a bias-free projection $W_h\in\R^{128\times512}$. The output is
+\begin{equation}
+ \mathbf u(I)=\frac{W_h\mathbf z(I)}{\norm{W_h\mathbf z(I)}_2}.
+\end{equation}
+This is both descriptor compression and adaptation. Its comparison cannot isolate those effects completely, so the report avoids describing it as full-network day/night fine-tuning. The training-place list, fixed seeds and final head checkpoints are retained.
+
+\subsection{Triplet loss and sampling}
+For anchor, positive and negative descriptors from the selected training places, the implemented loss is
+\begin{equation}
+ \mathcal L=\frac1B\sum_{b=1}^{B}
+ \max\bigl(0,d(\mathbf u_a,\mathbf u_p)-d(\mathbf u_a,\mathbf u_n)+m\bigr),
+ \qquad d(\mathbf a,\mathbf b)=1-\mathbf a^\top\mathbf b.
+\end{equation}
+The positive shares the source-place label and excludes the same sample index; the negative comes from another training place. The margin, optimiser, step count and learning rate are fixed in the script. One condition uses available real sequence images only; the other adds synthetic night variants. No held-out score selects a checkpoint or adjusts the step count.
+
+\begin{algorithm}[htbp]
+\caption{Frozen-descriptor projection training}\label{alg:training}
+\begin{algorithmic}[1]
+\Require Disjoint training/test places, fixed seed, frozen encoder, step budget
+\State Extract training descriptors and labels; optionally add seeded night variants
+\State Initialise a 512-to-128 linear head from the specified seed
+\For{each optimiser step}
+\State Sample anchors, different positive samples from the same place, and negative places
+\State Normalise projected descriptors and compute the triplet loss
+\State Update only the projection head
+\EndFor
+\State Save the final head and loss trace
+\State Evaluate held-out HPatches places and all selected Tokyo protocols once
+\end{algorithmic}
+\end{algorithm}
+
+\Cref{alg:training} is repeated for three fixed initialisations. Reporting the mean, variability and small-sample interval prevents selecting a favourable seed. A low training loss is not treated as evidence of better place recognition outside the training domain. The chosen experiment is deliberately short and interpretable; its limitations are part of the result.
+
+\ifFullReport
+\section{Computational accounting}
+For $M$ references and descriptor dimension $d$, exact global scoring uses a matrix-vector product with cost proportional to $Md$. Exhaustive local verification repeats pair matching $M$ times, while the hierarchy repeats it $k$ times after retrieval. Query extraction is shared across those comparisons. These expressions describe scaling of the chosen implementation; adaptive matcher behaviour and image size still determine actual measured latency.
+
+The evaluation stores individual feature and pair timings so stage costs can be inspected. Their sums are labelled stage sums, not independently timed complete queries. A separate isolated profiler executes query and rendering paths on predecoded images, with cached gallery features, to measure actual wall-clock behaviour and peak process memory. Keeping these definitions separate prevents cached evaluation work from producing an implausible online throughput claim.
+\fi
+
