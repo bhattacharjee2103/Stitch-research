@@ -9,7 +9,7 @@ These collections supply different evidence levels. A labelled place identity es
 
 \section{HPatches subset}
 \subsection{Acquisition and deterministic selection}
-The original HPatches host failed DNS resolution during the recorded download check. The dataset author's Hugging Face mirror was reachable and supplied the full sequence archive. The manifest records its URL, file hash, extracted-image hashes and per-sequence file counts. This distinguishes a verified local copy from a statement that a URL happened to exist when the thesis was written.
+The original HPatches host failed DNS resolution during the recorded download check. The dataset author's Hugging Face mirror was reachable and supplied the full sequence archive. The manifest records its URL, file hash, extracted-image hashes and per-sequence file counts. This distinguishes a verified local copy from a statement that a URL happened to exist when the report was written.
 
 The selected evaluation set consists of the first twelve sequence names in lexicographic order for each of the illumination and viewpoint prefixes. Every selected sequence contributes its reference image, all five targets and their corresponding homography files. Thus \HpImages{} images and \HpPairs{} reference-target pairs are evaluated. The choice uses names and metadata before inference, rather than selecting pairs on which one method appears stronger.
 
@@ -44,7 +44,7 @@ Condition names throughout the artifact follow the arrow from reference to query
 The gallery has one reference per selected site. Place correctness uses the stored site identity, not a distance threshold inferred after observing predictions. The reverse protocol is useful because extraction and matching may not behave symmetrically when query and reference roles change. It nevertheless reuses the same physical sites, so the protocols are related observations rather than independent geographic test sets.
 
 \subsection{Difference from the official benchmark}
-The official Tokyo retrieval task uses a street-view image database. The executed protocol uses query photographs as a small cross-time reference gallery. This changes database scale, appearance distribution, viewpoint alignment and distractor difficulty. Results are therefore labelled ``Tokyo cross-time subset'' throughout the thesis. They must not be compared directly with published official benchmark recall values.
+The official Tokyo retrieval task uses a street-view image database. The executed protocol uses query photographs as a small cross-time reference gallery. This changes database scale, appearance distribution, viewpoint alignment and distractor difficulty. Results are therefore labelled ``Tokyo cross-time subset'' throughout the report. They must not be compared directly with published official benchmark recall values.
 
 The restriction is scientifically important when recall saturates. A small gallery with aligned front-facing views can be easy even though night recognition is difficult in a larger operational setting. Conversely, a deliberately different viewing direction can reduce overlap despite unchanged time of day. The experiment identifies these task properties rather than treating all appearance labels as a fixed difficulty ordering.
 
@@ -69,7 +69,7 @@ The daytime condition changes brightness within a bounded range. Night condition
 \subsection{Known geometry and deterministic seeds}
 Before appearance modification, a small random projective warp perturbs the image corners. The seed determines both this warp and the subsequent photometric randomness. The homography is stored explicitly, including the scale mapping from the original reference to the working-resolution source. This detail prevents a synthetic experiment from accidentally comparing an estimate in resized coordinates with a ground-truth matrix in original coordinates.
 
-The three query seeds support repeatability and sensitivity analysis. They do not create three independent physical scenes. Confidence statements must therefore preserve source identity as a grouping variable. Likewise, increasing the number of augmentations does not compensate for the small number of base photographs. The thesis reports those dependencies as validity constraints.
+The three query seeds support repeatability and sensitivity analysis. They do not create three independent physical scenes. Confidence statements must therefore preserve source identity as a grouping variable. Likewise, increasing the number of augmentations does not compensate for the small number of base photographs. The report reports those dependencies as validity constraints.
 
 \section{Training and evaluation separation}
 The optional adaptation experiment reserves the first four illumination and first four viewpoint sequences for training the projection head. Remaining selected sequences form the held-out HPatches retrieval evaluation. Training never uses Tokyo photographs. Additional synthetic training perturbations use a separate fixed seed list. The backbone remains frozen, and no test-based checkpoint selection is performed.
@@ -91,4 +91,4 @@ MSLS was inspected as a route to broader seasonal and sequence coverage. Its off
 \section{Integrity and idempotent acquisition}
 The downloader validates both archive-derived member properties and locally recorded hashes. Repeated execution checks existing files and skips a valid collection. Missing data can be restored and checked against the pinned manifest; an existing corrupt file produces an explicit error instead of silently changing the input. Archive paths are not extracted blindly: selected basenames and sequence directories determine destinations.
 
-File-count checks enforce the expected image and homography structure. The final \code{benchmark.json} freezes protocol definitions before inference, and its hash is recorded with the run configuration. These controls do not prove that the original benchmark labels are error-free, but they establish exactly which input bytes and label rules produced the thesis results.
+File-count checks enforce the expected image and homography structure. The final \code{benchmark.json} freezes protocol definitions before inference, and its hash is recorded with the run configuration. These controls do not prove that the original benchmark labels are error-free, but they establish exactly which input bytes and label rules produced the report results.

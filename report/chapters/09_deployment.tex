@@ -17,7 +17,7 @@ The CosPlace global model was exported to a fixed-input ONNX graph and checked w
 \resultinput{exports.tex}
 The export scope is deliberately narrow: it covers the global descriptor, not SuperPoint, LightGlue, RANSAC, rendering, or a complete camera application. A successful descriptor graph does not establish that dynamic keypoint operations and adaptive matching export without changes. Nor does graph validation prove that a chosen mobile execution provider supports every operator efficiently. No TFLite, CoreML or phone-native full-pipeline artifact is claimed.
 
-The executed float graph is \FpModelMB{} MB and has median descriptor inference of \FpLatency{} ms in the recorded ONNX Runtime CPU test. This timing excludes image preprocessing and gallery search. It also differs from the separate native global query profile because the runtime, timed work and query population differ. The thesis retains these definitions rather than combining the faster number from one test with the broader functionality of another.
+The executed float graph is \FpModelMB{} MB and has median descriptor inference of \FpLatency{} ms in the recorded ONNX Runtime CPU test. This timing excludes image preprocessing and gallery search. It also differs from the separate native global query profile because the runtime, timed work and query population differ. The report retains these definitions rather than combining the faster number from one test with the broader functionality of another.
 
 \section{Executed INT8 quantisation}
 \subsection{Calibration and graph form}

@@ -82,7 +82,7 @@ The comparison uses OpenCV's RANSAC homography estimation with a fixed pixel thr
 \begin{equation}
  e_j=\norm{\mathbf x_{q,j}-\pi(H\widetilde{\mathbf x}_{r,j})}_2.
 \end{equation}
-The inlier mask indicates correspondences compatible with the fitted model at the configured threshold. The thesis retains this support even if the final acceptance policy rejects the matrix.
+The inlier mask indicates correspondences compatible with the fitted model at the configured threshold. The report retains this support even if the final acceptance policy rejects the matrix.
 
 \subsection{Sampling interpretation}
 For an idealised inlier fraction $w$, minimal sample size $s$ and desired sampling confidence $c$, the familiar RANSAC relation is
@@ -169,7 +169,7 @@ For calibrated image points $\mathbf u_r$ and $\mathbf u_q$, two-view geometry c
 \begin{equation}
  \widetilde{\mathbf x}_q\sim K(R\mathbf X+t),
 \end{equation}
-which supports PnP and metric map-relative pose estimation \citep{lepetit2009}. The thesis presents these equations to define an integration route; neither essential-matrix nor PnP results are claimed for the uncalibrated selected subsets.
+which supports PnP and metric map-relative pose estimation \citep{lepetit2009}. The report presents these equations to define an integration route; neither essential-matrix nor PnP results are claimed for the uncalibrated selected subsets.
 
 A calibrated extension should return camera-to-map transforms with a documented convention. If $R,t$ are world-to-camera parameters, the camera centre is $-R^\top t$, not $t$ itself. The supplied pose-error utility and its unit test make this convention explicit. Actual metric error reporting still requires independent ground-truth poses, a common map scale and correctly associated camera intrinsics.
 \fi

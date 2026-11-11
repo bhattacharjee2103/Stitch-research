@@ -68,7 +68,7 @@ data/manual/cmu/
     sparse/
     camera_poses/
 \end{lstlisting}
-Archive-internal directory names should be taken from the official README. The inspected source specifies attribution, non-commercial and share-alike restrictions. No CMU image or seasonal metric is included in this thesis.
+Archive-internal directory names should be taken from the official README. The inspected source specifies attribution, non-commercial and share-alike restrictions. No CMU image or seasonal metric is included in this report.
 
 \subsection{MSLS and the full Tokyo street-view task}
 MSLS instructions are at \url{https://github.com/mapillary/mapillary_sls} and its linked download site \url{https://www.mapillary.com/dataset/places}. Preserve city, query/database and sequence metadata. The official structure uses \code{train_val/<city>/query/images/}, a corresponding database directory and associated CSV files. Test data and current ground-truth availability should follow the current official instructions rather than an assumed historical evaluation server.
@@ -79,7 +79,7 @@ Pittsburgh/SF-XL, Oxford/Paris and Google Landmarks are alternative future colle
 \fi
 
 \section{Build procedure}
-The installed TeX toolchain was used directly. The document uses the report class, numeric natbib citations, generated vector figures and a nomenclature index. From the project root, \code{make thesis} regenerates empirical artifacts and invokes latexmk. The thesis Makefile copies the completed PDF to the main deliverable path and runs the verification script. A clean TeX rebuild is available through the recorded clean/build commands.
+The installed TeX toolchain was used directly. The document uses the report class, numeric natbib citations, generated vector figures and a nomenclature index. From the project root, \code{make thesis} regenerates empirical artifacts and invokes latexmk. The report Makefile copies the completed PDF to the main deliverable path and runs the verification script. A clean TeX rebuild is available through the recorded clean/build commands.
 
 Authoring and environment-inspection commands performed before the command runner existed are summarised in \code{results/bootstrap_commands.json}. Subsequent substantive executions are recorded in \code{results/commands.jsonl} with exact command text and outcomes\ifFullReport{}, reproduced below\fi. File edits are represented by the delivered source, not presented as experiment commands. \ifFullReport The currently running build can appear as in progress when its own ledger is generated; the machine-readable journal records completion after the build returns.\fi
 

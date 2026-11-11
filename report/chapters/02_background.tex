@@ -47,7 +47,7 @@ CosPlace addresses large-scale visual geo-localisation through a classification-
 
 \ifFullReport
 \subsection{MixVPR and foundation features}
-MixVPR aggregates feature maps through feature mixing and is a relevant alternative to residual aggregation \citep{alibey2023}. DINOv2 provides self-supervised visual features that can also motivate retrieval pipelines \citep{oquab2023}. These approaches are discussed to position the selected model within the literature. They are not silently substituted for CosPlace, and the thesis attributes no locally measured performance to them.
+MixVPR aggregates feature maps through feature mixing and is a relevant alternative to residual aggregation \citep{alibey2023}. DINOv2 provides self-supervised visual features that can also motivate retrieval pipelines \citep{oquab2023}. These approaches are discussed to position the selected model within the literature. They are not silently substituted for CosPlace, and the report attributes no locally measured performance to them.
 \fi
 
 \subsection{Candidate retrieval as a bottleneck}
@@ -70,7 +70,7 @@ HPatches offers image sequences with illumination or viewpoint variation and kno
 
 Tokyo 24/7 was designed around changes in time of day and viewpoint, with camera-phone queries and a street-view database \citep{torii2015}. Using its accessible query photographs as both cross-time references and queries creates a useful paired recognition experiment but changes the task. The benchmark's original database scale and ground-truth conventions must not be carried over to this subset's results.
 
-Aachen Day-Night, RobotCar Seasons and Extended CMU Seasons extend evaluation toward long-term metric localisation \citep{sattler2018,localizationbenchmark}. MSLS provides broader geographic, seasonal and sequence variation \citep{warburg2020}. Those capabilities motivate future validation, while their absence from the executed image set limits what this thesis can conclude about seasonal robustness and map-level localisation.
+Aachen Day-Night, RobotCar Seasons and Extended CMU Seasons extend evaluation toward long-term metric localisation \citep{sattler2018,localizationbenchmark}. MSLS provides broader geographic, seasonal and sequence variation \citep{warburg2020}. Those capabilities motivate future validation, while their absence from the executed image set limits what this report can conclude about seasonal robustness and map-level localisation.
 
 \section{Persistent AR services and lifecycle}
 ARCore Cloud Anchors uses hosted scene information and an anchor identifier to support later resolution by devices observing the environment \citep{arcore}. ARKit world maps support saving spatial state and attempting relocalisation in a later session \citep{arkit}. These systems demonstrate that persistence involves mapping and coordinate recovery, not only content storage. Their documentation informs the proposed integration boundary; neither service is called by the experiments.
