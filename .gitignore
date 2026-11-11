@@ -13,5 +13,3 @@ presentation/build/
 .venv-linux/
 .git.corrupt-backup/
 *.pyc
-# truncated/corrupt build (4 MiB, no EOF marker); rebuild before adding
-report/thesis_full.pdf

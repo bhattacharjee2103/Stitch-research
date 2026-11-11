@@ -1,26 +1,26 @@
 {
-  "Stitch_IITR_Presentation.pptx": {
-    "bytes": 9246997,
-    "sha256": "1342f5ee46f622143a5b53d9a0899e51abdde50993541705f003da4e838dd133"
-  },
-  "Stitch_IITR_Presentation_LaTeX.zip": {
-    "bytes": 9539071,
-    "sha256": "7adc3972934f4c2700455a1735a97e7d7d006838cc75c207a86ba104249856db"
-  },
   "Stitch_IITR_Presentation.pdf": {
-    "bytes": 6080410,
-    "sha256": "5fc0a622567fd554c4ca8262096acaf4e3cbc09414ba047a2234bb2acad33229"
-  },
-  "Stitch_IITR_Report_LaTeX.zip": {
-    "bytes": 43483878,
-    "sha256": "ab65b62c6323ed7bbbe40b70c7fd74230934140b0e05ea173c66036d35deeead"
-  },
-  "Stitch_IITR_Report.pdf": {
-    "bytes": 3213739,
-    "sha256": "120e21f0e7b06d35a27d6ea8f23db199d5fd2d771c633a7fffc6d93f935f094a"
+    "bytes": 5005221,
+    "sha256": "cbf9c220cd943e9c2a69a72dc9204ac8b62a979f7a4b6d4fa35ced34a0cd36bd"
   },
   "README.txt": {
     "bytes": 1853,
     "sha256": "e271e5c290d7fc53c381f77a2790325911402d55d4e0e8ffc2b843a64c95ab09"
+  },
+  "Stitch_IITR_Report.pdf": {
+    "bytes": 2910600,
+    "sha256": "904ad0f51aabde445194091321f59e3a7971630f3f05c0743e25b2b75f9f47f1"
+  },
+  "Stitch_IITR_Presentation_LaTeX.zip": {
+    "bytes": 9539071,
+    "sha256": "1c73dd29757c9d4ac3f1a95d61bc18621b258f5c7ec686c1ac9d210db57b19cb"
+  },
+  "Stitch_IITR_Presentation.pptx": {
+    "bytes": 9239216,
+    "sha256": "5bcb255473e2b296a336c263e31e54e12610c0f6cfc0ad83d42466379e029d28"
+  },
+  "Stitch_IITR_Report_LaTeX.zip": {
+    "bytes": 43483943,
+    "sha256": "7d503599f3d06ec0901b16b6c018e3f62d6a1a452e0536ebc00e5a38bfaeeb93"
   }
 }
